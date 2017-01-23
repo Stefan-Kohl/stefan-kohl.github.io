@@ -1,0 +1,113 @@
+
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <title> GAP Package FactInt </title>
+  <link rel = "stylesheet" type = "text/css" href = "index.css" />
+</head>
+
+<body>
+
+<h1 class = "package"> FactInt </h1>
+
+<p class = "subtitle">
+  Advanced Methods for <em class = "partsofheading">Fact</em>oring
+  <em class = "partsofheading">Int</em>egers <br /> <br />
+  Version 1.5.3
+</p>
+
+<p class = "myname">Stefan Kohl</p>
+
+<h2>
+  Description
+</h2>
+
+<p class = "firstparagraph">
+  FactInt is a <a href = "http://www.gap-system.org" target = "_blank">GAP</a>&nbsp;4 package which provides
+  implementations of the following methods for factoring integers:
+</p>
+
+<ul>
+  <li> Pollard's <em>p</em>-1 </li>
+  <li> Williams' <em>p</em>+1 </li>
+  <li> Elliptic Curves Method (ECM) </li>
+  <li> Continued Fraction Algorithm (CFRAC) </li>
+  <li> Multiple Polynomial Quadratic Sieve (MPQS) </li>
+</ul>
+
+<p class = "firstparagraph">
+  FactInt also makes use of
+  <a href = "http://maths-people.anu.edu.au/~brent/factors.html" target = "_blank">Richard P. Brent's tables</a>
+  of known factors of integers of the form <em>b<sup>k</sup>+/-1</em> for `small' <em>b</em>.
+  The code for accessing these tables has been contributed by <a href = "http://www.math.rwth-aachen.de/~Frank.Luebeck/index.html" target = "_blank">Frank L&uuml;beck</a>.
+</p>
+
+<p class = "middleparagraph">
+  The ECM is suited best for finding factors which are neither too small
+  (i.e. have less than about 12 decimal digits) nor too close to the square root
+  of the number to be factored.
+  The MPQS is designed for factoring products of two primes of comparable orders
+  of magnitude. CFRAC is the historical predecessor of the MPQS.
+  Pollard's <em>p</em>-1 and Williams' <em>p</em>+1 are useful for finding factors
+  <em>p</em> such that all prime factors of <em>p</em>-1 resp. <em>p</em>+1 are
+  `small', e.g. smaller than 1000000.
+  All factoring methods implemented in this package are probabilistic.
+  In particular the time needed by the ECM depends highly on the actual - good
+  or bad - luck.
+</p>
+
+<p class = "middleparagraph">
+  FactInt provides a general-purpose factorization routine which uses an appropriate
+  combination of the methods mentioned above, the Pollard&nbsp;Rho routine which is
+  implemented in the <a href = "http://www.gap-system.org" target = "_blank">GAP</a>&nbsp;Library and a variety of tricks for special cases
+  to obtain a good average performance for `arbitrary' integers.
+  At the user's option, FactInt provides detailed information about
+  the progress of the factorization process.
+</p>
+
+<p class = "normaltext">
+  FactInt is published / redistributed on the <a href = "http://www.gap-system.org" target = "_blank">GAP</a> website
+  <a href = "http://www.gap-system.org/Packages/factint.html" target = "_blank">here</a>.
+</p>
+
+<h2>
+  Download, Manual and Examples
+</h2>
+
+<ul>
+  <li> Download FactInt: 
+    <ul>
+      <li> <a href = "factint/factint-1.5.3-win.zip">factint-1.5.3-win.zip</a> (recent version, released 16-Jun-2011, about 4.2&nbsp;MB). </li>
+      <li> <a href = "factint/factint-1.5.2.tar.gz">factint-1.5.2.tar.gz</a> (previous version, released 26-Sep-2007, about 3.2&nbsp;MB). </li>
+    </ul>
+  </li>
+  <li> FactInt&nbsp;can&nbsp;be used under any operating system for which <a href = "http://www.gap-system.org" target = "_blank">GAP</a>&nbsp;is&nbsp;available. </li>
+  <li> Requirements: <a href = "http://www.gap-system.org" target = "_blank">GAP</a>&nbsp;4.4.9 or newer and <a href = "http://www.gap-system.org/Packages/gapdoc.html" target = "_blank">GAPDoc</a>&nbsp;1.0 or newer. </li>
+  <li> Installation: extract the distribution file in the <code>pkg/</code> subdirectory of the <a href = "http://www.gap-system.org" target = "_blank">GAP</a> root directory. </li>
+  <li> Manual: <a href = "factint/doc/chap0.html">HTML</a>&nbsp;<a href = "factint/doc/manual.pdf">PDF</a>. </li>
+  <li> Some <a href = "factint/examples.html">examples</a> for the use of FactInt. </li>
+  <li> Version history: see <a href = "factint/CHANGES">CHANGES</a>. </li>
+  <li> A <a href = "factint/README.factint">readme</a> file which provides similar information as given on this webpage. </li>
+  <li> <a href = "http://www.gap-system.org" target = "_blank">GAP</a> - readable package information: see <a href = "factint/PackageInfo.g">PackageInfo.g</a>. </li>
+  <li> Slides I used in my talk at the <a href = "http://www.gap-system.org" target = "_blank">GAP</a> workshop in April 1999 in Linz: <a href = "factint/slides.zoo">slides.zoo</a> (26K). </li>
+</ul>
+
+<p class = "normaltext">
+  If you have problems with this package, wish to make comments
+  or suggestions, or if you find bugs, please send e&nbsp;-&nbsp;mail
+  to <a href = "mailto:stefan@mcs.st-and.ac.uk">Stefan&nbsp;Kohl</a>.
+</p>
+
+<table class = "footer" width = "100%" cellspacing = "1" cellpadding = "2"
+       summary = "This table tells you the date of the last modification of this file.">
+  <tr> <td> Back to <a class = "footer" href = "http://www.gap-system.org/DevelopersPages/StefanKohl/" target = "_parent">main page</a> </td>
+       <td> <p align = "right"> Last modified: 16-Jun-2016 </p> </td> </tr>
+</table>
+
+</body>
+
+</html>

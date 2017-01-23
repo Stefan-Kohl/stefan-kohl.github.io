@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE Book SYSTEM "gapdoc.dtd"
+ [ <!ENTITY GAP "<Package>GAP</Package>"> ]>
+<?LaTeX ExtraPreamble="\usepackage{amsfonts}"?>
+<?LaTeX ExtraPreamble="\usepackage{amsxtra}"?>
+
+<!-- #################################################################### -->
+<!-- ##                                                                ## -->
+<!-- ##  gap-exercises.xml         GAP Exercises          Stefan Kohl  ## -->
+<!-- ##                                                                ## -->
+<!-- #################################################################### -->
+
+<Book Name="GAP-Exercises"> 
+
+<!-- #################################################################### -->
+
+<TitlePage>
+  <Title>GAP Exercises</Title>
+  <Subtitle></Subtitle>
+  <Version>
+    Version 1.0
+  </Version>
+  <Author>
+    Stefan Kohl
+    <Email>stefan@mcs.st-and.ac.uk</Email>
+    <Homepage>
+      http://www.gap-system.org/DevelopersPages/StefanKohl/
+    </Homepage>
+    <Address>
+      Department of Mathematics <Br/>
+      University of Vlora <Br/>
+      Lagjja: Pavaresia <Br/>
+      Vlore / Albania
+    </Address>
+  </Author>
+  <Date>February 17, 2010</Date>
+</TitlePage>
+
+<!-- #################################################################### -->
+
+<TableOfContents/>
+
+<!-- #################################################################### -->
+
+<Body>
+
+<#Include SYSTEM "exercises.xml">
+<#Include SYSTEM "solutions.xml">
+
+</Body>
+
+<!-- #################################################################### -->
+
+<Bibliography Databases="exercises-bib.xml"/>
+
+<TheIndex/>
+
+<!-- #################################################################### -->
+
+</Book>
+
+<!-- #################################################################### -->

@@ -1,0 +1,84 @@
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  index.css            Homepage Style File            Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body {
+  background: #FFFFFF;
+  color:      #000000;
+
+  margin-top:     1cm;
+  margin-bottom:  1cm;
+  margin-left:    1cm;
+  margin-right:   1cm;
+
+  font-family: Helvetica,Verdana,Arial,sans-serif;
+  font-size: 12pt;
+}
+
+h1.publications { font-size:  200%;
+                  color:      #000000;
+                  text-align: center;
+                  margin-bottom: 8mm; }
+
+h1.thesis { font-size:  300%;
+            color:      #507020;
+            text-align: center;
+            margin-bottom: 8mm; }
+
+h1.package { font-size:  300%;
+             color:      #507020;
+             text-align: center;
+             margin-bottom: 8mm; }
+
+h1.problems { font-size:  175%;
+              color:      #F00000;
+              text-align: center;
+              margin-bottom: 8mm; }
+
+h1.abstract { font-size:  125%;
+              color:      #000000;
+              margin-bottom: 8mm; }
+
+h1.other { font-size:  175%;
+           color:      #000000;
+           margin-bottom: 8mm; }
+
+p.subtitle { font-size:     160%;
+             text-align:    center;
+             margin-bottom: 8mm; }
+
+p.myname { font-size:     140%;
+           text-align:    center; 
+           margin-bottom: 8mm; }
+
+p.display { font-size:     100%;
+            text-align:    center;
+            margin-top:    3mm;
+            margin-bottom: 3mm; }
+
+p.normaltext { text-align: justify; }
+
+em.introducingwords { color:      #408000;
+                      font-style: normal; }
+
+em.partsofheading { color:      #507020;
+                    font-style: normal; }
+
+table.list { margin-bottom: 5mm; }
+
+table.footer { margin-top:    0mm;
+               margin-bottom: 0mm; }
+
+a:link    { color: #0000AE; text-decoration: none; }
+a:visited { color: #0000AE; text-decoration: none; }
+a:active  { color: #000000; text-decoration: none; }
+
+tt,code,pre { font-family: "Courier New",Courier,monospace;
+              font-size: 100%; 
+              color: #284D49; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */

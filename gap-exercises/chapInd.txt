@@ -1,0 +1,323 @@
+  
+  
+  [1XIndex[101X
+  
+  [10X[110X  2.1
+  [10X[110X  2.17
+  3n+1 conjecture  1.20-1
+  3n+1 problem bibliography  1.20-2
+  abc conjecture  1.6-1
+  abc triples  1.6-1
+  [10XabcTriplesByRadical[110X  2.6
+  [10XAction[110X  2.2
+  [10XAdd[110X  2.6
+  [10XAdd[110X  2.8
+  [10XAdd[110X  2.8
+  Aliquot sequence  1.17-1
+  [10XAliquotSequence[110X  2.17
+  [10XAllGraphs[110X  2.7
+  [10XAllGraphs[110X  2.7
+  [10XAllGroups[110X  1.11-2
+  [10XAllGroups[110X  1.14-2
+  [10XAllGroups[110X  1.2-2
+  [10XAllGroups[110X  2.1
+  [10XAllGroups[110X  2.11
+  [10XAllGroups[110X  2.14
+  [10XAllTransitiveGroups[110X  1.7-2
+  [10XAllTransitiveGroups[110X  2.7
+  [10XAlternatingGroup[110X  1.5-1
+  [10XArrangements[110X  1.16-2
+  [10XArrangements[110X  2.16
+  [10XAsList[110X  1.1-2
+  [10XAsList[110X  1.2-2
+  [10XAsList[110X  2.1
+  [10XAsList[110X  2.2
+  [10XAsList[110X  2.8
+  [10XAutomorphismGroup[110X  1.14-2
+  [10XAutomorphismGroup[110X  1.2-2
+  [10XAutomorphismGroup[110X  2.14
+  [10XAutomorphismGroup[110X  2.2
+  [10XAutomorphismGroup[110X  2.2
+  [10XCartesian[110X  1.1-2
+  [10XCartesian[110X  1.8-2
+  [10XCartesian[110X  2.1
+  [10XCartesian[110X  2.8
+  [10XCentre[110X  1.5-1
+  [10XCentre[110X  2.5
+  changing the GAP Library  1.17-2
+  chess board  1.8-1
+  Collatz conjecture  1.20-1
+  Collatz mapping  1.20-1
+  [10XCollected[110X  1.10-2
+  [10XCollected[110X  2.10
+  [10XCombinations[110X  1.7-2
+  [10XCombinations[110X  1.8-2
+  [10XCombinations[110X  2.7
+  [10XCombinations[110X  2.8
+  [10XComm[110X  1.1-2
+  [10XComm[110X  2.1
+  commutator  1.1-1
+  [10XCommutatorLength[110X  1.1-2
+  [10XCommutatorLength[110X  2.1
+  [10XCommutatorsFormGroup[110X  2.1
+    1.19-1
+  conjugacy class  1.2-1
+  [10XConjugacyClasses[110X  2.2
+  [10XConjugacyClassesSubgroups[110X  2.2
+  [10XContinuedFractionApproximationOfRoot[110X  1.13-2
+  [10XContinuedFractionApproximationOfRoot[110X  2.13
+  [10XContinuedFractionExpansionOfRoot[110X  1.13-2
+  [10XContinuedFractionExpansionOfRoot[110X  2.13
+  [10XCreateCompletionFiles[110X  1.17-2
+  [10XDenominatorRat[110X  2.13
+  derived subgroup  1.1-1
+  [10XDerivedSubgroup[110X  1.1-2
+  [10XDerivedSubgroup[110X  1.11-2
+  [10XDerivedSubgroup[110X  2.1
+  [10XDerivedSubgroup[110X  2.11
+  [10XDerivedSubgroup[110X  2.14
+  [10XDisplay[110X  1.20-2
+  [10XEXP_FLOAT[110X  1.12-2
+  [10XEXP_FLOAT[110X  2.12
+  FactInt package  1.17-2
+  FactInt package  2.17
+  [10XFactIntInfo[110X  2.17
+  [10XFactorial[110X  2.8
+  [10XFactors[110X  2.15
+  [10XFactors[110X  2.6
+  [10XFactorsInt[110X  1.17-2
+  [10XFiltered[110X  2.15
+  [10XFiltered[110X  2.2
+  [10XFiltered[110X  2.3
+  [10XFiltered[110X  2.6
+  [10XFiltered[110X  2.7
+  [10XFiltered[110X  2.9
+  [10XFirst[110X  2.1
+  [10XFirst[110X  2.11
+  [10XFirst[110X  2.14
+  [10XFirst[110X  2.15
+  [10XFirst[110X  2.2
+  [10XFlat[110X  2.8
+  [10XFloat[110X  1.12-2
+  [10XFloat[110X  1.6-2
+  [10XFloat[110X  2.12
+  [10XFloat[110X  2.6
+  [10XForAll[110X  2.2
+  [10XForAll[110X  2.2
+  [10XForAny[110X  2.2
+  function, computable  1.19-1
+  function, quickly growing  1.19-1
+  function, recursive  1.18-1
+  function, recursive  1.19-1
+  [10XFundamentalSolutionOfPellsEquation[110X  2.13
+  GAPDoc package  1.10-2
+  [10XGcd[110X  2.15
+  [10XGcd[110X  2.6
+  [10XGeneratorsOfGroup[110X  2.7
+  [10XGF[110X  2.16
+  [10XGF[110X  2.18
+  [10XGF[110X  2.3
+  GRAPE package  2.7
+  graph, automorphism group  1.7-1
+  graph, finite, undirected  1.7-1
+  graph, isomorphism type  1.7-1
+  [10XGraphAutomorphismGroup[110X  2.7
+  graphics  1.3-1
+  [10XGroup[110X  2.2
+  group, automorphism group  1.14-1
+  group, commutator  1.1-1
+  group, conjugacy class  1.2-1
+  group, derived subgroup  1.1-1
+  group, metabelian group  1.11-1
+  group, outer automorphism  1.2-1
+  group, p-group  1.11-1
+  [10XGroupHomomorphismByImages[110X  2.2
+  harmonic number  1.12-1
+  [10XHomogeneousGraphs[110X  2.7
+  [10XHorsesMatrix[110X  2.8
+  [10XIdGroup[110X  2.1
+  [10XIdGroup[110X  2.11
+  [10XIdGroup[110X  2.14
+  [10XIdGroup[110X  2.2
+  [10XImage[110X  1.2-2
+  [10XImage[110X  2.2
+  [10XImage[110X  2.2
+  [10XIndeterminate[110X  2.13
+  Info messages  2.17
+  [10XInstallMethod[110X  1.5-2
+  [10XInstallMethod[110X  2.5
+  [10XIntersection[110X  2.8
+  [10XIsAbelian[110X  1.11-2
+  [10XIsAbelian[110X  2.11
+  [10XIsAbelian[110X  2.2
+  [10XIsAbelian[110X  2.5
+  [10XIsConjugate[110X  1.2-2
+  [10XIsConjugate[110X  2.2
+  [10XIsConjugate[110X  2.2
+  [10XIsInnerAutomorphism[110X  1.2-2
+  [10XIsInnerAutomorphism[110X  2.2
+  [10XIsPrimeInt[110X  2.3
+  [10XIsPrimeInt[110X  2.9
+  [10XIsProbablyPrimeInt[110X  2.15
+  [10XIsSimpleGroup[110X  2.5
+  [10XIsTransitive[110X  2.7
+  [10XIsWieferichPrimeInt[110X  2.9
+  iterative vs. recursive  2.18
+  Lagarias bibliography  1.20-2
+  [10XLength[110X  2.1
+  [10XLength[110X  2.13
+  [10XLength[110X  2.15
+  [10XLength[110X  2.2
+  [10XLength[110X  2.7
+  [10XList[110X  2.15
+  [10XList[110X  2.16
+  [10XList[110X  2.2
+  [10XList[110X  2.7
+  [10XList[110X  2.8
+  [10XListWithIdenticalEntries[110X  2.18
+  [10XListWithIdenticalEntries[110X  2.8
+  [10XLOG_FLOAT[110X  1.12-2
+  [10XLOG_FLOAT[110X  1.6-2
+  [10XLOG_FLOAT[110X  2.12
+  [10XLOG_FLOAT[110X  2.6
+  [10XMaximum[110X  2.18
+  metabelian group  1.11-1
+  method installation  1.17-2
+  method installation  1.5-1
+  method installation  2.17
+  method rank  2.5
+  method selection  2.5
+  [10XMinimum[110X  2.15
+  [10XNrMovedPoints[110X  1.7-2
+  [10XNrMovedPoints[110X  2.7
+  [10XNullMat[110X  1.16-2
+  [10XNullMat[110X  1.18-2
+  [10XNullMat[110X  1.3-2
+  [10XNullMat[110X  1.8-2
+  [10XNullMat[110X  2.16
+  [10XNullMat[110X  2.18
+  [10XNullMat[110X  2.3
+  [10XNullMat[110X  2.8
+  [10XNumeratorRat[110X  2.13
+  [10XOne[110X  2.16
+  [10XOne[110X  2.18
+  [10XOne[110X  2.3
+  [10XOnRight[110X  2.2
+  [10XOnSets[110X  2.7
+  [10XOrbits[110X  1.7-2
+  [10XOrbits[110X  2.7
+  [10XOrderMod[110X  1.15-2
+  [10XOrderMod[110X  2.15
+  outer automorphism  1.2-1
+  p-group  1.11-1
+  Pell's equation  1.13-1
+  Pell's equation, fundamental solution  1.13-1
+  [10XPlotQSequence[110X  2.18
+  [10XPosition[110X  1.8-2
+  [10XPosition[110X  2.8
+  [10XPowerModInt[110X  1.9-2
+  [10XPowerModInt[110X  2.9
+  prime number  1.3-1
+  [10XPrimes[110X  2.15
+  [10XPrint[110X  2.1
+  [10XPrint[110X  2.14
+  [10XPrint[110X  2.17
+  [10XPrint[110X  2.2
+  [10XProduct[110X  2.15
+  [10XProduct[110X  2.6
+  projective plane, automorphism group  1.4-1
+  [10XQ[110X  2.18
+  Q sequence  1.18-1
+  [10XQCallCounts[110X  2.18
+  [10XQSequence[110X  2.18
+  rational points, on the unit sphere  1.16-1
+  [10XRationalPointsOnUnitSphere[110X  2.16
+  RCWA package  1.16-2
+  RCWA package  1.18-2
+  RCWA package  1.20-2
+  RCWA package  1.3-2
+  [10XRcwaMapping[110X  1.20-2
+  rebuilding completion files  1.17-2
+  recursive vs. iterative  2.18
+  [10XRepresentative[110X  1.7-2
+  [10XRepresentative[110X  2.2
+  [10XRepresentative[110X  2.7
+  ResClasses package  1.15-2
+  ResClasses package  2.15
+  [10XResidueClass[110X  1.15-2
+  [10XResidueClass[110X  2.15
+  Riemann hypothesis  2.12
+  [10XRightCosets[110X  2.2
+  [10XRootInt[110X  2.13
+  [10XRootInt[110X  2.16
+  [10XSaveAsBitmapPicture[110X  1.16-2
+  [10XSaveAsBitmapPicture[110X  1.18-2
+  [10XSaveAsBitmapPicture[110X  1.3-2
+  [10XSaveAsBitmapPicture[110X  2.16
+  [10XSaveAsBitmapPicture[110X  2.18
+  [10XSaveAsBitmapPicture[110X  2.3
+  [10XSet[110X  1.1-2
+  [10XSet[110X  2.1
+  [10XSet[110X  2.15
+  [10XSet[110X  2.2
+  [10XSet[110X  2.4
+  [10XSet[110X  2.6
+  [10XSet[110X  2.7
+  [10XSetName[110X  1.20-2
+  Sieve of Eratosthenes  2.3
+  [10XSigma[110X  1.12-2
+  [10XSigma[110X  1.17-2
+  [10XSigma[110X  2.12
+  [10XSigma[110X  2.17
+  [10XSize[110X  2.1
+  [10XSize[110X  2.14
+  [10XSize[110X  2.2
+  [10XSize[110X  2.7
+  Small Groups Library  1.11-2
+  Small Groups Library  1.14-2
+  Small Groups Library  2.1
+  stream  1.10-1
+  string  1.10-1
+  [10XStringFile[110X  1.10-2
+  [10XStringFile[110X  2.10
+  [10XStructureDescription[110X  2.1
+  [10XStructureDescription[110X  2.11
+  [10XStructureDescription[110X  2.14
+  [10XStructureDescription[110X  2.4
+  [10XStructureDescription[110X  2.7
+  [10XSubgroupProperty[110X  1.4-2
+  [10XSubgroupProperty[110X  1.7-2
+  [10XSubgroupProperty[110X  2.4
+  [10XSubgroupProperty[110X  2.7
+  [10XSum[110X  2.12
+  sum-of-divisors function  1.12-1
+  sum-of-divisors function  1.17-1
+  [10XSUM_FLAGS[110X  1.17-2
+  [10XSymmetricGroup[110X  1.8-2
+  [10XSymmetricGroup[110X  2.4
+  [10XSymmetricGroup[110X  2.7
+  [10XSymmetricGroup[110X  2.8
+  [10XTrajectory[110X  1.20-2
+  [10XTransitiveGraphAutomorphismGroups[110X  2.7
+  [10XTransitiveIdentification[110X  1.7-2
+  [10XTransitiveIdentification[110X  2.7
+  [10XTransposedMat[110X  2.15
+  transposition  1.8-1
+  [10XTranspositionMatrixSn[110X  2.8
+  [10XTrivialSubgroup[110X  2.5
+  Ulam spiral  1.3-1
+  [10XUlamSpiral[110X  2.3
+  [10XUnion[110X  2.15
+  [10XUnion[110X  2.6
+  unit sphere, rational points  1.16-1
+  Wieferich prime  1.9-1
+  word count  1.10-1
+  [10XWordCount[110X  2.10
+  [10XWordsString[110X  1.10-2
+  [10XWordsString[110X  2.10
+  [10XZero[110X  2.16
+  [10XZero[110X  2.18
+  [10XZero[110X  2.3
+  
+  
+  -------------------------------------------------------

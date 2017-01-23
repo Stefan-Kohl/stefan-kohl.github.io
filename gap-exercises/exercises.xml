@@ -1,0 +1,1055 @@
+<!-- #################################################################### -->
+<!-- ##                                                                ## -->
+<!-- ##  exercises.xml           GAP Exercises            Stefan Kohl  ## -->
+<!-- ##                                                                ## -->
+<!-- #################################################################### -->
+
+<Chapter Label="ch:Exercises"><Heading>The Exercises</Heading>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:CommutatorExercise">
+<Heading>On Commutators and Derived Subgroups</Heading>
+
+<Subsection Label="ssec:CommutatorExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="group" Subkey="derived subgroup">group</Index>
+<Index Key="group" Subkey="commutator">group</Index>
+<Index Key="derived subgroup">derived subgroup</Index>
+<Index Key="commutator">commutator</Index>
+
+The <E>derived subgroup</E> <M>G'</M> of a group <M>G</M> is defined
+as the group <E>generated</E> by all <E>commutators</E>
+<M>[a,b] := a^{-1}b^{-1}ab</M>, where <M>a,b \in G</M>.
+In general, not all elements of the derived subgroup of a group are
+actually commutators themselves.
+Find a group <M>G</M> of smallest possible order such that the set of
+all commutators of elements of <M>G</M> does not <E>form</E> a group! <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:CommutatorHints">
+<Heading>Hints</Heading>
+
+<Index Key="Comm"><C>Comm</C></Index>
+<Index Key="DerivedSubgroup"><C>DerivedSubgroup</C></Index>
+<Index Key="Cartesian"><C>Cartesian</C></Index>
+<Index Key="Set"><C>Set</C></Index>
+<Index Key="AsList"><C>AsList</C></Index>
+<Index Key="CommutatorLength"><C>CommutatorLength</C></Index>
+
+Commutators can be computed by the operation <C>Comm</C>, and the derived
+subgroup can be computed by the operation <C>DerivedSubgroup</C>.
+The function <C>Cartesian</C> and the operations <C>Set</C> and <C>AsList</C>
+can be helpful in this context as well.
+If you are lazy but patient, you may simply use <C>CommutatorLength</C>.
+Otherwise, this exercise requires writing a couple of lines of &GAP; code.
+The wanted group has order greater than&nbsp;50, but less than&nbsp;100. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:CommutatorSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:OuterAutomorphismsExercise">
+<Heading>On Outer Automorphisms Fixing Conjugacy Classes</Heading>
+
+<Subsection Label="ssec:OuterAutomorphismsExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="group" Subkey="outer automorphism">group</Index>
+<Index Key="group" Subkey="conjugacy class">group</Index>
+<Index Key="outer automorphism">outer automorphism</Index>
+<Index Key="conjugacy class">conjugacy class</Index>
+
+Is there a finite group which has an automorphism which is not inner,
+but which nevertheless fixes all conjugacy classes setwise? --
+If so, then find an example of least possible order! <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:OuterAutomorphismsHints">
+<Heading>Hints</Heading>
+
+<Index Key="AllGroups"><C>AllGroups</C></Index>
+<Index Key="AutomorphismGroup"><C>AutomorphismGroup</C></Index>
+<Index Key="IsInnerAutomorphism"><C>IsInnerAutomorphism</C></Index>
+<Index Key="IsConjugate"><C>IsConjugate</C></Index>
+<Index Key="Image"><C>Image</C></Index>
+<Index Key="AsList"><C>AsList</C></Index>
+
+This exercise is slightly more difficult than that given
+in Section&nbsp;<Ref Label="sec:CommutatorExercise"/>.
+Useful functions and operations are <C>AllGroups</C>,
+<C>AutomorphismGroup</C>, <C>IsInnerAutomorphism</C>,
+<C>IsConjugate</C>, <C>Image</C> and <C>AsList</C>.
+It is a good exercise to try to find a way to write down the group
+and the automorphism in a nice and human-readable form.
+One possible way to achieve this is to determine a <Q>nice</Q>
+permutation representation of the group, and to choose an
+automorphism with the desired property which fixes all but one
+of the generators. <P/>
+
+For a solution,
+see Section&nbsp;<Ref Label="sec:OuterAutomorphismsSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:UlamSpiralExercise">
+<Heading>Drawing the Ulam Spiral</Heading>
+
+<Subsection Label="ssec:UlamSpiralExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="Ulam spiral">Ulam spiral</Index>
+<Index Key="prime number">prime number</Index>
+<Index Key="graphics">graphics</Index>
+
+Write a &GAP; function which draws the
+<URL Text="Ulam spiral">http://en.wikipedia.org/wiki/Ulam_spiral</URL>
+and saves the picture in a file! <P/>
+
+The arguments of the function should be the size (width / height) of the
+picture to be drawn and the name of the output file. <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:UlamSpiralHints">
+<Heading>Hints</Heading>
+
+<Index Key="NullMat"><C>NullMat</C></Index>
+<Index Key="SaveAsBitmapPicture"><C>SaveAsBitmapPicture</C></Index>
+<Index Key="RCWA package">RCWA package</Index>
+
+This is more or less just an easy programming exercise, which does not
+require particular mathematical knowledge.
+Use the function <C>NullMat</C> to create a zero matrix over the
+field with two elements, and use this matrix as a grid to draw the spiral.
+The <Package>RCWA</Package> package&nbsp;<Cite Key="RCWA"/> provides
+a function <C>SaveAsBitmapPicture</C>, which can be used to produce
+a picture file from the matrix. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:UlamSpiralSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:ProjectivePlaneExercise">
+<Heading>Automorphism Group of the Smallest Projective Plane</Heading>
+
+<Subsection Label="ssec:ProjectivePlaneExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="projective plane" Subkey="automorphism group">
+projective plane</Index>
+
+The automorphisms of a finite projective plane are determined by the
+permutations of the set of points which move lines to lines.
+Thus, labelling the points with integers <M>1, 2, \dots, n</M>, the
+automorphism group can be described as a subgroup of the symmetric
+group <M>{\rm S}_n</M>. <P/>
+
+The smallest projective plane has 7 points and 7 lines. Any point is
+incident with 3 lines, and any line is incident with 3 points.
+We label the points with integers <M>1, 2, \dots, 7</M>. Then the lines
+are given by the sets <M>g_1 := \{1,2,3\}</M>, <M>g_2 := \{1,4,7\}</M>,
+<M>g_3 := \{1,5,6\}</M>, <M>g_4 := \{2,4,6\}</M>, <M>g_5 := \{2,5,7\}</M>,
+<M>g_6 := \{3,4,5\}</M> and <M>g_7 := \{3,6,7\}</M> of points which are
+incident with them. <P/>
+
+Compute the automorphism group of the smallest projective plane! <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:ProjectivePlaneHints">
+<Heading>Hints</Heading>
+
+<Index Key="SubgroupProperty"><C>SubgroupProperty</C></Index>
+
+A useful function in this context is <C>SubgroupProperty</C>.
+The actual determination of the group can be done in one statement.
+Can you figure out the isomorphism type of the group by theoretical means?
+<P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:ProjectivePlaneSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:InstallingMethodsExercise">
+<Heading>Installing a Missing Method</Heading>
+
+<Subsection Label="ssec:InstallingMethodsExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="method installation">method installation</Index>
+<Index Key="Centre"><C>Centre</C></Index>
+<Index Key="AlternatingGroup"><C>AlternatingGroup</C></Index>
+
+What happens when you enter the command <C>Centre(AlternatingGroup(100));</C>
+in&nbsp;&GAP;? Are you satisfied with the performance, given that the centre
+of a nonabelian simple group is always trivial and that &GAP; knows that the
+alternating group of degree&nbsp;100 is simple? <P/>
+
+Probably not. -- Thus improve the performance radically by implementing
+a method for <C>Centre</C> for simple groups, which returns either the
+group itself or the trivial subgroup, depending on whether the group is
+abelian or not! <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:InstallingMethodsHints">
+<Heading>Hints</Heading>
+
+<Index Key="InstallMethod"><C>InstallMethod</C></Index>
+
+Methods are installed with <C>InstallMethod</C>.
+The exercise is easy -- basically all you need to do is to look
+up in the documentation how this function is used.
+If your solution is correct, then <C>Centre(AlternatingGroup(100));</C>
+returns the trivial subgroup immediately, and <C>Centre(<A>G</A>)</C>
+still computes the centre of a non-simple group <A>G</A> using methods
+implemented in the &GAP; Library.  <P/>
+
+For a solution,
+see Section&nbsp;<Ref Label="sec:InstallingMethodsSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:abcTriplesExercise">
+<Heading>Finding Good abc Triples</Heading>
+
+<Subsection Label="ssec:abcTriplesExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="abc conjecture">abc conjecture</Index>
+<Index Key="abc triples">abc triples</Index>
+
+Given a positive integer <M>n</M>, let rad(<M>n</M>) denote the product
+of distinct prime divisors of&nbsp;<M>n</M>. The
+<URL Text="abc conjecture">http://en.wikipedia.org/wiki/Abc_conjecture</URL>
+states that for any <M>\epsilon > 0</M> there is a constant <M>K_\epsilon</M>
+such that for any triple <M>(a,b,c)</M> of coprime positive integers
+satisfying the equation <M>a + b = c</M> we have
+<M>c &lt; K_\epsilon {\rm rad}(abc)^{1 + \epsilon}</M>. <P/>
+
+A triple <M>(a,b,c)</M> of coprime integers satisfying <M>a + b = c</M> is
+called an <E>abc triple</E> if rad(<M>abc</M>) is less than&nbsp;<M>c</M>.
+An abc triple <M>(a,b,c)</M> is called a <E>good</E> abc triple if it
+satisfies even <M>\ln(c)/\ln({\rm rad}(abc)) > 1.4</M>.
+The left-hand side of the inequality is sometimes called the <E>ratio</E>
+of the abc triple. <P/>
+
+It can be shown easily that there are infinitely many abc triples, but if the
+abc conjecture holds, there are only finitely many good abc triples. <P/>
+
+Write a &GAP; function which finds all good abc triples <M>(a,b,c)</M>
+with given radical rad(<M>abc</M>) and with <M>c</M> less than a given
+bound! <P/>
+
+Can you find a new triple, which is not yet on Abderrahmane Nitaj's
+<URL Text="list of known good abc triples">
+http://www.math.unicaen.fr/~nitaj/tableabc.pdf</URL>? <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:abcTriplesHints">
+<Heading>Hints</Heading>
+
+<Index Key="Float"><C>Float</C></Index>
+<Index Key="LOG_FLOAT"><C>LOG_FLOAT</C></Index>
+
+You can start by determining all positive integers less than the given
+bound all of whose prime factors divide the given radical. This can be
+done much more efficiently than by the Sieve of Eratosthenes, or even by
+looping over all integers in the range and factoring -- it is easy and
+very elementary to find out how. Then you can loop over all pairs of these
+integers, test whether they are coprime and compute the ratio if they are.
+To compute the ratio, you need the operation <C>Float</C> which converts
+integers and rationals to floating point numbers, and the function
+<C>LOG_FLOAT</C> which computes the natural logarithm of a floating point
+number. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:abcTriplesSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:GraphsExercise">
+<Heading>Automorphism Groups of Finite Graphs</Heading>
+
+<Subsection Label="ssec:GraphsExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="graph" Subkey ="finite, undirected">graph</Index>
+<Index Key="graph" Subkey ="automorphism group">graph</Index>
+<Index Key="graph" Subkey ="isomorphism type">graph</Index>
+
+<List>
+  <Mark>a)</Mark>
+  <Item>
+    Determine all undirected graphs with 6 vertices up to isomorphism! --
+    How many isomorphism types of such graphs are there? <P/>
+
+    The graphs should be represented as sets of edges, where the edges
+    should be written as sets of two vertices, each. <P/>
+
+    Example: In this representation, the graphs
+    <C>[[1,2],[1,6],[2,3],[3,4],[4,5],[5,6]]</C> and
+    <C>[[1,5],[1,6],[2,4],[2,6],[3,4],[3,5]]</C> are both isomorphic to the
+    regular hexagon.
+  </Item>
+  <Mark>b)</Mark>
+  <Item>
+    Write a function <C>GraphAutomorphismGroup(<A>Gamma</A>,<A>n</A>)</C>
+    which computes the automorphism group of the graph <A>Gamma</A> with
+    <A>n</A> vertices. -- The automorphisms are precisely the permutations
+    of the set of vertices which move edges to edges. <P/>
+
+    Note that the cardinality <A>n</A> of the set of vertices needs to be
+    specified, as there may be isolated vertices.
+  </Item>
+  <Mark>c)</Mark>
+  <Item>
+    Find out which of the (up to conjugation in <M>{\rm S}_6</M>)
+    16 transitive permutation groups of degree&nbsp;6 occur as
+    automorphism groups of graphs with 6 vertices! --
+    How do the corresponding graphs look like?
+  </Item>
+</List>
+
+</Subsection>
+
+<Subsection Label="ssec:GraphsHints">
+<Heading>Hints</Heading>
+
+<Index Key="Combinations"><C>Combinations</C></Index>
+<Index Key="Orbits"><C>Orbits</C></Index>
+<Index Key="Representative"><C>Representative</C></Index>
+<Index Key="SubgroupProperty"><C>SubgroupProperty</C></Index>
+<Index Key="AllTransitiveGroups"><C>AllTransitiveGroups</C></Index>
+<Index Key="NrMovedPoints"><C>NrMovedPoints</C></Index>
+<Index Key="TransitiveIdentification"><C>TransitiveIdentification</C></Index>
+
+<List>
+  <Mark>ad a)</Mark>
+  <Item>
+    You can obtain the set of all graphs with <M>n</M> vertices in the
+    suggested notation by <C>Combinations(Combinations([1..n],2));</C>.
+    Then you need to find a suitable group action on this set such that
+    two graphs are isomorphic if and only if they lie in the same orbit.
+    Useful operations are <C>Orbits</C> and <C>Representative</C>.
+  </Item>
+  <Mark>ad b)</Mark>
+  <Item>
+    In principle you can implement a fancy algorithm here, but for our
+    purposes a very basic one is perfectly sufficient.
+    First find out how to check whether a given permutation of the vertices
+    induces a graph automorphism. Then you can use <C>SubgroupProperty</C>
+    to determine the group formed by all such permutations.
+  </Item>
+  <Mark>ad c)</Mark>
+  <Item>
+    Given Part&nbsp;a) and&nbsp;b), this is more or less straightforward.
+    Useful functions / operations are <C>AllTransitiveGroups</C>,
+    <C>NrMovedPoints</C> and <C>TransitiveIdentification</C>.
+  </Item>
+</List>
+
+For a solution, see Section&nbsp;<Ref Label="sec:GraphsSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:EnumeratingPathsExercise">
+<Heading>Enumerating Paths</Heading>
+
+<Subsection Label="ssec:EnumeratingPathsExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="transposition">transposition</Index>
+<Index Key="chess board">chess board</Index>
+
+Answer the following questions using &GAP;:
+
+<List>
+  <Mark>a)</Mark>
+  <Item>
+    In how many ways can <M>1 \in {\rm S}_4</M> be written as a product of
+    exactly 100 transpositions?
+  </Item>
+  <Mark>b)</Mark>
+  <Item>
+    In how many ways can a horse cross the chess board from the upper left
+    to the lower right corner with exactly 100 moves?
+  </Item>
+</List>
+
+</Subsection>
+
+<Subsection Label="ssec:EnumeratingPathsHints">
+<Heading>Hints</Heading>
+
+<Index Key="NullMat"><C>NullMat</C></Index>
+<Index Key="SymmetricGroup"><C>SymmetricGroup</C></Index>
+<Index Key="Combinations"><C>Combinations</C></Index>
+<Index Key="Cartesian"><C>Cartesian</C></Index>
+<Index Key="Position"><C>Position</C></Index>
+
+Construct a matrix <M>x \in \mathbb{Z}^{n \times n}</M>
+with ones at suitable positions and zeros everywhere else
+and compute powers. For Part&nbsp;a), choose <M>n := 24</M>,
+and for Part&nbsp;b), choose <M>n := 8^2 = 64</M>.
+Useful functions are e.g. <C>NullMat</C>, <C>SymmetricGroup</C>,
+<C>Combinations</C>, <C>Cartesian</C> and <C>Position</C>. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:EnumeratingPathsSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:WieferichPrimesExercise">
+<Heading>Wieferich Primes</Heading>
+
+<Subsection Label="ssec:WieferichPrimesExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="Wieferich prime">Wieferich prime</Index>
+
+By Fermat's little theorem, for any prime number <M>p</M> we have
+<M>p|2^{p-1}-1</M>. A prime number <M>p</M> is called a
+<URL Text="Wieferich prime">http://en.wikipedia.org/wiki/Wieferich_prime
+</URL> if it satisfies even <M>p^2|2^{p-1}-1</M>. <P/>
+
+Write a &GAP; function which checks whether a given positive integer is
+a Wieferich prime, and try to find as many Wieferich primes as you can! <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:WieferichPrimesHints">
+<Heading>Hints</Heading>
+
+<Index Key="PowerModInt"><C>PowerModInt</C></Index>
+
+Writing the &GAP; function is easy. Use <C>PowerModInt</C> instead of
+first computing <M>2^{p-1}</M> and then reducing modulo&nbsp;<M>p^2</M>.
+Two Wieferich primes can be found easily, but finding a third one is
+at least hard. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:WieferichPrimesSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:WordCountExercise">
+<Heading>Counting Words in a File</Heading>
+
+<Subsection Label="ssec:WordCountExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="stream">stream</Index>
+<Index Key="string">string</Index>
+<Index Key="word count">word count</Index>
+
+Write a &GAP; function which, given a filename, returns a word distribution
+statistics. The function should return a list with entries of the form
+<C>[ "word", 237 ]</C> for any word in the file, indicating the word and
+the number of times it occurs. A <Q>word</Q> in our sense is a sequence of
+letters with no non-letter characters in between, i.e. it does not need to
+be a dictionary word. Can you put your function into one line with no more
+than 80 characters? <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:WordCountHints">
+<Heading>Hints</Heading>
+
+<Index Key="Collected"><C>Collected</C></Index>
+<Index Key="StringFile"><C>StringFile</C></Index>
+<Index Key="WordsString"><C>WordsString</C></Index>
+<Index Key="GAPDoc package">GAPDoc package</Index>
+
+You will probably need the operation <C>Collected</C>.
+Further, the functions <C>StringFile</C> and <C>WordsString</C>
+from the <Package>GAPDoc</Package> package&nbsp;<Cite Key="GAPDoc"/>
+will be useful. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:WordCountSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:NonMetabelianPGroupsExercise">
+<Heading>Non-Metabelian p-Groups</Heading>
+
+<Subsection Label="ssec:NonMetabelianPGroupsExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="group" Subkey="metabelian group">group</Index>
+<Index Key="group" Subkey="p-group">group</Index>
+<Index Key="metabelian group">metabelian group</Index>
+<Index Key="p-group">p-group</Index>
+
+A group <M>G</M> is called <E>metabelian</E> if it has an abelian
+normal subgroup <M>N</M> such that the quotient <M>G/N</M> is abelian
+as well. Further, a group is called a <E><M>p</M>-group</E> if its order is
+a power of a prime. <P/>
+
+Find a non-metabelian <M>p</M>-group of least possible order! <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:NonMetabelianPGroupsHints">
+<Heading>Hints</Heading>
+
+<Index Key="Small Groups Library">Small Groups Library</Index>
+<Index Key="AllGroups"><C>AllGroups</C></Index>
+<Index Key="DerivedSubgroup"><C>DerivedSubgroup</C></Index>
+<Index Key="IsAbelian"><C>IsAbelian</C></Index>
+
+First determine conceivable orders of non-metabelian groups by means
+of theory. Then just run a <E>brute-force</E> search over the groups
+of the smallest few of these orders in the Small Groups
+Library&nbsp;<Cite Key="SmallGroups"/>.
+Useful functions / operations are <C>AllGroups</C>, <C>DerivedSubgroup</C>
+and <C>IsAbelian</C>.
+
+For a solution, see
+Section&nbsp;<Ref Label="sec:NonMetabelianPGroupsSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:RHExercise">
+<Heading>The Growth of the Sum-of-Divisors Function</Heading>
+
+<Subsection Label="ssec:RHExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="sum-of-divisors function">sum-of-divisors function</Index>
+<Index Key="harmonic number">harmonic number</Index>
+
+Let <M>\sigma</M> denote the sum-of-divisors function.
+Given a positive integer <M>n</M>, let <M>H(n) := \sum_{k=1}^n 1/k</M> be
+the <M>n</M>th harmonic number, and put <M>B(n) := H(n) + \ln(H(n)) \cdot
+e^{H(n)}</M>. <P/>
+
+Examples are <M>\sigma(24) = 60</M> and <M>B(24) \approx 61.7575</M>,
+as well as <M>\sigma(60) = 168</M> and <M>B(60) \approx 170.977</M>. <P/>
+
+Can you find an integer <M>n > 1</M> such that <M>\sigma(n)</M> is larger
+than&nbsp;<M>B(n)</M>? <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:RHHints">
+<Heading>Hints</Heading>
+
+<Index Key="Sigma"><C>Sigma</C></Index>
+<Index Key="Float"><C>Float</C></Index>
+<Index Key="LOG_FLOAT"><C>LOG_FLOAT</C></Index>
+<Index Key="EXP_FLOAT"><C>EXP_FLOAT</C></Index>
+
+In &GAP;, <M>\sigma(n)</M> can be computed by <C>Sigma(<A>n</A>)</C>.
+Use the operation <C>Float</C> to convert integers and rationals to
+floating point numbers, and use the functions <C>LOG_FLOAT</C> and
+<C>EXP_FLOAT</C> to compute logarithms and to evaluate the exponential
+function, respectively. Be prepared that finding an integer <M>n > 1</M>
+such that <M>\sigma(n)</M> is larger than&nbsp;<M>B(n)</M> is not easy. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:RHSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:PellExercise">
+<Heading>Pell's Equation</Heading>
+
+<Subsection Label="ssec:PellExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="Pell's equation">Pell's equation</Index>
+<Index Key="Pell's equation" Subkey="fundamental solution">
+  Pell's equation
+</Index>
+
+<URL Text="Pell's equation">http://en.wikipedia.org/wiki/Pell%27s_equation
+</URL> is any Diophantine equation of the form <M>x^2 - ny^2 = 1</M>, where
+<M>n</M> is a nonsquare integer. <P/>
+
+Write a &GAP; function which takes an argument <M>n</M> and returns the
+smallest solution of the equation <M>x^2 - ny^2 = 1</M> in positive integers!
+<P/>
+
+This solution is called the <E>fundamental solution</E>.
+Your function should return for example the answer for <M>n = 421</M>
+very quickly. <P/> 
+
+</Subsection>
+
+<Subsection Label="ssec:PellHints">
+<Heading>Hints</Heading>
+
+<Index Key="ContinuedFractionExpansionOfRoot">
+  <C>ContinuedFractionExpansionOfRoot</C>
+</Index>
+<Index Key="ContinuedFractionApproximationOfRoot">
+  <C>ContinuedFractionApproximationOfRoot</C>
+</Index>
+
+Useful functions in this context are <C>ContinuedFractionExpansionOfRoot</C>
+and <C>ContinuedFractionApproximationOfRoot</C>. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:PellSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:AutomorphismGroupOfOddOrderExercise">
+<Heading>Automorphism Groups of Odd Order</Heading>
+
+<Subsection Label="ssec:AutomorphismGroupOfOddOrderExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="group" Subkey="automorphism group">group</Index>
+
+Obviously, the automorphism groups of both the trivial group and the
+cyclic group of order&nbsp;2 are trivial, and have therefore odd order.
+Find the smallest group of order greater than&nbsp;2 whose automorphism
+group has odd order! <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:AutomorphismGroupOfOddOrderHints">
+<Heading>Hints</Heading>
+
+<Index Key="Small Groups Library">Small Groups Library</Index>
+<Index Key="AllGroups"><C>AllGroups</C></Index>
+<Index Key="AutomorphismGroup"><C>AutomorphismGroup</C></Index>
+
+First try to exclude the groups of even order by means of theory.
+Then run a <E>brute-force</E> search over the Small Groups
+Library&nbsp;<Cite Key="SmallGroups"/>.
+Useful functions / operations in this context are <C>AllGroups</C>
+and <C>AutomorphismGroup</C>. <P/>
+
+For a solution,
+see Section&nbsp;<Ref Label="sec:AutomorphismGroupOfOddOrderSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:CompositeSumsExercise">
+<Heading>Composite Sums</Heading>
+
+<Subsection Label="ssec:CompositeSumsExercise">
+<Heading>Exercise</Heading>
+
+Find an odd positive integer <M>n</M> such that <M>n+2^k</M> is composite
+for any positive integer&nbsp;<M>k</M>! -- Can you find the least possible
+such&nbsp;<M>n</M>? <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:CompositeSumsHints">
+<Heading>Hints</Heading>
+
+<Index Key="OrderMod"><C>OrderMod</C></Index>
+<Index Key="ResClasses package">ResClasses package</Index>
+<Index Key="ResidueClass"><C>ResidueClass</C></Index>
+
+First perform a <E>brute-force</E> search to find candidates.
+Then try to verify whether these candidates indeed have the desired property.
+A useful function in this context is <C>OrderMod</C>. In addition, it may be
+worth to have a look at the <Package>ResClasses</Package>
+package&nbsp;<Cite Key="ResClasses"/>, and there in particular at the
+function <C>ResidueClass</C>. Finding a good candidate for the least possible
+number with the given property is reasonably easy, but the verification that
+it is indeed the smallest one is computationally difficult. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:CompositeSumsSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:RationalPointsExercise">
+<Heading>Rational Points on the Unit Sphere</Heading>
+
+<Subsection Label="ssec:RationalPointsExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="unit sphere" Subkey="rational points">unit sphere</Index>
+<Index Key="rational points" Subkey="on the unit sphere">
+rational points</Index>
+
+Write a &GAP; function which computes all rational points on the unit sphere
+<M>x^2+y^2+z^2=1</M> which correspond to solutions of the diophantine
+equation <M>a^2+b^2+c^2=d^2</M> with <M>a</M>, <M>b</M> and&nbsp;<M>c</M>
+not exceeding a given bound.
+
+Further, your function should draw a picture showing the projection of
+one octant of the sphere to the <M>x</M>-<M>y</M>-plane, where the rational
+points are marked by black pixels. <P/>
+
+</Subsection>
+
+<Subsection Label="ssec:RationalPointsHints">
+<Heading>Hints</Heading>
+
+<Index Key="Arrangements"><C>Arrangements</C></Index>
+<Index Key="NullMat"><C>NullMat</C></Index>
+<Index Key="RCWA package">RCWA package</Index>
+<Index Key="SaveAsBitmapPicture"><C>SaveAsBitmapPicture</C></Index>
+
+Just write a nested loop to determine the solutions. Note that the variables
+can be permuted, thus you can assume <M>a \geq b \geq c</M> and generate
+the solutions not satisfying this inequality by permuting <M>a</M>, <M>b</M>
+and&nbsp;<M>c</M>. This saves almost 5/6 of the time. Maybe a useful function
+in this context is <C>Arrangements</C>. Create an empty grid over GF(2) by
+the function <C>NullMat</C>, invert it (i.e. replace zeros by ones) and mark
+the solutions by zeros there. Finally, the <Package>RCWA</Package>
+package&nbsp;<Cite Key="RCWA"/>
+provides a function <C>SaveAsBitmapPicture</C>, which can be used to write
+the picture to a file. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:RationalPointsSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:AliquotExercise">
+<Heading>Aliquot Sequences</Heading>
+
+<Subsection Label="ssec:AliquotExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="Aliquot sequence">Aliquot sequence</Index>
+<Index Key="sum-of-divisors function">sum-of-divisors function</Index>
+
+Given a positive integer <M>n</M>, the <E>Aliquot sequence</E>
+<M>n = a_1, a_2, a_3, a_4, \dots</M> starting at <M>n</M> is defined
+by <M>a_{i+1} = \sigma(a_i) - a_i</M>, where <M>\sigma</M> denotes the
+sum-of-divisors function. We say that the Aliquot sequence starting
+at&nbsp;<M>n</M> <E>stops</E> if there is an index <M>i</M> such that
+<M>a_i = 1</M>, and we say that it <E>runs into a cycle</E> if there are
+distinct indices <M>i</M> and&nbsp;<M>j</M> such that <M>a_i = a_j</M>. <P/>
+
+Find out whether all Aliquot sequences starting at integers <M>n &lt; 100</M>
+either stop or run into cycles! -- Can you do the same for all Aliquot
+sequences starting at integers <M>n &lt; 200</M> or <M>n &lt; 300</M>?
+Do you see algorithmic problems, and of which kind are they?
+
+</Subsection>
+
+<Subsection Label="ssec:AliquotHints">
+<Heading>Hints</Heading>
+
+<Index Key="Sigma"><C>Sigma</C></Index>
+<Index Key="FactorsInt"><C>FactorsInt</C></Index>
+<Index Key="FactInt package">FactInt package</Index>
+<Index Key="SUM_FLAGS"><C>SUM_FLAGS</C></Index>
+<Index Key="method installation">method installation</Index>
+<Index Key="changing the GAP Library">changing the GAP Library</Index>
+<Index Key="rebuilding completion files">rebuilding completion files</Index>
+<Index Key="CreateCompletionFiles"><C>CreateCompletionFiles</C></Index>
+
+In &GAP;, <M>\sigma(n)</M> can be computed by <C>Sigma(<A>n</A>)</C>.
+Computing <M>\sigma(n)</M> requires factoring <M>n</M>. For this, the
+&GAP; Library method for the operation <C>Sigma</C> calls the &GAP; Library
+function <C>FactorsInt</C> directly. This works for small <M>n</M>, but
+for larger <M>n</M>, <C>FactorsInt</C> will often give up and raise
+an error message which suggests to use the <Package>FactInt</Package>
+package&nbsp;<Cite Key="FactInt"/>.
+If you have loaded <Package>FactInt</Package>, you may find this strange.
+However, this has nothing to do with <Package>FactInt</Package>, as this
+package does not get a chance to help with factoring.
+You can make <C>Sigma</C> benefit from <Package>FactInt</Package> if you
+fetch the method for <C>Sigma</C> from <File>lib/numtheor.gi</File>, put it
+into a separate file, replace <C>FactorsInt</C> by <C>Factors</C>, increase
+the method rank to something like <C>SUM_FLAGS</C> and read this file
+into &GAP;. Alternatively you can make the change directly in the &GAP;
+Library. Then you do not need to increase the method rank, but (as after
+every Library change) you need to rebuild the completion files. For this,
+start &GAP; with option -N and enter <C>CreateCompletionFiles();</C>. <P/>
+
+For a solution, see Section&nbsp;<Ref Label="sec:AliquotSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:QExercise">
+<Heading>The Q Sequence</Heading>
+
+<Subsection Label="ssec:QExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="Q sequence">Q sequence</Index>
+<Index Key="function" Subkey="recursive">function</Index>
+
+Hofstadter's <URL Text="Q sequence">
+http://mathworld.wolfram.com/HofstadtersQ-Sequence.html</URL>
+is defined by <M>Q_1 = Q_2 = 1</M> and
+<M>Q_{n} = Q_{n-Q_{n-1}} + Q_{n-Q_{n-2}}</M> for <M>n &gt; 2</M>.
+
+<List>
+  <Mark>a)</Mark>
+  <Item>
+    Write a &GAP; function which takes an integer argument&nbsp;<M>l</M>
+    and computes the first <M>l</M> terms of the Q&nbsp;sequence.
+  </Item>
+  <Mark>b)</Mark>
+  <Item>
+    Write a &GAP; function which plots the graph of the Q&nbsp;sequence.
+  </Item>
+</List>
+
+</Subsection>
+
+<Subsection Label="ssec:QHints">
+<Heading>Hints</Heading>
+
+<Index Key="NullMat"><C>NullMat</C></Index>
+<Index Key="SaveAsBitmapPicture"><C>SaveAsBitmapPicture</C></Index>
+<Index Key="RCWA package">RCWA package</Index>
+
+<List>
+  <Mark>ad a)</Mark>
+  <Item>
+    The Q sequence is defined recursively. Ask yourself the question why
+    a recursive implementation is not a particularly good idea in this case,
+    anyway.
+  </Item>
+  <Mark>ad b)</Mark>
+  <Item>
+    Use the function <C>NullMat</C> to create a zero matrix over the field
+    with two elements, turn the zeros into ones if you prefer a black graph
+    on a white background to a white graph on a black background, and use
+    this matrix as a grid to draw the graph.
+    The <Package>RCWA</Package> package&nbsp;<Cite Key="RCWA"/> provides
+    a function <C>SaveAsBitmapPicture</C>, which can be used to produce
+    a picture file from the matrix.
+  </Item>
+</List>
+
+For a solution, see Section&nbsp;<Ref Label="sec:QSolution"/>.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:QuicklyGrowingFunctionExercise">
+<Heading>A Quickly Growing Function</Heading>
+
+<Subsection Label="ssec:QuicklyGrowingFunctionExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="computable function"></Index>
+<Index Key="function" Subkey="computable">function</Index>
+<Index Key="function" Subkey="quickly growing">function</Index>
+<Index Key="function" Subkey="recursive">function</Index>
+
+Have a look at the following function, which takes as arguments three
+nonnegative integers and which returns a positive integer:
+
+<Alt Only="LaTeX">\pagebreak[4]</Alt>
+
+<Listing Type="GAP code">
+<![CDATA[
+f := function ( i, j, k )
+  if i = 0 then
+    if   j = 0
+    then if k = 0 then return 2; else return 2^f(i,j,k-1); fi;
+    else return f(i,j-1,f(i,j-1,k)); fi;
+  else
+    return f(i-1,f(i-1,j,k),f(i-1,j,k));
+  fi;
+end;
+]]>
+</Listing>
+
+Try to evaluate <C>f</C> for small values of <C>i</C>, <C>j</C>
+and&nbsp;<C>k</C>! -- How far can you get?
+Can you evaluate <C>f(1,1,1)</C> or <C>f(2,2,2)</C>, or can you
+perhaps write down these values as non-recursive expressions? <P/>
+
+The function <C>f</C> is still a computable function -- recall
+however that there are functions which grow faster than <E>any</E>
+computable function!
+
+</Subsection>
+
+<Subsection Label="ssec:QuicklyGrowingFunctionHints">
+<Heading>Hints</Heading>
+
+Some values this function takes: <C>f(0,0,0)</C> is&nbsp;2,
+<C>f(0,0,1)</C> is&nbsp;4, <C>f(0,0,2)</C> and <C>f(0,1,0)</C> are
+both&nbsp;16, <C>f(0,0,3)</C> is&nbsp;65536, <C>f(0,0,4)</C> and
+<C>f(0,1,1)</C> are both&nbsp;<M>2^{65536}</M>, <C>f(0,0,5)</C>
+is&nbsp;<M>2^{2^{65536}}</M>, and already <C>f(1,1,1)</C>
+is basically too large to be written down in a non-recursive way.
+The exercise asks just for some experimentation -- thus there
+is no solution given.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:CollatzConjectureExercise">
+<Heading>The 3n+1 Conjecture</Heading>
+
+<Subsection Label="ssec:CollatzConjectureExercise">
+<Heading>Exercise</Heading>
+
+<Index Key="3n+1 conjecture">3n+1 conjecture</Index>
+<Index Key="Collatz conjecture">Collatz conjecture</Index>
+<Index Key="Collatz mapping">Collatz mapping</Index>
+
+The <E><M>3n+1</M> conjecture</E>, also known as <E>Collatz conjecture</E>,
+asserts that iterated application of the <E>Collatz mapping</E>
+<Alt Only="LaTeX">
+  <Display>
+  <![CDATA[
+    T: \ \ \mathbb{Z} \longrightarrow \mathbb{Z}, \ \ \ \
+    n \ \longmapsto \
+    \begin{cases}
+      \frac{n}{2}    & \text{if} \ \ n \ \ \text{is even}, \\
+      \frac{3n+1}{2} & \text{if} \ \ n \ \ \text{is odd}
+    \end{cases}
+  ]]>
+  </Display>
+</Alt>
+<Alt Only="HTML"><![CDATA[<center>
+  <img src = "collatz.png" width = "342" height = "63"
+       alt = "T: Z -> Z, n |-> (n/2 if n even, (3n+1)/2 if n odd)"/>
+</center>]]></Alt>
+<Alt Only="Text"><Verb><![CDATA[
+                                       /
+                                      | n/2 if n even,
+               T:  Z -> Z,   n  |->  <
+                                      | (3n+1)/2 if n odd
+                                       \
+]]></Verb></Alt>
+to any given positive integer eventually yields&nbsp;1.
+This problem has been posed by Lothar Collatz in the 1930's, and
+it is still open today. <P/>
+
+Investigate Collatz' conjecture by means of computation with &GAP;,
+and try to find a proof or a counterexample!
+
+</Subsection>
+
+<Subsection Label="ssec:CollatzConjectureHints">
+<Heading>Hints</Heading>
+
+<Index Key="RCWA package">RCWA package</Index>
+<Index Key="3n+1 problem bibliography">3n+1 problem bibliography</Index>
+<Index Key="Lagarias bibliography">Lagarias bibliography</Index>
+<Index Key="RcwaMapping"><C>RcwaMapping</C></Index>
+<Index Key="SetName"><C>SetName</C></Index>
+<Index Key="Display"><C>Display</C></Index>
+<Index Key="Trajectory"><C>Trajectory</C></Index>
+
+The <M>3n+1</M> conjecture is generally believed to be true, but if it
+is false, this may be for two reasons: firstly, there may be unbounded
+sequences, and secondly, there may be sequences which run into cycles
+not containing&nbsp;1. Jeffrey C. Lagarias has compiled a comprehensive
+annotated bibliography&nbsp;<Cite Key="Lagarias07"/> on this conjecture. 
+The &GAP; package <Package>RCWA</Package>&nbsp;<Cite Key="RCWA"/>
+provides a large variety of methods to compute with mappings like the
+Collatz mapping. We show just how to enter the Collatz mapping and how
+to compute the sequences we are interested in:
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> T := RcwaMapping([[1,0,2],[3,1,2]]);
+<rcwa mapping of Z with modulus 2>
+gap> SetName(T,"T");
+gap> Display(T);
+
+Rcwa mapping of Z with modulus 2
+
+              n mod 2               |                n^T
+------------------------------------+------------------------------------
+  0                                 | n/2
+  1                                 | (3n + 1)/2
+
+gap> Trajectory(T,15,[1]);
+[ 15, 23, 35, 53, 80, 40, 20, 10, 5, 8, 4, 2, 1 ]
+gap> Trajectory(T,27,[1]);
+[ 27, 41, 62, 31, 47, 71, 107, 161, 242, 121, 182, 91, 137, 206, 103, 
+  155, 233, 350, 175, 263, 395, 593, 890, 445, 668, 334, 167, 251, 377, 
+  566, 283, 425, 638, 319, 479, 719, 1079, 1619, 2429, 3644, 1822, 911, 
+  1367, 2051, 3077, 4616, 2308, 1154, 577, 866, 433, 650, 325, 488, 244, 
+  122, 61, 92, 46, 23, 35, 53, 80, 40, 20, 10, 5, 8, 4, 2, 1 ]
+]]>
+</Listing>
+
+There is (of course!) no solution given for this exercise.
+
+</Subsection>
+
+</Section>
+
+<!-- #################################################################### -->
+
+</Chapter>
+
+<!-- #################################################################### -->

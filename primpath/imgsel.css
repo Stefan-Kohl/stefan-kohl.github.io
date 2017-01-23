@@ -1,0 +1,44 @@
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  imgsel.css        Image Selector Style File         Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body {
+  color:            #000000;
+  background-color: #EDEEEF;
+
+  margin-top:    1cm;
+  margin-bottom: 0.5cm;
+  margin-left:   0.25cm;
+  margin-right:  0.25cm;
+
+  font-family: Helvetica,Verdana,Arial,sans-serif;
+  font-size: 10pt;
+}
+
+h1 { font-size: 130%;
+
+     color:            #000000;
+     background-color: #EDEEEF;
+
+     text-align:    center;
+     margin-bottom: 5mm; }
+
+p.link  { text-align:    right;
+          margin-top:    0mm;
+          margin-bottom: 0mm; }
+
+p.links { text-align:    center;
+          margin-bottom: 5mm; }
+
+table.mapping { font-size:  100%;
+                margin-top: 3mm; }
+
+a:link    { color: #0000AE; background-color: #EDEEEF; text-decoration: none; }
+a:visited { color: #0000AE; background-color: #EDEEEF; text-decoration: none; }
+a:active  { color: #000000; background-color: #EDEEEF; text-decoration: none; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */

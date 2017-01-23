@@ -1,0 +1,195 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <title> A Little RCWA Picture Gallery </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+</head>
+
+<body>
+
+<h1 class = "other"> A Little RCWA Picture Gallery </h1>
+
+<p class = "normaltext">
+  This page shows a couple of pictures created using the function <code>DrawOrbitPicture</code>.
+  This function is new in RCWA&nbsp;2.3.0. In order to save space, the pictures have been
+  converted to PNG format by a common graphics program.
+  The first picture shows an orbit under an action of the modular group PSL(2,Z)
+  on&nbsp;Z&nbsp;x&nbsp;Z (the pattern of course extends to infinity):
+</p>
+
+<br />
+
+<img src = "pictures/example1.png" width = "512" height = "512"
+     alt = "An illustration of an orbit under a certain action of PSL(2,Z) on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  The action of PSL(2,Z) on that orbit is regular(!).
+  The picture is created by the following commands:
+</p>
+
+<pre>
+gap> PSL2Z := Image(IsomorphismRcwaGroup(FreeProduct(CyclicGroup(2),
+>                                                    CyclicGroup(3))));;
+gap> DrawOrbitPicture(PSL2Z,[0,1],20,512,512,false,fail,
+>                     "~/rcwa/pictures/example1.bmp");
+</pre>
+
+<p class = "normaltext">
+  The second picture shows three orbits under that action of PSL(2,Z) on Z&nbsp;x&nbsp;Z,
+  in different colors:
+</p>
+
+<img src = "pictures/example2.png" width = "512" height = "512"
+     alt = "An illustration of some orbits under a certain action of PSL(2,Z) on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following command:
+</p>
+
+<pre>
+gap> DrawOrbitPicture(PSL2Z,Combinations([1..4],2),20,512,512,true,
+>                     [[255,0,0],[0,255,0],[0,0,255]],
+>                     "~/rcwa/pictures/example2.bmp");
+</pre>
+
+<p class = "normaltext">
+  The third picture shows the distance of points from (0,1), in terms of length of
+  words in the generators, under the above action of PSL(2,Z). The color is determined
+  by the distance (mod&nbsp;3):
+</p>
+
+<img src = "pictures/example3.png" width = "512" height = "512"
+     alt = "An illustration of an orbit under an action of PSL(2,Z) on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following command:
+</p>
+
+<pre>
+gap> DrawOrbitPicture(PSL2Z,[0,1],20,256,256,true,
+>                     [[255,0,0],[0,255,0],[0,0,255]],
+>                     "~/rcwa/pictures/example3.bmp");
+</pre>
+
+<p class = "firstparagraph">
+  Afterwards, the picture has been enlarged by a factor of&nbsp;2 by a standard graphics program,
+  in order to improve the visibility of the colors of the pixels.
+</p>
+
+<p class = "middleparagraph">
+  The following picture shows the same, but with a free product of two cyclic groups
+  of order&nbsp;3 instead of PSL(2,Z):
+</p>
+
+<br />
+
+<img src = "pictures/example4.png" width = "512" height = "512"
+     alt = "An illustration of an orbit under an action of the free product of two cyclic groups of order 3 on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Image(IsomorphismRcwaGroup(FreeProduct(CyclicGroup(3),
+>                                                CyclicGroup(3))));;
+gap> DrawOrbitPicture(G,[0,1],13,256,256,true,
+>                     [[255,0,0],[0,255,0],[0,0,255]],
+>                     "~/rcwa/pictures/example4.bmp");
+</pre>
+
+<p class = "normaltext">
+  The next picture shows the distance of points from (0,1), in terms of length of
+  words in the generators, under the action of a group which acts 2-transitively
+  on&nbsp;Z:
+</p>
+
+<img src = "pictures/example5.png" width = "512" height = "512"
+     alt = "An illustration of a 2-transitive group action on Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Group(ClassShift(0,1),ClassTransposition(1,2,0,4));;
+gap> DrawOrbitPicture(G,[0,1],20,512,512,true,
+>                     List([1..20],i->[255-12*i,255-12*i,255]),
+>                     "~/rcwa/pictures/example5.bmp");
+</pre>
+
+<p class = "normaltext">
+  The same, for another group which acts 2-transitively on&nbsp;Z:
+</p>
+
+<img src = "pictures/example6.png" width = "512" height = "512"
+     alt = "An illustration of a 2-transitive group action on Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Group(mKnot(3),ClassShift(Integers));;
+gap> palette := [[255,  0,  0],[  0,255,  0],[  0,  0,255],
+>                [255,255,  0],[255,  0,255],[  0,255,255],
+>                [255,128,  0],[255,  0,128],[128,255,  0],
+>                [  0,255,128],[128,  0,255],[  0,128,255]];;
+gap> DrawOrbitPicture(G,[0,1],16,512,512,true,palette,
+>                     "~/rcwa/pictures/example6.bmp");
+</pre>
+
+<p class = "normaltext">
+  The next picture shows a ball around (0,1) of another group
+  (the orbit covers the plane with the pattern visible in the middle of the image):
+</p>
+
+<img src = "pictures/example7.png" width = "512" height = "512"
+     alt = "A ball around (0,1) of a group acting on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Group(ClassTransposition(0,2,1,2),
+>               ClassShift(0,4))^ClassTransposition(0,2,1,4);;
+gap> DrawOrbitPicture(G,[0,1],30,512,512,false,fail,
+>                     "~/rcwa/pictures/example7.bmp");
+</pre>
+
+<p class = "normaltext">
+  Another similar picture.
+  The orbit again covers the plane with the pattern visible in the middle of the image:
+</p>
+
+<img src = "pictures/example8.png" width = "512" height = "512"
+     alt = "A ball around (0,1) of a group acting on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Group(ClassShift(0,2),
+>               ClassTransposition(0,4,1,4))^ClassTransposition(1,2,0,6);;
+gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
+>                     "~/rcwa/pictures/example8.bmp");
+</pre>
+
+<br />
+
+<table class = "footer" width = "100%" cellspacing = "1" cellpadding = "2"
+       summary = "This table serves as a partial substitute for the [BACK] button of your browser.">
+  <tr> <td> Back to <a class = "footer" href = "../rcwa.html">RCWA main page</a>,
+                    <a class = "footer" href = "../main.html">main page</a> </td> 
+       <td> <p align = "right"> Last modified: 05-Jun-2007 </p> </td> </tr>
+</table>
+
+</body>
+
+</html>

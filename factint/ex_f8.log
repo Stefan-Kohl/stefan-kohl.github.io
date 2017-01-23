@@ -1,0 +1,56 @@
+gap> RequirePackage("factint");
+
+Loading FactInt 1.1 (Routines for Integer Factorization),
+by Stefan.Kohl@cip.mathematik.uni-stuttgart.de
+
+gap> FactInfo(3);
+gap> FactorsECM(2^256+1);
+#I  ECM for n = 
+115792089237316195423570985008687907853269984665640564039457584007913129639937
+#I  Digits : 78, Curves : 294
+#I  Initial Limit1 : 200, Initial Limit2 : 20000, Delta : 200
+#I  Curve no.      1 (   294), Limit1 :     200, Limit2 :    20000
+#I  Timings : first stage : 0.467 sec., second stage : 0.852 sec.
+#I            curve       : 1.319 sec., total        : 2.119 sec.
+#I  Curve no.      2 (   294), Limit1 :     400, Limit2 :    40000
+#I  Timings : first stage : 1.072 sec., second stage : 1.469 sec.
+#I            curve       : 2.541 sec., total        : 4.742 sec.
+#I  Curve no.      3 (   294), Limit1 :     600, Limit2 :    60000
+#I  Timings : first stage : 1.154 sec., second stage : 2.046 sec.
+#I            curve       : 3.200 sec., total        : 8.038 sec.
+#I  Curve no.      4 (   294), Limit1 :     800, Limit2 :    80000
+#I  Timings : first stage : 1.826 sec., second stage :  2.597 sec.
+#I            curve       : 4.423 sec., total        : 12.557 sec.
+#I  Curve no.      5 (   294), Limit1 :    1000, Limit2 :   100000
+#I  Timings : first stage : 2.225 sec., second stage :  3.128 sec.
+#I            curve       : 5.353 sec., total        : 17.995 sec.
+#I  Curve no.      6 (   294), Limit1 :    1200, Limit2 :   120000
+#I  Timings : first stage : 2.595 sec., second stage :  3.901 sec.
+#I            curve       : 6.496 sec., total        : 24.573 sec.
+#I  Curve no.      7 (   294), Limit1 :    1400, Limit2 :   140000
+#I  Timings : first stage : 2.692 sec., second stage :  4.436 sec.
+#I            curve       : 7.128 sec., total        : 31.797 sec.
+#I  Curve no.      8 (   294), Limit1 :    1600, Limit2 :   160000
+#I  Timings : first stage : 3.365 sec., second stage :  4.656 sec.
+#I            curve       : 8.021 sec., total        : 39.886 sec.
+#I  Curve no.      9 (   294), Limit1 :    1800, Limit2 :   180000
+#I  Timings : first stage : 3.749 sec., second stage :  5.411 sec.
+#I            curve       : 9.160 sec., total        : 49.142 sec.
+#I  Curve no.     10 (   294), Limit1 :    2000, Limit2 :   200000
+#I  Timings : first stage :  4.134 sec., second stage :  5.892 sec.
+#I            curve       : 10.026 sec., total        : 59.209 sec.
+#I  Curve no.     11 (   294), Limit1 :    2200, Limit2 :   220000
+#I  Timings : first stage :  4.491 sec., second stage :  6.372 sec.
+#I            curve       : 10.863 sec., total        : 70.140 sec.
+#I  Curve no.     12 (   294), Limit1 :    2400, Limit2 :   240000
+#I  Timings : first stage :  4.958 sec., second stage :  7.086 sec.
+#I            curve       : 12.044 sec., total        : 82.253 sec.
+#I  Curve no.     13 (   294), Limit1 :    2600, Limit2 :   260000
+#I  Timings : first stage :  5.287 sec., second stage :  7.306 sec.
+#I            curve       : 12.593 sec., total        : 94.943 sec.
+#I  Curve no.     14 (   294), Limit1 :    2800, Limit2 :   280000
+#I  16 - digit factor 1238926361552897 was found in second stage
+[ [ 1238926361552897, 
+      93461639715357977769163558199606896584051237541638188580280321 ], [  ] ]
+gap> 
+

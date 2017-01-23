@@ -1,0 +1,203 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <title> GAP Crossword Puzzle </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+  <link rel = "stylesheet" type = "text/css" href = "gaplog.css" />
+</head>
+
+<body>
+
+<h1 class = "publications"> GAP Crossword Puzzle </h1>
+
+<p class = "myname">Stefan Kohl</p>
+
+<img src = "gap-crossword-small.png" width = "724" height = "604"
+     alt = "GAP Crossword Puzzle" />
+
+<p class = "normaltext">
+  In the GAP session log below, any term - identifier or keyword -
+  to be filled in into the crossword puzzle has been replaced by number
+  and direction, enclosed in angular brackets. For example, &lt;44R&gt; stands
+  for <q>number 44, to the right</q> and &lt;32D&gt; stands for <q>number 32, down</q>.
+  Terms are case insensitive. They end at bold lines - so for example
+  &lt;7D&gt; has 8 characters.
+  For printing, you can download the crossword puzzle in
+  <a href = "gap-crossword-puzzle.png"> full resolution </a> (1440&nbsp;x&nbsp;1200)
+  and the instructions as a <a href = "gap-crossword-puzzle.pdf">PDF</a> file.
+</p>
+
+<pre class = "logfile">
+<em class = "prompt">gap> </em><em class = "input">l := [ "course", " solve", " riddle.", " you", " this", " can", "Of " ];;</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;24D>( [ 2, 5, 7, 3, 6, 4, 1 ], l );; &lt;78R>( l );                       </em>
+<em class = "output">"Of course you can solve this riddle."</em>
+<em class = "prompt">gap></em><em class = "input"> List( [ 1 .. 25 ], &lt;44R> );</em>
+<em class = "output">[ 1, 2, 2, 3, 2, 4, 2, 4, 3, 4, 2, 6, 2, 4, 4, 5, 2, 6, 2, 6, 4, 4, 2, 8, 3 ]</em>
+<em class = "prompt">gap></em><em class = "input"> List( [ 1 .. 12 ], &lt;32D> );</em>
+<em class = "output">[ 1, 2, 5, 15, 52, 203, 877, 4140, 21147, 115975, 678570, 4213597 ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;2D>( 4 ) * &lt;59R>( 4 ) + 1;</em>
+<em class = "output">0</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;39D>( &lt;7D>( Integers, 4 ) );  </em>
+<em class = "output">[ 0, 0, 0, 0 ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;80R>( );</em>
+<em class = "output">not in any function</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;11D>( 2 ) + &lt;11D>( 3 );</em>
+<em class = "output">E(24)-E(24)^11-E(24)^14+E(24)^17-E(24)^19+E(24)^22</em>
+<em class = "prompt">gap></em><em class = "input"> List( [ 1, [ true, false ], "abc", (1,2) ], &lt;83R> );</em>
+<em class = "output">[ fail, fail, fail, fail ]</em>
+<em class = "prompt">gap></em><em class = "input"> List( [ 1, [ true, false ], "abc", (1,2) ], &lt;70R> );</em>
+<em class = "output">[ true, false, false, false ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;56R> = Indeterminate;</em>
+<em class = "output">true</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;67R>( SymmetricGroup( 4 ) );</em>
+<em class = "output">[ (), (3,4), (2,3), (2,3,4), (2,4), (1,2), (1,2)(3,4), (1,2,3), (1,2,3,4),
+  (1,2,4,3), (1,3), (1,3,4), (1,3)(2,4), (1,3,2,4), (1,4,2), (1,4),
+  (1,4)(2,3) ]</em>
+<em class = "prompt">gap></em><em class = "input"> List( &lt;13D>, &lt;10D> );</em>
+<em class = "output">[ 1, -1, -1, 1, -1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, 1 ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;22D>( &lt;17D>( [ 1 .. 100 ], &lt;28D> ) );</em>
+<em class = "output">36524</em>
+<em class = "prompt">gap></em><em class = "input"> List( &lt;49R>( 24 ), &lt;20D> );</em>
+<em class = "output">[ 24, 24, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 6, 6, 6 ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;86R>( &lt;26D>( &lt;61R> ), 2 );</em>
+<em class = "output">1379</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;85R>( [ 1 .. 10 ], n -> n^3 );</em>
+<em class = "output">3025</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;14D>( [ 1 .. 16 ], 2 );</em>
+<em class = "output">983041</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;73R>( &lt;72R>( 1 ) );</em>
+<em class = "output">Rationals</em>
+<em class = "prompt">gap></em><em class = "input"> List( [ GF(2), Integers, [1,2,3], Group((1,2),(1,2,3)) ], &lt;29D> );</em>
+<em class = "output">[ true, false, true, true ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;12D>( [ "This", "gets", "all", "smashed", "together." ] );</em>
+<em class = "output">".Tadeghilmorst"</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;5D>;</em>
+<em class = "output">&lt;5D></em>
+<em class = "prompt">gap></em><em class = "input"> &lt;63R>( [ 1 .. 10 ] );</em>
+<em class = "output">2520</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;37D>( 355/113 );</em>
+<em class = "output">3.14159</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;4D>( &lt;13D> );</em>
+<em class = "output">355/113</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;15D>(CharacterTable("A5"));</em>
+<em class = "output">[ "1a", "2a", "3a", "5a", "5b" ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;27D>( &lt;53R>( 27 ) );</em>
+<em class = "output">10073444472</em>
+<em class = "prompt">gap></em><em class = "input"> List( &lt;49R>( 12 ), &lt;51R> );</em>
+<em class = "output">[ false, true, false, false, true ]</em>
+<em class = "prompt">gap></em><em class = "input"> List( &lt;49R>( 16 ), G -> &lt;43R>( &lt;74R>( G ) ) );</em>
+<em class = "output">[ [ 2, 1 ], [ 4, 2 ], [ 4, 2 ], [ 4, 2 ], [ 4, 2 ], [ 2, 1 ], [ 2, 1 ],
+  [ 2, 1 ], [ 2, 1 ], [ 8, 5 ], [ 4, 2 ], [ 4, 2 ], [ 2, 1 ], [ 16, 14 ] ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;40D>( 31 ) - &lt;41D>( 31 );</em>
+<em class = "output">E(31)^2+E(31)^4-E(31)^5-E(31)^6+E(31)^8+E(31)^16-E(31)^25-E(31)^26-E(31)^30</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;82R>( 29 );</em>
+<em class = "output">E(29)+E(29)^7+E(29)^16+E(29)^20+E(29)^23+E(29)^24+E(29)^25</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;58R>( "abc", 5 );</em>
+<em class = "output">243</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;8D>( &lt;27D>( PSL( 3, 4 ) ), 1 );</em>
+<em class = "output">A5 x L3(2) 2^1</em>
+<em class = "prompt">gap></em><em class = "input"> SylowSubgroup( SymmetricGroup( 4 ), 2 );</em>
+<em class = "output">Group([ (1,2), (3,4), (1,3)(2,4) ])</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;81R>( &lt;13D> );</em>
+<em class = "output">Sym( [ 1 .. 4 ] )</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;60R>( (1,2), (2,3) );</em>
+<em class = "output">(1,2,3)</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;77R>( SymmetricGroup( 6 ), &lt;57R>( (1,2,3), (4,5,6) ) );</em>
+<em class = "output">Group([ (4,5,6), (1,2,3), (4,5), (2,3)(4,6), (1,4,3,6)(2,5) ])</em>
+<em class = "prompt">gap></em><em class = "input"> StructureDescription( &lt;13D> );</em>
+<em class = "output">"(S3 x S3) : C2"</em>
+<em class = "prompt">gap></em><em class = "input"> Rationals / &lt;21D>( Rationals, [ 1/2 ] );</em>
+<em class = "output">&lt;algebra over Rationals></em>
+<em class = "prompt">gap></em><em class = "input"> S := [ 1, 2, 4 ];;</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;66R>( S, 3 ); S;</em>
+<em class = "output">[ 1, 2, 3, 4 ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;16D>( S, [ 7, 8 ] ); S;</em>
+<em class = "output">[ 1, 2, 3, 4, 7, 8 ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;17D>( &lt;33D>( GAPInfo ), Length );</em>
+<em class = "output">[ 7, 4, 10, 13, 17, 12, 17, 17, 9, 8, 18, 19, 20, 16, 12, 18, 12, 10, 15, 25,
+  21, 9, 15, 14, 12, 8, 5, 16, 21, 16, 13, 20, 17, 20, 33, 22, 13, 23, 12 ]</em>
+<em class = "prompt">gap></em><em class = "input"> HasSize = &lt;31D>( &lt;27D> );</em>
+<em class = "output">true</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;78R>( Tuples( [ 1, 2 ], 3 ) );</em>
+<em class = "output">[ 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 2, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2, 2, 2 ]</em>
+<em class = "prompt">gap></em><em class = "input"> n := 27;;</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;69R></em>
+<em class = "prompt">></em><em class = "input">      &lt;75R> n mod 2 = 0 then n := n/2; &lt;46R> n := 3*n+1; &lt;48R>;</em>
+<em class = "prompt">></em><em class = "input">    until n = 1;</em>
+<em class = "prompt">gap></em><em class = "input"> n;</em>
+<em class = "output">1</em>
+<em class = "prompt">gap></em><em class = "input"> true &lt;79R> &lt;45R> false;</em>
+<em class = "output">true</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;84R>( &lt;84R>( &lt;61R> ) ) = &lt;61R>;</em>
+<em class = "output">true</em>
+<em class = "prompt">gap></em><em class = "input"> [[-1,0],[0,-1]] &lt;54R> &lt;57R>( [[1,1],[0,-1]], [[-1,-1],[0,1]] );</em>
+<em class = "output">true</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;76R>( (1,2,3)(4,5,6), Combinations( [ 1 .. 4 ], 3 ), OnTuples );</em>
+<em class = "output">[ [ [ 1, 2, 3 ], [ 2, 3, 1 ], [ 3, 1, 2 ] ],
+  [ [ 1, 2, 4 ], [ 2, 3, 5 ], [ 3, 1, 6 ] ],
+  [ [ 1, 3, 4 ], [ 2, 1, 5 ], [ 3, 2, 6 ] ],
+  [ [ 2, 3, 4 ], [ 3, 1, 5 ], [ 1, 2, 6 ] ] ]</em>
+<em class = "prompt">gap></em><em class = "input"> Action( &lt;57R>( (1,2,3), (3,4,5) ), Combinations( [ 1 .. 5 ], 2 ), &lt;55R> );</em>
+<em class = "output">Group([ (1,5,8,10,4)(2,6,9,3,7), (2,3,4)(5,6,7)(8,10,9) ])</em>
+<em class = "prompt">gap></em><em class = "input"> TransitiveGroup( 10, TransitiveIdentification( &lt;13D> ) );</em>
+<em class = "output">A_5(10)</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;68R>( &lt;13D>, [ 1 .. 10 ] );</em>
+<em class = "output">[ [ 1 .. 10 ] ]</em>
+<em class = "prompt">gap></em><em class = "input"> for x &lt;65R> &lt;3D>( Rationals ) &lt;6D></em>
+<em class = "prompt">></em><em class = "input">      &lt;62R>( l, &lt;36D>( x ) );</em>
+<em class = "prompt">></em><em class = "input">      &lt;34D> Length( l ) > 20 then break; &lt;48R>;</em>
+<em class = "prompt">></em><em class = "input">    od;</em>
+<em class = "prompt">gap></em><em class = "input"> l;</em>
+<em class = "output">[ 0, 1, -1, 0.5, 2, -0.5, -2, 0.333333, 0.666667, 1.5, 3, -0.333333, 
+  -0.666667, -1.5, -3, 0.25, 0.75, 1.33333, 4, -0.25, -0.75 ]</em>
+<em class = "prompt">gap></em><em class = "input"> IsOperation( &lt;9D> );</em>
+<em class = "output">true</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;64R>( &lt;61R>, 17 ); </em>
+<em class = "output">7</em>
+<em class = "prompt">gap></em><em class = "input"> Collected( List( Tuples( [ 1 .. 4 ], 4 ), &lt;35D> ) );</em>
+<em class = "output">[ [ 1, 175 ], [ 2, 65 ], [ 3, 15 ], [ 4, 1 ] ]</em>
+<em class = "prompt">gap></em><em class = "input"> List( [ 0 .. 12 ], k -> &lt;25D>( &lt;19D>( 13, k ), &lt;19D>( 13, k + 1 ) ) );</em>
+<em class = "output">[ 1, 13, 26, 143, 143, 429, 1716, 429, 143, 143, 26, 13, 1 ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;38D>( Group((1,2,3),(2,3,4)), Group((1,2)(3,4),(1,3)(2,4)) );</em>
+<em class = "output">Group([ (1,2)(3,4), (1,3)(2,4) ])</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;27D>( &lt;42R>( [[1,0],[1,0]], [[0,1],[0,0]], [[0,0],[1,0]] ) );</em>
+<em class = "output">7</em>
+<em class = "prompt">gap></em><em class = "input"> Q := [1,1];; for n in [3..32] &lt;30D> Q[n] := Q[n-Q[n-1]] + Q[n-Q[n-2]]; od;</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;1D>( Q ); Q;</em>
+<em class = "output">[ 1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 6, 8, 8, 8, 9, 10, 10, 11, 11, 12, 12, 12, 
+  12, 14, 14, 16, 16, 16, 16, 16, 17, 20 ]</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;50R>( [ 1 .. 1000 ], n -> &lt;45R> IsPrime( n ) &lt;79R> 2^(n-1) mod n = 1 );</em>
+<em class = "output">341</em>
+<em class = "prompt">gap></em><em class = "input"> List( Arrangements( [ 1 .. 4 ], 4 ), l -> &lt;23D>( &lt;18D>( l ) ) );</em>
+<em class = "output">[ 1, -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, 1, 1, 
+  -1, -1, 1 ]</em>
+<em class = "prompt">gap></em><em class = "input"> List( [ 0 .. 20 ], n -> &lt;52R>( SIN_FLOAT( &lt;37D>( n/20 * 355/113 ) ) ) );</em>
+<em class = "output">[ 0, 265/1694, 7680/24853, 2975/6553, 9297/15817, 7711/10905, 11251/13907, 
+  1496/1679, 6121/6436, 5375/5442, 1, 6097/6173, 7967/8377, 9818/11019, 
+  1292/1597, 17293/24456, 7603/12935, 5427/11954, 682/2207, 12791/81766, 0 ]</em>
+<em class = "prompt">gap></em><em class = "input"> F2 := FreeGroup(2);; G := F2/[F2.1^2,F2.2^F2.1*F2.2,Comm(F2.1,F2.2)^2];;</em>
+<em class = "prompt">gap></em><em class = "input"> &lt;47R>(KnuthBendixRewritingSystem(Image(IsomorphismFpMonoid(G))));</em>
+<em class = "output">[ [ f1^-1*f1, &lt;identity ...> ], [ f1*f1^-1, &lt;identity ...> ], 
+  [ f1^2, &lt;identity ...> ] ]</em>
+<em class = "prompt">gap></em><em class = "input"> MakeReadWriteGlobal( "&lt;71R>" ); Unbind( &lt;71R> );</em>
+<em class = "prompt">gap></em><em class = "input"> Factors( 27^41 - 41^27 );</em>
+<em class = "output">Variable: '&lt;71R>' must have an assigned value at
+Point := &lt;71R>( Point, q ^ qExponent, n, a );
+ called from
+ECMTryCurve( n, Curve, X, Z, a, Limit1, Limit2, StartingTime ) called from
+...</em>
+</pre>
+
+<table class = "footer" width = "100%" cellspacing = "1" cellpadding = "2"
+       summary = "This table tells you the date of the last modification of this file.">
+  <tr> <td> Back to <a class = "footer" href = "http://www.gap-system.org/DevelopersPages/StefanKohl/" target = "_parent">main page</a> </td>
+       <td> <p align = "right"> Last modified: 21-Feb-2010 </p> </td> </tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+
+\usepackage{german}
+\usepackage[latin1]{inputenc}
+\usepackage{theorem}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsbsy}
+\usepackage{amstext}
+\usepackage{amsxtra}
+
+\oddsidemargin   0.0cm
+\evensidemargin  0.0cm
+\topmargin      -1.0cm
+\textwidth      16.0cm
+\textheight     25.0cm
+
+\pagestyle{empty}
+
+\makeatletter 
+\newcommand{\qedChar}{\mbox{$\square$}}
+\newcommand{\qed}{{\unskip\nobreak\hfil\penalty50\hskip .001pt \mbox{}
+          \nobreak\hfil\qedChar 
+           \parfillskip=0pt\finalhyphendemerits=0\medbreak}\rm}
+\makeatother 
+
+\begin{document}
+
+\noindent \textbf{Theorem}
+\emph{
+  Let \(n = p_1 p_2 p_3\) be a Carmichael number with 3 prime factors.
+  Without loss of generality, assume that \(p_2 < p_3\).
+  Then the following hold:
+  \begin{enumerate}
+    \item \(p_2 < 2p_1^2\).
+    \item \(p_3 < 2p_1^3\).
+    \item \(n < 4p_1^6\).
+  \end{enumerate}}
+\noindent \textbf{Proof:}
+  It is an elementary property of Carmichael numbers \(n = p_1 \cdot \; \dots \; \cdot p_k\) that
+  \(\forall i \in \{1, \dots, k\} \; (p_i - 1) | (n - 1)\). From this, in case \(k = 3\)
+  we conclude
+  \begin{itemize}
+    \item \((p_3 - 1)|(p_1 p_2 - 1) \Rightarrow p_1 p_2 - 1 = a(p_3 - 1)\) 
+          for some \(a \in \mathbb{N}\), and
+    \item \((p_2 - 1)|(p_1 p_3 - 1) \Rightarrow p_1 p_3 - 1 = b(p_2 - 1)\) 
+          for some \(b \in \mathbb{N}\).
+  \end{itemize}
+  The assumption \(p_2 < p_3\) implies \(a < b\), and further
+  \begin{itemize}
+    \item \(a \geq 2\) since \(p_1 p_2 - 1 = 1(p_3 - 1)\) contradicts the primality of~\(p_3\), and
+    \item \(b \geq 2\) since \(p_1 p_3 - 1 = 1(p_2 - 1)\) contradicts the primality of~\(p_2\).
+  \end{itemize}
+  We also get
+  \begin{itemize}
+    \item \(p_1 p_2 - 1 = a(p_3 - 1) = a p_3 - a \Longrightarrow p_3 = (p_1 p_2 + a - 1)/a\), and
+    \item \(p_1 p_3 - 1 = b(p_2 - 1) = b p_2 - b \Longrightarrow p_2 = (p_1 p_3 + b - 1)/b\).
+  \end{itemize}
+  Inserting the former equation into the latter yields
+  \[
+    p_2 \ = \ \frac{p_1 (p_1 p_2 + a - 1)/a + b - 1}{b}
+        \ = \ \frac{p_1^2 p_2 + ab + (p_1 - 1)a - p_1}{ab}.
+  \]
+  This implies that
+  \[
+    (p_1^2 -ab)p_2 + ab + (p_1 - 1)a - p_1 \ = \ 0,
+  \]
+  from which we get
+  \[
+    p_2 \ = \ \frac{ab + (p_1 - 1)a - p_1}{ab - p_1^2} 
+        \ < \ \frac{ab}{ab - p_1^2} \ + \ \frac{(p_1 - 1)a}{ab - p_1^2}.
+  \]
+  We have \(ab \neq p_1^2\), since assuming the contrary yields \(a = b = p_1
+  \Rightarrow p_1 p_2 - 1 = p_1 (p_3 - 1) \Rightarrow p_3 = p_2 + 1 - 1/p_1 \notin \mathbb{N}\),
+  which is not possible. Further it is \(ab > p_1^2\) since \(p_2 > 0\) and
+  \(ab + (p_1 - 1)a > 0\). This yields
+  \[
+    \frac{ab}{ab - p_1^2} \ \leq \ \frac{p_1^2 + 1}{(p_1^2 + 1) - p_1^2} \ = \ p_1^2 + 1.
+  \]
+  By the assumption \(p_2 < p_3\) we have \(p_1(p_3 - 1) > p_1 p_2 - 1 = a(p_3 - 1)\),
+  hence \(a < p_1\). We conclude that
+  \[
+    \frac{(p_1 - 1)a}{ab - p_1^2} \ < \ \frac{(p_1 - 1)p_1}{ab - p_1^2} \ \leq \ p_1^2 - p_1.
+  \]
+  This yields \(p_2 < p_1^2 + 1 + p_1^2 - p_1 < 2p_1^2\), as claimed.
+  From \(p_1 p_2 - 1 = a(p_3 - 1)\) we get \(p_3 < p_1 p_2 < 2p_1^3\),
+  and finally \(n = p_1 p_2 p_3 < p_1 \cdot 2p_1^2 \cdot 2p_1^3 = 4p_1^6\). \qed
+
+\end{document}

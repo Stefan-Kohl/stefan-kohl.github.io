@@ -1,0 +1,309 @@
+gap> Factors(1093^28+1:Pminus1Limit1:=250000,ECMCurves:=256,ECMLimit1:=10000,
+             ECMDelta:=100,ECMLimit2:=1000000,Pplus1Limit1:=25000);
+#I  
+#I  Check for n = b^k +/- 1
+#I  
+120604783831868319714361188926040065699900262125810019185409703521265062910696\
+10672402 = 1093^28 + 1
+#I  The factors corresponding to polynomial factors are
+[ 1427186233202, 
+  8450528811596114346412493592648523582188327098989722278623638076982859601 ]
+#I  
+#I  Factors already found : [  ]
+#I  
+#I  
+#I  Trial division by all primes p < 1000
+#I  Intermediate result : [ [ 2, 41, 17404710161 ], [  ] ]
+#I  
+#I  Factors already found : [ 2, 41, 17404710161 ]
+#I  
+#I  
+#I  Trial division by some already known primes
+#I  
+#I  Check for perfect powers
+#I  
+#I  Pollard's Rho
+Steps = 16384, Cluster = 795
+Number to be factored : 
+8450528811596114346412493592648523582188327098989722278623638076982859601
+#I  Intermediate result : 
+[ [ 68489 ], [ 123385197792289482200243741223386581526790099125256935838216911\
+868809 ] ]
+#I  
+#I  Factors already found : [ 2, 41, 68489, 17404710161 ]
+#I  
+#I  
+#I  Pollard's p - 1
+Limit1 = 250000, Limit2 = 10000000
+Number to be factored : 
+123385197792289482200243741223386581526790099125256935838216911868809
+#I  Initializing prime differences list, PrimeDiffLimit = 10000000
+#I  p-1 for n = 
+123385197792289482200243741223386581526790099125256935838216911868809
+a : 2, Limit1 : 250000, Limit2 : 10000000
+#I  First stage
+#I  Second stage
+#I  
+#I  Williams' p + 1
+Residues = 2, Limit1 = 25000, Limit2 = 1000000
+Number to be factored : 
+123385197792289482200243741223386581526790099125256935838216911868809
+#I  p+1 for n = 
+123385197792289482200243741223386581526790099125256935838216911868809
+Residues : 2, Limit1 : 25000, Limit2 : 1000000
+#I  Residue no. 1
+#I  First stage
+#I  Second stage
+#I  Residue no. 2
+#I  First stage
+#I  Second stage
+#I  
+#I  Elliptic Curves Method (ECM)
+Curves = 256
+Init. Limit1 = 10000, Init. Limit2 = 1000000, Delta = 100
+Number to be factored : 
+123385197792289482200243741223386581526790099125256935838216911868809
+#I  ECM for n = 
+123385197792289482200243741223386581526790099125256935838216911868809
+Curves : 256, Initial Limit1 : 10000, Initial Limit2 : 1000000, Delta : 100
+#I  Curve no.      1, Limit1 :   10000, Limit2 :  1000000
+#I  First stage
+#I  Second stage
+#I  Curve no.      2, Limit1 :   10100, Limit2 :  1010000
+#I  First stage
+#I  Second stage
+#I  Curve no.      3, Limit1 :   10200, Limit2 :  1020000
+#I  First stage
+#I  Second stage
+#I  Curve no.      4, Limit1 :   10300, Limit2 :  1030000
+#I  First stage
+#I  Second stage
+#I  Curve no.      5, Limit1 :   10400, Limit2 :  1040000
+#I  First stage
+#I  Second stage
+#I  Curve no.      6, Limit1 :   10500, Limit2 :  1050000
+#I  First stage
+#I  Second stage
+#I  Curve no.      7, Limit1 :   10600, Limit2 :  1060000
+#I  First stage
+#I  Second stage
+#I  Curve no.      8, Limit1 :   10700, Limit2 :  1070000
+#I  First stage
+#I  Second stage
+#I  Curve no.      9, Limit1 :   10800, Limit2 :  1080000
+#I  First stage
+#I  Second stage
+#I  Curve no.     10, Limit1 :   10900, Limit2 :  1090000
+#I  First stage
+#I  Second stage
+#I  Curve no.     11, Limit1 :   11000, Limit2 :  1100000
+#I  First stage
+#I  Second stage
+#I  Curve no.     12, Limit1 :   11100, Limit2 :  1110000
+#I  First stage
+#I  Second stage
+#I  Curve no.     13, Limit1 :   11200, Limit2 :  1120000
+#I  First stage
+#I  Second stage
+#I  Curve no.     14, Limit1 :   11300, Limit2 :  1130000
+#I  First stage
+#I  Second stage
+#I  Curve no.     15, Limit1 :   11400, Limit2 :  1140000
+#I  First stage
+#I  Second stage
+#I  Curve no.     16, Limit1 :   11500, Limit2 :  1150000
+#I  First stage
+#I  Second stage
+#I  Curve no.     17, Limit1 :   11600, Limit2 :  1160000
+#I  First stage
+#I  Second stage
+#I  Curve no.     18, Limit1 :   11700, Limit2 :  1170000
+#I  First stage
+#I  Second stage
+#I  Curve no.     19, Limit1 :   11800, Limit2 :  1180000
+#I  First stage
+#I  Second stage
+#I  Curve no.     20, Limit1 :   11900, Limit2 :  1190000
+#I  First stage
+#I  Second stage
+#I  Curve no.     21, Limit1 :   12000, Limit2 :  1200000
+#I  First stage
+#I  Second stage
+#I  Curve no.     22, Limit1 :   12100, Limit2 :  1210000
+#I  First stage
+#I  Second stage
+#I  Curve no.     23, Limit1 :   12200, Limit2 :  1220000
+#I  First stage
+#I  Second stage
+#I  Curve no.     24, Limit1 :   12300, Limit2 :  1230000
+#I  First stage
+#I  Second stage
+#I  Curve no.     25, Limit1 :   12400, Limit2 :  1240000
+#I  First stage
+#I  Second stage
+#I  Curve no.     26, Limit1 :   12500, Limit2 :  1250000
+#I  First stage
+#I  Second stage
+#I  Curve no.     27, Limit1 :   12600, Limit2 :  1260000
+#I  First stage
+#I  Second stage
+#I  Curve no.     28, Limit1 :   12700, Limit2 :  1270000
+#I  First stage
+#I  Second stage
+#I  Curve no.     29, Limit1 :   12800, Limit2 :  1280000
+#I  First stage
+#I  Second stage
+#I  Curve no.     30, Limit1 :   12900, Limit2 :  1290000
+#I  First stage
+#I  Second stage
+#I  Curve no.     31, Limit1 :   13000, Limit2 :  1300000
+#I  First stage
+#I  Second stage
+#I  Curve no.     32, Limit1 :   13100, Limit2 :  1310000
+#I  First stage
+#I  Second stage
+#I  Curve no.     33, Limit1 :   13200, Limit2 :  1320000
+#I  First stage
+#I  Second stage
+#I  Curve no.     34, Limit1 :   13300, Limit2 :  1330000
+#I  First stage
+#I  Second stage
+#I  Curve no.     35, Limit1 :   13400, Limit2 :  1340000
+#I  First stage
+#I  Second stage
+#I  Curve no.     36, Limit1 :   13500, Limit2 :  1350000
+#I  First stage
+#I  Second stage
+#I  Curve no.     37, Limit1 :   13600, Limit2 :  1360000
+#I  First stage
+#I  Second stage
+#I  Curve no.     38, Limit1 :   13700, Limit2 :  1370000
+#I  First stage
+#I  Second stage
+#I  Curve no.     39, Limit1 :   13800, Limit2 :  1380000
+#I  First stage
+#I  Second stage
+#I  Curve no.     40, Limit1 :   13900, Limit2 :  1390000
+#I  First stage
+#I  Second stage
+#I  Curve no.     41, Limit1 :   14000, Limit2 :  1400000
+#I  First stage
+#I  Second stage
+#I  Curve no.     42, Limit1 :   14100, Limit2 :  1410000
+#I  First stage
+#I  Second stage
+#I  Curve no.     43, Limit1 :   14200, Limit2 :  1420000
+#I  First stage
+#I  Second stage
+#I  Curve no.     44, Limit1 :   14300, Limit2 :  1430000
+#I  First stage
+#I  Second stage
+#I  Curve no.     45, Limit1 :   14400, Limit2 :  1440000
+#I  First stage
+#I  Second stage
+#I  Curve no.     46, Limit1 :   14500, Limit2 :  1450000
+#I  First stage
+#I  Second stage
+#I  Curve no.     47, Limit1 :   14600, Limit2 :  1460000
+#I  First stage
+#I  Second stage
+#I  Curve no.     48, Limit1 :   14700, Limit2 :  1470000
+#I  First stage
+#I  Second stage
+#I  Curve no.     49, Limit1 :   14800, Limit2 :  1480000
+#I  First stage
+#I  Second stage
+#I  Curve no.     50, Limit1 :   14900, Limit2 :  1490000
+#I  First stage
+#I  Second stage
+#I  Curve no.     51, Limit1 :   15000, Limit2 :  1500000
+#I  First stage
+#I  Second stage
+#I  Curve no.     52, Limit1 :   15100, Limit2 :  1510000
+#I  First stage
+#I  Second stage
+#I  Curve no.     53, Limit1 :   15200, Limit2 :  1520000
+#I  First stage
+#I  Second stage
+#I  Curve no.     54, Limit1 :   15300, Limit2 :  1530000
+#I  First stage
+#I  Second stage
+#I  Curve no.     55, Limit1 :   15400, Limit2 :  1540000
+#I  First stage
+#I  Second stage
+#I  Curve no.     56, Limit1 :   15500, Limit2 :  1550000
+#I  First stage
+#I  Second stage
+#I  Curve no.     57, Limit1 :   15600, Limit2 :  1560000
+#I  First stage
+#I  Second stage
+#I  Curve no.     58, Limit1 :   15700, Limit2 :  1570000
+#I  First stage
+#I  Second stage
+#I  Curve no.     59, Limit1 :   15800, Limit2 :  1580000
+#I  First stage
+#I  Second stage
+#I  Curve no.     60, Limit1 :   15900, Limit2 :  1590000
+#I  First stage
+#I  Second stage
+#I  Curve no.     61, Limit1 :   16000, Limit2 :  1600000
+#I  First stage
+#I  Second stage
+#I  Curve no.     62, Limit1 :   16100, Limit2 :  1610000
+#I  First stage
+#I  Second stage
+#I  Curve no.     63, Limit1 :   16200, Limit2 :  1620000
+#I  First stage
+#I  Second stage
+#I  Curve no.     64, Limit1 :   16300, Limit2 :  1630000
+#I  First stage
+#I  Second stage
+#I  Curve no.     65, Limit1 :   16400, Limit2 :  1640000
+#I  First stage
+#I  Second stage
+#I  Curve no.     66, Limit1 :   16500, Limit2 :  1650000
+#I  First stage
+#I  Second stage
+#I  Curve no.     67, Limit1 :   16600, Limit2 :  1660000
+#I  First stage
+#I  Second stage
+#I  Curve no.     68, Limit1 :   16700, Limit2 :  1670000
+#I  First stage
+#I  Second stage
+#I  Curve no.     69, Limit1 :   16800, Limit2 :  1680000
+#I  First stage
+#I  Second stage
+#I  Curve no.     70, Limit1 :   16900, Limit2 :  1690000
+#I  First stage
+#I  Second stage
+#I  Curve no.     71, Limit1 :   17000, Limit2 :  1700000
+#I  First stage
+#I  Second stage
+#I  Curve no.     72, Limit1 :   17100, Limit2 :  1710000
+#I  First stage
+#I  Second stage
+#I  Curve no.     73, Limit1 :   17200, Limit2 :  1720000
+#I  First stage
+#I  Second stage
+#I  Curve no.     74, Limit1 :   17300, Limit2 :  1730000
+#I  First stage
+#I  Second stage
+#I  Curve no.     75, Limit1 :   17400, Limit2 :  1740000
+#I  First stage
+#I  Second stage
+#I  Curve no.     76, Limit1 :   17500, Limit2 :  1750000
+#I  First stage
+#I  Second stage
+#I  Factor 424747962122189061704041 was found
+#I  Intermediate result : 
+[ [ 424747962122189061704041, 290490382051073231478800385526362271396418849 ],
+  [  ] ]
+#I  
+#I  The result is
+[ [ 2, 41, 68489, 17404710161, 424747962122189061704041, 
+      290490382051073231478800385526362271396418849 ], [  ] ]
+
+[ 2, 41, 68489, 17404710161, 424747962122189061704041, 
+  290490382051073231478800385526362271396418849 ]
+gap>
+

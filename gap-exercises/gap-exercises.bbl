@@ -1,0 +1,84 @@
+\begin{thebibliography}{Koh07b}
+
+\bibitem[BEO07]{SmallGroups}
+H.~U. Besche, B.~Eick, and E.~O'Brien.
+\newblock {\em {The SmallGroups Library}}, 2007.
+\newblock GAP package, \href {http://www.gap-system.org/Packages/sgl.html}
+  {\texttt{http://www.gap-system.org/}\discretionary
+  {}{}{}\texttt{Packages/}\discretionary {}{}{}\texttt{sgl.html}}.
+
+\bibitem[Dok03]{Dokchitser03}
+T.~Dokchitser.
+\newblock {LLL \& ABC}, 2003.
+\newblock \href {http://arxiv.org/abs/math.NT/0307322}
+  {\texttt{http://arxiv.org/}\discretionary {}{}{}\texttt{abs/}\discretionary
+  {}{}{}\texttt{math.NT/}\discretionary {}{}{}\texttt{0307322}}.
+
+\bibitem[Koh07a]{FactInt}
+S.~Kohl.
+\newblock {\em {FactInt -- Advanced Methods for Factoring Integers (Version
+  1.5.2)}}, 2007.
+\newblock GAP package, \href {http://www.gap-system.org/Packages/factint.html}
+  {\texttt{http://www.gap-system.org/}\discretionary
+  {}{}{}\texttt{Packages/}\discretionary {}{}{}\texttt{factint.html}}.
+
+\bibitem[Koh07b]{RCWA}
+S.~Kohl.
+\newblock {\em {RCWA -- Residue-Class-Wise Affine Groups (Version 2.5.4)}},
+  2007.
+\newblock GAP package, \href {http://www.gap-system.org/Packages/rcwa.html}
+  {\texttt{http://www.gap-system.org/}\discretionary
+  {}{}{}\texttt{Packages/}\discretionary {}{}{}\texttt{rcwa.html}}.
+
+\bibitem[Koh07c]{ResClasses}
+S.~Kohl.
+\newblock {\em {ResClasses -- Set-Theoretic Computations with Residue Classes
+  (Version 2.5.3)}}, 2007.
+\newblock GAP package, \href
+  {http://www.gap-system.org/Packages/resclasses.html}
+  {\texttt{http://www.gap-system.org/}\discretionary
+  {}{}{}\texttt{Packages/}\discretionary {}{}{}\texttt{resclasses.html}}.
+
+\bibitem[Lag02]{Lagarias02}
+J.~C. Lagarias.
+\newblock An elementary problem equivalent to the {Riemann} hypothesis.
+\newblock {\em Amer. Math. Monthly}, 109:534--543, 2002.
+
+\bibitem[Lag07]{Lagarias07}
+J.~C. Lagarias.
+\newblock 3x+1 problem annotated bibliography, 2007.
+\newblock Part I: \href {http://arxiv.org/abs/math.NT/0309224}
+  {\texttt{http://arxiv.org/}\discretionary {}{}{}\texttt{abs/}\discretionary
+  {}{}{}\texttt{math.NT/}\discretionary {}{}{}\texttt{0309224}}, Part II: \href
+  {http://arxiv.org/abs/math.NT/0608208}
+  {\texttt{http://arxiv.org/}\discretionary {}{}{}\texttt{abs/}\discretionary
+  {}{}{}\texttt{math.NT/}\discretionary {}{}{}\texttt{0608208}}.
+
+\bibitem[LN06]{GAPDoc}
+F.~L{\"u}beck and M.~Neunh{\"o}ffer.
+\newblock {\em {GAPDoc (Version 1.0)}}.
+\newblock RWTH Aachen, 2006.
+\newblock GAP package, \href {http://www.gap-system.org/Packages/gapdoc.html}
+  {\texttt{http://www.gap-system.org/}\discretionary
+  {}{}{}\texttt{Packages/}\discretionary {}{}{}\texttt{gapdoc.html}}.
+
+\bibitem[MS95]{MacHaleSheehy95}
+D.~MacHale and R.~Sheehy.
+\newblock Finite groups with odd order automorphism groups.
+\newblock {\em Proc. Roy. Irish Acad. Sect. A}, 95:113--116, 1995.
+
+\bibitem[Paz80]{Pazderski80}
+G.~Pazderski.
+\newblock The orders of which only belong metabelian groups.
+\newblock {\em Math. Nachr.}, 95:7--16, 1980.
+
+\bibitem[Soi02]{GRAPE}
+L.~Soicher.
+\newblock {\em {GRAPE -- GRaph Algorithms using PErmutation groups (Version
+  4.1)}}.
+\newblock Queen Mary, University of London, 2002.
+\newblock GAP package, \href {http://www.gap-system.org/Packages/grape.html}
+  {\texttt{http://www.gap-system.org/}\discretionary
+  {}{}{}\texttt{Packages/}\discretionary {}{}{}\texttt{grape.html}}.
+
+\end{thebibliography}

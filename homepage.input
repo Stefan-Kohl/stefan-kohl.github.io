@@ -1,0 +1,3539 @@
+§index.css§25-Sep-2010§
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  index.css            Homepage Style File            Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body {
+  background-color: #FFFFFF;
+  color:            #000000;
+
+  margin-top:     1cm;
+  margin-bottom:  1cm;
+  margin-left:    1cm;
+  margin-right:   1cm;
+
+  font-family: Helvetica,Verdana,Arial,sans-serif;
+  font-size: 10pt;
+}
+
+h1.publications { font-size:           200%;
+                  color:            #000000;
+                  background-color: #FFFFFF;
+                  text-align:        center;
+                  margin-bottom:        8mm; }
+
+h1.thesis { font-size:           300%;
+            color:            #507020;
+            background-color: #FFFFFF;
+            text-align:        center;
+            margin-bottom:        8mm; }
+
+h1.package { font-size:           300%;
+             color:            #507020;
+             background-color: #FFFFFF;
+             text-align:        center;
+             margin-bottom:        8mm; }
+
+h1.problems { font-size:           175%;
+              color:            #F00000;
+              background-color: #FFFFFF;
+              text-align:        center;
+              margin-bottom:        8mm; }
+
+h1.abstract { font-size:           125%;
+              color:            #000000;
+              background-color: #FFFFFF;
+              margin-bottom:        8mm; }
+
+h1.syllabus { font-size:           200%;
+              color:            #000000;
+              background-color: #FFFFFF;
+              text-align:        center;
+              margin-bottom:        8mm; }
+
+h1.other { font-size:        175%;
+           color:            #000000;
+           background-color: #FFFFFF;
+           margin-bottom:    8mm; }
+
+h2 { font-size:        140%;
+     color:            #000000;
+     background-color: #FFFFFF; }
+
+h2.minorheading { font-size:        120%;
+                  color:            #000000;
+                  background-color: #FFFFFF;
+                  margin-bottom:    4mm; }
+
+p.subtitle { font-size:     160%;
+             text-align:    center;
+             margin-bottom: 8mm; }
+
+p.myname { font-size:     140%;
+           text-align:    center; 
+           margin-bottom: 8mm; }
+
+p.display { font-size:     100%;
+            text-align:    center;
+            margin-top:    3mm;
+            margin-bottom: 3mm; }
+
+p.normaltext { text-align:    justify; }
+
+p.firstparagraph { text-align:    justify;
+                   margin-bottom: 0mm; }
+
+p.middleparagraph { text-align:    justify;
+                    text-indent:   7.5mm;
+                    margin-top:    0mm;
+                    margin-bottom: 0mm; }
+
+p.lastparagraph { text-align:    justify;
+                  text-indent:   7.5mm;
+                  margin-top:    0mm; }
+
+em.introducingwords { color:            #408000;
+                      background-color: #FFFFFF;
+                      font-style:       normal; }
+
+em.partsofheading { color:            #507020;
+                    background-color: #FFFFFF;
+                    font-style:        normal; }
+
+table.list { margin-bottom: 5mm; }
+
+table.footer { margin-top:       0mm;
+               margin-bottom:    0mm;
+               color:            #000000;
+               background-color: {MENU BACKGROUND}; }
+
+a:link    { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:visited { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:active  { color: #000000; background-color: #FFFFFF; text-decoration: none; }
+
+a.footer:link    { color: #0000AE; background-color: {MENU BACKGROUND}; text-decoration: none; }
+a.footer:visited { color: #0000AE; background-color: {MENU BACKGROUND}; text-decoration: none; }
+a.footer:active  { color: #000000; background-color: {MENU BACKGROUND}; text-decoration: none; }
+
+tt,code,pre { font-family: "Courier New",Courier,monospace;
+              font-size:                              100%; 
+              color:                               #284D49;
+              background-color:                    #FFFFFF; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */
+§menu.css§25-Sep-2010§
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  menu.css          Contents Menu Style File          Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body {
+  color:            #000000;
+  background-color: {MENU BACKGROUND};
+  margin-top:           1cm;
+  margin-bottom:      0.5cm;
+  margin-left:       0.25cm;
+  margin-right:      0.25cm;
+
+  font-family: Helvetica,Verdana,Arial,sans-serif;
+  font-size: 10pt;
+}
+
+h1 { font-size:           130%;
+     color:            #000000;
+     background-color: {MENU BACKGROUND};
+     text-align:          left;
+     margin-bottom:        5mm; 
+     margin-left:          1mm; }
+
+p.remark { font-size:      12pt;
+           text-align:  justify;
+           margin-top:      2mm;
+           margin-bottom:   2mm;
+           margin-left:     3mm;
+           margin-right:    3mm; }
+
+p.footnote { font-size:      80%;
+             text-align:   right;
+             margin-top:    20mm;
+             margin-bottom: 10mm;
+             margin-left:    3mm;
+             margin-right:   3mm; }
+
+a:link    { color: #0000AE; background-color: {MENU BACKGROUND}; text-decoration: none; }
+a:visited { color: #0000AE; background-color: {MENU BACKGROUND}; text-decoration: none; }
+a:active  { color: #000000; background-color: {MENU BACKGROUND}; text-decoration: none; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */
+§main.css§25-Sep-2010§
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  main.css            Main Page Style File            Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body {
+  color:            #000000;
+  background-color: #FFFFFF;
+
+  margin-top:    1cm;
+  margin-bottom: 1cm;
+  margin-left:   1cm;
+  margin-right:  1cm;
+
+  font-family: Helvetica,Verdana,Arial,sans-serif;
+  font-size:  10pt;
+}
+
+h1 {
+  font-size:            1cm;
+  color:            #0000FF;
+  background-color: #FFFFFF;
+  text-align:         right;
+  margin-bottom:        0mm;
+}
+
+b.address { font-size: 125%; }
+
+p.portrait { text-align: right; }
+
+p.footnote { font-size:   70%;
+             text-align:  left;
+             margin-top:  0mm; }
+
+a:link    { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:visited { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:active  { color: #000000; background-color: #FFFFFF; text-decoration: none; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */
+§index.html§16-Jun-2016§
+{Frameset DTD}
+<html>
+
+<head>
+  <title> Stefan Kohl </title>
+  <meta name = "description"          content = "Homepage of a mathematician working on group theory." />
+  <meta name = "keywords"             content = "Mathematics, Algebra, Group Theory, Permutation Groups, Infinite Permutation Groups, Residue-Class-Wise Affine Groups, 3n+1 Conjecture, Collatz Conjecture, Automorphisms, Simple Groups, Number Theory, GAP, RCWA, FactInt, ResClasses" />
+  <meta name = "DC.title"             content = "Stefan Kohl" />
+  <meta name = "DC.title.alternative" content = "Homepage of Stefan Kohl" />
+  <meta name = "DC.creator.name"      content = "Kohl, Stefan" />
+  <meta name = "DC.description"       content = "Homepage of a mathematician working on group theory." />
+  <meta name = "DC.date.current"      content = "(SCHEME=ISO8601) 2010-03-27" />
+  <meta name = "DC.type"              content = "Homepage" />
+  <meta name = "DC.format"            content = "(SCHEME=imt) text/html" />
+  <meta name = "DC.identifier"        content = "(SCHEME=URL) http://www.gap-system.org/DevelopersPages/StefanKohl/" />
+  <meta name = "DC.language"          content = "(SCHEME=NISOZ39.53) ENG" />
+  {index.css}
+</head>
+
+<frameset cols = "20%,80%">
+  <frame src = "contents.html" id = "controlbar" name = "controlbar" noresize = "noresize" frameborder = "0"/>
+  <frame src = "main.html"     id = "mainwindow" name = "mainwindow" noresize = "noresize" frameborder = "0"/>
+  <noframes>
+    <body>
+      Sorry, your browser does not support frames ... :-(
+    </body>
+  </noframes>
+</frameset>
+
+</html>
+§contents.html§15-Sep-2015§
+{DTD}
+<html>
+
+<head>
+  <title> Table of Contents </title>
+  {menu.css}
+</head>
+
+<body>
+
+<h1> Table of Contents </h1>
+
+<table width = "100%" cellspacing = "5" cellpadding = "0"
+       summary = "This is the table of contents of the homepage of Stefan Kohl.">
+
+  <tr> <td nowrap = "nowrap"> <a href = "cv_kohl.html" target = "mainwindow">Curriculum vitae</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> <a href = "publications_kohl.html" target = "mainwindow">Publications</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> <a href = "teaching_kohl.html" target = "mainwindow">Teaching</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> <a href = "talks_kohl.html" target = "mainwindow">Talks / conferences</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> {GAP} packages: </td> </tr>
+  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "rcwa.html" target = "mainwindow">RCWA</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "resclasses.html" target = "mainwindow">ResClasses</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "factint.html" target = "mainwindow">FactInt</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> GAP <a href = "gap-materials.html" target = "mainwindow">exercises</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> <a href = "motivated_papers.html" target = "mainwindow">Papers</a> motivated by </td> </tr>
+  <tr> <td nowrap = "nowrap"> questions of mine. </td> </tr>
+  <tr> <td nowrap = "nowrap"> <a href = "miscellanea.html" target = "mainwindow">Miscellanea</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> <a href = "links.html" target = "mainwindow">External links</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> <a href = "cpr.html" target = "mainwindow">Copyright</a>. </td> </tr>
+
+</table>
+
+<br />
+
+</body>
+
+</html>
+§main.html§30-Sep-2016§
+{DTD}
+<html>
+
+<head>
+  <title> Stefan Kohl </title>
+  <meta name    = "keywords" 
+        content = "Mathematics, Algebra, Group Theory, Automorphisms, Simple Groups, Number Theory, GAP, FactInt" />
+  {main.css}
+</head>
+
+<body>
+
+<b class = "address"> Dr. Stefan Kohl </b> <br />
+<b class = "address"> E-mail: <a href = "mailto:{MYMAIL}">{MYMAIL}</a> </b> <br />
+
+<hr />
+
+<br />
+
+<table width = "100%" cellspacing = "0" cellpadding = "0"
+       summary = "This table contains the address and a photo of Stefan Kohl.">
+
+  <tr>
+    <td valign = "top">
+    </td>
+    <td rowspan = "2">
+      <p class = "portrait">
+        <img src = "images/portrait.jpg" width = "400" height = "561"
+             alt = "Photo of Stefan Kohl" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td valign = "bottom">
+      Mathematical interests: <br />
+      Algebra (in particular group theory) and number theory. <br />
+      Computational aspects of these topics. <br /> <br />
+      Member of the <a href = "http://www.gap-system.org/Contacts/People/supportgroup.html" target = "_blank">GAP Support Group</a>.
+      <br /> <br />
+    </td>
+  </tr>
+
+</table>
+
+<br />
+
+<hr />
+
+</body>
+
+</html>
+§cv_kohl.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> Curriculum Vitae of Stefan Kohl </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "other" align = "center"> Curriculum Vitae </h1>
+
+{SK}
+
+<table class = "list" width = "100%" cellspacing = "2" cellpadding = "2"
+       summary = "This table contains the CV of Stefan Kohl.">
+
+  <tr> <td nowrap = "nowrap" valign = "top"> July 10, 1973                 </td> <td valign = "top"> Born in Sindelfingen / Germany. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> September 1980 - August 1984  </td> <td valign = "top"> Elementary school in Weil der Stadt / Germany. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> September 1984 - May 1993     </td> <td valign = "top"> <em>Johannes-Kepler-Gymnasium</em> in Weil der Stadt. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> March 25, 1993                </td> <td valign = "top"> 2nd price in the <em>Landeswettbewerb Jugend forscht</em> in Baden-W&uuml;rttemberg on the subject mathematics / computer science for the project <em>Programmierung des ostasiatischen Brettspiels Go</em>. (<a href = "stuff/go.zip">Download</a>) </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> May 18, 1993                  </td> <td valign = "top"> <em>Abitur</em> at the <em>Johannes-Kepler-Gymnasium</em> in Weil der Stadt. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> October 1993 - February 2000  </td> <td valign = "top"> Studied mathematics with minor subject computer science at the University of Stuttgart. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> March 8, 1996                 </td> <td valign = "top"> <em>Vordiplom</em> in mathematics. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> February 28, 2000             </td> <td valign = "top"> <em>Diplom</em> in mathematics. <br /> Thesis: <em>&Uuml;ber die Anzahl der Bahnen auf endlichen Gruppen unter der Operation der Automorphismengruppe - Suzuki-Gruppen vs. lineare Gruppen</em> (Counting the Orbits on Finite Groups under the Action of the Automorphism Group - Suzuki Groups vs. Linear Groups). <br /> Advisor: Prof. Dr. Markus Stroppel. <br /> Download:&nbsp;<a href = "diplom/diplomathesis_kohl.dvi">DVI</a>&nbsp;<a href = "diplom/diplomathesis_kohl.pdf">PDF</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> March 2000 - October 2005     </td> <td valign = "top"> <em>Doktorand</em> in mathematics at the University of Stuttgart. Advisor: Prof. Dr. Wolfgang Kimmerle. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> August 18 - September 8, 2001 </td> <td valign = "top"> Invited visit at the University of St Andrews / Scotland. <br /> Purpose: Introduction to {GAP} development. Since then, one of the {GAP} developers. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> Since July 2003               </td> <td valign = "top"> Member of the <a href = "http://www.gap-system.org/Contacts/People/supportgroup.html" target = "_blank">GAP Support Group</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> October 6, 2005               </td> <td valign = "top"> Dr. rer. nat. in mathematics. <br /> Thesis:  <a href = "http://dx.doi.org/10.18419/opus-4763" target = "_blank">Restklassenweise affine Gruppen</a> (Residue-Class-Wise Affine Groups). <br /> Download of the slides I used in my talk in the public part of the examination: <a href = "rcwa/slides/promotionsvortrag-kohl.pdf">PDF</a>&nbsp;<a href = "rcwa/slides/promvortragauf1seite.ps">PS</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> Since then                    </td> <td valign = "top"> Further research; found and investigated a simple group which arises in a natural way from the arithmetical structure of the ring of integers. Cf. the article <a href = "http://dx.doi.org/10.1007/s00209-009-0497-8" target = "_blank">A Simple Group Generated by Involutions Interchanging Residue Classes of the Integers</a>, which appeared in 2009 in <em>Mathematische Zeitschrift</em>. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> August 1 - October 31, 2007   </td> <td valign = "top"> Developed teaching material for the computer algebra system {GAP} for the University of St Andrews. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> October 2008 - September 2010 </td> <td valign = "top"> <em>Profesor i Ftuar</em> (Visiting Professor), <a href = "http://univlora.edu.al/" target = "_blank">Universiteti <q>Ismail Qemali</q> Vlorë</a> / Albania. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> June 26, 2010                 </td> <td valign = "top"> Organized a session on computational group theory on the conference <a href = "http://math.unm.edu/aca.html" target = "_blank">ACA 2010, Applications of Computer Algebra</a>, with talks by Max Horn (Germany), Vasyl Alex Ustimenko (Poland), Ekaterina Khrebtova (Russia, Dubai), Thomas Bier (Oman), Sandeep Rajkumar Murthy (Great Britain) and Urszula Romanczuk (Poland). (Jointly with Dmitry Malinin.) </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> September 6, 2010             </td> <td valign = "top"> Obtained albanian title <em>Profesor i Asociuar</em>, registered by the Ministry of Education and Sciences of the Republic of Albania. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> March 2011 - July 2012        </td> <td valign = "top"> <em>Profesor i Ftuar</em> (Visiting Professor), <a href = "http://univlora.edu.al/" target = "_blank">Universiteti <q>Ismail Qemali</q> Vlorë</a> / Albania. </td> </tr>
+
+</table>
+
+</body>
+
+</html>
+§publications_kohl.html§10-Oct-2016§
+{DTD}
+<html>
+
+<head>
+  <title> Publications of Stefan Kohl </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "publications"> Publications </h1>
+
+{SK}
+
+<h2> Journal Articles </h2>
+
+<ul>
+  <li>
+    Simple groups generated by involutions interchanging residue classes modulo lattices in <b>Z</b><sup><em>d</em></sup>. <br />
+    <em>J. Group Theory</em> 16 (2013), no. 1, 81-86. <br />
+    DOI:&nbsp;<a href = "http://dx.doi.org/10.1515/jgt-2012-0031" target = "_blank">10.1515/jgt-2012-0031</a>.
+    <a href = "http://www.ams.org/mathscinet-getitem?mr=3008313" target = "_blank">MR3008313</a>,
+    <a href = "https://zbmath.org/?q=an:1287.20041" target = "_blank">Zbl&nbsp;1287.20041</a>. <br />
+    Download:&nbsp;<a href = "articles/ctzd.pdf">PDF</a>&nbsp;<a href = "articles/ctzd.dvi">DVI</a>.
+    <br /> <br />
+  </li>
+  <li>
+    A simple group generated by involutions interchanging residue classes of the integers. <br />
+    <em>Math. Z.</em> 264 (2010), no.&nbsp;4, 927-938. <br />
+    DOI:&nbsp;<a href = "http://dx.doi.org/10.1007/s00209-009-0497-8" target = "_blank">10.1007/s00209-009-0497-8</a>.
+    <a href = "http://www.ams.org/mathscinet-getitem?mr=2593301" target = "_blank">MR2593301</a>,
+    <a href = "https://zbmath.org/?q=an:1210.20026" target = "_blank">Zbl&nbsp;1210.20026</a>. <br />
+    Download:&nbsp;<a href = "articles/simplegp.pdf">PDF</a>&nbsp;<a href = "articles/simplegp.dvi">DVI</a>.
+    <br /> <br />
+  </li>
+  <li>
+    Algorithms for a class of infinite permutation groups. <br />
+    <em>J. Symb. Comput.</em> 43 (2008), no.&nbsp;8, 545-581. <br />
+    DOI:&nbsp;<a href = "http://dx.doi.org/10.1016/j.jsc.2007.12.001" target = "_blank">10.1016/j.jsc.2007.12.001</a>.
+    <a href = "http://www.ams.org/mathscinet-getitem?mr=2415857" target = "_blank">MR2415857</a>,
+    <a href = "https://zbmath.org/?q=an:1155.20003" target = "_blank">Zbl&nbsp;1155.20003</a>. <br />
+    Download:&nbsp;<a href = "articles/compute.pdf">PDF</a>&nbsp;<a href = "articles/compute.dvi">DVI</a>.
+    <br /> <br />
+  </li>
+  <li>
+    On conjugates of Collatz-type mappings. <br />
+    <em>Int. J. Number Theory</em> 4 (2008), no.&nbsp;1, 117-120. <br />
+    DOI:&nbsp;<a href = "http://dx.doi.org/10.1142/S1793042108001237" target = "_blank">10.1142/S1793042108001237</a>.
+    <a href = "http://www.ams.org/mathscinet-getitem?mr=2387919" target = "_blank">MR2387919</a>,
+    <a href = "https://zbmath.org/?q=an:1157.11306 " target = "_blank">Zbl&nbsp;1157.11306</a>. <br />
+    Download:&nbsp;<a href = "articles/monoconj.pdf">PDF</a>&nbsp;<a href = "articles/monoconj.dvi">DVI</a>.
+    <br /> <br />
+  </li>
+  <li>
+    Wildness of iteration of certain residue-class-wise affine mappings. <br />
+    <em>Adv.&nbsp;in&nbsp;Appl.&nbsp;Math.</em> 39 (2007), no.&nbsp;3, 322-328. <br />
+    DOI:&nbsp;<a href = "http://dx.doi.org/10.1016/j.aam.2006.08.003" target = "_blank">10.1016/j.aam.2006.08.003</a>.
+    <a href = "http://www.ams.org/mathscinet-getitem?mr=2352043" target = "_blank">MR2352043</a>,
+    <a href = "https://zbmath.org/?q=an:1146.11015" target = "_blank">Zbl&nbsp;1146.11015</a>. <br />
+    Download:&nbsp;<a href = "articles/surjnotinj.pdf">PDF</a>&nbsp;<a href = "articles/surjnotinj.dvi">DVI</a>. <br />
+    Cited by <a href = "http://arxiv.org/abs/1311.1029" target = "_blank">[Michel 2013]</a>.
+    <br /> <br />
+  </li>
+  <li>
+    Classifying finite simple groups with respect to the number of orbits under the action of the automorphism group. <br /> 
+    <em>Comm.&nbsp;Algebra</em> 32 (2004), no.&nbsp;12, 4785-4794. <br />
+    DOI:&nbsp;<a href = "http://dx.doi.org/10.1081/AGB-200039279" target = "_blank">10.1081/AGB-200039279</a>.
+    <a href = "http://www.ams.org/mathscinet-getitem?mr=2111596" target = "_blank">MR2111596</a>,
+    <a href = "https://zbmath.org/?q=an:1077.20023" target = "_blank">Zbl&nbsp;1077.20023</a>. <br />
+    Download:&nbsp;<a href = "articles/autorb.pdf">PDF</a>&nbsp;<a href = "articles/autorb.dvi">DVI</a>.
+    Supplementary tables:&nbsp;<a href = "articles/autorb-tables.pdf">PDF</a>&nbsp;<a href = "articles/autorb-tables.dvi">DVI</a>.
+    {GAP}&nbsp;routines used for the paper: <a href = "articles/autorb.g">autorb.g</a>. <br />
+    Cited by <a href = "http://arxiv.org/abs/1507.04373" target = "_blank">[Bastos, Dantas 2015]</a>.
+    <br /> <br />
+  </li>
+  <li>
+    Counting the orbits on finite simple groups under the action of the automorphism group -
+    Suzuki&nbsp;groups vs. linear&nbsp;groups. <br />
+    <em>Comm.&nbsp;Algebra</em> 30 (2002), no.&nbsp;7, 3515-3532. <br />
+    DOI:&nbsp;<a href = "http://dx.doi.org/10.1081/AGB-120004501" target = "_blank">10.1081/AGB-120004501</a>.
+    <a href = "http://www.ams.org/mathscinet-getitem?mr=1915010" target = "_blank">MR1915010</a>,
+    <a href = "https://zbmath.org/?q=an:1011.20015" target = "_blank">Zbl&nbsp;1011.20015</a>.
+    <a href = "articles/countorb-erratum.html">Erratum</a>. <br />
+    Download:&nbsp;<a href = "articles/countorb.pdf">PDF</a>&nbsp;<a href = "articles/countorb.dvi">DVI</a>. <br />
+    Cited by <a href = "http://dml.cz/dmlcz/136917" target = "_blank">[Ashrafi, Shi 2005]</a>,
+    <a href = "http://link.springer.com/article/10.1007/s12190-007-0001-8" target = "_blank">[Ashrafi, Shi 2008]</a>.
+  </li>
+</ul>
+
+<h2> Theses </h2>
+
+<ul>
+  <li>
+    Restklassenweise&nbsp;affine&nbsp;Gruppen. Dissertation,&nbsp;Universit&auml;t&nbsp;Stuttgart,&nbsp;2005.
+    <a href = "https://zbmath.org/?q=an:1195.20001" target = "_blank">Zbl&nbsp;1195.20001</a>.
+    Download:&nbsp;<a href = "dissertation/thesis_kohl.pdf">PDF</a>&nbsp;<a href = "dissertation/thesis_kohl.ps">PS</a>. <br />
+    <a href = "http://d-nb.info/977164071" target = "_blank">Archivserver&nbsp;Deutsche&nbsp;Nationalbibliothek</a> &nbsp;
+    <a href = "http://dx.doi.org/10.18419/opus-4763" target = "_blank">OPUS-Datenbank&nbsp;(Universit&auml;t&nbsp;Stuttgart)</a>.
+    <br /> <br />
+  </li>
+  <li>
+    &Uuml;ber die Anzahl der Bahnen auf endlichen Gruppen unter der Operation
+    ihrer&nbsp;Automorphismengruppe&nbsp;- <br />
+    Suzuki-Gruppen&nbsp;vs.&nbsp;lineare&nbsp;Gruppen.
+    Diplomarbeit,&nbsp;Universit&auml;t&nbsp;Stuttgart,&nbsp;2000.
+    Download:&nbsp;<a href = "diplom/diplomathesis_kohl.pdf">PDF</a>&nbsp;<a href = "diplom/diplomathesis_kohl.dvi">DVI</a>.
+  </li>
+</ul>
+
+<h2> GAP Packages </h2>
+
+<h3> Refereed </h3>
+
+<ul>
+  <li>
+    <a href = "http://www.gap-system.org/Packages/rcwa.html" target = "_blank">RCWA</a>.
+    Residue-class-wise affine groups. {GAP}&nbsp;package. 2005. <br />
+    Current version: 4.4.1 (released 22/05/2016). <br />
+    For a longer description and download, see <a href = "rcwa.html">here</a>.
+    <br /> <br />
+  </li>
+  <li>
+    <a href = "http://www.gap-system.org/Packages/factint.html" target = "_blank">FactInt</a>.
+    Advanced methods for factoring integers. {GAP}&nbsp;package. 1999. <br />
+    Current version: 1.5.3 (released 16/06/2011). <br />
+    For a longer description and download, see <a href = "factint.html">here</a>.
+  </li>
+</ul>
+
+<h3> Other </h3>
+
+<ul>
+  <li>
+    <a href = "http://www.gap-system.org/Packages/resclasses.html" target = "_blank">ResClasses</a>.
+    Set-theoretic computations with residue classes. {GAP}&nbsp;package. 2004. <br />
+    Current version: 4.5.0 (released 14/05/2016). <br />
+    For a longer description, see <a href = "resclasses.html">here</a>.
+  </li>
+</ul>
+
+<h2> Preprints </h2>
+
+<ul>
+  <li>
+    The Collatz conjecture in a group theoretic context. 4&nbsp;pages,&nbsp;2016. <br />
+    Download:&nbsp;<a href = "preprints/collatzgroups.pdf">PDF</a>.
+    <br /> <br />
+  </li>
+  <li>
+    On a series of finitely generated infinite simple groups. 4&nbsp;pages,&nbsp;2009, revised 2013. <br />
+    Download:&nbsp;<a href = "preprints/ctpz-v2.pdf">PDF</a>&nbsp;<a href = "preprints/ctpz-v2.ps">PS</a>&nbsp;<a href = "preprints/ctpz-v2.dvi">DVI</a>.
+    <br /> <br />
+  </li>
+  <li>
+    On the cycle structure of products of two class transpositions. 5&nbsp;pages,&nbsp;2009, revised 2011. <br />
+    Download:&nbsp;<a href = "preprints/cycles.pdf">PDF</a>.
+  </li>
+</ul>
+
+<h2> Short Notes </h2>
+
+<ul>
+  <li>
+    Two invariants of residue-class-wise affine permutations of the integers. 6&nbsp;pages, 2006. <br />
+    Download:&nbsp;<a href = "preprints/rcwaepis.pdf">PDF</a>&nbsp;<a href = "preprints/rcwaepis.ps">PS</a>&nbsp;<a href = "preprints/rcwaepis.dvi">DVI</a>.
+    <br /> <br />
+  </li>
+  <li>
+    A reformulation of the 3<em>n</em>+1 conjecture in terms of a mapping from the free monoid of rank&nbsp;2 to the positive integers. 3&nbsp;pages, 2007. <br />
+    Download:&nbsp;<a href = "preprints/3n+1tree.pdf">PDF</a>&nbsp;<a href = "preprints/3n+1tree.ps">PS</a>&nbsp;<a href = "preprints/3n+1tree.dvi">DVI</a>.
+    <br /> <br />
+  </li>
+  <li>
+    Graph theoretical criteria for the wildness of residue-class-wise affine permutations. 4&nbsp;pages, 2007. <br />
+    Download:&nbsp;<a href = "preprints/graphcrit.pdf">PDF</a>&nbsp;<a href = "preprints/graphcrit.ps">PS</a>&nbsp;<a href = "preprints/graphcrit.dvi">DVI</a>.
+    <br /> <br />
+  </li>
+  <li>
+    On Carmichael numbers with 3 factors. 3&nbsp;pages, 2006. <br />
+    Download:&nbsp;<a href = "preprints/cmz3fact.pdf">PDF</a>&nbsp;<a href = "preprints/cmz3fact.ps">PS</a>&nbsp;<a href = "preprints/cmz3fact.dvi">DVI</a>.
+    <br /> <br />
+  </li>
+  <li>
+    A bound on the order of the outer automorphism group of a finite simple group of given order. 2&nbsp;pages, 2003. <br />
+    Download:&nbsp;<a href = "preprints/outbound.pdf">PDF</a>&nbsp;<a href = "preprints/outbound.ps">PS</a>&nbsp;<a href = "preprints/outbound.dvi">DVI</a>. <br />
+    Cited by <a href = "https://www.semanticscholar.org/paper/Polynomial-time-normalizers-Luks-Miyazaki/ca5ae2cdbd948ce27b6d129c4ec1a542f6ba9923" target = "_blank">[Luks, Miyazaki 2011]</a>,
+    <a href = "http://arxiv.org/abs/1508.03565#" target = "_blank">[Bamberg, Li, Swartz 2015]</a>.
+  </li>
+</ul>
+
+<h2> Other </h2>
+
+<ul>
+  <li>
+    I am one of the many <a href = "http://www.gap-system.org/Contacts/People/authors.html" target = "_blank">authors</a> of the computer algebra system {GAP}. <br />
+    A list of my contributions to the {GAP} Library can be found <a href = "gaplib.html" target = "mainwindow">here</a>.
+    <br /> <br />
+  </li>
+  <li>
+    Since November 2012, I am an active <a href = "http://mathoverflow.net/users/28104/stefan-kohl" target = "_blank">contributor to MathOverflow</a>. <br />
+    In particular, I have <a href = "http://mathoverflow.net/users/28104/stefan-kohl?tab=answers" target = "_blank">answered</a> there questions of many colleagues on various different topics.
+    <br /> <br />
+  </li>
+</ul>
+
+<p class = "normaltext"> There is a list of <a href = "kohl.bib">BibTeX entries</a> for my refereed publications and theses. </p>
+
+<p class = "normaltext"> I try to follow the recommendations of the IMU as given <a href = "http://www.ams.org/meetings/call" target = "_blank">here</a>. </p>
+
+{FOOTER}
+
+</body>
+
+</html>
+§motivated_papers.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> Papers Motivated by Questions of Stefan Kohl </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "other" align = "center"> Papers Motivated by Questions of Mine </h1>
+
+The following papers of other people have been motivated by questions of mine:
+
+<ul>
+  <li>
+    <a href = "http://www.mathematik.uni-wuerzburg.de/~koenig/" target = "_blank">Joachim König</a>,
+    <a href = "http://dx.doi.org/10.1016/j.ejc.2016.03.006" target = "_blank"><em>A note on the product of two permutations of prescribed orders</em></a>. <br />
+    European Journal of Combinatorics 57 (2016), 50-56. <br />
+    This paper solves Problem 18.49 posed by myself in the <a href = "http://arxiv.org/abs/1401.0300" target = "_blank">Kourovka Notebook</a>, <br />
+    and therefore also provides a complete answer to the question
+    <a href = "http://mathoverflow.net/questions/118092/order-of-products-of-elements-in-symmetric-groups" target = "_blank"><em>Order of products of elements in symmetric groups</em></a>
+    of mine on MathOverflow.
+    <br /> <br />
+  </li>
+  <li>
+    <a href = "https://webusers.imj-prg.fr/~leonardo.zapponi/Page_web_de_Leonardo_Zapponi/Accueil.html" target = "_blank">Leonardo Zapponi</a>,
+    <a href = "http://arxiv.org/abs/1503.00637" target = "_blank"><em>Parametric solutions of Pell equations</em></a>, 2015. <br />
+    This paper answers the question
+    <a href = "http://mathoverflow.net/questions/194910/parametric-solutions-of-pells-equation" target = "_blank"><em>Parametric solutions of Pell's equation</em></a>
+    of mine on MathOverflow.
+  </li>
+</ul>
+
+Furthermore, the discussion initiated by my question
+<a href = "http://mathoverflow.net/questions/121178/primes-occurring-as-orders-of-elements-of-a-finitely-presented-group" target = "_blank"><em>Primes occurring as orders of elements of a finitely presented group</em></a>
+on MathOverflow led to the addition of Section&nbsp;5 to:
+<ul>
+  <li>
+    <a href = "https://www.dpmms.cam.ac.uk/~mcc56/" target = "_blank">Maurice Chiodo</a>,
+    <a href = "http://dx.doi.org/10.1515/gcc-2014-0001" target = "_blank"><em>On torsion in finitely presented groups</em></a>.
+    Groups Complexity Cryptology 6(1): 1-8 (2014).
+    (<a href = "http://arxiv.org/abs/1107.1489" target = "_blank">arXiv version</a>)
+  </li>
+</ul>
+Main further contributors to the discussion were <a href = "http://logic.dorais.org/" target = "_blank">François G. Dorais</a>,
+<a href = "http://www.sci.ccny.cuny.edu/~benjamin/" target = "_blank">Benjamin Steinberg</a>
+and <a href = "https://www.dpmms.cam.ac.uk/~hjrw2/" target = "_blank">Henry Wilton</a>. <br /> <br />
+
+{FOOTER}
+
+</body>
+
+</html>
+§gaplib.html§30-Jan-2006§
+{DTD}
+<html>
+
+<head>
+  <title> Contributions to the GAP Library </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "other"> My contributions to the GAP Library </h1>
+
+<ul>
+  <li> Constructors for the Suzuki groups Sz( <em>q</em> ) as
+       <ul>
+         <li> matrix groups and as </li>
+         <li> permutation groups, permutation-isomorphic to the action of Sz( <em>q</em> ) on Tits' ovoid. </li>
+       </ul>
+       Since version 4.2.
+  </li>
+  <li> Functions and methods for the efficient computation of class numbers of
+       <ul>
+         <li> GL( <em>n</em>, <em>q</em> ), </li>
+         <li> the groups isogeneous to SL( <em>n</em>, <em>q</em> ), </li>
+         <li> PSL( <em>n</em>, <em>q</em> ), </li>
+         <li> GU( <em>n</em>, <em>q</em> ), </li>
+         <li> the groups isogeneous to SU( <em>n</em>, <em>q</em> ), and </li>
+         <li> PSU( <em>n</em>, <em>q</em> ). </li>
+       </ul>
+       Since version 4.3.
+  </li>
+  <li> Constructors for
+       <ul>
+         <li> GL( <em>n</em>, Z/<em>m</em>Z ) and </li>
+         <li> SL( <em>n</em>, Z/<em>m</em>Z ). </li>
+       </ul>
+       Since version 4.3.
+  </li>
+  <li> Functions for computing
+       <ul>
+         <li> continued fraction expansions and </li>
+         <li> continued fraction approximations </li>
+       </ul>
+       of real roots of polynomials with integer coefficients. <br />
+       Since version&nbsp;4.4.5.
+  </li>
+  <li> A method for computing structure descriptions for finite groups. <br />
+       Since version&nbsp;4.4.5.
+  </li>
+  <li> A function for computing partial factorizations of integers,
+       which permits the user to specify the amount of work he wants
+       to invest in finding factors. <br />
+       Since version&nbsp;4.4.6.
+  </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§dissertation/errata.html§30-Jan-2006§
+{DTD}
+<html>
+
+<head>
+  <title> Errata for Thesis 'Restklassenweise affine Gruppen' </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "abstract">
+  Errata for Thesis <em>Restklassenweise affine Gruppen</em>
+</h1>
+
+<p class = "normaltext">
+  This page lists the currently known errata for the thesis
+  <a href = "http://deposit.ddb.de/cgi-bin/dokserv?idn=977164071" target = "_blank">Restklassenweise&nbsp;affine&nbsp;Gruppen</a>.
+  The list is sorted by page numbers.
+</p>
+
+<ul>
+
+  <li>
+    In the english summary on page&nbsp;vii in line&nbsp;10, 11 and&nbsp;16,
+    it must read 'transitively' instead of 'transitive'.
+  </li>
+
+  <li>
+    The assertion given in the english summary on page&nbsp;viii in line&nbsp;13-15 resp.
+    in the german summary on page&nbsp;xiii in line&nbsp;17-19 is slightly stronger than what is
+    actually shown in Theorem&nbsp;3.11 and Remark&nbsp;3.12.
+  </li>
+
+  <li>
+    In <em>Beispiele&nbsp;1.1.3, Teil&nbsp;(1)</em> on page&nbsp;2 it must read '{(2n-1)/3,2n}'
+    instead of '{(3n-1)/2,2n}'.
+  </li>
+
+  <li>
+    On page&nbsp;75 in the second-last line the phrase 'und es sei ...' is not wrong, but
+    superfluous.
+  </li>
+
+  <li>
+    On page&nbsp;79 in line&nbsp;3 of Section&nbsp;B.1, it is wrongly claimed that in
+    <em>Beispiele&nbsp;1.8.5, Teil&nbsp;(4)</em> it would be conjectured that &alpha; and&nbsp;&beta;
+    generate a free group of rank&nbsp;2. (The conjecture itself may be true or not --
+    I don't know.)
+  </li>
+
+  <li>
+    On page&nbsp;97, the word 'packages' in the URL of my {GAP} package <a href = "http://www.gap-system.org/Packages/rcwa.html" target = "_blank">RCWA</a> must be capitalized. <br />
+    Remark: The correct URL <a href = "http://www.gap-system.org/Packages/rcwa.html" target = "_blank">http://www.gap-system.org/Packages/rcwa.html</a>
+    is given in the english as well as in the german summary on page&nbsp;viii resp.&nbsp;xiii.
+  </li>
+
+</ul>
+
+<p class = "normaltext">
+  For convenience, the errors listed above are corrected in the files provided for download on this site.
+  Since the thesis is originally written in German, there is also
+  a <a href = "errata_g.html">german version</a> of this page.
+</p>
+
+{FOOTER}
+
+</body>
+
+</html>
+§dissertation/errata_g.html§29-Dec-2005§
+{DTD}
+<html>
+
+<head>
+  <title> Errata zur Dissertation 'Restklassenweise affine Gruppen' </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "abstract">
+  Errata zur Dissertation <em>Restklassenweise affine Gruppen</em>
+</h1>
+
+<p class = "normaltext">
+  Die untenstehende Liste umfa&szlig;t s&auml;mtliche zur Zeit bekannten Errata zur Dissertation
+  <a href = "http://deposit.ddb.de/cgi-bin/dokserv?idn=977164071" target = "_blank">Restklassenweise&nbsp;affine&nbsp;Gruppen</a>.
+  Die Liste ist nach Seitenzahlen geordnet.
+</p>
+
+<ul>
+
+  <li>
+    In der englischen Zusammenfassung auf Seite&nbsp;vii in Zeile&nbsp;10, 11 und&nbsp;16
+    mu&szlig; es statt 'transitive' grammatikalisch richtig 'transitively' hei&szlig;en.
+  </li>
+
+  <li>
+    Die in der englischen Zusammenfassung auf Seite&nbsp;viii in Zeile&nbsp;13-15 bzw.
+    in der deutschen Zusammenfassung auf Seite&nbsp;xiii in Zeile&nbsp;17-19 angegebene
+    Aussage ist etwas st&auml;rker als die in Satz&nbsp;3.11 und Bemerkung&nbsp;3.12
+    tats&auml;chlich gezeigte.
+  </li>
+
+  <li>
+    In <em>Beispiele&nbsp;1.1.3, Teil&nbsp;(1)</em> auf Seite&nbsp;2 mu&szlig; es statt
+    '{(3n-1)/2,2n}' richtigerweise '{(2n-1)/3,2n}' hei&szlig;en.
+  </li>
+
+  <li>
+    Auf Seite&nbsp;75 in der vorletzten Zeile ist der Satzteil 'und es sei ...' zwar nicht
+    falsch, aber g&auml;nzlich &uuml;berfl&uuml;ssig.
+  </li>
+
+  <li>
+    Auf Seite&nbsp;79 in Abschnitt&nbsp;B.1, Zeile&nbsp;3 wird f&auml;lschlicherweise
+    angegeben, in <em>Beispiele&nbsp;1.8.5, Teil&nbsp;(4)</em> w&uuml;rde die
+    Vermutung formuliert, da&szlig; &alpha; und&nbsp;&beta; eine freie Gruppe vom
+    Rang&nbsp;2 erzeugen. (Ob die Vermutung selbst stimmt, wei&szlig; ich nicht.)
+  </li>
+
+  <li>
+    Auf Seite&nbsp;97 mu&szlig; das Wort 'packages' in der URL meines {GAP} - Packages
+    <a href = "http://www.gap-system.org/Packages/rcwa.html" target = "_blank">RCWA</a>
+    gro&szlig;geschrieben werden. <br />
+    NB.: Die korrekte URL <a href = "http://www.gap-system.org/Packages/rcwa.html" target = "_blank">http://www.gap-system.org/Packages/rcwa.html</a>.
+    wird sowohl in der deutschen wie auch in der englischen Zusammenfassung auf Seite&nbsp;xiii bzw.&nbsp;viii genannt.
+  </li>
+
+</ul>
+
+<p class = "normaltext">
+  In den auf dieser Website zum Download angebotenen Dateien wurden diese Fehler korrigiert.
+</p>
+
+{FOOTER}
+
+</body>
+
+</html>
+§diplom/diplth.html§30-May-2006§
+{DTD}
+<html>
+
+<head>
+  <title> Abstract for Diploma Thesis of Stefan Kohl </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "abstract">
+  Abstract for:
+  &Uuml;ber die Anzahl der Bahnen auf endlichen Gruppen unter der Operation ihrer Automorphismengruppe -
+  Suzuki-Gruppen vs. lineare Gruppen; Diplomarbeit, Universit&auml;t Stuttgart, 2000.
+</h1>
+
+<p class = "normaltext">
+  Let <em>G</em> be a group, and let &omega;(<em>G</em>) denote the number of orbits
+  on&nbsp;<em>G</em> under the action of the automorphism group.
+  The main result of my thesis is that for suitable <em>q</em>, it holds that
+</p>
+
+<p class = "display"> 
+  &omega;( Sz( <em>q</em> ) ) = &omega;( PSL( 2, <em>q</em> ) ) + 2.
+</p>
+
+<p class = "normaltext">
+  This result reflects similarities between the structure of the Suzuki groups and the 
+  projective special linear groups of degree&nbsp;2.
+</p>
+
+<p class = "normaltext">
+  My advisor was <a href = "http://www.igt.uni-stuttgart.de/LstGeo/Stroppel/" target = "_blank">Markus Stroppel</a>.
+</p>
+
+<p class = "normaltext">
+  Most of the results can be found in the article
+  <em>Counting the Orbits on Finite Simple Groups under the Action of the Automorphism Group - 
+  Suzuki Groups vs. Linear Groups</em>. <em>Comm. Algebra</em> 30 (2002), no.&nbsp;7, 3515-3532.
+</p>
+
+</body>
+
+</html>
+§articles/countorb-erratum.html§30-Dec-2011§
+{DTD}
+<html>
+
+<head>
+  <title> Erratum </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+</head>
+
+<body>
+
+<br />
+
+<h1 class = "abstract">
+  Erratum for: Counting the Orbits on Finite Simple Groups under the
+  Action of the Automorphism&nbsp;Group - Suzuki&nbsp;Groups vs. Linear&nbsp;Groups
+</h1>
+
+<p class = "normaltext">
+  The typesetter has permuted the numbers of the references in the text.
+  To get the number as given in the bibliography, take the image
+  of the number given in the text under the permutation
+  (1 15 5 6 2 17 9 3 14 4 20 11 13 10)(7 21)(8 16 18 12).
+  Some further minor errors were introduced during the typesetting process as well.
+  All errors are fixed in the version provided for download on this site. 
+</p>
+
+</body>
+
+</html>
+§teaching_kohl.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> Courses Taught by Stefan Kohl </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "publications"> Teaching </h1>
+
+{SK}
+
+<p class = "normaltext">
+  Courses taught at the <a href = "http://univlora.edu.al/" target = "_blank">University of Vlora</a> in Albania:
+</p>
+
+<p class = "normaltext">
+  In Spring 2012, I have taught
+</p>
+<ul>
+  <li> <a href = "teaching/mat_421/mat_421.html">MAT 421, Introduction to Real Analysis I</a>. </li>
+  <li> <a href = "teaching/mat_452_2/mat_452.html">MAT 452, Introduction to Algebra II</a>. </li>
+</ul>
+
+<p class = "normaltext">
+  In Fall 2011, I have taught
+</p>
+<ul>
+  <li> <a href = "teaching/mat_551_2/mat_551.html">MAT 551, Algebra I</a> and </li>
+  <li> <a href = "teaching/mat_451/mat_451.html">MAT 451, Introduction to Algebra I</a>. </li>
+</ul>
+
+<p class = "normaltext">
+  In Spring 2011, I have taught
+</p>
+<ul>
+  <li> <a href = "teaching/mat_551/mat_551.html">MAT 551, Algebra I</a> and </li>
+  <li> <a href = "teaching/mat_452/mat_452.html">MAT 452, Introduction to Algebra II</a>. </li>
+</ul>
+
+<p class = "normaltext">
+  In Spring 2010, I have taught
+</p>
+<ul>
+  <li> <a href = "teaching/mat_642/mat_642.html">MAT 642, Computational Algebra II</a>. </li>
+</ul>
+
+<p class = "normaltext">
+  In Fall 2009, I have taught
+</p>
+<ul>
+  <li> <a href = "teaching/mat_410/mat_410.html">MAT 410, Introduction to Topology</a> and </li>
+  <li> <a href = "teaching/mat_641/mat_641.html">MAT 641, Computational Algebra I</a>. </li>
+</ul>
+
+<p class = "normaltext">
+  In Spring 2009, I have taught
+</p>
+<ul>
+  <li> MAT 452, Introduction to Algebra II, </li>
+  <li> MAT 655, Computational Group Theory and </li>
+  <li> MAT 500, Introduction to Mathematical Writing. </li>
+</ul>  
+
+<p class = "normaltext">
+  In Fall 2008, I have taught
+</p>
+<ul>
+  <li> MAT 451, Introduction to Algebra I. </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§teaching/mat_410/mat_410.html§18-Feb-2010§
+{DTD}
+<html>
+
+<head>
+  <title> MAT 410: Introduction to Topology </title>
+  {../../index.css}
+</head>
+
+<body>
+
+<h1 class = "syllabus"> MAT 410: Introduction to Topology (Fall 2009)</h1>
+
+{SK}
+
+<h2> Course Description </h2>
+
+<p class = "normaltext">
+  The course is a standard introduction to topology. It follows the script
+  by David R. Wilkins (Trinity College Dublin) which is available on Wilkins' homepage
+  <a href = "http://www.maths.tcd.ie/~dwilkins/Courses/212/" target = "_blank">here</a>.
+</p>
+
+<p class = "normaltext">
+  Recommended literature: Klaus Jaenich: Topology, Springer, 1984.
+</p>
+
+<h2> Timetable </h2>
+
+Monday, Wednesday and Friday 18:00 - 19:00 in Room C 411.
+
+<h2> Grading </h2>
+
+<p class = "normaltext">
+  Homework, midterm test and final test count 50%, 20% and 30% towards
+  the grade for the course, respectively. The homework grade is
+  10*(number of credits obtained)/(maximum possible number of credits),
+  rounded to the nearest integer. 
+</p>
+
+<h2> Examinations </h2>
+
+<ul>
+  <li>
+    Midterm test: Friday, 18.12.2009, 18:00. Duration: 1 hour.
+    <a href = "mat410-fall09-midterm1.pdf">Questions</a>.
+    <a href = "mat410-fall09-midterm1-answers.pdf">Answers</a>.
+  </li>
+  <li>
+    Final test: Wednesday, 10.02.2010, 17:00. Duration: 2 hours.
+    <a href = "mat410-fall09-final.pdf">Questions</a>.
+    <a href = "mat410-fall09-final-answers.pdf">Answers</a>.
+  </li>
+</ul>
+
+<h2> Homework </h2>
+
+<ul>
+  <li> <a href = "topologysheet1.pdf">Exercise sheet 1</a>, due October  23, 2009. </li>
+  <li> <a href = "topologysheet2.pdf">Exercise sheet 2</a>, due November  4, 2009. </li>
+  <li> <a href = "topologysheet3.pdf">Exercise sheet 3</a>, due November 16, 2009. </li>
+  <li> <a href = "topologysheet4.pdf">Exercise sheet 4</a>, due November 30, 2009. </li>
+  <li> <a href = "topologysheet5.pdf">Exercise sheet 5</a>, due December 14, 2009. </li>
+  <li> <a href = "topologysheet6.pdf">Exercise sheet 6</a>, due January  13, 2010. </li>
+  <li> <a href = "topologysheet7.pdf">Exercise sheet 7</a>, due January  29, 2010. </li>
+</ul>
+
+<p class = "normaltext">
+  Brief answers to the homework problems in plaintext can be found
+  <a href = "topologyanswers.txt">here</a>.
+</p>
+
+{FOOTER}
+
+</body>
+
+</html>
+§teaching/mat_641/mat_641.html§18-Feb-2010§
+{DTD}
+<html>
+
+<head>
+  <title> MAT 641: Computational Algebra I </title>
+  {../../index.css}
+</head>
+
+<body>
+
+<h1 class = "syllabus"> MAT 641: Computational Algebra I (Fall 2009) </h1>
+
+{SK}
+
+<h2> Course Description </h2>
+
+The course follows the book <em> Ideals, Varieties, and Algorithms:
+An Introduction to Computational Algebraic Geometry and Commutative Algebra </em>
+by David Cox, John Little and Donal O'Shea.
+
+<h2> Timetable </h2>
+
+Tuesday and Thursday 14:00 - 15:30 in Room C 411.
+
+<h2> Grading </h2>
+
+<p class = "normaltext">
+  Homework, midterm test and final test count 50%, 20% and 30% towards
+  the grade for the course, respectively. The homework grade is
+  10*(number of credits obtained)/(maximum possible number of credits),
+  rounded to the nearest integer. 
+</p>
+
+<h2> Examinations </h2>
+
+<ul>
+  <li>
+    Midterm test: Tuesday, 24.11.2009, 14:00. Duration: 1 hour.
+    <a href = "mat641-fall09-midterm.pdf">Questions</a>.
+    <a href = "mat641-fall09-midterm-answers.pdf">Answers</a>.
+  </li>
+  <li>
+    Final test: Tuesday, 09.02.2010, 17:00. Duration: 2 hours.
+    <a href = "mat641-fall09-final.pdf">Questions</a>.
+    <a href = "mat641-fall09-final-answers.pdf">Answers</a>.
+  </li>
+</ul>
+
+<h2> Homework </h2>
+
+<p class = "normaltext">
+  Exercises are usually taken from the above book.
+  Homework is always due within one week.
+</p>
+
+<ul>
+  <li> Due by October 27, 2009: Exercises 1.1.2 (6 credits), 1.1.3 (4 credits) and 1.1.4 (2 credits). </li>
+  <li> Due by October 29, 2009: Exercise 1.1.5 (3 credits). </li>
+  <li> Due by November 3, 2009: Exercises 1.2.1 (3 credits), 1.2.2 (2 credits) and 1.2.3 (2 credits). </li>
+  <li> Due by November 5, 2009: Exercises 1.2.6 (2 credits), 1.2.11 (2 credits) and 1.2.11' (3 credits). </li>
+  <li> Due by November 10, 2009: Exercises 1.3.1 (1 credit) and 1.3.3 (1 credit). </li>
+  <li> Due by November 19, 2009: Exercises 1.4.1 (2 credits), 1.4.2 (1 credit) and 1.4.3 (3 credits). </li>
+  <li> Due by December 8, 2009: Exercises 1.5.2 (3 credits), 1.5.8 (2 credits) and 1.5.9 (1 credit). </li>
+  <li> Due by December 10, 2009: Exercises 2.1.1 (4 credits) and 2.1.3, Parts a. and b. (2 credits). </li>
+  <li> Due by December 22, 2009: Exercises 2.2.1 (2 credits), 2.2.2 (2 credits) and 2.2.3 (2 credits). </li>
+  <li> Due by January 19, 2010: Exercise 2.3.2 (slightly modified, 5 credits) and Exercise 2.4.3 (2 credits). </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§teaching/mat_642/mat_642.html§04-Apr-2011§
+{DTD}
+<html>
+
+<head>
+  <title> MAT 642: Computational Algebra II </title>
+  {../../index.css}
+</head>
+
+<body>
+
+<h1 class = "syllabus"> MAT 642: Computational Algebra II (Spring 2010) </h1>
+
+{SK}
+
+<h2> Course Description </h2>
+
+This course is the continuation of
+<a href = "../mat_641/mat_641.html">MAT 641: Computational Algebra I</a> from Fall&nbsp;2009.
+It follows the book <em> Ideals, Varieties, and Algorithms: An Introduction to Computational
+Algebraic Geometry and Commutative Algebra </em> by David Cox, John Little and Donal O'Shea.
+
+<h2> Timetable </h2>
+
+Tuesday and Thursday 14:00 - 15:30 in Room C 411.
+
+<h2> Grading </h2>
+
+<ul>
+  <li> Homework: 20% </li>
+  <li> Course attendence: 20% </li>
+  <li> Midterm 1: 15% </li>
+  <li> Midterm 2: 15% </li>
+  <li> Final test: 30% </li>
+</ul>
+
+<h2> Examinations </h2>
+
+<ul>
+  <li>
+    Midterm 1: Tuesday, 06.04.2010, 14:00. Duration: 1 hour.
+    <a href = "mat642-spring10-midterm1.pdf">Questions</a>.
+    <a href = "mat642-spring10-midterm1-answers.pdf">Answers</a>.
+  </li>
+  <li>
+    Midterm 2: Tuesday, 25.05.2010, 14:00. Duration: 1 hour.
+    <a href = "mat642-spring10-midterm2.pdf">Questions</a>.
+    <a href = "mat642-spring10-midterm2-answers.pdf">Answers</a>.
+  </li>
+  <li>
+    Final test: Tuesday, 22.06.2010, 14:00. Duration: 2 hours.
+    <a href = "mat642-spring10-final.pdf">Questions</a>.
+    <a href = "mat642-spring10-final-answers.pdf">Answers</a>.
+  </li>
+</ul>
+
+<h2> Homework </h2>
+
+<ul>
+  <li> <a href = "compalg2sheet1.pdf">Exercise sheet 1</a>, due March 30, 2010. </li>
+  <li> <a href = "compalg2sheet2.pdf">Exercise sheet 2</a>, due April 29, 2010. </li>
+  <li> <a href = "compalg2sheet3.pdf">Exercise sheet 3</a>, due May   18, 2010. </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§teaching/mat_452/mat_452.html§28-Jun-2011§
+{DTD}
+<html>
+
+<head>
+  <title> MAT 452: Introduction to Algebra II </title>
+  {../../index.css}
+</head>
+
+<body>
+
+<h1 class = "syllabus"> MAT 452: Introduction to Algebra II (Spring 2011) </h1>
+
+{SK}
+
+<h2> Course Description </h2>
+
+<p class = "firstparagraph">
+  This course is an introduction to groups, rings and fields.
+</p>
+
+<p class = "normaltext">
+  Literature (among many other good books on the topic):
+  David S. Dummit, Richard M. Foote: Abstract Algebra. John Wiley and Sons, 2004.
+</p>
+
+<p class = "normaltext">
+  Software: {GAP} (Groups, Algorithms and Programming) -- a system for computational discrete algebra.
+</p>
+
+<h2> Timetable </h2>
+
+Monday and Wednesday, 15:00 - 16:15 in Room C 101.
+
+<h2> Grading </h2>
+
+<ul>
+  <li> Homework: 20% </li>
+  <li> Midterm 1: 20% </li>
+  <li> Midterm 2: 20% </li>
+  <li> Final: 40% </li>
+</ul>
+
+<h2> Examinations </h2>
+
+<ul>
+  <li>
+    Midterm 1: Monday, 18.04.2011, 15:00-16:00.
+    <a href = "mat452-spring11-midterm1.pdf">Questions</a>.
+    <a href = "mat452-spring11-midterm1-answers.pdf">Answers</a>.
+  </li>
+  <li>
+    Midterm 2: Monday, 16.05.2011, 15:00-16:00.
+    <a href = "mat452-spring11-midterm2.pdf">Questions</a>.
+    <a href = "mat452-spring11-midterm2-answers.pdf">Answers</a>.
+  </li>
+  <li>
+    Final: Monday, 27.06.2011, 16:00-18:00.
+    <a href = "mat452-spring11-final.pdf">Questions</a>.
+    <a href = "mat452-spring11-final-answers.pdf">Answers</a>.
+  </li>
+</ul>
+
+<h2> Homework </h2>
+
+<ul>
+  <li> <a href = "mat452-sheet1.pdf">Exercise sheet 1</a>, due April 6, 2011. </li>
+  <li> <a href = "mat452-sheet2.pdf">Exercise sheet 2</a>, due May 11, 2011. </li>
+  <li> <a href = "mat452-sheet3.pdf">Exercise sheet 3</a>, due June 6, 2011. </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§teaching/mat_551/mat_551.html§28-Jun-2011§
+{DTD}
+<html>
+
+<head>
+  <title> MAT 551: Algebra I </title>
+  {../../index.css}
+</head>
+
+<body>
+
+<h1 class = "syllabus"> MAT 551: Algebra I (Spring 2011) </h1>
+
+{SK}
+
+<h2> Course Description </h2>
+
+<p class = "normaltext">
+  This course comprises the group theory part of the course sequence MAT 551 / 552.
+</p>
+
+<p class = "normaltext">
+  Literature (among many other good books on the topic):
+</p>
+
+<ul>
+  <li> Serge Lang: Algebra. Springer GTM 211, 2002. </li>
+  <li> Joseph J. Rotman: An Introduction to the Theory of Groups. Springer GTM 148, 1995. </li>
+  <li> Derek J.S. Robinson: A Course in the Theory of Groups. Springer GTM 80, 1996. </li>
+</ul>
+
+<p class = "normaltext">
+  The first is a general book on algebra which briefly treats many parts of the
+  subject, without going into depth. The second and third are good introductions
+  to group theory, which is the main subject of this course.
+</p>
+
+<p class = "normaltext">
+  Software: {GAP} (Groups, Algorithms and Programming) -- a system for computational discrete algebra.
+</p>
+
+<h2> Timetable </h2>
+
+Monday and Wednesday, 16:30 - 17:45 in Room C 101.
+
+<h2> Grading </h2>
+
+<ul>
+  <li> Homework: 20% </li>
+  <li> Midterm 1: 20% </li>
+  <li> Midterm 2: 20% </li>
+  <li> Final: 40% </li>
+</ul>
+
+<h2> Examinations </h2>
+
+<ul>
+  <li>
+    Midterm 1: Monday, 02.05.2011, 16:30-17:45.
+    <a href = "mat551-spring11-midterm1.pdf">Questions</a>.
+    <a href = "mat551-spring11-midterm1-answers.pdf">Answers</a>.
+  </li>
+  <li>
+    Midterm 2: Wednesday, 25.05.2011, 16:30-17:45.
+    <a href = "mat551-spring11-midterm2.pdf">Questions</a>.
+    <a href = "mat551-spring11-midterm2-answers.pdf">Answers</a>.
+  </li>
+  <li>
+    Final: Monday, 27.06.2011, 14:00-16:00.
+    <a href = "mat551-spring11-final.pdf">Questions</a>.
+    <a href = "mat551-spring11-final-answers.pdf">Answers</a>.
+  </li>
+</ul>
+
+<h2> Homework </h2>
+
+<ul>
+  <li> <a href = "mat551-sheet1.pdf">Exercise sheet 1</a>, due April 18, 2011. </li>
+  <li> <a href = "mat551-sheet2.pdf">Exercise sheet 2</a>, due April 27, 2011. </li>
+  <li> <a href = "mat551-sheet3.pdf">Exercise sheet 3</a>, due May 18, 2011. </li>
+  <li> <a href = "mat551-sheet4.zip">Exercise sheet 4</a>, due June 6, 2011. </li>
+</ul>
+
+<h2> Schedule </h2>
+
+<ul>
+  <li> 4.4., 6.4., 11.4., 13.4.: Theory. </li>
+  <li> 18.4.: Discussion of Exercise Sheet 1. </li>
+  <li> 20.4.: Theory. </li>
+  <li> 27.4.: Discussion of Exercise Sheet 2. </li>
+  <li> 2.5.: Midterm 1. </li>
+  <li> 4.5.: Discussion of Midterm 1. </li>
+  <li> 9.5., 11.5., 16.5.: Theory. </li>
+  <li> 18.5.: Discussion of Exercise Sheet 3. </li>
+  <li> 23.5.: Theory. </li>
+  <li> 25.5.: Midterm 2. </li>
+  <li> 30.5.: Discussion of Midterm 2. </li>
+  <li> 1.6., 6.6.: Theory. </li>
+  <li> 8.6., 13.6.: Discussion of Exercise Sheet 4. </li>
+  <li> 15.6.: Preparation for Final Exam. </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§teaching/mat_451/mat_451.html§16-Mar-2012§
+{DTD}
+<html>
+
+<head>
+  <title> MAT 451: Introduction to Algebra I </title>
+  {../../index.css}
+</head>
+
+<body>
+
+<h1 class = "syllabus"> MAT 451: Introduction to Algebra I (Fall 2011) </h1>
+
+{SK}
+
+<h2> Course Description </h2>
+
+<p class = "firstparagraph">
+  The course sequence MAT 451 / 452 provides an introduction to groups, rings and fields.
+</p>
+
+<p class = "normaltext">
+  Literature (among many other good books on the topic):
+  David S. Dummit, Richard M. Foote: Abstract Algebra. John Wiley and Sons, 2004.
+</p>
+
+<p class = "normaltext">
+  Software: {GAP} (Groups, Algorithms and Programming) -- a system for computational discrete algebra.
+</p>
+
+<h2> Timetable </h2>
+
+Lecture: Monday, Tuesday, Wednesday and Friday, 17:00 - 18:00 <br />
+Seminar: Monday, 14:00 - 16:00
+
+<h2> Grading </h2>
+
+<ul>
+  <li> Midterm 1: 30% </li>
+  <li> Midterm 2: 30% </li>
+  <li> Final: 40% </li>
+</ul>
+
+<h2> Examinations </h2>
+
+<ul>
+  <li>
+    Midterm 1: Monday, 12.12.2011 <br />
+    <a href = "mat451-vjeshte11-provim1.pdf">Provim</a> &nbsp;
+    <a href = "mat451-vjeshte11-provim1-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+  <li>
+    Midterm 2: Monday, 16.01.2012 <br />
+    <a href = "mat451-vjeshte11-provim2.pdf">Provim</a> &nbsp;
+    <a href = "mat451-vjeshte11-provim2-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+  <li>
+    Final: Monday, 13.02.2012 <br />
+    <a href = "mat451-vjeshte11-final.pdf">Provim</a> &nbsp;
+    <a href = "mat451-vjeshte11-final-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§teaching/mat_551_2/mat_551.html§17-Feb-2012§
+{DTD}
+<html>
+
+<head>
+  <title> MAT 551: Algebra I </title>
+  {../../index.css}
+</head>
+
+<body>
+
+<h1 class = "syllabus"> MAT 551: Algebra I (Fall 2011) </h1>
+
+{SK}
+
+<h2> Course Description </h2>
+
+<p class = "normaltext">
+  This course comprises the group theory part of the course sequence MAT 551 / 552.
+</p>
+
+<p class = "normaltext">
+  Literature (among many other good books on the topic):
+</p>
+
+<ul>
+  <li> Serge Lang: Algebra. Springer GTM 211, 2002. </li>
+  <li> Joseph J. Rotman: An Introduction to the Theory of Groups. Springer GTM 148, 1995. </li>
+  <li> Derek J.S. Robinson: A Course in the Theory of Groups. Springer GTM 80, 1996. </li>
+</ul>
+
+<p class = "normaltext">
+  The first is a general book on algebra which briefly treats many parts of the
+  subject, without going into depth. The second and third are good introductions
+  to group theory, which is the main subject of this course.
+</p>
+
+<p class = "normaltext">
+  Software: {GAP} (Groups, Algorithms and Programming) -- a system for computational discrete algebra.
+</p>
+
+<h2> Timetable </h2>
+
+Lecture: Monday, Tuesday, Wednesday and Friday, 16:00 - 17:00 <br />
+Seminar: Thursday, 16:00 - 18:00
+
+<h2> Grading </h2>
+
+<ul>
+  <li> Midterm 1: 30% </li>
+  <li> Midterm 2: 30% </li>
+  <li> Final: 40% </li>
+</ul>
+
+<h2> Examinations </h2>
+
+<ul>
+  <li>
+    Midterm 1: Tuesday, 20.12.2011 <br />
+    <a href = "mat551-vjeshte11-provim1.pdf">Provim</a> &nbsp;
+    <a href = "mat551-vjeshte11-provim1-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+  <li>
+    Midterm 2: Thursday, 26.01.2012 <br />
+    <a href = "mat551-vjeshte11-provim2.pdf">Provim</a> &nbsp;
+    <a href = "mat551-vjeshte11-provim2-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+  <li>
+    Final: Thursday, 16.02.2012 <br />
+    <a href = "mat551-vjeshte11-final.pdf">Provim</a> &nbsp;
+    <a href = "mat551-vjeshte11-final-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§teaching/mat_452_2/mat_452.html§05-Jul-2012§
+{DTD}
+<html>
+
+<head>
+  <title> MAT 452: Introduction to Algebra II </title>
+  {../../index.css}
+</head>
+
+<body>
+
+<h1 class = "syllabus"> MAT 452: Introduction to Algebra II (Spring 2012) </h1>
+
+{SK}
+
+<h2> Course Description </h2>
+
+<p class = "firstparagraph">
+  The course sequence MAT 451 / 452 provides an introduction to groups, rings and fields.
+</p>
+
+<p class = "normaltext">
+  Literature (among many other good books on the topic):
+</p>
+<ul>
+  <li> David S. Dummit, Richard M. Foote: Abstract Algebra. John Wiley and Sons, 2004. </li>
+  <li> Serge Lang: Algebra. Springer GTM 211, 2002. </li>
+  <li>
+    Thomas W. Judson: Abstract Algebra -- Theory and Applications. <br />
+    <a href = "http://abstract.ups.edu/download.html" target = "_blank">http://abstract.ups.edu/download.html</a>
+  </li>
+</ul>
+
+<p class = "normaltext">
+  Software: {GAP} (Groups, Algorithms and Programming) -- a system for computational discrete algebra.
+</p>
+
+<h2> Timetable </h2>
+
+Lecture: Monday, 16:00 - 17:00 and Tuesday, 14:00 - 17:00 <br />
+Seminar: Monday, 14:00 - 16:00
+
+<h2> Grading </h2>
+
+<ul>
+  <li> Midterm 1: 30% </li>
+  <li> Midterm 2: 30% </li>
+  <li> Final: 40% </li>
+</ul>
+
+<h2> Examinations </h2>
+
+<ul>
+  <li>
+    Midterm 1: Monday, 16.04.2012 <br />
+    <a href = "mat452-pranvere12-provim1.pdf">Provim</a> &nbsp;
+    <a href = "mat452-pranvere12-provim1-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+  <li>
+    Midterm 2: Monday, 28.05.2012 <br />
+    <a href = "mat452-pranvere12-provim2.pdf">Provim</a> &nbsp;
+    <a href = "mat452-pranvere12-provim2-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+  <li>
+    Final: Wednesday, 27.06.2012 <br />
+    <a href = "mat452-pranvere12-final.pdf">Provim</a> &nbsp;
+    <a href = "mat452-pranvere12-final-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§teaching/mat_421/mat_421.html§05-Jul-2012§
+{DTD}
+<html>
+
+<head>
+  <title> MAT 421: Introduction to Real Analysis I </title>
+  {../../index.css}
+</head>
+
+<body>
+
+<h1 class = "syllabus"> MAT 421: Introduction to Real Analysis I (Spring 2012) </h1>
+
+{SK}
+
+<h2> Course Description </h2>
+
+<p class = "firstparagraph">
+  The course MAT 421 provides an introduction to real analysis.
+  A tentative list of course topics is as follows:
+</p>
+<ul>
+  <li> Definition of R (Dedekind cut), Cantor's diagonal argument. </li>
+  <li> Convergence of sequences and series. </li>
+  <li> Continuous and differentiable functions. </li>
+  <li> Power series, Taylor series. </li>
+  <li> Notions of convergence of sequences of functions. </li>
+  <li> Lebesgue integral, measurable functions and -sets, Cantor set. </li>
+  <li> Metric spaces, Banach spaces, Banach fixed-point theorem. </li>
+</ul>
+<p class = "firstparagraph">
+  The exact course contents depend on the learning progress and the interests of
+  the participants. In order to support a better understanding of the topics, it
+  is put a strong emphasis on examples.
+</p>
+
+<p class = "normaltext">
+  Literature (among many other good books on the topic):
+</p>
+<ul>
+  <li>
+    William F. Trench: Introduction to Real Analysis. <br />
+    <a href = "http://ramanujan.math.trinity.edu/wtrench/misc/index.shtml" target = "_blank">http://ramanujan.math.trinity.edu/wtrench/misc/index.shtml</a>
+  </li>
+  <li>
+    Jiri Lebl: Basic Analysis: Introduction to Real Analysis. <br />
+    <a href = "http://www.jirka.org/ra/" target = "_blank">http://www.jirka.org/ra/</a>
+  </li>
+</ul>
+
+<h2> Timetable </h2>
+
+Lecture: Wednesday, 16:00 - 17:00 and Thursday, 14:00 - 17:00 <br />
+Seminar: Wednesday, 14:00 - 16:00
+
+<h2> Grading </h2>
+
+<ul>
+  <li> Midterm 1: 30% </li>
+  <li> Midterm 2: 30% </li>
+  <li> Final: 40% </li>
+</ul>
+
+<h2> Examinations </h2>
+
+<ul>
+  <li>
+    Midterm 1: Thursday, 26.04.2012 <br />
+    <a href = "mat421-pranvere12-provim1.pdf">Provim</a> &nbsp;
+    <a href = "mat421-pranvere12-provim1-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+  <li>
+    Midterm 2: Thursday, 07.06.2012 <br />
+    <a href = "mat421-pranvere12-provim2.pdf">Provim</a> &nbsp;
+    <a href = "mat421-pranvere12-provim2-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+  <li>
+    Final: Saturday, 30.06.2012 <br />
+    <a href = "mat421-pranvere12-final.pdf">Provim</a> &nbsp;
+    <a href = "mat421-pranvere12-final-pergjigje.pdf">Pergjigje</a> (in Albanian language).
+  </li>
+</ul>
+
+{FOOTER}
+
+</body>
+
+</html>
+§talks_kohl.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> Talks and Conference Participations </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "other" align = "center"> Talks and Conference Participations </h1>
+
+{SK}
+
+<table class = "list" width = "100%" cellspacing = "2" cellpadding = "2"
+       summary = "This table contains the list of talks and conference participations of Stefan Kohl.">
+
+  <tr> <td nowrap = "nowrap" valign = "top"> August 7 - 12, 2015      </td> <td valign = "top"> Gave a course <em>Introduction to <a href = "http://www.gap-system.org" target = "_blank">GAP</a> with an Emphasis on Automorphisms of Finite Groups</em> at Dogus University in Istanbul, mainly for faculty and PhD students from various universities in Turkey; participated in a subsequent workshop <em>Finite Groups and their Automorphisms</em>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 5 - 6, 2014     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2014/index.html" target = "_blank">Nikolaus Conference&nbsp;2014</a> at the RWTH Aachen, and talk entitled <a href = "http://www.math.rwth-aachen.de/Nikolaus2014/abstracts/kohl.html" target = "_blank"><em>What do Thompson's Group V and the Collatz Conjecture have in Common?</em></a>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> August 25 - 29, 2014     </td> <td valign = "top"> Participation in the <a href = "http://gapdays.de/gapdays2014/" target = "_blank">GAP Days 2014</a> at the RWTH Aachen.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> April 1 - 5, 2014        </td> <td valign = "top"> Participation in the conference <a href = "http://www.dipmat2.unisa.it/ischiagrouptheory/IGT2014/home_2014.html" target = "_blank">Ischia Group Theory 2014</a> in Italy, and talk entitled <em>A Group Action on Z^2 Exhibiting Fractal-like Patterns</em>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> March 24 - 28, 2014      </td> <td valign = "top"> Participation in the workshop <a href = "http://www.ihp.fr/en/ceb/geowalks/workshop4" target = "_blank">Asymptotic Properties of Infinite Groups</a> at <em>Institut Henri Poincare</em> in Paris / France.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 7 - 8, 2012     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2012/index.html" target = "_blank">Nikolaus Conference&nbsp;2012</a> at the RWTH Aachen.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 10 - 11, 2010   </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2010/index.html" target = "_blank">Nikolaus Conference&nbsp;2010</a> at the RWTH Aachen.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> June 24 - 27, 2010       </td> <td valign = "top"> Participation in the conference <a href = "http://aca2010.info/index.php/aca2010/aca2010" target = "_blank">ACA 2010 - Applications of Computer Algebra</a> in Vlora / Albania. Organization of a session on <em>Computational Group Theory</em> with talks by Max Horn (Germany), Vasyl Alex Ustimenko (Poland), Ekaterina Khrebtova (Russia, Dubai), Thomas Bier (Oman), Sandeep Rajkumar Murthy (Great Britain) and Urszula Romanczuk (Poland). (Jointly with Dmitry Malinin). </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 20, 2009        </td> <td valign = "top"> Talk entitled <a href = "rcwa/slides/talk-uv-winterconference-2009.pdf">Groups Generated by Class Transpositions - Results and Open Problems</a> in the colloquium <em>UV Algebra Winter Conference 2009</em> at the University of Vlora. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> November 10, 2009        </td> <td valign = "top"> Talk entitled <a href = "rcwa/slides/talk-vlore-10-11-09.pdf">Open Problems on Groups Generated by Involutions Interchanging Residue Classes of the Integers</a> in the mathematics colloquium at the University of Vlora. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> August 1 - 15, 2009      </td> <td valign = "top"> Participation in the conference <a href = "http://www.groupsstandrews.org/2009/index.html" target = "_blank">Groups St&nbsp;Andrews&nbsp;2009</a> in Bath / England and talk entitled <a href = "rcwa/slides/gps2009slides.pdf">Simple Groups Generated by Involutions Interchanging Residue Classes of the Integers</a>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> February 12, 2009        </td> <td valign = "top"> Seminar talk entitled <a href = "rcwa/slides/seminar-talk-12-02-09.pdf">A Simple Group Generated by Involutions Interchanging Residue Classes of the Integers</a> at the University of Vlora. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 7 - 9, 2007     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2007/index.html" target = "_blank">Nikolaus Conference&nbsp;2007</a> at the RWTH Aachen and talk entitled `Residue-Class-Wise Affine Permutations of Z^2'.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> September 11 - 15, 2007  </td> <td valign = "top"> Participation in the <a href = "http://www.gap-system.org/workshop2007/" target = "_blank">GAP Package Authors Workshop</a> at the <em>Technische Universit&auml;t Braunschweig</em> and talk entitled `Computing in a Class of Infinite Permutation Groups'.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> November 7, 2006         </td> <td valign = "top"> Invited talk on the Computational Algebra Day at the <em>Vrije Universiteit Brussel</em> (Belgium), entitled <a href = "rcwa/slides/brussels2006slides.pdf">A New Class of Groups Accessible to Methods From Computational Group Theory</a>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> October 6, 2006          </td> <td valign = "top"> Invited <a href = "http://hamilton.nuigalway.ie/seminars.html" target = "_blank">talk</a> at the <em>National University of Ireland, Galway</em>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> April 11, 2006           </td> <td valign = "top"> Invited talk at the <em>Ecole Polytechnique Federale de Lausanne</em> (Switzerland), entitled `A Class of Infinite Permutation Groups Which are Accessible to Computational Investigations' <em>(blackboard talk, no slides)</em>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> March 8, 2006            </td> <td valign = "top"> Invited talk at the University of Bielefeld, entitled `A Countable Highly Transitive Simple Group Containing Collatz' Permutation' <em>(blackboard talk, no slides)</em>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 8 - 10, 2005    </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2005/index.html" target = "_blank">Darstellungstheorie-Tage&nbsp;/ Nikolaus Conference&nbsp;2005</a> in Aachen and talk entitled <a href = "rcwa/slides/aachen2005slides.pdf">On a Class of Infinite Permutation Groups</a>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> July 30 - August 6, 2005 </td> <td valign = "top"> Participation in the conference <a href = "http://www.groupsstandrews.org/2005/index.html" target = "_blank">Groups St&nbsp;Andrews&nbsp;2005</a> in St&nbsp;Andrews / Scotland and talk entitled <a href = "rcwa/slides/gps2005slides.pdf">Residue-Class-Wise Affine Groups</a>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 10 - 11, 2004   </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2004/index.html" target = "_blank">Nikolaus Conference&nbsp;2004</a> at the RWTH Aachen and talk entitled <a href = "rcwa/slides/aachen2004slides.pdf">On the Structure of the Group of All Residue Class-Wise Affine Permutations of the Integers</a>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 5 - 6, 2003     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/~Frank.Luebeck/Nikolaus/2003/index.html" target = "_blank">Nikolaus Conference&nbsp;2003</a> at the RWTH Aachen.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> June 1 - 6, 2003         </td> <td valign = "top"> Participation in the conference <a href = "http://www.math.kth.se/gaeta/" target = "_blank">Combinatorial, Geometric and Dynamical Aspects of Infinite Groups</a> in Gaeta / Italy.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 6 - 7, 2002     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/~Frank.Luebeck/Nikolaus/2002/index.html" target = "_blank">Nikolaus Conference&nbsp;2002</a> at the RWTH Aachen and talk entitled <a href = "autorb/niko2002slides.pdf">Classifying Finite Simple Groups with at Most 17 Orbits Under Automorphisms</a>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> November 8 - 9, 2002     </td> <td valign = "top"> Participation in the <a href = "http://www.mathematik.uni-kassel.de/~compmath/dtt/" target = "_blank">Darstellungstheorie-Tage&nbsp;2002</a> in Kassel and talk entitled <a href = "rcwa/slides/dtt2002slides.pdf">Restklassenweise affine Darstellungen von Gruppen</a>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 7 - 8, 2001     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/~Frank.Luebeck/Nikolaus/2001/index.html" target = "_blank">Nikolaus Conference&nbsp;2001</a> at the RWTH Aachen.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> August 28, 2001          </td> <td valign = "top"> Talk in St&nbsp;Andrews / Scotland entitled `Residue-Class-Wise Affine Representations of Groups'.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> August 5 - 18, 2001      </td> <td valign = "top"> Participation in the conference <a href = "http://people.bath.ac.uk/masgcs/gps01/" target = "parent">Groups St&nbsp;Andrews&nbsp;2001</a> in Oxford / England and talk entitled `Residue-Class-Wise Affine Representations of Groups'. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> July 23 - 26, 2001       </td> <td valign = "top"> Participation in the workshop <a href = "http://www.gap-system.org/ForumArchive/Caranti.1/Andreas.1/Finitely.1/1.html" target = "_blank">Finitely Presented Groups: Questions and Algorithms</a> in Trento / Italy.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 7 - 9, 2000     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/~Nikolaus2000/indexdst.html" target = "_blank">Darstellungstheorie-Tage&nbsp;2000</a> in Aachen and talk entitled `Number of Orbits on Simple Groups under Automorphisms'.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> February 18, 2000        </td> <td valign = "top"> Talk on the seminar <em>GGT W&uuml;rzburg-Stuttgart</em> in W&uuml;rzburg, entitled `&Uuml;ber die Anzahl der Bahnen auf endlichen Gruppen unter der Operation ihrer Automorphismengruppe - Suzuki-Gruppen vs. lineare Gruppen'. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> April 6 - 10, 1999       </td> <td valign = "top"> Participation in the <a href = "http://www.gap-system.org/Doc/Talks/linz99.html" target = "parent">Workshop on Advanced Programming in GAP</a> in Linz / Austria and talk entitled `Integer Factorization'. </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> November 25 - 28, 1998   </td> <td valign = "top"> Participation in the <em>SUNCAGe98</em> (Workshop on Application of Computer Algebra to Group Theory and Finite Geometries) in Caserta / Italy. </td> </tr>
+
+</table>
+
+<p class = "normaltext">
+  *) I acknowledge financial support by the organizers, respectively the refund of travel expenses by the inviting institution.
+</p>
+
+</body>
+
+</html>
+§rcwa.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> GAP Package RCWA </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "package"> RCWA </h1>
+
+<p class = "subtitle">
+  <em class = "partsofheading">R</em>esidue-<em class = "partsofheading">C</em>lass-<em class = "partsofheading">W</em>ise
+  <em class = "partsofheading">A</em>ffine Groups <br /> <br />
+  Version 4.4.1
+</p>
+
+{SK}
+
+<h2> Abstract </h2>
+
+<p class = "firstparagraph">
+  This package for {GAP}&nbsp;4 provides implementations of algorithms and methods
+  for computing in certain infinite permutation groups. These groups act on the set
+  of integers or on the set of elements of another suitable ring:
+</p>
+
+<p class = "middleparagraph">
+  Let <em>R</em> be a principal ideal domain.
+  Given disjoint residue classes <em>r1</em>(<em>m1</em>) and <em>r2</em>(<em>m2</em>)
+  of&nbsp;<em>R</em>, let the corresponding <em>class transposition</em> be the
+  permutation of&nbsp;<em>R</em> which interchanges <em>r1</em>+<em>km1</em> and
+  <em>r2</em>+<em>km2</em> for each&nbsp;<em>k</em> in&nbsp;<em>R</em> and which fixes
+  all other points. Further let CT(<em>R</em>) be the group which is generated by the
+  set of all class transpositions of&nbsp;<em>R</em>. 
+  At least in case <em>R</em>&nbsp;=&nbsp;<b>Z</b> this group is simple.
+</p>
+
+<p class = "middleparagraph">
+  The RCWA package permits to compute in the group CT(<em>R</em>), where <em>R</em> is
+  either the ring of integers or a univariate polynomial ring GF(<em>q</em>)[<em>x</em>]
+  over a finite field. This means that in principle it allows to construct and investigate
+  all finitely generated groups which embed into CT(<em>R</em>) for one of the mentioned
+  rings&nbsp;<em>R</em>. For <em>R</em>&nbsp;=&nbsp;<b>Z</b>, this holds for the following
+  groups and their subgroups:
+</p>
+
+<ul>
+  <li> Finite groups, and certain divisible torsion groups which they embed into. </li>
+  <li> Free groups of finite rank. </li>
+  <li> Free products of finitely many finite groups, thus in particular the
+       modular group PSL(2,<b>Z</b>). </li>
+  <li> Direct products of the above groups. </li>
+  <li> Wreath products of the above groups with finite groups and with the infinite
+       cyclic group (<b>Z</b>,+). </li>
+  <li> Many, many further groups which are not listed here. </li>
+</ul>
+
+<p class = "normaltext">
+  This list permits already to conclude that CT(<b>Z</b>) has finitely generated
+  subgroups which do not have finite presentations, and such with algorithmically
+  unsolvable membership problem.
+  However the list is certainly by far not exhaustive, and using this package
+  it is easy to construct groups falling into the last-mentioned category.
+  For results on the group CT(<b>Z</b>), see the author's article
+</p>
+
+A Simple Group Generated by Involutions Interchanging Residue Classes of the Integers.
+<em>Math. Z.</em> 264 (2010), no.&nbsp;4, 927-938.
+DOI:&nbsp;<a href = "http://dx.doi.org/10.1007/s00209-009-0497-8" target = "_blank">10.1007/s00209-009-0497-8</a>.
+
+<p class = "normaltext">
+  Descriptions of many of the algorithms and methods which are implemented in this package can be
+  found in the article
+</p>
+
+Algorithms for a Class of Infinite Permutation Groups.
+<em>J. Symb. Comput.</em> 43 (2008), no.&nbsp;8, 545-581. <br />
+DOI:&nbsp;<a href = "http://dx.doi.org/10.1016/j.jsc.2007.12.001" target = "_blank">10.1016/j.jsc.2007.12.001</a>.
+
+<p class = "normaltext">
+  The type of groups the RCWA package deals with is also discussed in the author's
+  <a href = "http://dx.doi.org/10.18419/opus-4763" target = "_blank">thesis</a>.
+</p>
+
+<h2> Manual and Examples </h2>
+
+<ul>
+  <li> The RCWA manual is available in the following formats:
+       <ul>
+         <li> <a href = "rcwa/doc/chap0.html">HTML</a> </li>
+         <li> <a href = "rcwa/doc/manual.pdf">PDF</a> </li>
+       </ul>
+  </li>
+  <li> <a href = "rcwa/doc/chap7.html">Examples</a> for the use of RCWA. </li>
+  <li> A little RCWA <a href = "rcwa/pictures.html">Picture Gallery</a>. </li>
+  <li> <a href = "rcwa/slides.html">Slides</a> from some of my talks on the subject. </li>
+</ul>
+
+<h2> Requirements and Installation </h2>
+
+<p class = "normaltext">
+  RCWA can&nbsp;be used on any platform for which {GAP} is available.
+  It requires only a recent {GAP} installation and the recent version of
+  <a href = "resclasses.html">ResClasses</a>.
+  For details see the <a href = "rcwa/README.rcwa">README</a> file.
+  Like any other {GAP} package, RCWA is usually installed in the <code>pkg/</code>
+  subdirectory of the {GAP} distribution. This is accomplished by extracting
+  the distribution file in this directory. To load the package, enter
+  <code>LoadPackage("rcwa");</code> at the {GAP} prompt.
+</p>
+
+<h2> Download </h2>
+
+<p class = "firstparagraph">
+  Download one of the following archives:
+</p>
+<ul>
+  <li> <a href = "rcwa/rcwa-4.4.1.tar.gz">rcwa-4.4.1.tar.gz</a>, <a href = "rcwa/rcwa-4.4.1-win.zip">rcwa-4.4.1-win.zip</a> (current version, for GAP 4.8 or higher, released 22-May-2016, about 13&nbsp;MB). </li>
+  <li> <a href = "rcwa/rcwa-4.4.0.tar.gz">rcwa-4.4.0.tar.gz</a>, <a href = "rcwa/rcwa-4.4.0-win.zip">rcwa-4.4.0-win.zip</a> (previous version, for GAP 4.8 or higher, released 14-May-2016, about 13&nbsp;MB). </li>
+  <li> <a href = "rcwa/rcwa-4.3.1.tar.gz">rcwa-4.3.1.tar.gz</a>, <a href = "rcwa/rcwa-4.3.1-win.zip">rcwa-4.3.1-win.zip</a> (old version, for GAP 4.8, released 09-Mar-2016, about 13&nbsp;MB). </li>
+  <li> <a href = "rcwa/rcwa-3.7.0.tar.gz">rcwa-3.7.0.tar.gz</a>, <a href = "rcwa/rcwa-3.7.0-win.zip">rcwa-3.7.0-win.zip</a> (old version, for GAP 4.7, released 21-Jul-2014, about 5.3&nbsp;MB). </li>
+  <li> <a href = "rcwa/rcwa-3.6.1.tar.gz">rcwa-3.6.1.tar.gz</a>, <a href = "rcwa/rcwa-3.6.1-win.zip">rcwa-3.6.1-win.zip</a> (old version, for GAP 4.7, released 18-Nov-2013, about 5.2&nbsp;MB). </li>
+  <li> <a href = "rcwa/rcwa-3.5.1.tar.gz">rcwa-3.5.1.tar.gz</a>, <a href = "rcwa/rcwa-3.5.1-win.zip">rcwa-3.5.1-win.zip</a> (old version, for GAP 4.6, released 30-Dec-2012, about 1.4&nbsp;MB). </li>
+  <li> <a href = "rcwa/rcwa-3.0.4.tar.gz">rcwa-3.0.4.tar.gz</a>, <a href = "rcwa/rcwa-3.0.4-win.zip">rcwa-3.0.4-win.zip</a> (old version, for GAP 4.4.12, released 04-Jun-2011). </li>
+  <li> <a href = "rcwa/rcwa-2.5.4.tar.gz">rcwa-2.5.4.tar.gz</a> (last 2.x version, for GAP 4.4.12, released 26-Sep-2007). </li>
+</ul>
+<p class = "firstparagraph">
+  The <code>.tar.gz</code> files are for all operating systems except for Windows,
+  while the <code>-win.zip</code> file is the Windows version. RCWA is redistributed on the GAP website
+  <a href = "http://www.gap-system.org/Packages/rcwa.html" target = "_blank">here</a>.
+  Note that it may take a while until the redistribution site picks up the recent version.
+</p>
+<p class = "lastparagraph">
+  If you use RCWA in some of your work, then please <a href = "mailto:{MYMAIL}">let me know</a>.
+  - I am interested very much in any applications of this package.
+  Also please let me know if you have problems with this package, if you wish to make comments or suggestions or if you find bugs.
+</p>
+
+<h2> Acknowledgements </h2>
+
+<p class = "firstparagraph">
+  I am grateful to
+  <a href = "http://www.maths.nuigalway.ie/staff/jmcdermott.shtml" target = "_blank">John P. McDermott</a>
+  for the discovery that the group discussed in Section&nbsp;7.1 of the manual is isomorphic
+  to Thompson's group V in July 2008, and to
+  <a href = "http://xwww.uni-math.gwdg.de/laurent/" target = "_blank">Laurent Bartholdi</a>
+  for his hint on how to construct wreath products of residue-class-wise
+  affine groups with the infinite cyclic group&nbsp;(<b>Z</b>,+) in April 2006.
+</p>
+<p class = "lastparagraph">
+  Further, I thank <a href = "http://www.icm.tu-bs.de/~beick/" target = "_blank">Bettina Eick</a>
+  for communicating this package and for her valuable suggestions on its manual in the time
+  before its first public release in April 2005.
+  Last but not least I thank the two anonymous referees for their constructive criticism
+  and their helpful suggestions.
+</p>
+
+{FOOTER}
+
+</body>
+
+</html>
+§rcwa/slides.html§17-Oct-2011§
+{DTD}
+<html>
+
+<head>
+  <title> Talks on Residue-Class-Wise Affine Groups </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+</head>
+
+<body>
+
+<h1 class = "other"> Slides from some of my Talks on Residue-Class-Wise Affine Groups </h1>
+
+<ul>
+  <li>
+    <a href = "slides/talk-vlore-10-11-09.pdf">Slides</a>
+    I used in my colloquium talk in Vlora on November&nbsp;10,&nbsp;2009.
+  </li>
+  <li>
+    <a href = "slides/gps2009slides.pdf">Slides</a>
+    I used in my talk on the conference <a href = "http://www.groupsstandrews.org/" target = "_blank">Groups St Andrews 2009</a>.
+  </li>
+  <li>
+    <a href = "slides/seminar-talk-12-02-09.pdf">Slides</a>
+    I used in my seminar talk in Vlora on February&nbsp;12,&nbsp;2009.
+  </li>
+  <li>
+    <a href = "slides/brussels2006slides.pdf">Slides</a>
+    I used in my talk on the Computational Algebra Day on November&nbsp;7,&nbsp;2006 in Brussels. <br />
+    A&nbsp;<a href = "slides/brussels2006_8slidesperpage.pdf">version&nbsp;with&nbsp;8&nbsp;slides&nbsp;per&nbsp;page</a> is available as&nbsp;well.
+  </li>
+  <li>
+    <a href = "slides/aachen2005slides.pdf">Slides</a>
+    I used in my talk on the Nikolaus Conference&nbsp;2005 at the RWTH&nbsp;Aachen. <br />
+    A&nbsp;<a href = "slides/aachen2005_8slidesperpage.pdf">version&nbsp;with&nbsp;8&nbsp;slides&nbsp;per&nbsp;page</a> is available as&nbsp;well.
+  </li>
+  <li>
+    <a href = "slides/promotionsvortrag-kohl.pdf">Slides</a>.
+    I used in my <em>Promotionsvortrag</em> on Thursday, October 6, 2005 at the University of Stuttgart. <br />
+    A&nbsp;<a href = "slides/promotionsvortrag_8folienproseite.pdf">version&nbsp;with&nbsp;8&nbsp;slides&nbsp;per&nbsp;page</a> is available as&nbsp;well.
+  </li>
+  <li>
+    <a href = "slides/gps2005slides.pdf">Slides</a>.
+    I used in my talk on the conference <a href = "http://www.groupsstandrews.org/" target = "_blank">Groups St Andrews 2005</a>.
+  </li>
+  <li>
+    <a href = "slides/aachen2004slides.pdf">Slides</a>
+    I used in my talk on the Nikolaus Conference&nbsp;2004 at the RWTH&nbsp;Aachen.
+  </li>
+  <li>
+    A <a href = "slides/gaeta2003poster.pdf">poster</a>
+    I displayed at the conference <a href = "http://www.math.kth.se/gaeta/" target = "_blank">Combinatorial, Geometric and Dynamical Aspects of Infinite Groups</a> in&nbsp;2003 in&nbsp;Gaeta.
+  </li>
+  <li>
+    <a href = "slides/dtt2002slides.pdf">Slides</a>
+    I used in my talk on the <a href = "http://www.mathematik.uni-kassel.de/~compmath/dtt/" target = "_blank">Darstellungstheorie-Tage&nbsp;2002</a>.
+  </li>
+</ul>
+
+<p class = "firstparagraph">
+  Many of my talks were blackboard talks.
+  For these there are of course no slides available.
+</p>
+
+<br />
+
+<table class = "footer" width = "100%" cellspacing = "1" cellpadding = "2"
+       summary = "This table serves as a partial substitute for the [BACK] button of your browser.">
+  <tr> <td> Back to <a class = "footer" href = "../rcwa.html">RCWA main page</a>,
+                    <a class = "footer" href = "../main.html">main page</a> </td> 
+       <td> <p align = "right"> Last modified: {DATE} </p> </td> </tr>
+</table>
+
+</body>
+
+</html>
+§rcwa/pictures.html§05-Jun-2007§
+{DTD}
+<html>
+
+<head>
+  <title> A Little RCWA Picture Gallery </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+</head>
+
+<body>
+
+<h1 class = "other"> A Little RCWA Picture Gallery </h1>
+
+<p class = "normaltext">
+  This page shows a couple of pictures created using the function <code>DrawOrbitPicture</code>.
+  This function is new in RCWA&nbsp;2.3.0. In order to save space, the pictures have been
+  converted to PNG format by a common graphics program.
+  The first picture shows an orbit under an action of the modular group PSL(2,Z)
+  on&nbsp;Z&nbsp;x&nbsp;Z (the pattern of course extends to infinity):
+</p>
+
+<br />
+
+<img src = "pictures/example1.png" width = "512" height = "512"
+     alt = "An illustration of an orbit under a certain action of PSL(2,Z) on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  The action of PSL(2,Z) on that orbit is regular(!).
+  The picture is created by the following commands:
+</p>
+
+<pre>
+gap> PSL2Z := Image(IsomorphismRcwaGroup(FreeProduct(CyclicGroup(2),
+>                                                    CyclicGroup(3))));;
+gap> DrawOrbitPicture(PSL2Z,[0,1],20,512,512,false,fail,
+>                     "~/rcwa/pictures/example1.bmp");
+</pre>
+
+<p class = "normaltext">
+  The second picture shows three orbits under that action of PSL(2,Z) on Z&nbsp;x&nbsp;Z,
+  in different colors:
+</p>
+
+<img src = "pictures/example2.png" width = "512" height = "512"
+     alt = "An illustration of some orbits under a certain action of PSL(2,Z) on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following command:
+</p>
+
+<pre>
+gap> DrawOrbitPicture(PSL2Z,Combinations([1..4],2),20,512,512,true,
+>                     [[255,0,0],[0,255,0],[0,0,255]],
+>                     "~/rcwa/pictures/example2.bmp");
+</pre>
+
+<p class = "normaltext">
+  The third picture shows the distance of points from (0,1), in terms of length of
+  words in the generators, under the above action of PSL(2,Z). The color is determined
+  by the distance (mod&nbsp;3):
+</p>
+
+<img src = "pictures/example3.png" width = "512" height = "512"
+     alt = "An illustration of an orbit under an action of PSL(2,Z) on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following command:
+</p>
+
+<pre>
+gap> DrawOrbitPicture(PSL2Z,[0,1],20,256,256,true,
+>                     [[255,0,0],[0,255,0],[0,0,255]],
+>                     "~/rcwa/pictures/example3.bmp");
+</pre>
+
+<p class = "firstparagraph">
+  Afterwards, the picture has been enlarged by a factor of&nbsp;2 by a standard graphics program,
+  in order to improve the visibility of the colors of the pixels.
+</p>
+
+<p class = "middleparagraph">
+  The following picture shows the same, but with a free product of two cyclic groups
+  of order&nbsp;3 instead of PSL(2,Z):
+</p>
+
+<br />
+
+<img src = "pictures/example4.png" width = "512" height = "512"
+     alt = "An illustration of an orbit under an action of the free product of two cyclic groups of order 3 on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Image(IsomorphismRcwaGroup(FreeProduct(CyclicGroup(3),
+>                                                CyclicGroup(3))));;
+gap> DrawOrbitPicture(G,[0,1],13,256,256,true,
+>                     [[255,0,0],[0,255,0],[0,0,255]],
+>                     "~/rcwa/pictures/example4.bmp");
+</pre>
+
+<p class = "normaltext">
+  The next picture shows the distance of points from (0,1), in terms of length of
+  words in the generators, under the action of a group which acts 2-transitively
+  on&nbsp;Z:
+</p>
+
+<img src = "pictures/example5.png" width = "512" height = "512"
+     alt = "An illustration of a 2-transitive group action on Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Group(ClassShift(0,1),ClassTransposition(1,2,0,4));;
+gap> DrawOrbitPicture(G,[0,1],20,512,512,true,
+>                     List([1..20],i->[255-12*i,255-12*i,255]),
+>                     "~/rcwa/pictures/example5.bmp");
+</pre>
+
+<p class = "normaltext">
+  The same, for another group which acts 2-transitively on&nbsp;Z:
+</p>
+
+<img src = "pictures/example6.png" width = "512" height = "512"
+     alt = "An illustration of a 2-transitive group action on Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Group(mKnot(3),ClassShift(Integers));;
+gap> palette := [[255,  0,  0],[  0,255,  0],[  0,  0,255],
+>                [255,255,  0],[255,  0,255],[  0,255,255],
+>                [255,128,  0],[255,  0,128],[128,255,  0],
+>                [  0,255,128],[128,  0,255],[  0,128,255]];;
+gap> DrawOrbitPicture(G,[0,1],16,512,512,true,palette,
+>                     "~/rcwa/pictures/example6.bmp");
+</pre>
+
+<p class = "normaltext">
+  The next picture shows a ball around (0,1) of another group
+  (the orbit covers the plane with the pattern visible in the middle of the image):
+</p>
+
+<img src = "pictures/example7.png" width = "512" height = "512"
+     alt = "A ball around (0,1) of a group acting on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Group(ClassTransposition(0,2,1,2),
+>               ClassShift(0,4))^ClassTransposition(0,2,1,4);;
+gap> DrawOrbitPicture(G,[0,1],30,512,512,false,fail,
+>                     "~/rcwa/pictures/example7.bmp");
+</pre>
+
+<p class = "normaltext">
+  Another similar picture.
+  The orbit again covers the plane with the pattern visible in the middle of the image:
+</p>
+
+<img src = "pictures/example8.png" width = "512" height = "512"
+     alt = "A ball around (0,1) of a group acting on Z x Z" border = "0pt" />
+
+<p class = "normaltext">
+  This picture is created by the following commands:
+</p>
+
+<pre>
+gap> G := Group(ClassShift(0,2),
+>               ClassTransposition(0,4,1,4))^ClassTransposition(1,2,0,6);;
+gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
+>                     "~/rcwa/pictures/example8.bmp");
+</pre>
+
+<br />
+
+<table class = "footer" width = "100%" cellspacing = "1" cellpadding = "2"
+       summary = "This table serves as a partial substitute for the [BACK] button of your browser.">
+  <tr> <td> Back to <a class = "footer" href = "../rcwa.html">RCWA main page</a>,
+                    <a class = "footer" href = "../main.html">main page</a> </td> 
+       <td> <p align = "right"> Last modified: {DATE} </p> </td> </tr>
+</table>
+
+</body>
+
+</html>
+§resclasses.html§14-May-2016§
+{DTD}
+<html>
+
+<head>
+  <title> GAP Package ResClasses </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "package"> ResClasses </h1>
+
+<p class = "subtitle">
+  Set-Theoretic Computations with
+  <em class = "partsofheading">Res</em>idue
+  <em class = "partsofheading">Classes</em> <br /> <br />
+  Version 4.5.0
+</p>
+
+{SK}
+
+<h2>
+  Description
+</h2>
+
+<p class = "firstparagraph">
+  ResClasses is a little {GAP}&nbsp;4 package for computing with set-theoretic
+  unions of residue classes of the ring of integers.
+</p>
+
+<p class = "middleparagraph">
+  The class of sets which ResClasses can deal with includes the open and the
+  closed sets in the topology on the integers which is induced by taking the
+  set of all residue classes as a basis, as far as the usual restrictions
+  imposed by the finiteness of computing resources permit this.
+</p>
+
+<p class = "middleparagraph">
+  Similar functionality as for the ring of integers is provided for its
+  (semi-)localizations at one or several prime ideals as well as for
+  polynomial rings in one variable over a finite field. Special methods are
+  available for unions of residue classes with distinguished (`fixed')
+  representatives.
+</p>
+
+<p class = "lastparagraph">
+  The functionality of this package is used in a group theoretical context
+  by the <a href = "rcwa.html">RCWA</a> package.
+</p>
+
+<h2>
+  Manual
+</h2>
+
+<p class = "firstparagraph">
+  The ResClasses manual is available in the following formats:
+</p>
+<ul>
+  <li> <a href = "resclasses/doc/chap0.html">HTML</a> </li>
+  <li> <a href = "resclasses/doc/manual.pdf">PDF</a> </li>
+</ul>
+
+<h2> Requirements and Installation </h2>
+
+<p class = "normaltext">
+  ResClasses can&nbsp;be used on any platform for which {GAP} is available.
+  It requires only a recent {GAP} installation.
+  For details see the <a href = "resclasses/README.resclasses">README</a> file.
+  The installation requires only extracting the archive file in the <code>pkg/</code> subdirectory of the
+  {GAP} root directory. To load the package, enter <code>LoadPackage("resclasses");</code> at the {GAP} prompt.
+</p>
+
+<h2> Download </h2>
+
+<p class = "firstparagraph">
+  Download one of the following archives:
+</p>
+<ul>
+  <li> <a href = "resclasses/resclasses-4.5.0.tar.gz">resclasses-4.5.0.tar.gz</a>, <a href = "resclasses/resclasses-4.5.0-win.zip">resclasses-4.5.0-win.zip</a> (current version, for GAP 4.8 or higher, released 14-May-2016, about 300KB). </li>
+  <li> <a href = "resclasses/resclasses-4.4.2.tar.gz">resclasses-4.4.2.tar.gz</a>, <a href = "resclasses/resclasses-4.4.2-win.zip">resclasses-4.4.2-win.zip</a> (previous version, for GAP 4.8, released 09-Mar-2016, about 300KB). </li>
+  <li> <a href = "resclasses/resclasses-3.4.0.tar.gz">resclasses-3.4.0.tar.gz</a>, <a href = "resclasses/resclasses-3.4.0-win.zip">resclasses-3.4.0-win.zip</a> (old version, for GAP 4.7, released 21-Jul-2014, about 270KB). </li>
+  <li> <a href = "resclasses/resclasses-3.3.2.tar.gz">resclasses-3.3.2.tar.gz</a>, <a href = "resclasses/resclasses-3.3.2-win.zip">resclasses-3.3.2-win.zip</a> (old version, for GAP 4.6, released 18-Nov-2013). </li>
+  <li> <a href = "resclasses/resclasses-3.0.0.tar.gz">resclasses-3.0.0.tar.gz</a>, <a href = "resclasses/resclasses-3.0.0-win.zip">resclasses-3.0.0-win.zip</a> (old version, for GAP 4.4.12, released 08-May-2011). </li>
+  <li> <a href = "resclasses/resclasses-2.5.3.tar.gz">resclasses-2.5.3.tar.gz</a> (last 2.x version, for GAP 4.4.12, released 26-Sep-2007). </li>
+</ul>
+<p class = "firstparagraph">
+  The <code>.tar.gz</code> files are for all operating systems except for Windows,
+  while the <code>-win.zip</code> file is the Windows version. ResClasses is redistributed on the GAP website
+  <a href = "http://www.gap-system.org/Packages/resclasses.html" target = "_blank">here</a>.
+  Note that the redistribution may take a while to pick up the recent version.
+</p>
+<p class = "lastparagraph">
+  If you have problems with this package, if you wish to make comments or suggestions
+  or if you find bugs, then please send me an <a href = "mailto:{MYMAIL}">e-mail</a>.
+  Also please let me know if you use ResClasses in some of your work.
+</p>
+
+{FOOTER}
+
+</body>
+
+</html>
+§factint.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> GAP Package FactInt </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "package"> FactInt </h1>
+
+<p class = "subtitle">
+  Advanced Methods for <em class = "partsofheading">Fact</em>oring
+  <em class = "partsofheading">Int</em>egers <br /> <br />
+  Version 1.5.3
+</p>
+
+{SK}
+
+<h2>
+  Description
+</h2>
+
+<p class = "firstparagraph">
+  FactInt is a {GAP}&nbsp;4 package which provides
+  implementations of the following methods for factoring integers:
+</p>
+
+<ul>
+  <li> Pollard's <em>p</em>-1 </li>
+  <li> Williams' <em>p</em>+1 </li>
+  <li> Elliptic Curves Method (ECM) </li>
+  <li> Continued Fraction Algorithm (CFRAC) </li>
+  <li> Multiple Polynomial Quadratic Sieve (MPQS) </li>
+</ul>
+
+<p class = "firstparagraph">
+  FactInt also makes use of
+  <a href = "http://maths-people.anu.edu.au/~brent/factors.html" target = "_blank">Richard P. Brent's tables</a>
+  of known factors of integers of the form <em>b<sup>k</sup>+/-1</em> for `small' <em>b</em>.
+  The code for accessing these tables has been contributed by <a href = "http://www.math.rwth-aachen.de/~Frank.Luebeck/index.html" target = "_blank">Frank L&uuml;beck</a>.
+</p>
+
+<p class = "middleparagraph">
+  The ECM is suited best for finding factors which are neither too small
+  (i.e. have less than about 12 decimal digits) nor too close to the square root
+  of the number to be factored.
+  The MPQS is designed for factoring products of two primes of comparable orders
+  of magnitude. CFRAC is the historical predecessor of the MPQS.
+  Pollard's <em>p</em>-1 and Williams' <em>p</em>+1 are useful for finding factors
+  <em>p</em> such that all prime factors of <em>p</em>-1 resp. <em>p</em>+1 are
+  `small', e.g. smaller than 1000000.
+  All factoring methods implemented in this package are probabilistic.
+  In particular the time needed by the ECM depends highly on the actual - good
+  or bad - luck.
+</p>
+
+<p class = "middleparagraph">
+  FactInt provides a general-purpose factorization routine which uses an appropriate
+  combination of the methods mentioned above, the Pollard&nbsp;Rho routine which is
+  implemented in the {GAP}&nbsp;Library and a variety of tricks for special cases
+  to obtain a good average performance for `arbitrary' integers.
+  At the user's option, FactInt provides detailed information about
+  the progress of the factorization process.
+</p>
+
+<p class = "normaltext">
+  FactInt is published / redistributed on the {GAP} website
+  <a href = "http://www.gap-system.org/Packages/factint.html" target = "_blank">here</a>.
+</p>
+
+<h2>
+  Download, Manual and Examples
+</h2>
+
+<ul>
+  <li> Download FactInt: 
+    <ul>
+      <li> <a href = "factint/factint-1.5.3-win.zip">factint-1.5.3-win.zip</a> (recent version, released 16-Jun-2011, about 4.2&nbsp;MB). </li>
+      <li> <a href = "factint/factint-1.5.2.tar.gz">factint-1.5.2.tar.gz</a> (previous version, released 26-Sep-2007, about 3.2&nbsp;MB). </li>
+    </ul>
+  </li>
+  <li> FactInt&nbsp;can&nbsp;be used under any operating system for which {GAP}&nbsp;is&nbsp;available. </li>
+  <li> Requirements: {GAP}&nbsp;4.4.9 or newer and <a href = "http://www.gap-system.org/Packages/gapdoc.html" target = "_blank">GAPDoc</a>&nbsp;1.0 or newer. </li>
+  <li> Installation: extract the distribution file in the <code>pkg/</code> subdirectory of the {GAP} root directory. </li>
+  <li> Manual: <a href = "factint/doc/chap0.html">HTML</a>&nbsp;<a href = "factint/doc/manual.pdf">PDF</a>. </li>
+  <li> Some <a href = "factint/examples.html">examples</a> for the use of FactInt. </li>
+  <li> Version history: see <a href = "factint/CHANGES">CHANGES</a>. </li>
+  <li> A <a href = "factint/README.factint">readme</a> file which provides similar information as given on this webpage. </li>
+  <li> {GAP} - readable package information: see <a href = "factint/PackageInfo.g">PackageInfo.g</a>. </li>
+  <li> Slides I used in my talk at the {GAP} workshop in April 1999 in Linz: <a href = "factint/slides.zoo">slides.zoo</a> (26K). </li>
+</ul>
+
+<p class = "normaltext">
+  If you have problems with this package, wish to make comments
+  or suggestions, or if you find bugs, please send e&nbsp;-&nbsp;mail
+  to <a href = "mailto:{MYMAIL}">Stefan&nbsp;Kohl</a>.
+</p>
+
+{FOOTER}
+
+</body>
+
+</html>
+§factint/examples.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> FactInt Examples </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+</head>
+
+<body>
+
+<h1 class = "other" align = "center">
+  Examples for the use of FactInt
+</h1>
+
+<p class = "normaltext">
+  This page lists logfiles of some sample applications of FactInt.
+  Approximate runtimes are given for a Pentium&nbsp;200 under Windows.
+  Please note that these examples have been created in&nbsp;1999, and that
+  recent versions of the package on today's computers permit performing
+  considerably more difficult factorization tasks.
+</p>
+
+<table width = "100%" cellspacing = "1" cellpadding = "2"
+       summary = "This table lists log files of some sample applications of the FactInt package.">
+
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_f8.log">F8 = 2^(2^8) + 1</a>
+    </td>
+    <td valign = "top">
+      This is just a small example for the use of ECM.
+      Historical remark: This number was at first factored
+      by Brent and Pollard in&nbsp;1980.
+      Runtime:&nbsp;1<em>min</em>&nbsp;45<em>sec</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs3f.log">p(3489)</a>
+    </td>
+    <td valign = "top">
+      This shows the rare occurence of an integer with
+      3&nbsp;factors `reaching' the MPQS when using the
+      factorization routine with default parameters.
+      Runtime:&nbsp;5<em>min</em>&nbsp;47<em>sec</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_p-1.log">158! + 1</a>
+    </td>
+    <td valign = "top">
+      This example shows that also a special method like
+      Pollard's <em>p</em>-1 can sometimes be very useful.
+      Runtime:&nbsp;5<em>min</em>&nbsp;57<em>sec</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_auri.log">1459^60 - 1</a>
+    </td>
+    <td valign = "top">
+      This is an example of an integer with many 
+      `aurifeuillian' factors.
+      Runtime:&nbsp;13<em>min</em>&nbsp;19<em>sec</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_ecm24.log">1093^28 + 1</a>
+    </td>
+    <td valign = "top">
+      In this example, a 24-digit factor is found by ECM.
+      It shows also the use of options.
+      Runtime:&nbsp;about&nbsp;1<em>h</em>&nbsp;10<em>min</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs61.log">1093^33 + 1</a>
+    </td>
+    <td valign = "top">
+      This example shows the application of the MPQS
+      to a 61-digit integer with two factors of
+      nearly equal size.
+      Runtime:&nbsp;1<em>h</em>&nbsp;37<em>min</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_ecm27.log">1093^50 + 1</a>
+    </td>
+    <td valign = "top">
+      In this example, a 27-digit factor is found by ECM.
+      Runtime:&nbsp;about&nbsp;10<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs68.log">3^157 - 2^157</a>
+    </td>
+    <td valign = "top">
+      A 68-digit number is factored by the MPQS.
+      The factors have 32 resp. 36&nbsp;digits.
+      Runtime:&nbsp;about&nbsp;30<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs69.log">3^179 - 2^179</a>
+    </td>
+    <td valign = "top">
+      A 69-digit number is factored by the MPQS.
+      The factors have both 35 digits.
+      Runtime:&nbsp;about&nbsp;65<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs75.log">1093^40 + 1</a>
+    </td>
+    <td valign = "top">
+      The 75-digit cofactor of this number is the largest
+      integer I factored by the MPQS so far.
+      There was some bad luck that I did not find the
+      23-digit factor by ECM before invoking the MPQS. 
+      Runtime:&nbsp;about&nbsp;100<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs73.log">3^163 - 2^163</a>
+    </td>
+    <td valign = "top">
+      A 73-digit number is factored by the MPQS.
+      The factors have 34 resp. 39&nbsp;digits.
+      Runtime:&nbsp;about&nbsp;115<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+
+</table>
+
+<p class = "normaltext">
+  Here is a <a href = "ex3k2k.txt">table</a> of factorizations of numbers of the form
+  3<sup><em>k</em></sup> - 2<sup><em>k</em></sup> for <em>k</em>&nbsp;&lt;&nbsp;300
+  (with some gaps), obtained using my package.
+</p>
+
+<table class = "footer" width = "100%" cellspacing = "1" cellpadding = "2"
+       summary = "This table serves as a partial substitute for the [BACK] button of your browser.">
+  <tr> <td> Back to <a class = "footer" href = "../factint.html">FactInt main page</a>,
+                    <a class = "footer" href = "../main.html">main page</a> </td> 
+       <td> <p align = "right"> Last modified: {DATE} </p> </td> </tr>
+</table>
+
+</body>
+
+</html>
+§gap-materials.html§04-Oct-2011§
+{DTD}
+<html>
+
+<head>
+  <title> GAP Materials </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "publications"> GAP Materials </h1>
+
+{SK}
+
+<h2> GAP Exercises </h2>
+
+<p class = "normaltext">
+  A collection of {GAP} exercises is available in <a href = "gap-exercises/chap0.html">HTML</a>
+  and <a href = "gap-exercises/manual.pdf">PDF</a>.
+</p>
+
+<h2> GAP Crossword Puzzle </h2>
+
+<p class = "normaltext">
+  A {GAP} crossword puzzle is available <a href = "gap-crossword/gap-crossword.html">here</a>.
+</p>
+
+{FOOTER}
+
+</body>
+
+</html>
+§announcements.html§30-Aug-2012§
+{DTD}
+<html>
+
+<head>
+  <title> Announcements </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "publications"> Announcements </h1>
+
+{SK}
+
+<p class = "normaltext">
+  Presently none.
+</p>
+
+{FOOTER}
+
+</body>
+
+</html>
+§miscellanea.html§29-Sep-2014§
+{DTD}
+<html>
+
+<head>
+  <title> Miscellanea </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1> Miscellanea </h1>
+
+<ul>
+  <li>
+    A couple of <a href = "problems.html">problems and examples</a> from elementary number theory.
+  </li>
+  <li>
+    Prime number races in multiple dimensions -- <a href = "primpath/primpath.html">conjecture and pictures</a>.
+  </li>
+  <li>
+    A few <a href = "photos.html">photos</a> from my holidays (all from the 1990's).
+  </li>
+</ul>
+
+</body>
+
+</html>
+§problems.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> Problems, Questions and Examples from Number Theory </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "problems">
+  Some Problems, Questions and Examples from Elementary&nbsp;Number&nbsp;Theory
+</h1>
+
+<h2 align = "center"> 1. </h2>
+
+<p class = "normaltext">
+  <em class = "introducingwords"> Conjecture: </em>
+  Let <em>R</em> be an euclidean ring all of whose nontrivial residue class
+  rings are finite. Further let <em>P</em>&nbsp;in&nbsp;<em>R</em>[<em>x</em>]
+  be a univariate polynomial over&nbsp;<em>R</em> such that
+  gcd{&nbsp;<em>P</em>(<em>x</em>)&nbsp;|&nbsp;<em>x</em>&nbsp;in&nbsp;<em>R</em>&nbsp;}&nbsp;=&nbsp;1.
+  Then there is an <em>x</em>&nbsp;in&nbsp;<em>R</em> such that <em>P</em>(<em>x</em>) has
+  not more prime factors in&nbsp;<em>R</em> than the polynomial
+  <em>P</em>&nbsp;in&nbsp;<em>R</em>[<em>x</em>].
+</p>
+
+<h2 align = "center"> 2. </h2>
+
+<p class = "normaltext">
+  Let <em>n</em> be a Carmichael number with three prime factors, and let
+  <em>p</em> be one of them. Then we have <em>n</em>&nbsp;&lt;&nbsp;4<em>p</em><sup>6</sup>
+  (<a href = "problems/cmzth.pdf">proof</a>). 
+  Using this upper bound, it can be verified by means of computation that
+  <em>p</em> can be any odd prime number less than 1223, but not 1223 itself.
+  There is a <a href = "problems/cm3fact.gap">GAP program</a> 
+  and a <a href = "problems/cm3fakt.pas">Pascal program</a> for this.
+  A precomputed table is available <a href = "problems/cm3fact.txt">here</a>.
+  The numbers of Carmichael numbers with 3 prime factors having a specific factor
+  <em>p</em>&nbsp;&lt;&nbsp;10000 are listed <a href = "problems/cmzno.txt">here</a>.
+</p>
+
+<p class = "normaltext">
+  <em class = "introducingwords">Question:</em> Which primes are possible values of <em>p</em>?
+</p>
+
+<h2 align = "center"> 3. </h2>
+
+<p class = "normaltext">
+  Are there positive integers <em>a</em>,<em>b</em>&nbsp;>&nbsp;1
+  such that <em>a</em><sup>&pi;</sup>&nbsp;=&nbsp;<em>b</em>?
+</p>
+
+<p class = "normaltext">
+  The existence of such numbers is implausible, but the
+  transcendence of &pi; is obviously insufficient for a proof.
+  Cf. <a href = "http://mathoverflow.net/questions/118523/" target = "_blank">this</a>
+  question on MathOverflow.
+</p>
+
+<h2 align = "center"> 4. </h2>
+
+<p class = "normaltext">
+  Marking the rational points on the unit sphere
+  (equation <em>x</em><sup>2</sup>+<em>y</em><sup>2</sup>+<em>z</em><sup>2</sup>&nbsp;=&nbsp;1)
+  with common denominator less than a given upper bound and projecting
+  one octant onto the plane <em>z</em>&nbsp;=&nbsp;0 yields the following picture:
+</p> 
+
+<p>
+  <a href = "images/sphere1.gif">
+    <img src = "images/sphere1s.gif" width = "400" height = "400"
+         alt = "A mathematical illustration" />
+  </a>
+</p>
+
+<p class = "normaltext">
+  Taking the equation
+  <em>x</em><sup>3</sup>+<em>y</em><sup>3</sup>+<em>z</em><sup>3</sup> = 1
+  instead yields the following picture:
+</p>
+
+<p>
+  <img src = "images/sphere2.gif" width = "400" height = "400"
+       alt = "A mathematical illustration" />
+</p>
+
+<p class = "normaltext">
+  How does the respective image for the equation
+  <em>x</em><sup>4</sup>+<em>y</em><sup>4</sup>+<em>z</em><sup>4</sup>&nbsp;=&nbsp;1
+  look like?
+</p>
+
+<p class = "normaltext">
+  It is known that this equation has infinitely many solutions as well.
+  The `minimal' solution is
+  (<em>x</em>,<em>y</em>,<em>z</em>) = (95800/422481,217519/422481,414560/422481).
+</p>
+
+<h2 align = "center"> 5. </h2>
+
+<p class = "normaltext">
+  Write down the sequence of positive integers in the following manner
+  onto a square grid:
+</p>
+<pre>
+                            7 --- 8 --- 9 --- 10
+
+                            |                 |
+                            |                 |
+
+                            6     1 --- 2     11
+
+                            |           |     .
+                            |           |     .
+                                              .
+                            5 --- 4 --- 3
+</pre>
+<p class = "normaltext">
+  (like in <a href = "images/ulam.gif">
+  Ulam's prime number spiral</a>). Then paint the squares in colors
+  depending on the length of the period of the continued fraction expansion
+  of the square root of&nbsp;<em>n</em>.
+  This yields images like the following:
+</p>
+
+<table width = "100%" cellspacing = "5" cellpadding = "0"
+       summary = "This table contains two images illustrating period lengths of continued fraction expansions of square roots.">
+  <tr>
+    <td align = "left">
+      <a href = "images/cfrac1.gif">
+        <img src = "images/cfrac1s.gif" width = "288" height = "288"
+             alt = "A mathematical illustration" />
+      </a>
+    </td>
+    <td align = "right">
+      <a href = "images/cfrac2.gif">
+        <img src = "images/cfrac2s.gif" width = "288" height = "288"
+             alt = "A mathematical illustration" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+<h2 align = "center"> 6. </h2>
+
+<p class = "normaltext">
+  (Removed.)
+</p>
+
+<h2 align = "center"> 7. </h2>
+
+<p class = "normaltext">
+  A GAP implementation of elliptic curve point groups (currently only affine Weierstrass form)
+  is available here
+  (<a href = "problems/elliptic.gd">elliptic.gd</a>, <a href = "problems/elliptic.gi">elliptic.gi</a>).
+  There are also some <a href = "problems/examples.log">examples</a> for the use of these objects.
+</p>
+
+</body>
+
+</html>
+§image.css§25-Jan-2006§
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  image.css        Image-Only Page Style File         Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body { background-color: #FFFFFF; }
+
+a:link    { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:visited { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:active  { color: #000000; background-color: #FFFFFF; text-decoration: none; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */
+§primpath/imgsel.css§25-Sep-2010§
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  imgsel.css        Image Selector Style File         Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body {
+  color:            #000000;
+  background-color: {MENU BACKGROUND};
+
+  margin-top:    1cm;
+  margin-bottom: 0.5cm;
+  margin-left:   0.25cm;
+  margin-right:  0.25cm;
+
+  font-family: Helvetica,Verdana,Arial,sans-serif;
+  font-size: 10pt;
+}
+
+h1 { font-size: 130%;
+
+     color:            #000000;
+     background-color: {MENU BACKGROUND};
+
+     text-align:    center;
+     margin-bottom: 5mm; }
+
+p.link  { text-align:    right;
+          margin-top:    0mm;
+          margin-bottom: 0mm; }
+
+p.links { text-align:    center;
+          margin-bottom: 5mm; }
+
+table.mapping { font-size:  100%;
+                margin-top: 3mm; }
+
+a:link    { color: #0000AE; background-color: {MENU BACKGROUND}; text-decoration: none; }
+a:visited { color: #0000AE; background-color: {MENU BACKGROUND}; text-decoration: none; }
+a:active  { color: #000000; background-color: {MENU BACKGROUND}; text-decoration: none; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */
+§primpath/conj.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> Conjecture about Distribution of Primes </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+</head>
+
+<body>
+
+<h1 class = "problems">
+  Prime Number Races in Multiple Dimensions - <br />
+  Distribution of Primes on the Prime Residue Classes&nbsp;(mod&nbsp;<em>m</em>)
+</h1>
+
+<p class = "normaltext">
+  <em class = "introducingwords">Conjecture:</em>
+  Let <em>m</em> be an integer greater than&nbsp;2, and let <em>f</em> be a bijection from the set
+  of prime residue classes (mod&nbsp;<em>m</em>) to the set&nbsp;<em>B</em> of the elements
+  of the canonical basis of <b>Z</b><sup>&phi;(<em>m</em>)</sup> and their additive inverses.
+  Then the mapping
+</p>
+<p class = "display">
+  <img src = "../formulas/g.png" width = "413" height = "53" alt = "A formula" />
+</p>
+<p>
+  is surjective if and only if &phi;(<em>m</em>) is less than or equal to 4.
+  Furthermore if it is surjective, then all preimages are infinite.
+</p>
+<p class = "normaltext">
+  (Compare with Dirichlet's Prime Number Theorem and
+  the Shanks - Renyi Race Problem.)
+</p>
+<p class = "normaltext">
+  The menu on the right provides access to graphical visualizations of some examples.
+  There is also a short <a href = "descript.html">description</a> of these images.
+</p>
+</body>
+
+</html>
+§primpath/descript.html§29-Sep-2014§
+{DTD}
+<html>
+
+<head>
+  <title> Conjecture about Distribution of Primes: Description of Images </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+</head>
+
+<body>
+
+<h1 class = "problems">
+  Prime Number Races in Multiple Dimensions - <br />
+  Description of the Images  
+</h1>
+
+<p class = "firstparagraph">
+  The menu on the right provides access to graphical visualizations of
+  some examples (for all <em>m</em> with &phi;(<em>m</em>)&nbsp;=&nbsp;4 except of
+  <em>m</em>&nbsp;=&nbsp;10, since this would be the same as for <em>m</em>&nbsp;=&nbsp;5).
+</p>
+
+<p class = "middleparagraph">
+  These images strongly suggest a certain inhomogenity of the distribution of primes,
+  in particular if one compares them with images created using sequences
+  of pseudo - random numbers (I have tested this with various random number generators,
+  and the result was essentially independent from the particular choice here).
+</p>
+
+<p class = "middleparagraph">
+  For the given example of a randomized image, I&nbsp;have taken a sequence of
+  &pi;(10000000) = 664579 random integers (this allows a direct comparison
+  with the images above with <em>n</em>&nbsp;&lt;&nbsp;10000000)
+  ranging from 0 to&nbsp;3 and associated them to the four coordinate directions
+  of a two - dimensional cartesian coordinate system similar as above.
+</p>
+
+<p class = "middleparagraph">
+  The `diameter' of the figures created using the distribution of primes on
+  the prime residue classes (mod&nbsp;<em>m</em>) seems to be significantly smaller
+  than the statistically expected value concerning the randomly generated ones.
+</p>
+
+</body>
+
+</html>
+§primpath/primpath.html§15-Oct-2004§
+{Frameset DTD}
+<html>
+
+<head>
+  <title> A Conjecture Concerning the Distribution of Primes </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+</head>
+
+<frameset cols = "80%,20%">
+  <frame src = "conj.html"    id = "displaywindow" name = "displaywindow" noresize = "noresize" frameborder = "0"/>
+  <frame src = "imgsel5.html" id = "imageselector" name = "imageselector" noresize = "noresize" frameborder = "0"/>
+  <noframes>
+    <body>
+      Sorry, your browser does not support frames ... :-(
+    </body>
+  </noframes>
+</frameset>
+
+</html>
+§primpath/imgsel5.html§3-Jan-2006§
+{DTD}
+<html>
+
+<head>
+  <title> Images </title>
+  <link rel = "stylesheet" type = "text/css" href = "imgsel.css" />
+</head>
+
+<body>
+
+<h1> Images </h1>
+
+The <a href = "conj.html" target = "displaywindow">conjecture</a>.
+
+<br /> <br />
+
+We denote residue classes <em>r</em>&nbsp;mod&nbsp;<em>m</em> by <em>r</em>&nbsp;(<em>m</em>).
+
+<br /> <br />
+
+<table width = "100%" cellspacing = "3" cellpadding = "0"
+       summary = "This table allows you to choose the modulus."> 
+  <tr><td>*</td><td><em>m</em> = 5</td></tr>
+  <tr><td>&nbsp;</td><td><a href = "imgsel8.html"><em>m</em> =  8</a></td></tr>
+  <tr><td>&nbsp;</td><td><a href = "imgsel12.html"><em>m</em> = 12</a></td></tr>
+</table>
+
+<table class = "mapping" width = "100%" cellspacing = "3" cellpadding = "0"
+       summary = "This table describes a bijection of two sets of cardinality 4.">
+  <tr><td nowrap = "nowrap"><em>f</em>(1(5))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">( 1, 0)</td></tr>
+  <tr><td nowrap = "nowrap"><em>f</em>(2(5))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">( 0, 1)</td></tr>
+  <tr><td nowrap = "nowrap"><em>f</em>(3(5))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">(-1, 0)</td></tr>
+  <tr><td nowrap = "nowrap"><em>f</em>(4(5))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">( 0,-1)</td></tr>
+</table>
+
+<p class = "links">
+  <a href = "image1.html" target = "displaywindow"><em>n</em> &lt; 10<sup>7</sup></a>. <br />
+  <a href = "image2.html" target = "displaywindow"><em>n</em> &lt; 10<sup>8</sup></a>. <br />
+  <a href = "image3.html" target = "displaywindow"><em>n</em> &lt; 10<sup>9</sup></a>. <br />
+</p>
+
+As a contrast, a <a href = "rndimage.html" target = "displaywindow">randomized&nbsp;image</a>.
+
+<br /> <br />
+
+Click on the larger images to get them in original size.
+
+</body>
+
+</html>
+§primpath/imgsel8.html§3-Jan-2006§
+{DTD}
+<html>
+
+<head>
+  <title> Images </title>
+  <link rel = "stylesheet" type = "text/css" href = "imgsel.css" />
+</head>
+
+<body>
+
+<h1> Images </h1>
+
+The <a href = "conj.html" target = "displaywindow">conjecture</a>.
+
+<br /> <br />
+
+We denote residue classes <em>r</em>&nbsp;mod&nbsp;<em>m</em> by <em>r</em>&nbsp;(<em>m</em>).
+
+<br /> <br />
+
+<table width = "100%" cellspacing = "3" cellpadding = "0"
+       summary = "This table allows you to choose the modulus."> 
+  <tr><td>&nbsp;</td><td><a href = "imgsel5.html"><em>m</em> = 5</a></td></tr>
+  <tr><td>*</td><td><em>m</em> =  8</td></tr>
+  <tr><td>&nbsp;</td><td><a href = "imgsel12.html"><em>m</em> = 12</a></td></tr>
+</table>
+
+<table class = "mapping" width = "100%" cellspacing = "3" cellpadding = "0"
+       summary = "This table describes a bijection of two sets of cardinality 4.">
+  <tr><td nowrap = "nowrap"><em>f</em>(1(8))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">( 1, 0)</td></tr>
+  <tr><td nowrap = "nowrap"><em>f</em>(3(8))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">( 0, 1)</td></tr>
+  <tr><td nowrap = "nowrap"><em>f</em>(5(8))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">(-1, 0)</td></tr>
+  <tr><td nowrap = "nowrap"><em>f</em>(7(8))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">( 0,-1)</td></tr>
+</table>
+
+<p class = "links">
+  <a href = "image4.html" target = "displaywindow"><em>n</em> &lt; 10<sup>7</sup></a>. <br />
+  <a href = "image5.html" target = "displaywindow"><em>n</em> &lt; 10<sup>8</sup></a>. <br />
+  <a href = "image6.html" target = "displaywindow"><em>n</em> &lt; 10<sup>9</sup></a>. <br />
+</p>
+
+As a contrast, a <a href = "rndimage.html" target = "displaywindow">randomized&nbsp;image</a>.
+
+<br /> <br />
+
+Click on the larger images to get them in original size.
+
+</body>
+
+</html>
+§primpath/imgsel12.html§30-Jan-2006§
+{DTD}
+<html>
+
+<head>
+  <title> Images </title>
+  <link rel = "stylesheet" type = "text/css" href = "imgsel.css" />
+</head>
+
+<body>
+
+<h1> Images </h1>
+
+The <a href = "conj.html" target = "displaywindow">conjecture</a>.
+
+<br /> <br />
+
+We denote residue classes <em>r</em>&nbsp;mod&nbsp;<em>m</em> by <em>r</em>&nbsp;(<em>m</em>).
+
+<br /> <br />
+
+<table width = "100%" cellspacing = "3" cellpadding = "0"
+       summary = "This table allows you to choose the modulus."> 
+  <tr><td>&nbsp;</td><td><a href = "imgsel5.html"><em>m</em> = 5</a></td></tr>
+  <tr><td>&nbsp;</td><td><a href = "imgsel8.html"><em>m</em> =  8</a></td></tr>
+  <tr><td>*</td><td><em>m</em> = 12</td></tr>
+</table>
+
+<table class = "mapping" width = "100%" cellspacing = "3" cellpadding = "0"
+       summary = "This table describes a bijection of two sets of cardinality 4.">
+  <tr><td nowrap = "nowrap"><em>f</em>( 1(12))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">( 1, 0)</td></tr>
+  <tr><td nowrap = "nowrap"><em>f</em>( 5(12))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">( 0, 1)</td></tr>
+  <tr><td nowrap = "nowrap"><em>f</em>( 7(12))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">(-1, 0)</td></tr>
+  <tr><td nowrap = "nowrap"><em>f</em>(11(12))</td><td nowrap = "nowrap"> = </td><td nowrap = "nowrap">( 0,-1)</td></tr>
+</table>
+
+<p class = "links">
+  <a href = "image7.html" target = "displaywindow"><em>n</em> &lt; 10<sup>7</sup></a>. <br />
+  <a href = "image8.html" target = "displaywindow"><em>n</em> &lt; 10<sup>8</sup></a>. <br />
+  <a href = "image9.html" target = "displaywindow"><em>n</em> &lt; 10<sup>9</sup></a>. <br />
+</p>
+
+As a contrast, a <a href = "rndimage.html" target = "displaywindow">randomized&nbsp;image</a>.
+
+<br /> <br />
+
+Click on the larger images to get them in original size.
+
+</body>
+
+</html>
+§primpath/image1.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> Image 1 </title>
+  {image.css}
+</head>
+
+<body>
+
+<img src = "../images/5_7.gif" width = "576" height = "576"
+     alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+
+<br />
+
+</body>
+
+</html>
+§primpath/image2.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> Image 2 </title>
+  {image.css}
+</head>
+
+<body>
+
+<a href = "../images/5_8.gif">
+  <img src = "../images/5_8s.gif" width = "576" height = "576"
+       alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+</a>
+
+<br />
+
+</body>
+
+</html>
+§primpath/image3.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> Image 3 </title>
+  {image.css}
+</head>
+
+<body>
+
+<a href = "../images/5_9.gif">
+  <img src = "../images/5_9s.gif" width = "576" height = "576"
+       alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+</a>
+
+<br />
+
+</body>
+
+</html>
+§primpath/image4.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> Image 4 </title>
+  {image.css}
+</head>
+
+<body>
+
+<img src = "../images/8_7.gif" width = "576" height = "576"
+     alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+
+<br />
+
+</body>
+
+</html>
+§primpath/image5.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> Image 5 </title>
+  {image.css}
+</head>
+
+<body>
+
+<a href = "../images/8_8.gif">
+  <img src = "../images/8_8s.gif" width = "576" height = "576"
+       alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+</a>
+
+<br />
+
+</body>
+
+</html>
+§primpath/image6.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> Image 6 </title>
+  {image.css}
+</head>
+
+<body>
+
+<a href = "../images/8_9.gif">
+  <img src = "../images/8_9s.gif" width = "576" height = "576"
+       alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+</a>
+
+<br />
+
+</body>
+
+</html>
+§primpath/image7.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> Image 7 </title>
+  {image.css}
+</head>
+
+<body>
+
+<img src = "../images/12_7.gif" width = "576" height = "576"
+     alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+ 
+<br />
+
+</body>
+
+</html>
+§primpath/image8.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> Image 8 </title>
+  {image.css}
+</head>
+
+<body>
+
+<a href = "../images/12_8.gif">
+  <img src = "../images/12_8s.gif" width = "576" height = "576"
+       alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+</a>
+
+<br />
+
+</body>
+
+</html>
+§primpath/image9.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> Image 9 </title>
+  {image.css}
+</head>
+
+<body>
+
+<a href = "../images/12_9.gif">
+  <img src = "../images/12_9s.gif" width = "576" height = "576"
+       alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+</a>
+
+<br />
+
+</body>
+
+</html>
+§primpath/rndimage.html§15-Apr-2004§
+{DTD}
+<html>
+
+<head>
+  <title> A Randomized Image </title>
+  {image.css}
+</head>
+
+<body>
+
+<a href = "../images/rnd_7.gif">
+  <img src = "../images/rnd_7s.gif" width = "579" height = "579"
+       alt = "An illustration concerning the distribution of prime numbers" border = "0pt" />
+</a>
+
+<br />
+
+</body>
+
+</html>
+§photos.css§25-Sep-2010§
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  photos.css          Photo Page Style File           Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body {
+  color:            #FFFFFF;
+  background-color: #000000;
+
+  margin-top:     1cm;
+  margin-bottom:  1cm;
+  margin-left:    3mm;
+  margin-right:   3mm;
+
+  font-family: Helvetica,Verdana,Arial,sans-serif;
+  font-size: 10pt;
+}
+
+h1 { text-align:    center;
+     margin-bottom: 8mm; }
+
+a:link    { color: #0000AE; background-color: #000000; text-decoration: none; }
+a:visited { color: #0000AE; background-color: #000000; text-decoration: none; }
+a:active  { color: #0000FF; background-color: #000000; text-decoration: none; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */
+§photos.html§30-Jan-2006§
+{DTD}
+<html>
+
+<head>
+  <title> Photos from my Holidays </title>
+  {photos.css}
+</head>
+
+<body>
+
+<h1> Some Photos from my Holidays </h1>
+
+<table width = "100%" cellspacing = "8" cellpadding = "0"
+       summary = "This table contains selected photos from my holidays.">
+
+  <tr>
+    <td width = "250">
+      <a href = "images/schlateb.jpg">
+        <img src = "images/schlates.jpg" width = "250" height = "180"
+             alt = "Schlatenkees, Kristallwand; Venedigergruppe / Hohe Tauern (Austria)" />
+      </a>
+    </td>
+    <td valign = "bottom">
+      Schlatenkees, Kristallwand; Venedigergruppe / Hohe Tauern (Austria).
+    </td>
+  </tr>
+  <tr>
+    <td width = "250">
+      <a href = "images/geigerb.jpg">
+        <img src = "images/geigers.jpg" width = "250" height = "180"
+             alt = "Gro&szlig;er Geiger, Venedigergruppe / Hohe Tauern (Austria)" />
+      </a>
+    </td>
+    <td valign = "bottom">
+      Gro&szlig;er Geiger, Venedigergruppe / Hohe Tauern (Austria).
+    </td>
+  </tr>
+  <tr>
+    <td width = "250">
+      <a href = "images/dellachb.jpg">
+        <img src = "images/dellachs.jpg" width = "250" height = "180"
+             alt = "Gail Valley / K&auml;rnten (Austria)" />
+      </a>
+    </td>
+    <td valign = "bottom">
+      Gail Valley / K&auml;rnten (Austria).
+    </td>
+  </tr>
+  <tr>
+    <td width = "250">
+      <a href = "images/miradlpb.jpg">
+        <img src = "images/miradlps.jpg" width = "250" height = "180"
+             alt = "View from Mirador de Las Playas / El Hierro (Spain)" />
+      </a>
+    </td>
+    <td valign = "bottom">
+      View from Mirador de Las Playas / El Hierro (Spain).
+    </td>
+  </tr>
+  <tr>
+    <td width = "250">
+      <a href = "images/mercadb.jpg">
+        <img src = "images/mercads.jpg" width = "250" height = "180"
+             alt = "On the Mercadel / El Hierro (Spain)" />
+      </a>
+    </td>
+    <td valign = "bottom">
+      On the Mercadel / El Hierro (Spain).
+    </td>
+  </tr>
+  <tr>
+    <td width = "250">
+      <a href = "images/pettneub.jpg">
+        <img src = "images/pettneus.jpg" width = "250" height = "180"
+             alt = "On the Pettneuer Ferner; Verwallgruppe / Tirol (Austria)" />
+      </a>
+    </td>
+    <td valign = "bottom">
+      On the Pettneuer Ferner; Verwallgruppe / Tirol (Austria).
+    </td>
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+§links.html§16-Jun-2016§
+{DTD}
+<html>
+
+<head>
+  <title> External Links </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1> External Links </h1>
+
+<ul>
+  <li>
+    <p class = "normaltext">
+      My brother <a href = "http://www.fkohl.de/" target = "_blank">Frithjof</a>
+      has built a site showing about 45000 macro photos of insects, spiders and other arthropods.
+      Most of the photos have been taken in southern Germany.
+    </p>
+    <p align = "right">
+      <iframe src="http://www.fkohl.de/random/thumbs/en" scrolling="no" style="overflow:hidden;width:424px;height:194px;border:0px none;background-color:#EDEEEF;" title = "Homepage of my brother Frithjof on insects, spiders and other arthropods">
+           <a href="http://www.fkohl.de/">Makrofotos von Insekten, Spinnen und anderen Gliederfüssern</a>
+      </iframe>
+    </p>
+  </li>
+  <li>
+    <p class = "normaltext">
+      My sister <a href = "http://evakohl.de/" target = "_blank">Eva</a> is a freelance webdesigner,
+      and lives in Berlin.
+    </p>
+  </li>
+</ul>
+
+</body>
+
+</html>
+§cpr.html§02-Jul-2016§
+{DTD}
+<html>
+
+<head>
+  <title> Copyright information </title>
+  {index.css}
+</head>
+
+<body>
+
+<h1 class = "other" align = "center"> Copyright information </h1>
+
+<p class = "normaltext">
+  The material presented on the page
+  <a href = "http://www.gap-system.org/DevelopersPages/StefanKohl/" target = "_blank">http://www.gap-system.org/DevelopersPages/StefanKohl/</a>
+  is Copyright&nbsp;1999&nbsp;-&nbsp;2016 by Stefan&nbsp;Kohl.
+  For details (including exceptions from this general copyright) and permissions, ask
+  <a href = "mailto:{MYMAIL}">Stefan&nbsp;Kohl</a>.
+  You may use the material in accordance with good practice in science.
+  This means in particular that you must give proper credit to the author and to the source.  
+</p>
+
+{BACK}
+
+</body>
+
+</html>

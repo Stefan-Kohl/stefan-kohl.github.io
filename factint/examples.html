@@ -1,0 +1,162 @@
+
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <title> FactInt Examples </title>
+  <link rel = "stylesheet" type = "text/css" href = "../index.css" />
+</head>
+
+<body>
+
+<h1 class = "other" align = "center">
+  Examples for the use of FactInt
+</h1>
+
+<p class = "normaltext">
+  This page lists logfiles of some sample applications of FactInt.
+  Approximate runtimes are given for a Pentium&nbsp;200 under Windows.
+  Please note that these examples have been created in&nbsp;1999, and that
+  recent versions of the package on today's computers permit performing
+  considerably more difficult factorization tasks.
+</p>
+
+<table width = "100%" cellspacing = "1" cellpadding = "2"
+       summary = "This table lists log files of some sample applications of the FactInt package.">
+
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_f8.log">F8 = 2^(2^8) + 1</a>
+    </td>
+    <td valign = "top">
+      This is just a small example for the use of ECM.
+      Historical remark: This number was at first factored
+      by Brent and Pollard in&nbsp;1980.
+      Runtime:&nbsp;1<em>min</em>&nbsp;45<em>sec</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs3f.log">p(3489)</a>
+    </td>
+    <td valign = "top">
+      This shows the rare occurence of an integer with
+      3&nbsp;factors `reaching' the MPQS when using the
+      factorization routine with default parameters.
+      Runtime:&nbsp;5<em>min</em>&nbsp;47<em>sec</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_p-1.log">158! + 1</a>
+    </td>
+    <td valign = "top">
+      This example shows that also a special method like
+      Pollard's <em>p</em>-1 can sometimes be very useful.
+      Runtime:&nbsp;5<em>min</em>&nbsp;57<em>sec</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_auri.log">1459^60 - 1</a>
+    </td>
+    <td valign = "top">
+      This is an example of an integer with many 
+      `aurifeuillian' factors.
+      Runtime:&nbsp;13<em>min</em>&nbsp;19<em>sec</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_ecm24.log">1093^28 + 1</a>
+    </td>
+    <td valign = "top">
+      In this example, a 24-digit factor is found by ECM.
+      It shows also the use of options.
+      Runtime:&nbsp;about&nbsp;1<em>h</em>&nbsp;10<em>min</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs61.log">1093^33 + 1</a>
+    </td>
+    <td valign = "top">
+      This example shows the application of the MPQS
+      to a 61-digit integer with two factors of
+      nearly equal size.
+      Runtime:&nbsp;1<em>h</em>&nbsp;37<em>min</em> (Version&nbsp;1.1)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "ex_ecm27.log">1093^50 + 1</a>
+    </td>
+    <td valign = "top">
+      In this example, a 27-digit factor is found by ECM.
+      Runtime:&nbsp;about&nbsp;10<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs68.log">3^157 - 2^157</a>
+    </td>
+    <td valign = "top">
+      A 68-digit number is factored by the MPQS.
+      The factors have 32 resp. 36&nbsp;digits.
+      Runtime:&nbsp;about&nbsp;30<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs69.log">3^179 - 2^179</a>
+    </td>
+    <td valign = "top">
+      A 69-digit number is factored by the MPQS.
+      The factors have both 35 digits.
+      Runtime:&nbsp;about&nbsp;65<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs75.log">1093^40 + 1</a>
+    </td>
+    <td valign = "top">
+      The 75-digit cofactor of this number is the largest
+      integer I factored by the MPQS so far.
+      There was some bad luck that I did not find the
+      23-digit factor by ECM before invoking the MPQS. 
+      Runtime:&nbsp;about&nbsp;100<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+  <tr>
+    <td valign = "top" nowrap = "nowrap">
+      <a href = "exmpqs73.log">3^163 - 2^163</a>
+    </td>
+    <td valign = "top">
+      A 73-digit number is factored by the MPQS.
+      The factors have 34 resp. 39&nbsp;digits.
+      Runtime:&nbsp;about&nbsp;115<em>h</em> (Version&nbsp;1.0)
+    </td>
+  </tr>
+
+</table>
+
+<p class = "normaltext">
+  Here is a <a href = "ex3k2k.txt">table</a> of factorizations of numbers of the form
+  3<sup><em>k</em></sup> - 2<sup><em>k</em></sup> for <em>k</em>&nbsp;&lt;&nbsp;300
+  (with some gaps), obtained using my package.
+</p>
+
+<table class = "footer" width = "100%" cellspacing = "1" cellpadding = "2"
+       summary = "This table serves as a partial substitute for the [BACK] button of your browser.">
+  <tr> <td> Back to <a class = "footer" href = "../factint.html">FactInt main page</a>,
+                    <a class = "footer" href = "../main.html">main page</a> </td> 
+       <td> <p align = "right"> Last modified: 16-Jun-2016 </p> </td> </tr>
+</table>
+
+</body>
+
+</html>

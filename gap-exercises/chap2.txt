@@ -1,0 +1,1176 @@
+  
+  [1X2 [33X[0;0YThe Solutions[133X[101X
+  
+  
+  [1X2.1 [33X[0;0YOn Commutators and Derived Subgroups (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.1[114X.[133X
+  
+  [33X[0;0YThere  is a function [10XCommutatorLength([3XG[103X[10X)[110X, which returns the minimal number [22Xn[122X
+  such that each element in the derived subgroup of the group [3XG[103X can be written
+  as  a product of (at most) [22Xn[122X commutators of elements of [3XG[103X. For the groups we
+  are  looking  for,  this  function  returns a value greater than 1. However,
+  [10XCommutatorLength[110X  is  reasonably  slow  and  we  need  to check many groups.
+  Therefore we write an own little function as follows:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XCommutatorsFormGroup := G -> Length(Set(Cartesian(AsList(G),AsList(G)),[104X
+    [4X                                                  t -> Comm(t[1],t[2])))[104X
+    [4X                           = Size(DerivedSubgroup(G));[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOf course this function uses just a [13Xbrute-force[113X approach, and you might find
+  it  worth  to  look  for a better algorithm to check whether the commutators
+  form  a  subgroup -- but for our purposes it is sufficient as it stands. Now
+  we  simply  need  to  loop  over  the  groups  stored  in  the  Small Groups
+  Library [BEO07] until we find one for which this function returns [10Xfalse[110X:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> n := 0;;[104X
+    [4Xgap> repeat[104X
+    [4X>      n := n + 1; Print("n = ",n,"\n");[104X
+    [4X>      G := First(AllGroups(n),G->not CommutatorsFormGroup(G));[104X
+    [4X>    until G <> fail;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YCertainly  we could think about which groups we can already exclude by means
+  of  theory, but for our purposes here this turns out to be not necessary. We
+  obtain the following:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> IdGroup(G);[104X
+    [4X[ 96, 3 ][104X
+    [4Xgap> StructureDescription(G);[104X
+    [4X"((C4 x C2) : C4) : C3"[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  possible orders [22X≤ 256[122X of groups which have the desired property are 96,
+  128,  144, 162, 168, 192, 216, 240, 256. A low-degree permutation group with
+  our property is[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> G := Group((1,3)(2,4),(5,7)(6,8),(9,11)(10,12),(13,15)(14,16),[104X
+    [4X>               (1,3)(5,7)(9,11),(1,2)(3,4)(13,15),(5,6)(7,8)(13,14)(15,16),[104X
+    [4X>               (9,10)(11,12));;[104X
+    [4Xgap> CommutatorLength(G);[104X
+    [4X2[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.2 [33X[0;0YOn Outer Automorphisms Fixing Conjugacy Classes (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.2[114X.[133X
+  
+  [33X[0;0YWe perform a [13Xbrute-force[113X search. For this we write straightforward code that
+  uses a [21Xproblem-oriented[121X approach:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> n := 1;;[104X
+    [4Xgap> repeat[104X
+    [4X>      Print(n,"\n");[104X
+    [4X>      G := First(AllGroups(n),[104X
+    [4X>                 G -> not IsAbelian(G)[104X
+    [4X>                  and ForAny(AsList(AutomorphismGroup(G)),[104X
+    [4X>                             aut -> not IsInnerAutomorphism(aut)[104X
+    [4X>                                and ForAll(AsList(G),[104X
+    [4X>                                           g->IsConjugate(G,g,[104X
+    [4X>                                                          Image(aut,g)))));[104X
+    [4X>      n := n + 1;[104X
+    [4X>    until G <> fail;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis  loop runs a couple of minutes. This is likely less than the additional
+  time it would take to exclude many groups from the search by means of theory
+  or  to write code which tests given groups faster. Nevertheless you might be
+  interested  in looking at this question from a theoretical point of view and
+  in  trying  to  find  out  more  about  the structure of groups which permit
+  non-inner conjugacy class fixing automorphisms.[133X
+  
+  [33X[0;0YWe obtain the following:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> G;[104X
+    [4X<pc group of size 32 with 5 generators>[104X
+    [4Xgap> IdGroup(G);[104X
+    [4X[ 32, 43 ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  would like to find a nice faithful permutation representation of [22XG[122X which
+  permits  us to see how our automorphism looks like. For this purpose we look
+  for  suitable subgroups, and let [22XG[122X act from the right on right cosets. Since
+  [22X32  >  4![122X, there is no hope to find a faithful permutation representation of
+  degree 4. However we can find one of degree 8:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> S4 := Filtered(List(ConjugacyClassesSubgroups(G),Representative),[104X
+    [4X>                   S->Size(S)=4);;[104X
+    [4Xgap> permreps := Set(Filtered(List(S4,S->Action(G,RightCosets(G,S),OnRight)),[104X
+    [4X>                             H->Size(H)=32));[104X
+    [4X[ Group([ (1,2)(3,8)(4,6)(5,7), (2,8)(3,7)(5,6), (2,6)(5,8),[104X
+    [4X      (1,3,4,7)(2,5,6,8), (1,4)(2,6)(3,7)(5,8) ]) ][104X
+    [4Xgap> G := permreps[1];;[104X
+    [4Xgap> ConjugacyClasses(G);[104X
+    [4X[ ()^G, (2,5)(3,7)(6,8)^G, (2,6)(5,8)^G, (2,8)(3,7)(5,6)^G, [104X
+    [4X  (1,2)(3,8)(4,6)(5,7)^G, (1,2,3,5,4,6,7,8)^G, (1,2,4,6)(3,8,7,5)^G, [104X
+    [4X  (1,2,7,8,4,6,3,5)^G, (1,3,4,7)(2,5,6,8)^G, (1,3,4,7)(2,8,6,5)^G, [104X
+    [4X  (1,4)(2,6)(3,7)(5,8)^G ][104X
+    [4Xgap> G := G^(4,5);; # we want (1,2,3,4,5,6,7,8) in G[104X
+    [4Xgap> List(ConjugacyClasses(G),Representative); # pick nicer generators ...[104X
+    [4X[ (), (2,4)(3,7)(6,8), (2,6)(4,8), (2,8)(3,7)(4,6), (1,2)(3,8)(4,7)(5,6),[104X
+    [4X  (1,2,3,4,5,6,7,8), (1,2,5,6)(3,8,7,4), (1,2,7,8,5,6,3,4),[104X
+    [4X  (1,3,5,7)(2,4,6,8), (1,3,5,7)(2,8,6,4), (1,5)(2,6)(3,7)(4,8) ][104X
+    [4Xgap> G = Group((1,2,3,4,5,6,7,8),(2,4)(3,7)(6,8),(2,8)(3,7)(4,6));[104X
+    [4Xtrue[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow let's have a look at our automorphism:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> a := (1,2,3,4,5,6,7,8);; b := (2,4)(3,7)(6,8);; c := (2,8)(3,7)(4,6);;[104X
+    [4Xgap> G := Group(a,b,c);; # the nice representation determined above[104X
+    [4Xgap> A := AutomorphismGroup(G);[104X
+    [4X<group of size 64 with 6 generators>[104X
+    [4Xgap> auts := Filtered(AsList(A),[104X
+    [4X>                     aut ->  not IsInnerAutomorphism(aut)[104X
+    [4X>                         and ForAll(AsList(G),[104X
+    [4X>                                    g -> IsConjugate(G,g,Image(aut,g))));;[104X
+    [4Xgap> Length(auts); # there are 16 suitable aut's -- find the nicest of them:[104X
+    [4X16[104X
+    [4Xgap> auts := Filtered(auts,aut->Image(aut,a)=a);; # those fixing a[104X
+    [4Xgap> Length(auts);[104X
+    [4X4[104X
+    [4Xgap> auts := Filtered(auts,aut->Image(aut,b)=b);; # those fixing b as well[104X
+    [4Xgap> Length(auts);[104X
+    [4X1[104X
+    [4Xgap> aut := auts[1];; # this one fixes a and b, and moves the generator c[104X
+    [4Xgap> c; Image(aut,c);[104X
+    [4X(2,8)(3,7)(4,6)[104X
+    [4X(1,5)(2,4)(6,8)[104X
+    [4Xgap> c/Image(aut,c);[104X
+    [4X(1,5)(2,6)(3,7)(4,8)[104X
+    [4Xgap> last = a^4; # our automorphism multiplies c by a^4[104X
+    [4Xtrue[104X
+    [4Xgap> aut = GroupHomomorphismByImages(G,G,[a,b,c],[a,b,a^4*c]); # check[104X
+    [4Xtrue[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.3 [33X[0;0YDrawing the Ulam Spiral (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.3[114X.[133X
+  
+  [33X[0;0YWe can write the function as follows:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XUlamSpiral := function ( size, filename )[104X
+    [4X[104X
+    [4X  local  spiral, smallprimes, n, p, r,[104X
+    [4X         middle, edgelength, edgepos, direction, i, j, zero, one;[104X
+    [4X[104X
+    [4X  smallprimes := Filtered([2..size],IsPrimeInt);[104X
+    [4X  spiral      := NullMat(size,size,GF(2));[104X
+    [4X[104X
+    [4X  if size mod 2 = 0 then middle := [size/2,size/2];[104X
+    [4X                    else middle := [(size + 1)/2,(size + 1)/2]; fi;[104X
+    [4X[104X
+    [4X  zero := Zero(GF(2)); one := One(GF(2));[104X
+    [4X[104X
+    [4X  spiral[middle[1]][middle[2]] := one;[104X
+    [4X[104X
+    [4X  for p in smallprimes do[104X
+    [4X    i := middle[1]; j := middle[2];[104X
+    [4X    edgelength := 2; edgepos := 1; direction := 0; r := 1;[104X
+    [4X    for n in [2..size^2] do[104X
+    [4X      if   direction = 0 then j := j + 1;[104X
+    [4X      elif direction = 1 then i := i + 1;[104X
+    [4X      elif direction = 2 then j := j - 1;[104X
+    [4X      elif direction = 3 then i := i - 1; fi;[104X
+    [4X      r       := r + 1;[104X
+    [4X      edgepos := edgepos + 1;[104X
+    [4X      if r = p then[104X
+    [4X        if n > p then spiral[i][j] := one; fi;[104X
+    [4X        r := 0;[104X
+    [4X      fi;[104X
+    [4X      if edgepos = edgelength then[104X
+    [4X        direction := (direction + 1) mod 4;[104X
+    [4X        if direction in [0,2] then edgelength := edgelength + 1; fi;[104X
+    [4X        edgepos := 1;[104X
+    [4X      fi;[104X
+    [4X    od;[104X
+    [4X  od;[104X
+    [4X[104X
+    [4X  SaveAsBitmapPicture(spiral,filename);[104X
+    [4Xend;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  this  solution,  we  do  a [13XSieve of Eratosthenes[113X inside the spiral. This
+  saves  some memory, but doing the sieving before drawing the spiral would be
+  faster.[133X
+  
+  
+  [1X2.4 [33X[0;0YAutomorphism Group of the Smallest Projective Plane (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.4[114X.[133X
+  
+  [33X[0;0YWe determine the requested automorphism group as a subgroup of the symmetric
+  group of degree 7 as follows:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> p7 := [[1,2,3],[1,4,7],[1,5,6],[2,4,6],[2,5,7],[3,4,5],[3,6,7]];;[104X
+    [4Xgap> G := SubgroupProperty(SymmetricGroup(7),x->Set(p7,g->Set(g,p->p^x))=p7);[104X
+    [4XGroup([ (2,6)(3,5), (2,5)(3,6), (2,5,7)(3,6,4), (1,2,5,6,4,3,7) ])[104X
+    [4Xgap> StructureDescription(G);[104X
+    [4X"PSL(3,2)"[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe group [22XG[122X is isomorphic to PSL(3,2) since the smallest projective plane is
+  the  one  over the field GF(2) with 2 elements, and since the group PSL([22Xn[122X,[22Xq[122X)
+  is  defined  as  the  automorphism  group  of the projective space of affine
+  dimension [22Xn[122X  (i.e.  of  projective  dimension  [22Xn-1[122X) over GF([22Xq[122X). Our approach
+  works  since all groups we are dealing with are small, thus [10XSubgroupProperty[110X
+  is practical.[133X
+  
+  
+  [1X2.5 [33X[0;0YInstalling a Missing Method (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.5[114X.[133X
+  
+  [33X[0;0YWe can implement the needed method as follows:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XInstallMethod( Centre, "for simple groups", true, [ IsSimpleGroup ], 50,[104X
+    [4X               function( G )[104X
+    [4X                 if   IsAbelian( G ) then return G;[104X
+    [4X                 else return TrivialSubgroup( G ); fi;[104X
+    [4X               end );[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  set  the rank to 50 to make [5XGAP[105X's method selection choose this method in
+  cases where multiple methods are applicable.[133X
+  
+  
+  [1X2.6 [33X[0;0YFinding Good abc Triples (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.6[114X.[133X
+  
+  [33X[0;0YWe can write the function as follows:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XabcTriplesByRadical := function ( radical, bound )[104X
+    [4X[104X
+    [4X  local  triples, values, values_last, factors, a, b, c, rad_abc, ratio;[104X
+    [4X[104X
+    [4X  factors := Union(Factors(radical),[1]);[104X
+    [4X  values  := [1];[104X
+    [4X  repeat[104X
+    [4X    values_last := values;[104X
+    [4X    values := Filtered(Union(List(factors,p->values*p)),n->n<bound);[104X
+    [4X  until values = values_last;[104X
+    [4X  triples := [];[104X
+    [4X  for a in values do[104X
+    [4X    for b in values do[104X
+    [4X      if b >= a then break; fi;[104X
+    [4X      if a + b in values and Gcd(a,b) = 1 then[104X
+    [4X        c       := a + b;[104X
+    [4X        rad_abc := Product(Set(Factors(a*b*c)));[104X
+    [4X        ratio   := LOG_FLOAT(Float(c))/LOG_FLOAT(Float(rad_abc));[104X
+    [4X        if ratio > 7/5 then Add(triples,[a,b,c]); fi;[104X
+    [4X      fi;[104X
+    [4X    od;[104X
+    [4X  od;[104X
+    [4X  return triples;[104X
+    [4Xend;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  the first loop we determine all positive integers less than [3Xbound[103X all of
+  whose  prime factors divide [3Xradical[103X. For this we neither perform a loop over
+  all  integers  in  the  range from 1 to [3Xbound[103X nor we factor integers. In the
+  nested loop afterwards we determine the abc triples by a [13Xbrute-force[113X search.[133X
+  
+  [33X[0;0YWe obtain for example the following:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> abcTriplesByRadical( 2 * 3 * 5 * 7, 10000 );[104X
+    [4X[ [ 125, 3, 128 ], [ 2400, 1, 2401 ], [ 4374, 1, 4375 ] ][104X
+    [4Xgap> abcTriplesByRadical( 2 * 3 * 23 * 109, 10^7 );[104X
+    [4X[ [ 6436341, 2, 6436343 ] ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  latter  is  currently the best known abc triple. Its ratio is [22Xln(c)/ln(
+  rad(abc)) ≈ 1.62991[122X.[133X
+  
+  [33X[0;0YA  more  elaborate  method  to  search  for  good  abc  triples is described
+  in [Dok03].[133X
+  
+  
+  [1X2.7 [33X[0;0YAutomorphism Groups of Finite Graphs (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.7[114X.[133X
+  
+  [8Xad a)[108X
+        [33X[0;6YWe  let  the  symmetric group of the set of vertices act on the set of
+        all  graphs  with  the given number of vertices. The orbits under that
+        action  are  the  isomorphism classes. As said in the hints, we obtain
+        the     set     of     all     graphs     with     [3Xn[103X    vertices    by
+        [10XCombinations(Combinations([1..[3Xn[103X[10X],2))[110X.  We  can  write  a  [5XGAP[105X function
+        which  takes  an argument [3Xn[103X and which returns a set of representatives
+        for the isomorphism classes of graphs with [3Xn[103X vertices:[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XAllGraphs := n -> List(Orbits(SymmetricGroup(n),[104X
+          [4X                              Combinations(Combinations([1..n],2)),[104X
+          [4X                              function(Gamma,g)[104X
+          [4X                                return Set(Gamma,k->OnSets(k,g));[104X
+          [4X                              end),[104X
+          [4X                       Representative);[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YFor [3Xn[103X = 1, 2, 3, 4, 5 and 6, we obtain 1, 2, 4, 11, 34 and 156 graphs,
+        respectively.   We   observe   a   significant   increase  in  runtime
+        requirements between [3Xn[103X = 5 and [3Xn[103X = 6.[133X
+  
+  [8Xad b)[108X
+        [33X[0;6YWe can write the [5XGAP[105X function as follows:[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XGraphAutomorphismGroup := function( Gamma, n )[104X
+          [4X  return SubgroupProperty(SymmetricGroup(n),[104X
+          [4X                          g -> Set(Gamma,k->OnSets(k,g)) = Set(Gamma));[104X
+          [4Xend;[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YOf  course  we could put much more effort into writing such a function
+        in  order  to  obtain  a  satisfactory performance also for reasonably
+        large  graphs  --  but  for our purposes the given one is already good
+        enough.[133X
+  
+  [8Xad c)[108X
+        [33X[0;6YWe  write  a  [5XGAP[105X function which determines all transitive permutation
+        groups of given degree [3Xn[103X which occur as automorphism groups of graphs:[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XTransitiveGraphAutomorphismGroups := function( n )[104X
+          [4X[104X
+          [4X  local  graphs, groups; [104X
+          [4X[104X
+          [4X  graphs := AllGraphs(n);[104X
+          [4X  groups := Filtered(List(graphs,Gamma->GraphAutomorphismGroup(Gamma,n)),[104X
+          [4X                     G -> IsTransitive(G,[1..n]));[104X
+          [4X  return AllTransitiveGroups(NrMovedPoints,n)[104X
+          [4X           {Set(groups,TransitiveIdentification)};[104X
+          [4Xend;[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YAs  often, it is possible to abridge this function without performance
+        loss:[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XTransitiveGraphAutomorphismGroups :=[104X
+          [4X  n -> AllTransitiveGroups(NrMovedPoints,n)[104X
+          [4X         {Set(Filtered(List(AllGraphs(n),[104X
+          [4X                            Gamma->GraphAutomorphismGroup(Gamma,n)),[104X
+          [4X                       G -> IsTransitive(G,[1..n])),[104X
+          [4X              TransitiveIdentification)};[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YIn  general  one needs to be a bit careful to avoid computing the same
+        things  again  and  again,  to  avoid  filling up the memory with junk
+        objects  and  to  recognize  other  possible  sources  of  performance
+        problems when one shrinks functions in such a way.[133X
+  
+        [33X[0;6YWe obtain the following:[133X
+  
+  [4X      [32X  GAP session log  [32X[104X
+          [4X[104X
+          [4Xgap> TransitiveGraphAutomorphismGroups(3);[104X
+          [4X[ S3 ][104X
+          [4Xgap> TransitiveGraphAutomorphismGroups(4);[104X
+          [4X[ D(4), S4 ][104X
+          [4Xgap> TransitiveGraphAutomorphismGroups(5);[104X
+          [4X[ D(5) = 5:2, S5 ][104X
+          [4Xgap> TransitiveGraphAutomorphismGroups(6);[104X
+          [4X[ D(6) = S(3)[x]2, 2S_4(6) = [2^3]S(3) = 2 wr S(3), [104X
+          [4X  F_36(6):2 = [S(3)^2]2 = S(3) wr 2, S6 ][104X
+          [4Xgap> List(last, Size);[104X
+          [4X[ 12, 48, 72, 720 ][104X
+          [4Xgap> List(last2, GeneratorsOfGroup);[104X
+          [4X[ [ (1,2,3,4,5,6), (1,4)(2,3)(5,6) ], [ (3,6), (1,3,5)(2,4,6), (1,5)(2,4) ], [104X
+          [4X  [ (2,4,6), (2,4), (1,4)(2,5)(3,6) ], [ (1,2,3,4,5,6), (1,2) ] ][104X
+          [4Xgap> List(last3, StructureDescription);[104X
+          [4X[ "D12", "C2 x S4", "(S3 x S3) : C2", "S6" ][104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YNow  we  determine  the  corresponding  graphs. Since the automorphism
+        group  of  a  graph  is  invariant under taking the complement, we can
+        restrict  our considerations to graphs with at most [22X[frac12 ⋅ binom62]
+        = 7[122X edges -- complements of solutions are then solutions as well.[133X
+  
+  [4X      [32X  GAP session log  [32X[104X
+          [4X[104X
+          [4Xgap> HomogeneousGraphs :=[104X
+          [4X>      Filtered(AllGraphs(6),[104X
+          [4X>               Gamma -> Length(Gamma) <= 7 and[104X
+          [4X>                        IsTransitive(GraphAutomorphismGroup(Gamma,6),[104X
+          [4X>                                     [1..6]));[104X
+          [4X[ [  ], [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], [ 4, 5 ], [ 4, 6 ], [ 5, 6 ] ], [104X
+          [4X  [ [ 1, 2 ], [ 1, 3 ], [ 2, 4 ], [ 3, 5 ], [ 4, 6 ], [ 5, 6 ] ], [104X
+          [4X  [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ] ] ][104X
+          [4Xgap> List(HomogeneousGraphs, Gamma -> Size(GraphAutomorphismGroup(Gamma, 6)));[104X
+          [4X[ 720, 72, 12, 48 ][104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YThus  for the dihedral group of order 12 we get the hexagon, for [22XC_2 ≀
+        S_3[122X we get the graph consisting of 3 disconnected edges, for [22XS_3 ≀ C_2[122X
+        we  get  the  graph consisting of 2 separate triangles, and for [22XS_6[122X we
+        get the empty graph.[133X
+  
+  [33X[0;0YThere  is  a  [5XGAP[105X  package GRAPE [Soi02], which is dedicated to computations
+  with graphs.[133X
+  
+  
+  [1X2.8 [33X[0;0YEnumerating Paths (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.8[114X.[133X
+  
+  [8Xad a)[108X
+        [33X[0;6YWe can write the following function to determine a suitable [22Xx ∈ Z^24 ×
+        24[122X:[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XTranspositionMatrixSn := function ( n )[104X
+          [4X[104X
+          [4X  local  x, Sn, transpositions, line, g, t;[104X
+          [4X[104X
+          [4X  Sn := AsList(SymmetricGroup(n));[104X
+          [4X  transpositions := List(Combinations([1..n],2),t->(t[1],t[2]));[104X
+          [4X  x := [];[104X
+          [4X  for g in Sn do[104X
+          [4X    line := ListWithIdenticalEntries(Factorial(n), 0);[104X
+          [4X    for t in transpositions do line[Position(Sn,g*t)] := 1; od;[104X
+          [4X    Add(x, line);[104X
+          [4X  od;[104X
+          [4X  return x;[104X
+          [4Xend;[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YThe  lines  and  columns  of the matrix correspond to the elements [22X1 =
+        g_1, dots, g_24[122X of [22XS_4[122X, and it is[133X
+  
+        [33X[0;6Y[22Xx_ij = 1[122X if there is a transposition [22Xt[122X such that [22Xg_i t = g_j[122X, and [22Xx_ij
+        = 0[122X otherwise. It is easy to check that [22X(x^n)_ij[122X is the number of ways
+        to   take   [22Xg_i[122X   to  [22Xg_j[122X  by  multiplication  from  the  right  by  [22Xn[122X
+        transpositions. Therefore we get the solution as follows:[133X
+  
+  [4X      [32X  GAP session log  [32X[104X
+          [4X[104X
+          [4Xgap> x := TranspositionMatrixSn(4);; y := x^100;; y[1][1];[104X
+          [4X54443218625005908841390855596504818378095309207030310578760502581913955860480[104X
+          [4X[104X
+        [4X[32X[104X
+  
+  [8Xad b)[108X
+        [33X[0;6YWe can write the following function to determine a suitable [22Xx ∈ Z^64 ×
+        64[122X:[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XHorsesMatrix := function ( )[104X
+          [4X[104X
+          [4X  local  x, board, moves, m, i, j;[104X
+          [4X[104X
+          [4X  x := [];[104X
+          [4X  for i in [1..8] do[104X
+          [4X    for j in [1..8] do[104X
+          [4X      board := NullMat(8,8);[104X
+          [4X      moves := [[i-2,j-1], [i-2,j+1], [i-1,j-2], [i-1,j+2],[104X
+          [4X                [i+2,j+1], [i+2,j-1], [i+1,j+2], [i+1,j-2]];[104X
+          [4X      for m in Intersection(moves,Cartesian([1..8],[1..8]))[104X
+          [4X      do board[m[1]][m[2]] := 1; od;[104X
+          [4X      Add(x,Flat(board));[104X
+          [4X    od;[104X
+          [4X  od;[104X
+          [4X  return x;[104X
+          [4Xend;[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YWe  proceed  analogous  to  Part a). Here the lines and columns of the
+        correspond  to  the  64  squares of the chess board, and the matrix is
+        filled  with zeros and ones in such a way that [22Xx_ij = 1[122X if and only if
+        the  horse  can jump from square [22Xi[122X to square [22Xj[122X in one move. Similar as
+        above, we get the solution as follows:[133X
+  
+  [4X      [32X  GAP session log  [32X[104X
+          [4X[104X
+          [4Xgap> x := HorsesMatrix();;[104X
+          [4Xgap> y := x^100;; y[1][64];[104X
+          [4X2593244602149234588139078903115618952040745476069710377506002611030781169300[104X
+          [4X[104X
+        [4X[32X[104X
+  
+  
+  [1X2.9 [33X[0;0YWieferich Primes (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.9[114X.[133X
+  
+  [33X[0;0YWe can write the function as follows:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XIsWieferichPrimeInt := p -> IsPrimeInt(p) and PowerModInt(2,p-1,p^2) = 1;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe first two Wieferich primes can be found very quickly:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> Filtered([1..10000],IsWieferichPrimeInt);[104X
+    [4X[ 1093, 3511 ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHowever,  presently no third Wieferich prime is known. In case there is one,
+  it    must    be    greater   than   [22X1.25   ⋅   10^15[122X   (cf. McIntosh   2004
+  ([7Xhttp://www.loria.fr/~zimmerma/records/Wieferich.status[107X)).[133X
+  
+  [33X[0;0YAssuming [21Xequidistribution[121X of the residues [22X(2^p-1-1)/p[122X mod [22Xp[122X, one might argue
+  that  the  [21Xprobability[121X  of a prime [22Xp[122X to be a Wieferich prime should be about
+  [22X1/p[122X. Since the series [22X∑_p prime} 1/p[122X diverges, this would suggest that there
+  are  infinitely many Wieferich primes. More concisely, one would expect that
+  there  are  roughly  [22Xln(ln(n))[122X  Wieferich  primes less than a given bound [22Xn[122X.
+  Following  these speculations, the expected number of Wieferich primes below
+  the  current  bound  of [22X1.25 ⋅ 10^15[122X would be [22X3.548[122X, while the actual number
+  is 2.  Obviously no reasonable statistical conclusions can be made from that
+  difference.[133X
+  
+  [33X[0;0YWell  --  when  trying random primes, it seems that you might perhaps have a
+  little chance of finding a new Wieferich prime![133X
+  
+  
+  [1X2.10 [33X[0;0YCounting Words in a File (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.10[114X.[133X
+  
+  [33X[0;0YWe can write the function as follows:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XWordCount := filename -> Collected(WordsString(StringFile(filename)));[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.11 [33X[0;0YNon-Metabelian p-Groups (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.11[114X.[133X
+  
+  [33X[0;0YLet  [22Xp[122X be a prime. It is well-known that groups of order [22Xp[122X or [22Xp^2[122X are always
+  abelian,  and  that  groups  of  prime-power order are solvable. Therefore a
+  non-metabelian  [22Xp[122X-group  must at least have order [22Xp^6[122X. Further it is easy to
+  see  that  a  group  is  metabelian  if  and only if its derived subgroup is
+  abelian. Thus we can proceed as follows:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> G := First( AllGroups( 64), G -> not IsAbelian( DerivedSubgroup(G) ) );[104X
+    [4Xfail[104X
+    [4Xgap> G := First( AllGroups(128), G -> not IsAbelian( DerivedSubgroup(G) ) );[104X
+    [4X<pc group of size 128 with 7 generators>[104X
+    [4Xgap> IdGroup(G);[104X
+    [4X[ 128, 134 ][104X
+    [4Xgap> StructureDescription(G);[104X
+    [4X"((C4 : C8) : C2) : C2"[104X
+    [4Xgap> StructureDescription( DerivedSubgroup(G) );[104X
+    [4X"C2 x D8"[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThere  is a complete classification of the positive integers [22Xn[122X such that all
+  groups of order [22Xn[122X are metabelian. See [Paz80].[133X
+  
+  
+  [1X2.12 [33X[0;0YThe Growth of the Sum-of-Divisors Function (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.12[114X.[133X
+  
+  [33X[0;0YWe  can  compute  floating  point approximations for [22XH(n)[122X and [22XB(n)[122X in [5XGAP[105X as
+  follows:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XH := n -> Sum([1..n],i->Float(1/i));[104X
+    [4XB := n -> H(n) + LOG_FLOAT(H(n)) * EXP_FLOAT(H(n));[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe obtain for example[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> List( [ 1 .. 60 ], n -> B(n) - Sigma(n) );[104X
+    [4X[ 0, 0.317169, 1.62453, 0.977983, 4.38227, 0.834179, 7.32927, 2.86332, [104X
+    [4X  7.43259, 5.03387, 13.6644, 0.321837, 17.0041, 9.70942, 12.4362, 8.1831, [104X
+    [4X  23.9489, 5.73238, 27.5327, 8.34888, 21.1802, 20.0258, 34.8851, 1.7575, [104X
+    [4X  33.6424, 25.5393, 30.4477, 17.3671, 46.2972, 7.2375, 50.1877, 22.1475, [104X
+    [4X  40.1165, 37.0945, 46.0811, 6.0761, 62.0793, 43.0903, 50.1091, 19.1353, [104X
+    [4X  70.1688, 19.2093, 74.2568, 37.311, 46.3717, 55.4389, 82.5122, 9.59174, [104X
+    [4X  79.6772, 46.7685, 70.8655, 47.9681, 95.0762, 32.1896, 83.3082, 38.432, [104X
+    [4X  81.5609, 74.6946, 107.833, 2.97668 ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHowever  we cannot answer the question whether there is a positive integer [22Xn[122X
+  such that [22Xσ(n) > B(n)[122X -- in fact, Jeffrey C. Lagarias [Lag02] has shown that
+  this     question     is    equivalent    to    the    Riemann    hypothesis
+  ([7Xhttp://en.wikipedia.org/wiki/Riemann_Hypothesis[107X)![133X
+  
+  
+  [1X2.13 [33X[0;0YPell's Equation (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.13[114X.[133X
+  
+  [33X[0;0YWe can write the function as follows:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XFundamentalSolutionOfPellsEquation := function ( n )[104X
+    [4X[104X
+    [4X  local  x, periodlength, approx;[104X
+    [4X[104X
+    [4X  if n = RootInt(n,2)^2 then return fail; fi;[104X
+    [4X  x := Indeterminate(Integers);[104X
+    [4X  periodlength := Length(ContinuedFractionExpansionOfRoot(x^2-n,0)) - 1;[104X
+    [4X  if   periodlength mod 2 = 0[104X
+    [4X  then approx := ContinuedFractionApproximationOfRoot(x^2-n,  periodlength);[104X
+    [4X  else approx := ContinuedFractionApproximationOfRoot(x^2-n,2*periodlength);[104X
+    [4X  fi;[104X
+    [4X  return [ NumeratorRat(approx), DenominatorRat(approx) ];[104X
+    [4Xend;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFirst  we  determine  the  length  of  the  period of the continued fraction
+  expansion  of  the  square  root  of [3Xn[103X.  Then  we  determine the fundamental
+  solution of Pell's equation by taking the numerator and the denominator of a
+  suitable  continued  fraction  approximation  of  that square root (note the
+  dependency on the parity of the period length!). Examples are[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> FundamentalSolutionOfPellsEquation(2);[104X
+    [4X[ 3, 2 ][104X
+    [4Xgap> FundamentalSolutionOfPellsEquation(5);[104X
+    [4X[ 9, 4 ][104X
+    [4Xgap> FundamentalSolutionOfPellsEquation(13);[104X
+    [4X[ 649, 180 ][104X
+    [4Xgap> FundamentalSolutionOfPellsEquation(15);[104X
+    [4X[ 4, 1 ][104X
+    [4Xgap> FundamentalSolutionOfPellsEquation(61);[104X
+    [4X[ 1766319049, 226153980 ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y... and for [22Xn = 421[122X we obtain[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> FundamentalSolutionOfPellsEquation(421);[104X
+    [4X[ 3879474045914926879468217167061449, 189073995951839020880499780706260 ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.14 [33X[0;0YAutomorphism Groups of Odd Order (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.14[114X.[133X
+  
+  [33X[0;0YIt suffices to look at groups of odd order: Assume that [22XG[122X is a group of even
+  order,  and let [22XG_2[122X be its Sylow 2-subgroup. If [22XG_2[122X is not a subgroup of the
+  centre of [22XG[122X, then already the inner automorphism group has even order. If it
+  is a subgroup of the centre of [22XG[122X, then we have [22XG = G_2 × G_2'[122X, and therefore
+  Aut([22XG[122X)  = Aut([22XG_2[122X) [22X×[122X Aut([22XG_2'[122X). In this case, already the automorphism group
+  of [22XG_2'[122X has odd order, and [22XG[122X is not the smallest group having this property.[133X
+  
+  [33X[0;0YWe perform a [13Xbrute-force[113X search:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> n := 3;;[104X
+    [4Xgap> repeat[104X
+    [4X>      Print(n,"\n");[104X
+    [4X>      G := First(AllGroups(n),G->Size(AutomorphismGroup(G)) mod 2 = 1);[104X
+    [4X>      n := n + 2;[104X
+    [4X>    until G <> fail;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis loop runs for quite a while. We obtain the following:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> G;[104X
+    [4X<pc group of size 729 with 6 generators>[104X
+    [4Xgap> IdGroup(G);[104X
+    [4X[ 729, 31 ][104X
+    [4Xgap> AutomorphismGroup(G);[104X
+    [4X<group of size 19683 with 9 generators>[104X
+    [4Xgap> StructureDescription(DerivedSubgroup(G));[104X
+    [4X"C9"[104X
+    [4Xgap> StructureDescription(G/DerivedSubgroup(G));[104X
+    [4X"C9 x C9"[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe result that [22X3^6[122X is the smallest order of a group of more than 2 elements
+  with an odd order automorphism group has first been obtained in [MS95].[133X
+  
+  
+  [1X2.15 [33X[0;0YComposite Sums (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.15[114X.[133X
+  
+  [33X[0;0YFirst  we  look for odd integers [22Xn[122X such that any sum [22Xn+2^k[122X for [21Xsmall[121X [22Xk[122X has a
+  [21Xsmall[121X prime divisor:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> m := Product(Primes);;[104X
+    [4Xgap> Filtered([1,3..99999],n->First([0..500],k->Gcd(n+2^k,m)=1)=fail);[104X
+    [4X[ 78557 ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow  our  goal  is  to  find  out  whether  in  fact  [13Xall[113X sums [22X78557+2^k[122X are
+  composite.[133X
+  
+  [33X[0;0YFor  this,  we  first  determine  the  smallest prime factors of the numbers
+  [22X78557+2^k[122X  for  [21Xsmall[121X values of [22Xk[122X. Then we find out for which [22Xk[122X these primes
+  [22Xp_i[122X divide [22X78557+2^k[122X. The set of such [22Xk[122X is the set of positive integers in a
+  residue  class modulo the order of 2 (mod [22Xp_i[122X). Finally we form the union of
+  the residue classes we obtain, and check whether it equals [22XZ[122X (this needs the
+  [5XResClasses[105X package [Koh07c]):[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> primes := Set([1..100],k->Minimum(Factors(Gcd(78557+2^k,m))));[104X
+    [4X[ 3, 5, 7, 13, 19, 37, 73 ][104X
+    [4Xgap> m_i := List(primes,p->OrderMod(2,p));[104X
+    [4X[ 2, 4, 3, 12, 18, 36, 9 ][104X
+    [4Xgap> r_i := List([1..Length(primes)],[104X
+    [4X>                i->First([0..m_i[i]-1],k->(78557+2^k) mod primes[i] = 0));[104X
+    [4X[ 0, 3, 2, 1, 3, 9, 6 ][104X
+    [4Xgap> residueclasses := List(TransposedMat([r_i,m_i]),ResidueClass);[104X
+    [4X[ 0(2), 3(4), 2(3), 1(12), 3(18), 9(36), 6(9) ][104X
+    [4Xgap> Union(residueclasses);[104X
+    [4XIntegers[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow  we  know that all sums [22X78557+2^k[122X for positive integers [22Xk[122X are composite.
+  But  is  78557  indeed the smallest odd integer such that [22Xn+2^k[122X is composite
+  for  all  positive integers [22Xk[122X? -- Likely yes, but answering this question is
+  computationally difficult:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> k_s := List([1,3..78557],[104X
+    [4X>                n->First([1..1000],k->IsProbablyPrimeInt(n+2^k)));;[104X
+    [4Xgap> k_s{[1..100]}; # small n are not a problem ...[104X
+    [4X[ 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 3, 2, 1, 1, 4, 2, 1, 2, 1, 1, 2, 1, 5, 2, [104X
+    [4X  1, 3, 2, 1, 1, 8, 2, 1, 2, 1, 1, 4, 2, 1, 2, 1, 7, 2, 1, 3, 4, 2, 1, 2, 1, [104X
+    [4X  1, 2, 1, 1, 2, 1, 7, 4, 5, 3, 4, 2, 1, 2, 1, 3, 2, 1, 1, 10, 3, 3, 2, 1, 1, [104X
+    [4X  4, 2, 1, 4, 2, 1, 2, 1, 5, 2, 1, 3, 2, 1, 1, 4, 3, 3, 2, 1, 1, 2, 1, 1, 6 ][104X
+    [4Xgap> 2*Positions(k_s,fail)-1; # ... but larger n are:[104X
+    [4X[ 2131, 2491, 4471, 5101, 6379, 6887, 7013, 8447, 8543, 9833, 10711, 14033, [104X
+    [4X  14551, 14573, 14717, 15623, 16519, 17659, 18527, 19081, 19249, 20209, [104X
+    [4X  20273, 21143, 21661, 22193, 23147, 23221, 23971, 24953, 26213, 26491, [104X
+    [4X  28433, 29333, 29777, 30197, 31111, 31369, 31951, 32449, 32513, 34429, [104X
+    [4X  35461, 36083, 36721, 37217, 37967, 38387, 39079, 40291, 40351, 40613, [104X
+    [4X  41453, 41693, 43579, 47269, 48091, 48331, 48527, 48859, 48961, 49279, [104X
+    [4X  49577, 50839, 52339, 53119, 53359, 56717, 57083, 59071, 60443, 60451, [104X
+    [4X  60947, 60961, 62029, 63691, 64133, 64643, 65033, 65089, 65719, 67607, [104X
+    [4X  69593, 69709, 70321, 72679, 73373, 73583, 75353, 75841, 77041, 77783, [104X
+    [4X  77899, 78557 ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YUsing  a  bound  larger than 1000 for [22Xk[122X, it is possible to eliminate many of
+  the  above  values  of [22Xn[122X,  but eliminating all of them except of 78557 seems
+  hard.[133X
+  
+  [33X[0;0YSee       also       the       related      term      Sierpinski      number
+  ([7Xhttp://en.wikipedia.org/wiki/Sierpinski_number[107X),   and   the  corresponding
+  distributed       computing       project       Seventeen       or      bust
+  ([7Xhttp://www.rechenkraft.net/wiki/index.php?title=Seventeen_or_bust[107X).[133X
+  
+  [33X[0;0YThe  interested  reader  might  have  a  look  at  the  similar problem with
+  Fibonacci numbers instead of powers of 2.[133X
+  
+  
+  [1X2.16 [33X[0;0YRational Points on the Unit Sphere (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.16[114X.[133X
+  
+  [33X[0;0YThe function can be written as follows:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XRationalPointsOnUnitSphere := function ( max_abc, size, filename )[104X
+    [4X[104X
+    [4X  local  picture, solutions, a, b, c, d, sum,[104X
+    [4X         pixelcoords, mirror, zero, one, i, j;[104X
+    [4X[104X
+    [4X  zero := Zero(GF(2)); one := One(GF(2)); # create a white picture:[104X
+    [4X  picture := NullMat(size,size,GF(2));[104X
+    [4X  for i in [1..size] do for j in [1..size] do picture[i][j] := one; od; od;[104X
+    [4X[104X
+    [4X  solutions := 0;[104X
+    [4X  for a in [1..max_abc] do[104X
+    [4X    Print("a = ",a,", #solutions = ",solutions,"\n");[104X
+    [4X    for b in [1..a] do[104X
+    [4X      for c in [1..b] do[104X
+    [4X        sum := a^2 + b^2 + c^2;[104X
+    [4X        d   := RootInt(sum);[104X
+    [4X        if d^2 = sum then[104X
+    [4X          pixelcoords := List( size * [a,b,c]/d, Int ) + 1;[104X
+    [4X          for mirror in Arrangements([1..3],2) do[104X
+    [4X            picture[pixelcoords[mirror[1]]][pixelcoords[mirror[2]]] := zero;[104X
+    [4X          od;[104X
+    [4X          solutions := solutions + 1;[104X
+    [4X        fi;[104X
+    [4X      od;[104X
+    [4X    od;[104X
+    [4X  od;[104X
+    [4X  SaveAsBitmapPicture(picture,filename);[104X
+    [4Xend;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWith some patience, you can use this function to produce a picture like this
+  ([7Xhttp://www.cip.mathematik.uni-stuttgart.de/~kohlsn/images/sphere1.gif[107X).[133X
+  
+  
+  [1X2.17 [33X[0;0YAliquot Sequences (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.17[114X.[133X
+  
+  [33X[0;0YWe can write the following [5XGAP[105X function:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XAliquotSequence := function ( n )[104X
+    [4X[104X
+    [4X  local  a, i;[104X
+    [4X[104X
+    [4X  a := [n]; i := 1;[104X
+    [4X  while a[i] > 1 and not a[i] in a{[1..i-1]} do[104X
+    [4X    a[i+1] := Sigma(a[i]) - a[i]; i := i + 1;[104X
+    [4X  od;[104X
+    [4X  return a;[104X
+    [4Xend;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThis yields the following:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> List([1..40],AliquotSequence);[104X
+    [4X[ [ 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 3, 1 ], [ 5, 1 ], [ 6, 6 ], [ 7, 1 ], [104X
+    [4X  [ 8, 7, 1 ], [ 9, 4, 3, 1 ], [ 10, 8, 7, 1 ], [ 11, 1 ], [104X
+    [4X  [ 12, 16, 15, 9, 4, 3, 1 ], [ 13, 1 ], [ 14, 10, 8, 7, 1 ], [104X
+    [4X  [ 15, 9, 4, 3, 1 ], [ 16, 15, 9, 4, 3, 1 ], [ 17, 1 ], [ 18, 21, 11, 1 ], [104X
+    [4X  [ 19, 1 ], [ 20, 22, 14, 10, 8, 7, 1 ], [ 21, 11, 1 ], [104X
+    [4X  [ 22, 14, 10, 8, 7, 1 ], [ 23, 1 ], [ 24, 36, 55, 17, 1 ], [ 25, 6, 6 ], [104X
+    [4X  [ 26, 16, 15, 9, 4, 3, 1 ], [ 27, 13, 1 ], [ 28, 28 ], [ 29, 1 ], [104X
+    [4X  [ 30, 42, 54, 66, 78, 90, 144, 259, 45, 33, 15, 9, 4, 3, 1 ], [ 31, 1 ], [104X
+    [4X  [ 32, 31, 1 ], [ 33, 15, 9, 4, 3, 1 ], [ 34, 20, 22, 14, 10, 8, 7, 1 ], [104X
+    [4X  [ 35, 13, 1 ], [ 36, 55, 17, 1 ], [ 37, 1 ], [ 38, 22, 14, 10, 8, 7, 1 ], [104X
+    [4X  [ 39, 17, 1 ], [ 40, 50, 43, 1 ] ][104X
+    [4Xgap> List([1..275],n->Length(AliquotSequence(n)));[104X
+    [4X[ 1, 2, 2, 3, 2, 2, 2, 3, 4, 4, 2, 7, 2, 5, 5, 6, 2, 4, 2, 7, 3, 6, 2, 5, 3, [104X
+    [4X  7, 3, 2, 2, 15, 2, 3, 6, 8, 3, 4, 2, 7, 3, 4, 2, 14, 2, 5, 7, 8, 2, 6, 4, [104X
+    [4X  3, 4, 9, 2, 13, 3, 5, 3, 4, 2, 11, 2, 9, 3, 4, 3, 12, 2, 5, 4, 6, 2, 9, 2, [104X
+    [4X  5, 5, 5, 3, 11, 2, 7, 5, 6, 2, 6, 3, 9, 7, 7, 2, 10, 4, 6, 4, 4, 4, 9, 2, [104X
+    [4X  3, 4, 5, 2, 18, 2, 7, 8, 6, 2, 10, 2, 7, 3, 9, 2, 17, 3, 5, 4, 10, 4, 12, [104X
+    [4X  8, 5, 8, 6, 3, 16, 2, 3, 3, 6, 2, 11, 4, 7, 9, 8, 2, 178, 2, 5, 5, 6, 4, 9, [104X
+    [4X  4, 6, 6, 11, 2, 177, 2, 12, 6, 8, 3, 8, 2, 7, 4, 11, 3, 4, 2, 7, 9, 10, 2, [104X
+    [4X  175, 6, 9, 3, 9, 2, 16, 3, 5, 4, 7, 2, 52, 2, 9, 4, 6, 3, 15, 3, 12, 3, 10, [104X
+    [4X  2, 13, 2, 6, 6, 4, 2, 14, 2, 4, 3, 8, 3, 10, 3, 7, 9, 7, 3, 52, 2, 11, 6, [104X
+    [4X  8, 5, 10, 4, 10, 4, 3, 3, 176, 2, 17, 8, 6, 2, 8, 2, 9, 7, 11, 2, 175, 3, [104X
+    [4X  7, 3, 7, 2, 11, 2, 3, 9, 11, 3, 15, 7, 12, 8, 11, 2, 17, 4, 7, 5, 6, 2, 14, [104X
+    [4X  8, 11, 4, 8, 2, 31, 3, 9, 5, 8, 2, 13, 2, 12, 4, 6, 3 ][104X
+    [4Xgap> Maximum(last);[104X
+    [4X178[104X
+    [4Xgap> Position(last2,last);[104X
+    [4X138[104X
+    [4Xgap> AliquotSequence(138);[104X
+    [4X[ 138, 150, 222, 234, 312, 528, 960, 2088, 3762, 5598, 6570, 10746, 13254, [104X
+    [4X  13830, 19434, 20886, 21606, 25098, 26742, 26754, 40446, 63234, 77406, [104X
+    [4X  110754, 171486, 253458, 295740, 647748, 1077612, 1467588, 1956812, 2109796, [104X
+    [4X  1889486, 953914, 668966, 353578, 176792, 254128, 308832, 502104, 753216, [104X
+    [4X  1240176, 2422288, 2697920, 3727264, 3655076, 2760844, 2100740, 2310856, [104X
+    [4X  2455544, 3212776, 3751064, 3282196, 2723020, 3035684, 2299240, 2988440, [104X
+    [4X  5297320, 8325080, 11222920, 15359480, 19199440, 28875608, 25266172, [104X
+    [4X  19406148, 26552604, 40541052, 54202884, 72270540, 147793668, 228408732, [104X
+    [4X  348957876, 508132204, 404465636, 303708376, 290504024, 312058216, [104X
+    [4X  294959384, 290622016, 286081174, 151737434, 75868720, 108199856, 101437396, [104X
+    [4X  76247552, 76099654, 42387146, 21679318, 12752594, 7278382, 3660794, [104X
+    [4X  1855066, 927536, 932464, 1013592, 1546008, 2425752, 5084088, 8436192, [104X
+    [4X  13709064, 20563656, 33082104, 57142536, 99483384, 245978376, 487384824, [104X
+    [4X  745600776, 1118401224, 1677601896, 2538372504, 4119772776, 8030724504, [104X
+    [4X  14097017496, 21148436904, 40381357656, 60572036544, 100039354704, [104X
+    [4X  179931895322, 94685963278, 51399021218, 28358080762, 18046051430, [104X
+    [4X  17396081338, 8698040672, 8426226964, 6319670230, 5422685354, 3217383766, [104X
+    [4X  1739126474, 996366646, 636221402, 318217798, 195756362, 101900794, [104X
+    [4X  54202694, 49799866, 24930374, 17971642, 11130830, 8904682, 4913018, [104X
+    [4X  3126502, 1574810, 1473382, 736694, 541162, 312470, 249994, 127286, 69898, [104X
+    [4X  34952, 34708, 26038, 13994, 7000, 11720, 14740, 19532, 16588, 18692, 14026, [104X
+    [4X  7016, 6154, 3674, 2374, 1190, 1402, 704, 820, 944, 916, 694, 350, 394, 200, [104X
+    [4X  265, 59, 1 ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThus  we  see that indeed all Aliquot sequences starting at integers [22Xn ≤ 275[122X
+  either  stop  or  run into cycles. So far, everything runs quickly and there
+  are  no  performance  problems  of  any kind. However, [22Xn = 276[122X causes severe
+  problems  -- the sequence grows, and factoring becomes a serious problem. As
+  suggested in the hints, we install the following modified [5XGAP[105X Library method
+  for  the  operation  [10XSigma[110X  to  ensure  that  [5XFactInt[105X [Koh07a]  is  used for
+  factoring integers:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XInstallMethod( Sigma, "use FactInt", true, [ IsPosInt ], SUM_FLAGS,[104X
+    [4X[104X
+    [4X  function( n )[104X
+    [4X[104X
+    [4X    local  sigma, p, q, k;[104X
+    [4X[104X
+    [4X    # make <n> it nonnegative, handle trivial cases[104X
+    [4X    if n < 0 then n := -n; fi;[104X
+    [4X    if n = 0 then Error("Sigma: <n> must not be 0"); fi;[104X
+    [4X    if n <= Length(DivisorsIntCache) then[104X
+    [4X      return Sum(DivisorsIntCache[n]);[104X
+    [4X    fi;[104X
+    [4X[104X
+    [4X    # loop over all prime factors p of n[104X
+    [4X    sigma := 1;[104X
+    [4X    for p in Set(Factors(n)) do[104X
+    [4X[104X
+    [4X      # compute p^e and k = 1+p+p^2+..p^e[104X
+    [4X      q := p;  k := 1 + p;[104X
+    [4X      while n mod (q * p) = 0 do q := q * p; k := k + q; od;[104X
+    [4X   [104X
+    [4X      # combine with the value found so far[104X
+    [4X      sigma := sigma * k;[104X
+    [4X[104X
+    [4X    od;[104X
+    [4X[104X
+    [4X    return sigma;[104X
+    [4X  end );[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFurther  we  insert a [10XPrint[110X statement into our [10XAliquotSequence[110X function, and
+  we switch on [5XFactInt[105X's [10XInfo[110X's whenever large integers are to be factored:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4XAliquotSequence := function ( n )[104X
+    [4X[104X
+    [4X  local  a, i;[104X
+    [4X[104X
+    [4X  a := [n]; i := 1;[104X
+    [4X  while a[i] > 1 and not a[i] in a{[1..i-1]} do[104X
+    [4X    if a[i] > 10^40 then FactIntInfo(3); fi;[104X
+    [4X    Factors(a[i]);[104X
+    [4X    FactIntInfo(0);[104X
+    [4X    Print(String(i,6)," : ",a[i]," = ");[104X
+    [4X    PrintFactorsInt(a[i]); Print("\n");[104X
+    [4X    a[i+1] := Sigma(a[i]) - a[i];[104X
+    [4X    i := i + 1;[104X
+    [4X  od;[104X
+    [4X  return a;[104X
+    [4Xend;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow try out yourself how far you can get with computing the Aliquot sequence
+  ([7Xhttp://en.wikipedia.org/wiki/Aliquot_sequence[107X) starting at 276 ... ![133X
+  
+  
+  [1X2.18 [33X[0;0YThe Q Sequence (Solution)[133X[101X
+  
+  [33X[0;0YThis is a suggested solution for Exercise [14X1.18[114X.[133X
+  
+  [8Xad a)[108X
+        [33X[0;6YWe can write either the following recursive[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XQ := function ( n )[104X
+          [4X  if   n in [1,2][104X
+          [4X  then return 1;[104X
+          [4X  else return Q(n-Q(n-1)) + Q(n-Q(n-2)); fi;[104X
+          [4Xend;[104X
+          [4XQSequence := l -> List([1..l],Q);[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6Yor the following iterative code;[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XQSequence := function ( l )[104X
+          [4X[104X
+          [4X  local  Q, n;[104X
+          [4X[104X
+          [4X  Q := [1,1];[104X
+          [4X  for n in [3..l] do[104X
+          [4X    Q[n] := Q[n-Q[n-1]] + Q[n-Q[n-2]];[104X
+          [4X  od;[104X
+          [4X  return Q;[104X
+          [4Xend;[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YWith  the  recursive  approach,  we  get  something like the following
+        timings:[133X
+  
+  [4X      [32X  GAP session log  [32X[104X
+          [4X[104X
+          [4Xgap> QSequence(10);[104X
+          [4X[ 1, 1, 2, 3, 3, 4, 5, 5, 6, 6 ][104X
+          [4Xgap> time;[104X
+          [4X0[104X
+          [4Xgap> QSequence(20);[104X
+          [4X[ 1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 6, 8, 8, 8, 10, 9, 10, 11, 11, 12 ][104X
+          [4Xgap> time;[104X
+          [4X220[104X
+          [4Xgap> QSequence(30);[104X
+          [4X[ 1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 6, 8, 8, 8, 10, 9, 10, 11, 11, 12, 12, 12, [104X
+          [4X  12, 16, 14, 14, 16, 16, 16, 16 ][104X
+          [4Xgap> time;[104X
+          [4X26640[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YThus  we  observe  a  horrible increase in runtime. With the iterative
+        approach, this looks quite different:[133X
+  
+  [4X      [32X  GAP session log  [32X[104X
+          [4X[104X
+          [4Xgap> QSequence(200);[104X
+          [4X[ 1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 6, 8, 8, 8, 10, 9, 10, 11, 11, 12, 12, 12, [104X
+          [4X  12, 16, 14, 14, 16, 16, 16, 16, 20, 17, 17, 20, 21, 19, 20, 22, 21, 22, 23, [104X
+          [4X  23, 24, 24, 24, 24, 24, 32, 24, 25, 30, 28, 26, 30, 30, 28, 32, 30, 32, 32, [104X
+          [4X  32, 32, 40, 33, 31, 38, 35, 33, 39, 40, 37, 38, 40, 39, 40, 39, 42, 40, 41, [104X
+          [4X  43, 44, 43, 43, 46, 44, 45, 47, 47, 46, 48, 48, 48, 48, 48, 48, 64, 41, 52, [104X
+          [4X  54, 56, 48, 54, 54, 50, 60, 52, 54, 58, 60, 53, 60, 60, 52, 62, 66, 55, 62, [104X
+          [4X  68, 62, 58, 72, 58, 61, 78, 57, 71, 68, 64, 63, 73, 63, 71, 72, 72, 80, 61, [104X
+          [4X  71, 77, 65, 80, 71, 69, 77, 75, 73, 77, 79, 76, 80, 79, 75, 82, 77, 80, 80, [104X
+          [4X  78, 83, 83, 78, 85, 82, 85, 84, 84, 88, 83, 87, 88, 87, 86, 90, 88, 87, 92, [104X
+          [4X  90, 91, 92, 92, 94, 92, 93, 94, 94, 96, 94, 96, 96, 96, 96, 96, 96, 128, [104X
+          [4X  72, 96, 115, 100, 84, 114, 110, 93 ][104X
+          [4Xgap> time;[104X
+          [4X0[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YLet's have a look how often [10XQ[110X calls itself in the recursive version:[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XQCallCounts := function ( n )[104X
+          [4X[104X
+          [4X  local  Q, sequence;[104X
+          [4X[104X
+          [4X  Q := function ( n )[104X
+          [4X    sequence[n] := sequence[n] + 1;[104X
+          [4X    if   n in [1,2][104X
+          [4X    then return 1;[104X
+          [4X    else return Q(n-Q(n-1)) + Q(n-Q(n-2)); fi;[104X
+          [4X  end;[104X
+          [4X[104X
+          [4X  sequence := ListWithIdenticalEntries(n,0);[104X
+          [4X  Q(n);[104X
+          [4X  return sequence;[104X
+          [4Xend;[104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YWe obtain[133X
+  
+  [4X      [32X  GAP session log  [32X[104X
+          [4X[104X
+          [4Xgap> QCallCounts(30);[104X
+          [4X[ 1477421, 5444369, 1477421, 415342, 181422, 98727, 55073, 31366, 18752, [104X
+          [4X  11250, 6884, 4238, 2604, 1601, 987, 610, 377, 233, 144, 89, 55, 34, 21, 13, [104X
+          [4X  8, 5, 3, 2, 1, 1 ][104X
+          [4X[104X
+        [4X[32X[104X
+  
+        [33X[0;6YThis  clearly  explains  the poor performance. (By the way: The end of
+        the  sequence  seems  to  be the reversed beginning of the sequence of
+        Fibonacci numbers -- can you find out something about this?)[133X
+  
+  [8Xad b)[108X
+        [33X[0;6YWe can write the following [5XGAP[105X function:[133X
+  
+  [4X      [32X  GAP code  [32X[104X
+          [4X[104X
+          [4XPlotQSequence := function ( l, filename )[104X
+          [4X[104X
+          [4X  local  Q, graph, h, n, i, j, zero, one;[104X
+          [4X[104X
+          [4X  Q := QSequence(l);[104X
+          [4X  h := Maximum(Q); # use the maximum as the height of the picture[104X
+          [4X  graph := NullMat(h,l);[104X
+          [4X  zero := Zero(GF(2)); one := One(GF(2));[104X
+          [4X  for i in [1..h] do for j in [1..l] do graph[i][j] := one; od; od;[104X
+          [4X  for n in [1..l] do graph[Q[n]][n] := zero; od;[104X
+          [4X  SaveAsBitmapPicture(graph,filename);[104X
+          [4Xend;[104X
+          [4X[104X
+        [4X[32X[104X
+  

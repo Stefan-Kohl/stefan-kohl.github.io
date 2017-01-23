@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  primconj.tex                                                                         Stefan Kohl
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+\usepackage{german}
+\usepackage[latin1]{inputenc}
+\usepackage{theorem}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsbsy}
+\usepackage{amstext}
+\usepackage{amsxtra}
+
+\oddsidemargin  -0.5cm
+\evensidemargin -0.5cm
+\textwidth      16.0cm
+\textheight     25.0cm
+
+\pagestyle{empty}
+
+\include{macros}
+
+\theoremstyle{change}
+\theorembodyfont{\rmfamily}
+\newtheorem{Definition}{Definition}
+\newtheorem{Conjecture}[Definition]{Conjecture}
+\newtheorem{Question}[Definition]{Question}
+
+\begin{document}
+
+\title{Prime Factorization - \(R\) vs. \(R[x]\)}
+\author{Stefan Kohl} \date{}
+\maketitle
+
+  \begin{Definition}
+    Let \(R\) be an euclidean domain all of whose residue class rings are finite.
+    We call a function \(f: R \rightarrow R\) \emph{analytic} if it satisfies the condition
+    \[
+      \forall x,y \in R \ \ f(x) \equiv f(x + y) \!\! \mod \ y.
+    \]
+    We call the function~\(f\) \emph{reducible} if it can be written as (pointwise) product of
+    two other analytic functions \(f_1, f_2\) over~\(R\) whose images do not entirely consist
+    of units, and \emph{irreducible} if not.
+    We say that a product \(f = \prod_{i=1}^k f_i\) of irreducible analytic functions \(f_i\) 
+    over~\(R\) fulfills the \emph{limited factoring condition} if and only if there is an
+    \(x \in R\) such that \(f(x)\) has at most \(k\) prime factors.
+    We say that \(f\) has \emph{polynomial growth} if for all sequences \(x_1, x_2, \dots\) of
+    elements of~\(R\) satisfying \(\lim_{n \rightarrow \infty} |R/x_nR| = \infty\) we have
+    \[
+      \limsup_{n \rightarrow \infty} \frac{|R/f(x_n)R|}{|R/x_nR|!} \ = \ 0.
+    \]
+    We call \(R\) a \emph{limited factoring domain} if all analytic functions over~\(R\) of
+    polynomial growth fulfill the limited factoring condition.
+  \end{Definition}
+
+  \begin{Conjecture}
+    The ring \(\ZZ\) is a limited factoring domain.
+  \end{Conjecture}
+
+  \begin{Question}
+    How to characterize limited factoring domains in general?
+  \end{Question}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

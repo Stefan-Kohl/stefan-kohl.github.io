@@ -1,0 +1,15 @@
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  image.css        Image-Only Page Style File         Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body { background-color: #FFFFFF; }
+
+a:link    { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:visited { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:active  { color: #000000; background-color: #FFFFFF; text-decoration: none; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */

@@ -1,0 +1,116 @@
+  
+  
+                                 [1XGAP Exercises[101X
+  
+  
+                                        [1X[101X
+  
+  
+                                  Version 1.0
+  
+  
+                               February 17, 2010
+  
+  
+                                  Stefan Kohl
+  
+  
+  
+  Stefan Kohl
+      Email:    [7Xmailto:stefan@mcs.st-and.ac.uk[107X
+      Homepage: [7Xhttp://www.gap-system.org/DevelopersPages/StefanKohl/[107X
+      Address:  [33X[0;14YDepartment of Mathematics[133X
+                [33X[0;14YUniversity of Vlora[133X
+                [33X[0;14YLagjja: Pavaresia[133X
+                [33X[0;14YVlore / Albania[133X
+  
+  
+  
+  -------------------------------------------------------
+  
+  
+  [1XContents (GAP-Exercises)[101X
+  
+  1 [33X[0;0YThe Exercises[133X
+    1.1 [33X[0;0YOn Commutators and Derived Subgroups[133X
+      1.1-1 [33X[0;0YExercise[133X
+      1.1-2 [33X[0;0YHints[133X
+    1.2 [33X[0;0YOn Outer Automorphisms Fixing Conjugacy Classes[133X
+      1.2-1 [33X[0;0YExercise[133X
+      1.2-2 [33X[0;0YHints[133X
+    1.3 [33X[0;0YDrawing the Ulam Spiral[133X
+      1.3-1 [33X[0;0YExercise[133X
+      1.3-2 [33X[0;0YHints[133X
+    1.4 [33X[0;0YAutomorphism Group of the Smallest Projective Plane[133X
+      1.4-1 [33X[0;0YExercise[133X
+      1.4-2 [33X[0;0YHints[133X
+    1.5 [33X[0;0YInstalling a Missing Method[133X
+      1.5-1 [33X[0;0YExercise[133X
+      1.5-2 [33X[0;0YHints[133X
+    1.6 [33X[0;0YFinding Good abc Triples[133X
+      1.6-1 [33X[0;0YExercise[133X
+      1.6-2 [33X[0;0YHints[133X
+    1.7 [33X[0;0YAutomorphism Groups of Finite Graphs[133X
+      1.7-1 [33X[0;0YExercise[133X
+      1.7-2 [33X[0;0YHints[133X
+    1.8 [33X[0;0YEnumerating Paths[133X
+      1.8-1 [33X[0;0YExercise[133X
+      1.8-2 [33X[0;0YHints[133X
+    1.9 [33X[0;0YWieferich Primes[133X
+      1.9-1 [33X[0;0YExercise[133X
+      1.9-2 [33X[0;0YHints[133X
+    1.10 [33X[0;0YCounting Words in a File[133X
+      1.10-1 [33X[0;0YExercise[133X
+      1.10-2 [33X[0;0YHints[133X
+    1.11 [33X[0;0YNon-Metabelian p-Groups[133X
+      1.11-1 [33X[0;0YExercise[133X
+      1.11-2 [33X[0;0YHints[133X
+    1.12 [33X[0;0YThe Growth of the Sum-of-Divisors Function[133X
+      1.12-1 [33X[0;0YExercise[133X
+      1.12-2 [33X[0;0YHints[133X
+    1.13 [33X[0;0YPell's Equation[133X
+      1.13-1 [33X[0;0YExercise[133X
+      1.13-2 [33X[0;0YHints[133X
+    1.14 [33X[0;0YAutomorphism Groups of Odd Order[133X
+      1.14-1 [33X[0;0YExercise[133X
+      1.14-2 [33X[0;0YHints[133X
+    1.15 [33X[0;0YComposite Sums[133X
+      1.15-1 [33X[0;0YExercise[133X
+      1.15-2 [33X[0;0YHints[133X
+    1.16 [33X[0;0YRational Points on the Unit Sphere[133X
+      1.16-1 [33X[0;0YExercise[133X
+      1.16-2 [33X[0;0YHints[133X
+    1.17 [33X[0;0YAliquot Sequences[133X
+      1.17-1 [33X[0;0YExercise[133X
+      1.17-2 [33X[0;0YHints[133X
+    1.18 [33X[0;0YThe Q Sequence[133X
+      1.18-1 [33X[0;0YExercise[133X
+      1.18-2 [33X[0;0YHints[133X
+    1.19 [33X[0;0YA Quickly Growing Function[133X
+      1.19-1 [33X[0;0YExercise[133X
+      1.19-2 [33X[0;0YHints[133X
+    1.20 [33X[0;0YThe 3n+1 Conjecture[133X
+      1.20-1 [33X[0;0YExercise[133X
+      1.20-2 [33X[0;0YHints[133X
+  2 [33X[0;0YThe Solutions[133X
+    2.1 [33X[0;0YOn Commutators and Derived Subgroups (Solution)[133X
+    2.2 [33X[0;0YOn Outer Automorphisms Fixing Conjugacy Classes (Solution)[133X
+    2.3 [33X[0;0YDrawing the Ulam Spiral (Solution)[133X
+    2.4 [33X[0;0YAutomorphism Group of the Smallest Projective Plane (Solution)[133X
+    2.5 [33X[0;0YInstalling a Missing Method (Solution)[133X
+    2.6 [33X[0;0YFinding Good abc Triples (Solution)[133X
+    2.7 [33X[0;0YAutomorphism Groups of Finite Graphs (Solution)[133X
+    2.8 [33X[0;0YEnumerating Paths (Solution)[133X
+    2.9 [33X[0;0YWieferich Primes (Solution)[133X
+    2.10 [33X[0;0YCounting Words in a File (Solution)[133X
+    2.11 [33X[0;0YNon-Metabelian p-Groups (Solution)[133X
+    2.12 [33X[0;0YThe Growth of the Sum-of-Divisors Function (Solution)[133X
+    2.13 [33X[0;0YPell's Equation (Solution)[133X
+    2.14 [33X[0;0YAutomorphism Groups of Odd Order (Solution)[133X
+    2.15 [33X[0;0YComposite Sums (Solution)[133X
+    2.16 [33X[0;0YRational Points on the Unit Sphere (Solution)[133X
+    2.17 [33X[0;0YAliquot Sequences (Solution)[133X
+    2.18 [33X[0;0YThe Q Sequence (Solution)[133X
+  
+  
+  [32X

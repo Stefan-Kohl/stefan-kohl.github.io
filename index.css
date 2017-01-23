@@ -1,0 +1,126 @@
+/* ####################################################################### */
+/* ##                                                                   ## */
+/* ##  index.css            Homepage Style File            Stefan Kohl  ## */
+/* ##                                                                   ## */
+/* ####################################################################### */
+
+body {
+  background-color: #FFFFFF;
+  color:            #000000;
+
+  margin-top:     1cm;
+  margin-bottom:  1cm;
+  margin-left:    1cm;
+  margin-right:   1cm;
+
+  font-family: Helvetica,Verdana,Arial,sans-serif;
+  font-size: 10pt;
+}
+
+h1.publications { font-size:           200%;
+                  color:            #000000;
+                  background-color: #FFFFFF;
+                  text-align:        center;
+                  margin-bottom:        8mm; }
+
+h1.thesis { font-size:           300%;
+            color:            #507020;
+            background-color: #FFFFFF;
+            text-align:        center;
+            margin-bottom:        8mm; }
+
+h1.package { font-size:           300%;
+             color:            #507020;
+             background-color: #FFFFFF;
+             text-align:        center;
+             margin-bottom:        8mm; }
+
+h1.problems { font-size:           175%;
+              color:            #F00000;
+              background-color: #FFFFFF;
+              text-align:        center;
+              margin-bottom:        8mm; }
+
+h1.abstract { font-size:           125%;
+              color:            #000000;
+              background-color: #FFFFFF;
+              margin-bottom:        8mm; }
+
+h1.syllabus { font-size:           200%;
+              color:            #000000;
+              background-color: #FFFFFF;
+              text-align:        center;
+              margin-bottom:        8mm; }
+
+h1.other { font-size:        175%;
+           color:            #000000;
+           background-color: #FFFFFF;
+           margin-bottom:    8mm; }
+
+h2 { font-size:        140%;
+     color:            #000000;
+     background-color: #FFFFFF; }
+
+h2.minorheading { font-size:        120%;
+                  color:            #000000;
+                  background-color: #FFFFFF;
+                  margin-bottom:    4mm; }
+
+p.subtitle { font-size:     160%;
+             text-align:    center;
+             margin-bottom: 8mm; }
+
+p.myname { font-size:     140%;
+           text-align:    center; 
+           margin-bottom: 8mm; }
+
+p.display { font-size:     100%;
+            text-align:    center;
+            margin-top:    3mm;
+            margin-bottom: 3mm; }
+
+p.normaltext { text-align:    justify; }
+
+p.firstparagraph { text-align:    justify;
+                   margin-bottom: 0mm; }
+
+p.middleparagraph { text-align:    justify;
+                    text-indent:   7.5mm;
+                    margin-top:    0mm;
+                    margin-bottom: 0mm; }
+
+p.lastparagraph { text-align:    justify;
+                  text-indent:   7.5mm;
+                  margin-top:    0mm; }
+
+em.introducingwords { color:            #408000;
+                      background-color: #FFFFFF;
+                      font-style:       normal; }
+
+em.partsofheading { color:            #507020;
+                    background-color: #FFFFFF;
+                    font-style:        normal; }
+
+table.list { margin-bottom: 5mm; }
+
+table.footer { margin-top:       0mm;
+               margin-bottom:    0mm;
+               color:            #000000;
+               background-color: #EDEEEF; }
+
+a:link    { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:visited { color: #0000AE; background-color: #FFFFFF; text-decoration: none; }
+a:active  { color: #000000; background-color: #FFFFFF; text-decoration: none; }
+
+a.footer:link    { color: #0000AE; background-color: #EDEEEF; text-decoration: none; }
+a.footer:visited { color: #0000AE; background-color: #EDEEEF; text-decoration: none; }
+a.footer:active  { color: #000000; background-color: #EDEEEF; text-decoration: none; }
+
+tt,code,pre { font-family: "Courier New",Courier,monospace;
+              font-size:                              100%; 
+              color:                               #284D49;
+              background-color:                    #FFFFFF; }
+
+hr { height: 0.3pt; }
+
+/* ####################################################################### */

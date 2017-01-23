@@ -1,0 +1,1443 @@
+gap> Factors(1093^40+1);
+#I  
+#I  Check for n = b^k +/- 1
+#I  
+350595613419451834224222609649008688089713097883018091924373942563701938581070\
+80667299932841828164413246818805827223132002 = 1093^40 + 1
+#I  The factors corresponding to polynomial factors are
+[ 2036860544238459154706402, 
+  1721254871430250141153842289820549199270926377050407827583032226046904793012\
+9266890672315145252801 ]
+#I  
+#I  Factors already found : [  ]
+#I  
+#I  
+#I  Trial division by all primes p < 1000
+#I  Intermediate result : [ [ 2, 17 ], [ 59907663065837033961953 ] ]
+#I  
+#I  Factors already found : [ 2, 17 ]
+#I  
+#I  
+#I  Trial division by some already known primes
+#I  Intermediate result : [ [ 1873 ], [ 31984870830665794961 ] ]
+#I  
+#I  Factors already found : [ 2, 17, 1873 ]
+#I  
+#I  
+#I  Check for perfect powers
+#I  
+#I  Pollard's Rho
+Steps = 16384, Cluster = 1624
+Number to be factored : 
+31984870830665794961
+#I  
+#I  Pollard's Rho
+Steps = 16384, Cluster = 1624
+Number to be factored : 
+172125487143025014115384228982054919927092637705040782758303222604690479301292\
+66890672315145252801
+#I  Intermediate result : 
+[ [ 53441 ], [ 322085079139658715434561907490606313368186668859191973874559275\
+845681179808185978755493256961 ] ]
+#I  
+#I  Factors already found : [ 2, 17, 1873, 53441 ]
+#I  
+#I  
+#I  Pollard's p - 1
+Limit1 = 10000, Limit2 = 400000
+Number to be factored : 
+31984870830665794961
+#I  p-1 for n = 31984870830665794961
+a : 2, Limit1 : 10000, Limit2 : 400000
+#I  First stage
+#I  Second stage
+#I  Factor 10345760209 was found
+#I  Intermediate result : [ [ 3091592129, 10345760209 ], [  ] ]
+#I  
+#I  Pollard's p - 1
+Limit1 = 10000, Limit2 = 400000
+Number to be factored : 
+322085079139658715434561907490606313368186668859191973874559275845681179808185\
+978755493256961
+#I  p-1 for n = 
+322085079139658715434561907490606313368186668859191973874559275845681179808185\
+978755493256961
+a : 2, Limit1 : 10000, Limit2 : 400000
+#I  First stage
+#I  Second stage
+#I  
+#I  Factors already found : [ 2, 17, 1873, 53441, 3091592129, 10345760209 ]
+#I  
+#I  
+#I  Williams' p + 1
+Residues = 2, Limit1 = 2000, Limit2 = 80000
+Number to be factored : 
+322085079139658715434561907490606313368186668859191973874559275845681179808185\
+978755493256961
+#I  p+1 for n = 
+322085079139658715434561907490606313368186668859191973874559275845681179808185\
+978755493256961
+Residues : 2, Limit1 : 2000, Limit2 : 80000
+#I  Residue no. 1
+#I  First stage
+#I  Second stage
+#I  Residue no. 2
+#I  First stage
+#I  Second stage
+#I  
+#I  Elliptic Curves Method (ECM)
+Curves = <func.>
+Init. Limit1 = <func.>, Init. Limit2 = <func.>, Delta = <func.>
+Number to be factored : 
+322085079139658715434561907490606313368186668859191973874559275845681179808185\
+978755493256961
+#I  ECM for n = 
+322085079139658715434561907490606313368186668859191973874559275845681179808185\
+978755493256961
+Curves : 1086, Initial Limit1 : 200, Initial Limit2 : 20000, Delta : 200
+#I  Curve no.      1, Limit1 :     200, Limit2 :    20000
+#I  First stage
+#I  Second stage
+#I  Curve no.      2, Limit1 :     400, Limit2 :    40000
+#I  First stage
+#I  Second stage
+#I  Curve no.      3, Limit1 :     600, Limit2 :    60000
+#I  First stage
+#I  Second stage
+#I  Curve no.      4, Limit1 :     800, Limit2 :    80000
+#I  First stage
+#I  Second stage
+#I  Curve no.      5, Limit1 :    1000, Limit2 :   100000
+#I  First stage
+#I  Second stage
+#I  Curve no.      6, Limit1 :    1200, Limit2 :   120000
+#I  First stage
+#I  Second stage
+#I  Curve no.      7, Limit1 :    1400, Limit2 :   140000
+#I  First stage
+#I  Second stage
+#I  Curve no.      8, Limit1 :    1600, Limit2 :   160000
+#I  First stage
+#I  Second stage
+#I  Curve no.      9, Limit1 :    1800, Limit2 :   180000
+#I  First stage
+#I  Second stage
+#I  Curve no.     10, Limit1 :    2000, Limit2 :   200000
+#I  First stage
+#I  Second stage
+#I  Curve no.     11, Limit1 :    2200, Limit2 :   220000
+#I  First stage
+#I  Second stage
+#I  Curve no.     12, Limit1 :    2400, Limit2 :   240000
+#I  First stage
+#I  Second stage
+#I  Curve no.     13, Limit1 :    2600, Limit2 :   260000
+#I  First stage
+#I  Second stage
+#I  Curve no.     14, Limit1 :    2800, Limit2 :   280000
+#I  First stage
+#I  Second stage
+#I  Curve no.     15, Limit1 :    3000, Limit2 :   300000
+#I  First stage
+#I  Second stage
+#I  Curve no.     16, Limit1 :    3200, Limit2 :   320000
+#I  First stage
+#I  Second stage
+#I  Curve no.     17, Limit1 :    3400, Limit2 :   340000
+#I  First stage
+#I  Second stage
+#I  Curve no.     18, Limit1 :    3600, Limit2 :   360000
+#I  First stage
+#I  Second stage
+#I  Curve no.     19, Limit1 :    3800, Limit2 :   380000
+#I  First stage
+#I  Second stage
+#I  Curve no.     20, Limit1 :    4000, Limit2 :   400000
+#I  First stage
+#I  Second stage
+#I  Curve no.     21, Limit1 :    4200, Limit2 :   420000
+#I  First stage
+#I  Second stage
+#I  Curve no.     22, Limit1 :    4400, Limit2 :   440000
+#I  First stage
+#I  Second stage
+#I  Curve no.     23, Limit1 :    4600, Limit2 :   460000
+#I  First stage
+#I  Second stage
+#I  Curve no.     24, Limit1 :    4800, Limit2 :   480000
+#I  First stage
+#I  Second stage
+#I  Curve no.     25, Limit1 :    5000, Limit2 :   500000
+#I  First stage
+#I  Second stage
+#I  Curve no.     26, Limit1 :    5200, Limit2 :   520000
+#I  First stage
+#I  Second stage
+#I  Curve no.     27, Limit1 :    5400, Limit2 :   540000
+#I  First stage
+#I  Second stage
+#I  Curve no.     28, Limit1 :    5600, Limit2 :   560000
+#I  First stage
+#I  Second stage
+#I  Curve no.     29, Limit1 :    5800, Limit2 :   580000
+#I  First stage
+#I  Second stage
+#I  Curve no.     30, Limit1 :    6000, Limit2 :   600000
+#I  First stage
+#I  Second stage
+#I  Curve no.     31, Limit1 :    6200, Limit2 :   620000
+#I  First stage
+#I  Second stage
+#I  Curve no.     32, Limit1 :    6400, Limit2 :   640000
+#I  First stage
+#I  Second stage
+#I  Curve no.     33, Limit1 :    6600, Limit2 :   660000
+#I  First stage
+#I  Second stage
+#I  Curve no.     34, Limit1 :    6800, Limit2 :   680000
+#I  First stage
+#I  Second stage
+#I  Curve no.     35, Limit1 :    7000, Limit2 :   700000
+#I  First stage
+#I  Second stage
+#I  Curve no.     36, Limit1 :    7200, Limit2 :   720000
+#I  First stage
+#I  Second stage
+#I  Curve no.     37, Limit1 :    7400, Limit2 :   740000
+#I  First stage
+#I  Second stage
+#I  Curve no.     38, Limit1 :    7600, Limit2 :   760000
+#I  First stage
+#I  Second stage
+#I  Curve no.     39, Limit1 :    7800, Limit2 :   780000
+#I  First stage
+#I  Second stage
+#I  Factor 2605409680075200641 was found
+#I  ECM for n = 
+123621663649596284253701654905768885566016648125285185137896003217239803521
+Curves : 228, Initial Limit1 : 8000, Initial Limit2 : 800000, Delta : 200
+#I  Curve no.     40, Limit1 :    8000, Limit2 :   800000
+#I  First stage
+#I  Second stage
+#I  Curve no.     41, Limit1 :    8200, Limit2 :   820000
+#I  First stage
+#I  Second stage
+#I  Curve no.     42, Limit1 :    8400, Limit2 :   840000
+#I  First stage
+#I  Second stage
+#I  Curve no.     43, Limit1 :    8600, Limit2 :   860000
+#I  First stage
+#I  Second stage
+#I  Curve no.     44, Limit1 :    8800, Limit2 :   880000
+#I  First stage
+#I  Second stage
+#I  Curve no.     45, Limit1 :    9000, Limit2 :   900000
+#I  First stage
+#I  Second stage
+#I  Curve no.     46, Limit1 :    9200, Limit2 :   920000
+#I  First stage
+#I  Second stage
+#I  Curve no.     47, Limit1 :    9400, Limit2 :   940000
+#I  First stage
+#I  Second stage
+#I  Curve no.     48, Limit1 :    9600, Limit2 :   960000
+#I  First stage
+#I  Second stage
+#I  Curve no.     49, Limit1 :    9800, Limit2 :   980000
+#I  First stage
+#I  Second stage
+#I  Curve no.     50, Limit1 :   10000, Limit2 :  1000000
+#I  First stage
+#I  Second stage
+#I  Curve no.     51, Limit1 :   10200, Limit2 :  1020000
+#I  Initializing prime differences list, PrimeDiffLimit = 2000000
+#I  First stage
+#I  Second stage
+#I  Curve no.     52, Limit1 :   10400, Limit2 :  1040000
+#I  First stage
+#I  Second stage
+#I  Curve no.     53, Limit1 :   10600, Limit2 :  1060000
+#I  First stage
+#I  Second stage
+#I  Curve no.     54, Limit1 :   10800, Limit2 :  1080000
+#I  First stage
+#I  Second stage
+#I  Curve no.     55, Limit1 :   11000, Limit2 :  1100000
+#I  First stage
+#I  Second stage
+#I  Curve no.     56, Limit1 :   11200, Limit2 :  1120000
+#I  First stage
+#I  Second stage
+#I  Curve no.     57, Limit1 :   11400, Limit2 :  1140000
+#I  First stage
+#I  Second stage
+#I  Curve no.     58, Limit1 :   11600, Limit2 :  1160000
+#I  First stage
+#I  Second stage
+#I  Curve no.     59, Limit1 :   11800, Limit2 :  1180000
+#I  First stage
+#I  Second stage
+#I  Curve no.     60, Limit1 :   12000, Limit2 :  1200000
+#I  First stage
+#I  Second stage
+#I  Curve no.     61, Limit1 :   12200, Limit2 :  1220000
+#I  First stage
+#I  Second stage
+#I  Curve no.     62, Limit1 :   12400, Limit2 :  1240000
+#I  First stage
+#I  Second stage
+#I  Curve no.     63, Limit1 :   12600, Limit2 :  1260000
+#I  First stage
+#I  Second stage
+#I  Curve no.     64, Limit1 :   12800, Limit2 :  1280000
+#I  First stage
+#I  Second stage
+#I  Curve no.     65, Limit1 :   13000, Limit2 :  1300000
+#I  First stage
+#I  Second stage
+#I  Curve no.     66, Limit1 :   13200, Limit2 :  1320000
+#I  First stage
+#I  Second stage
+#I  Curve no.     67, Limit1 :   13400, Limit2 :  1340000
+#I  First stage
+#I  Second stage
+#I  Curve no.     68, Limit1 :   13600, Limit2 :  1360000
+#I  First stage
+#I  Second stage
+#I  Curve no.     69, Limit1 :   13800, Limit2 :  1380000
+#I  First stage
+#I  Second stage
+#I  Curve no.     70, Limit1 :   14000, Limit2 :  1400000
+#I  First stage
+#I  Second stage
+#I  Curve no.     71, Limit1 :   14200, Limit2 :  1420000
+#I  First stage
+#I  Second stage
+#I  Curve no.     72, Limit1 :   14400, Limit2 :  1440000
+#I  First stage
+#I  Second stage
+#I  Curve no.     73, Limit1 :   14600, Limit2 :  1460000
+#I  First stage
+#I  Second stage
+#I  Curve no.     74, Limit1 :   14800, Limit2 :  1480000
+#I  First stage
+#I  Second stage
+#I  Curve no.     75, Limit1 :   15000, Limit2 :  1500000
+#I  First stage
+#I  Second stage
+#I  Curve no.     76, Limit1 :   15200, Limit2 :  1520000
+#I  First stage
+#I  Second stage
+#I  Curve no.     77, Limit1 :   15400, Limit2 :  1540000
+#I  First stage
+#I  Second stage
+#I  Curve no.     78, Limit1 :   15600, Limit2 :  1560000
+#I  First stage
+#I  Second stage
+#I  Curve no.     79, Limit1 :   15800, Limit2 :  1580000
+#I  First stage
+#I  Second stage
+#I  Curve no.     80, Limit1 :   16000, Limit2 :  1600000
+#I  First stage
+#I  Second stage
+#I  Curve no.     81, Limit1 :   16200, Limit2 :  1620000
+#I  First stage
+#I  Second stage
+#I  Curve no.     82, Limit1 :   16400, Limit2 :  1640000
+#I  First stage
+#I  Second stage
+#I  Curve no.     83, Limit1 :   16600, Limit2 :  1660000
+#I  First stage
+#I  Second stage
+#I  Curve no.     84, Limit1 :   16800, Limit2 :  1680000
+#I  First stage
+#I  Second stage
+#I  Curve no.     85, Limit1 :   17000, Limit2 :  1700000
+#I  First stage
+#I  Second stage
+#I  Curve no.     86, Limit1 :   17200, Limit2 :  1720000
+#I  First stage
+#I  Second stage
+#I  Curve no.     87, Limit1 :   17400, Limit2 :  1740000
+#I  First stage
+#I  Second stage
+#I  Curve no.     88, Limit1 :   17600, Limit2 :  1760000
+#I  First stage
+#I  Second stage
+#I  Curve no.     89, Limit1 :   17800, Limit2 :  1780000
+#I  First stage
+#I  Second stage
+#I  Curve no.     90, Limit1 :   18000, Limit2 :  1800000
+#I  First stage
+#I  Second stage
+#I  Curve no.     91, Limit1 :   18200, Limit2 :  1820000
+#I  First stage
+#I  Second stage
+#I  Curve no.     92, Limit1 :   18400, Limit2 :  1840000
+#I  First stage
+#I  Second stage
+#I  Curve no.     93, Limit1 :   18600, Limit2 :  1860000
+#I  First stage
+#I  Second stage
+#I  Curve no.     94, Limit1 :   18800, Limit2 :  1880000
+#I  First stage
+#I  Second stage
+#I  Curve no.     95, Limit1 :   19000, Limit2 :  1900000
+#I  First stage
+#I  Second stage
+#I  Curve no.     96, Limit1 :   19200, Limit2 :  1920000
+#I  First stage
+#I  Second stage
+#I  Curve no.     97, Limit1 :   19400, Limit2 :  1940000
+#I  First stage
+#I  Second stage
+#I  Curve no.     98, Limit1 :   19600, Limit2 :  1960000
+#I  First stage
+#I  Second stage
+#I  Curve no.     99, Limit1 :   19800, Limit2 :  1980000
+#I  First stage
+#I  Second stage
+#I  Curve no.    100, Limit1 :   20000, Limit2 :  2000000
+#I  First stage
+#I  Second stage
+#I  Curve no.    101, Limit1 :   20200, Limit2 :  2020000
+#I  Initializing prime differences list, PrimeDiffLimit = 4000000
+#I  First stage
+#I  Second stage
+#I  Curve no.    102, Limit1 :   20400, Limit2 :  2040000
+#I  First stage
+#I  Second stage
+#I  Curve no.    103, Limit1 :   20600, Limit2 :  2060000
+#I  First stage
+#I  Second stage
+#I  Curve no.    104, Limit1 :   20800, Limit2 :  2080000
+#I  First stage
+#I  Second stage
+#I  Curve no.    105, Limit1 :   21000, Limit2 :  2100000
+#I  First stage
+#I  Second stage
+#I  Curve no.    106, Limit1 :   21200, Limit2 :  2120000
+#I  First stage
+#I  Second stage
+#I  Curve no.    107, Limit1 :   21400, Limit2 :  2140000
+#I  First stage
+#I  Second stage
+#I  Curve no.    108, Limit1 :   21600, Limit2 :  2160000
+#I  First stage
+#I  Second stage
+#I  Curve no.    109, Limit1 :   21800, Limit2 :  2180000
+#I  First stage
+#I  Second stage
+#I  Curve no.    110, Limit1 :   22000, Limit2 :  2200000
+#I  First stage
+#I  Second stage
+#I  Curve no.    111, Limit1 :   22200, Limit2 :  2220000
+#I  First stage
+#I  Second stage
+#I  Curve no.    112, Limit1 :   22400, Limit2 :  2240000
+#I  First stage
+#I  Second stage
+#I  Curve no.    113, Limit1 :   22600, Limit2 :  2260000
+#I  First stage
+#I  Second stage
+#I  Curve no.    114, Limit1 :   22800, Limit2 :  2280000
+#I  First stage
+#I  Second stage
+#I  Curve no.    115, Limit1 :   23000, Limit2 :  2300000
+#I  First stage
+#I  Second stage
+#I  Curve no.    116, Limit1 :   23200, Limit2 :  2320000
+#I  First stage
+#I  Second stage
+#I  Curve no.    117, Limit1 :   23400, Limit2 :  2340000
+#I  First stage
+#I  Second stage
+#I  Curve no.    118, Limit1 :   23600, Limit2 :  2360000
+#I  First stage
+#I  Second stage
+#I  Curve no.    119, Limit1 :   23800, Limit2 :  2380000
+#I  First stage
+#I  Second stage
+#I  Curve no.    120, Limit1 :   24000, Limit2 :  2400000
+#I  First stage
+#I  Second stage
+#I  Curve no.    121, Limit1 :   24200, Limit2 :  2420000
+#I  First stage
+#I  Second stage
+#I  Curve no.    122, Limit1 :   24400, Limit2 :  2440000
+#I  First stage
+#I  Second stage
+#I  Curve no.    123, Limit1 :   24600, Limit2 :  2460000
+#I  First stage
+#I  Second stage
+#I  Curve no.    124, Limit1 :   24800, Limit2 :  2480000
+#I  First stage
+#I  Second stage
+#I  Curve no.    125, Limit1 :   25000, Limit2 :  2500000
+#I  First stage
+#I  Second stage
+#I  Curve no.    126, Limit1 :   25200, Limit2 :  2520000
+#I  First stage
+#I  Second stage
+#I  Curve no.    127, Limit1 :   25400, Limit2 :  2540000
+#I  First stage
+#I  Second stage
+#I  Curve no.    128, Limit1 :   25600, Limit2 :  2560000
+#I  First stage
+#I  Second stage
+#I  Curve no.    129, Limit1 :   25800, Limit2 :  2580000
+#I  First stage
+#I  Second stage
+#I  Curve no.    130, Limit1 :   26000, Limit2 :  2600000
+#I  First stage
+#I  Second stage
+#I  Curve no.    131, Limit1 :   26200, Limit2 :  2620000
+#I  First stage
+#I  Second stage
+#I  Curve no.    132, Limit1 :   26400, Limit2 :  2640000
+#I  First stage
+#I  Second stage
+#I  Curve no.    133, Limit1 :   26600, Limit2 :  2660000
+#I  First stage
+#I  Second stage
+#I  Curve no.    134, Limit1 :   26800, Limit2 :  2680000
+#I  First stage
+#I  Second stage
+#I  Curve no.    135, Limit1 :   27000, Limit2 :  2700000
+#I  First stage
+#I  Second stage
+#I  Curve no.    136, Limit1 :   27200, Limit2 :  2720000
+#I  First stage
+#I  Second stage
+#I  Curve no.    137, Limit1 :   27400, Limit2 :  2740000
+#I  First stage
+#I  Second stage
+#I  Curve no.    138, Limit1 :   27600, Limit2 :  2760000
+#I  First stage
+#I  Second stage
+#I  Curve no.    139, Limit1 :   27800, Limit2 :  2780000
+#I  First stage
+#I  Second stage
+#I  Curve no.    140, Limit1 :   28000, Limit2 :  2800000
+#I  First stage
+#I  Second stage
+#I  Curve no.    141, Limit1 :   28200, Limit2 :  2820000
+#I  First stage
+#I  Second stage
+#I  Curve no.    142, Limit1 :   28400, Limit2 :  2840000
+#I  First stage
+#I  Second stage
+#I  Curve no.    143, Limit1 :   28600, Limit2 :  2860000
+#I  First stage
+#I  Second stage
+#I  Curve no.    144, Limit1 :   28800, Limit2 :  2880000
+#I  First stage
+#I  Second stage
+#I  Curve no.    145, Limit1 :   29000, Limit2 :  2900000
+#I  First stage
+#I  Second stage
+#I  Curve no.    146, Limit1 :   29200, Limit2 :  2920000
+#I  First stage
+#I  Second stage
+#I  Curve no.    147, Limit1 :   29400, Limit2 :  2940000
+#I  First stage
+#I  Second stage
+#I  Curve no.    148, Limit1 :   29600, Limit2 :  2960000
+#I  First stage
+#I  Second stage
+#I  Curve no.    149, Limit1 :   29800, Limit2 :  2980000
+#I  First stage
+#I  Second stage
+#I  Curve no.    150, Limit1 :   30000, Limit2 :  3000000
+#I  First stage
+#I  Second stage
+#I  Curve no.    151, Limit1 :   30200, Limit2 :  3020000
+#I  First stage
+#I  Second stage
+#I  Curve no.    152, Limit1 :   30400, Limit2 :  3040000
+#I  First stage
+#I  Second stage
+#I  Curve no.    153, Limit1 :   30600, Limit2 :  3060000
+#I  First stage
+#I  Second stage
+#I  Curve no.    154, Limit1 :   30800, Limit2 :  3080000
+#I  First stage
+#I  Second stage
+#I  Curve no.    155, Limit1 :   31000, Limit2 :  3100000
+#I  First stage
+#I  Second stage
+#I  Curve no.    156, Limit1 :   31200, Limit2 :  3120000
+#I  First stage
+#I  Second stage
+#I  Curve no.    157, Limit1 :   31400, Limit2 :  3140000
+#I  First stage
+#I  Second stage
+#I  Curve no.    158, Limit1 :   31600, Limit2 :  3160000
+#I  First stage
+#I  Second stage
+#I  Curve no.    159, Limit1 :   31800, Limit2 :  3180000
+#I  First stage
+#I  Second stage
+#I  Curve no.    160, Limit1 :   32000, Limit2 :  3200000
+#I  First stage
+#I  Second stage
+#I  Curve no.    161, Limit1 :   32200, Limit2 :  3220000
+#I  First stage
+#I  Second stage
+#I  Curve no.    162, Limit1 :   32400, Limit2 :  3240000
+#I  First stage
+#I  Second stage
+#I  Curve no.    163, Limit1 :   32600, Limit2 :  3260000
+#I  First stage
+#I  Second stage
+#I  Curve no.    164, Limit1 :   32800, Limit2 :  3280000
+#I  First stage
+#I  Second stage
+#I  Curve no.    165, Limit1 :   33000, Limit2 :  3300000
+#I  First stage
+#I  Second stage
+#I  Curve no.    166, Limit1 :   33200, Limit2 :  3320000
+#I  First stage
+#I  Second stage
+#I  Curve no.    167, Limit1 :   33400, Limit2 :  3340000
+#I  First stage
+#I  Second stage
+#I  Curve no.    168, Limit1 :   33600, Limit2 :  3360000
+#I  First stage
+#I  Second stage
+#I  Curve no.    169, Limit1 :   33800, Limit2 :  3380000
+#I  First stage
+#I  Second stage
+#I  Curve no.    170, Limit1 :   34000, Limit2 :  3400000
+#I  First stage
+#I  Second stage
+#I  Curve no.    171, Limit1 :   34200, Limit2 :  3420000
+#I  First stage
+#I  Second stage
+#I  Curve no.    172, Limit1 :   34400, Limit2 :  3440000
+#I  First stage
+#I  Second stage
+#I  Curve no.    173, Limit1 :   34600, Limit2 :  3460000
+#I  First stage
+#I  Second stage
+#I  Curve no.    174, Limit1 :   34800, Limit2 :  3480000
+#I  First stage
+#I  Second stage
+#I  Curve no.    175, Limit1 :   35000, Limit2 :  3500000
+#I  First stage
+#I  Second stage
+#I  Curve no.    176, Limit1 :   35200, Limit2 :  3520000
+#I  First stage
+#I  Second stage
+#I  Curve no.    177, Limit1 :   35400, Limit2 :  3540000
+#I  First stage
+#I  Second stage
+#I  Curve no.    178, Limit1 :   35600, Limit2 :  3560000
+#I  First stage
+#I  Second stage
+#I  Curve no.    179, Limit1 :   35800, Limit2 :  3580000
+#I  First stage
+#I  Second stage
+#I  Curve no.    180, Limit1 :   36000, Limit2 :  3600000
+#I  First stage
+#I  Second stage
+#I  Curve no.    181, Limit1 :   36200, Limit2 :  3620000
+#I  First stage
+#I  Second stage
+#I  Curve no.    182, Limit1 :   36400, Limit2 :  3640000
+#I  First stage
+#I  Second stage
+#I  Curve no.    183, Limit1 :   36600, Limit2 :  3660000
+#I  First stage
+#I  Second stage
+#I  Curve no.    184, Limit1 :   36800, Limit2 :  3680000
+#I  First stage
+#I  Second stage
+#I  Curve no.    185, Limit1 :   37000, Limit2 :  3700000
+#I  First stage
+#I  Second stage
+#I  Curve no.    186, Limit1 :   37200, Limit2 :  3720000
+#I  First stage
+#I  Second stage
+#I  Curve no.    187, Limit1 :   37400, Limit2 :  3740000
+#I  First stage
+#I  Second stage
+#I  Curve no.    188, Limit1 :   37600, Limit2 :  3760000
+#I  First stage
+#I  Second stage
+#I  Curve no.    189, Limit1 :   37800, Limit2 :  3780000
+#I  First stage
+#I  Second stage
+#I  Curve no.    190, Limit1 :   38000, Limit2 :  3800000
+#I  First stage
+#I  Second stage
+#I  Curve no.    191, Limit1 :   38200, Limit2 :  3820000
+#I  First stage
+#I  Second stage
+#I  Curve no.    192, Limit1 :   38400, Limit2 :  3840000
+#I  First stage
+#I  Second stage
+#I  Curve no.    193, Limit1 :   38600, Limit2 :  3860000
+#I  First stage
+#I  Second stage
+#I  Curve no.    194, Limit1 :   38800, Limit2 :  3880000
+#I  First stage
+#I  Second stage
+#I  Curve no.    195, Limit1 :   39000, Limit2 :  3900000
+#I  First stage
+#I  Second stage
+#I  Curve no.    196, Limit1 :   39200, Limit2 :  3920000
+#I  First stage
+#I  Second stage
+#I  Curve no.    197, Limit1 :   39400, Limit2 :  3940000
+#I  First stage
+#I  Second stage
+#I  Curve no.    198, Limit1 :   39600, Limit2 :  3960000
+#I  First stage
+#I  Second stage
+#I  Curve no.    199, Limit1 :   39800, Limit2 :  3980000
+#I  First stage
+#I  Second stage
+#I  Curve no.    200, Limit1 :   40000, Limit2 :  4000000
+#I  First stage
+#I  Second stage
+#I  Curve no.    201, Limit1 :   40200, Limit2 :  4020000
+#I  Initializing prime differences list, PrimeDiffLimit = 8000000
+#I  First stage
+#I  Second stage
+#I  Curve no.    202, Limit1 :   40400, Limit2 :  4040000
+#I  First stage
+#I  Second stage
+#I  Curve no.    203, Limit1 :   40600, Limit2 :  4060000
+#I  First stage
+#I  Second stage
+#I  Curve no.    204, Limit1 :   40800, Limit2 :  4080000
+#I  First stage
+#I  Second stage
+#I  Curve no.    205, Limit1 :   41000, Limit2 :  4100000
+#I  First stage
+#I  Second stage
+#I  Curve no.    206, Limit1 :   41200, Limit2 :  4120000
+#I  First stage
+#I  Second stage
+#I  Curve no.    207, Limit1 :   41400, Limit2 :  4140000
+#I  First stage
+#I  Second stage
+#I  Curve no.    208, Limit1 :   41600, Limit2 :  4160000
+#I  First stage
+#I  Second stage
+#I  Curve no.    209, Limit1 :   41800, Limit2 :  4180000
+#I  First stage
+#I  Second stage
+#I  Curve no.    210, Limit1 :   42000, Limit2 :  4200000
+#I  First stage
+#I  Second stage
+#I  Curve no.    211, Limit1 :   42200, Limit2 :  4220000
+#I  First stage
+#I  Second stage
+#I  Curve no.    212, Limit1 :   42400, Limit2 :  4240000
+#I  First stage
+#I  Second stage
+#I  Curve no.    213, Limit1 :   42600, Limit2 :  4260000
+#I  First stage
+#I  Second stage
+#I  Curve no.    214, Limit1 :   42800, Limit2 :  4280000
+#I  First stage
+#I  Second stage
+#I  Curve no.    215, Limit1 :   43000, Limit2 :  4300000
+#I  First stage
+#I  Second stage
+#I  Curve no.    216, Limit1 :   43200, Limit2 :  4320000
+#I  First stage
+#I  Second stage
+#I  Curve no.    217, Limit1 :   43400, Limit2 :  4340000
+#I  First stage
+#I  Second stage
+#I  Curve no.    218, Limit1 :   43600, Limit2 :  4360000
+#I  First stage
+#I  Second stage
+#I  Curve no.    219, Limit1 :   43800, Limit2 :  4380000
+#I  First stage
+#I  Second stage
+#I  Curve no.    220, Limit1 :   44000, Limit2 :  4400000
+#I  First stage
+#I  Second stage
+#I  Curve no.    221, Limit1 :   44200, Limit2 :  4420000
+#I  First stage
+#I  Second stage
+#I  Curve no.    222, Limit1 :   44400, Limit2 :  4440000
+#I  First stage
+#I  Second stage
+#I  Curve no.    223, Limit1 :   44600, Limit2 :  4460000
+#I  First stage
+#I  Second stage
+#I  Curve no.    224, Limit1 :   44800, Limit2 :  4480000
+#I  First stage
+#I  Second stage
+#I  Curve no.    225, Limit1 :   45000, Limit2 :  4500000
+#I  First stage
+#I  Second stage
+#I  Curve no.    226, Limit1 :   45200, Limit2 :  4520000
+#I  First stage
+#I  Second stage
+#I  Curve no.    227, Limit1 :   45400, Limit2 :  4540000
+#I  First stage
+#I  Second stage
+#I  Curve no.    228, Limit1 :   45600, Limit2 :  4560000
+#I  First stage
+#I  Second stage
+#I  Intermediate result : 
+[ [ 2605409680075200641 ], [ 1236216636495962842537016549057688855660166481252\
+85185137896003217239803521 ] ]
+#I  
+#I  Factors already found : [ 2, 17, 1873, 53441, 3091592129, 10345760209, 
+  2605409680075200641 ]
+#I  
+#I  
+#I  Multiple Polynomial Quadratic Sieve (MPQS)
+Number to be factored : 
+123621663649596284253701654905768885566016648125285185137896003217239803521
+#I  Pass no. 1
+#I  MPQS for n = 
+123621663649596284253701654905768885566016648125285185137896003217239803521
+#I  Digits                     :         75
+#I  Multiplier                 :          1
+#I  Size of factor base        :       4218
+#I  Factor base : 
+[ -1, 2, 3, 5, 7, 11, 13, 19, 23, 29, 43, 59, 61, 79, 97, 107, 113, 131, 137, 
+  139, 149, 151, 157, 163, 167, 179, 191, 193, 197, 199, 227, 271, 281, 293, 
+  311, 313, 317, 331, 337, 347, 349, 367, 379, 389, 397, 401, 421, 431, 443, 
+  457, 467, 499, 503, 523, 547, 557, 571, 577, 587, 613, 619, 643, 659, 683, 
+  701, 709, 719, 727, 733, 739, 743, 751, 761, 811, 829, 853, 857, 859, 881, 
+  911, 919, 929, 937, 941, 967, 971, 997, 1013, 1019, 1031, 1033, 1039, 1051, 
+  1091, 1093, 1103, 1109, 1117, 1129, 1153, 1163, 1181, 1187, 1193, 1217, 
+  1229, 1237, 1249, 1259, 1277, 1283, 1289, 1297, 1303, 1307, 1367, 1381, 
+  1399, 1409, 1427, 1439, 1447, 1451, 1481, 1493, 1511, 1553, 1559, 1571, 
+  1583, 1607, 1609, 1613, 1619, 1627, 1663, 1669, 1697, 1723, 1733, 1747, 
+  1753, 1759, 1777, 1783, 1787, 1789, 1811, 1831, 1847, 1867, 1871, 1877, 
+  1879, 1889, 1901, 1933, 1949, 1951, 1979, 1997, 1999, 2039, 2053, 2069, 
+  2081, 2083, 2099, 2111, 2113, 2129, 2131, 2137, 2143, 2153, 2161, 2179, 
+  2203, 2221, 2243, 2251, 2267, 2269, 2273, 2281, 2309, 2333, 2341, 2351, 
+  2357, 2371, 2389, 2393, 2411, 2423, 2441, 2459, 2467, 2521, 2531, 2539, 
+  2621, 2647, 2657, 2659, 2663, 2671, 2677, 2683, 2687, 2713, 2731, 2749, 
+  2777, 2789, 2797, 2803, 2833, 2857, 2861, 2879, 2897, 2909, 2927, 2953, 
+  2957, 2963, 2971, 2999, 3001, 3011, 3023, 3041, 3061, 3067, 3089, 3109, 
+  3119, 3167, 3181, 3187, 3191, 3203, 3209, 3217, 3221, 3229, 3251, 3253, 
+  3257, 3271, 3307, 3313, 3329, 3347, 3359, 3361, 3371, 3389, 3391, 3413, 
+  3449, 3457, 3463, 3467, 3469, 3527, 3533, 3541, 3571, 3581, 3583, 3593, 
+  3631, 3637, 3643, 3677, 3701, 3709, 3719, 3733, 3739, 3761, 3769, 3779, 
+  3793, 3797, 3803, 3821, 3833, 3847, 3851, 3907, 3917, 3947, 3989, 4027, 
+  4073, 4093, 4099, 4127, 4129, 4133, 4139, 4153, 4157, 4201, 4211, 4217, 
+  4219, 4241, 4243, 4253, 4261, 4271, 4283, 4289, 4337, 4339, 4363, 4397, 
+  4421, 4423, 4481, 4483, 4493, 4513, 4517, 4519, 4583, 4591, 4597, 4603, 
+  4621, 4643, 4649, 4651, 4673, 4679, 4729, 4733, 4787, 4789, 4801, 4813, 
+  4831, 4861, 4889, 4931, 4943, 4987, 4993, 5009, 5021, 5077, 5081, 5099, 
+  5113, 5167, 5171, 5189, 5227, 5261, 5279, 5303, 5323, 5333, 5387, 5407, 
+  5419, 5431, 5437, 5441, 5443, 5477, 5503, 5519, 5563, 5573, 5581, 5591, 
+  5639, 5641, 5651, 5659, 5669, 5693, 5711, 5741, 5743, 5749, 5783, 5801, 
+  5807, 5813, 5821, 5843, 5849, 5861, 5867, 5879, 5881, 5897, 5923, 6011, 
+  6029, 6037, 6043, 6047, 6053, 6089, 6091, 6131, 6133, 6143, 6151, 6197, 
+  6199, 6203, 6211, 6217, 6247, 6263, 6271, 6277, 6299, 6301, 6343, 6359, 
+  6361, 6367, 6373, 6379, 6389, 6427, 6449, 6473, 6481, 6547, 6551, 6563, 
+  6569, 6577, 6619, 6659, 6661, 6689, 6691, 6703, 6709, 6737, 6791, 6793, 
+  6803, 6827, 6829, 6833, 6857, 6863, 6869, 6911, 6917, 6947, 6959, 6961, 
+  6967, 6971, 6977, 6983, 6991, 6997, 7039, 7043, 7057, 7079, 7103, 7109, 
+  7121, 7127, 7151, 7177, 7187, 7207, 7219, 7283, 7321, 7331, 7351, 7411, 
+  7451, 7481, 7499, 7507, 7517, 7523, 7541, 7547, 7559, 7561, 7573, 7591, 
+  7603, 7621, 7643, 7673, 7681, 7687, 7691, 7699, 7717, 7723, 7741, 7759, 
+  7823, 7829, 7841, 7853, 7873, 7901, 7919, 7927, 7963, 8011, 8017, 8039, 
+  8053, 8059, 8087, 8089, 8093, 8111, 8117, 8161, 8171, 8179, 8209, 8221, 
+  8231, 8233, 8269, 8273, 8287, 8291, 8293, 8297, 8329, 8353, 8369, 8377, 
+  8387, 8389, 8423, 8429, 8431, 8443, 8447, 8467, 8521, 8527, 8537, 8543, 
+  8573, 8581, 8597, 8623, 8627, 8641, 8647, 8677, 8699, 8713, 8731, 8737, 
+  8779, 8783, 8803, 8807, 8831, 8839, 8849, 8867, 8887, 8893, 8923, 8951, 
+  8963, 8971, 9001, 9007, 9041, 9043, 9049, 9137, 9151, 9157, 9161, 9181, 
+  9199, 9227, 9281, 9293, 9337, 9341, 9349, 9377, 9391, 9397, 9413, 9433, 
+  9437, 9463, 9473, 9491, 9497, 9521, 9533, 9539, 9547, 9587, 9601, 9623, 
+  9631, 9679, 9689, 9697, 9719, 9733, 9743, 9767, 9787, 9791, 9817, 9833, 
+  9851, 9857, 9887, 9901, 9923, 9929, 9931, 9967, 9973, 10007, 10039, 10067, 
+  10069, 10099, 10103, 10111, 10163, 10181, 10193, 10223, 10243, 10253, 
+  10259, 10267, 10303, 10321, 10337, 10343, 10369, 10391, 10433, 10453, 
+  10499, 10501, 10513, 10531, 10567, 10613, 10631, 10639, 10651, 10657, 
+  10663, 10687, 10709, 10711, 10723, 10729, 10739, 10753, 10771, 10831, 
+  10837, 10847, 10861, 10867, 10891, 10903, 10909, 10979, 10993, 11003, 
+  11027, 11047, 11059, 11069, 11071, 11083, 11087, 11131, 11159, 11171, 
+  11177, 11213, 11261, 11273, 11287, 11299, 11311, 11321, 11351, 11369, 
+  11393, 11399, 11411, 11443, 11447, 11471, 11483, 11491, 11497, 11503, 
+  11549, 11551, 11579, 11597, 11617, 11633, 11657, 11689, 11699, 11701, 
+  11719, 11731, 11743, 11779, 11789, 11827, 11831, 11833, 11839, 11863, 
+  11867, 11887, 11897, 11939, 11959, 11969, 11981, 12007, 12037, 12043, 
+  12049, 12071, 12073, 12101, 12113, 12119, 12143, 12149, 12157, 12203, 
+  12211, 12241, 12251, 12253, 12269, 12277, 12281, 12329, 12343, 12377, 
+  12391, 12421, 12479, 12487, 12491, 12497, 12503, 12517, 12539, 12541, 
+  12553, 12577, 12611, 12613, 12637, 12647, 12653, 12671, 12689, 12697, 
+  12763, 12781, 12823, 12829, 12853, 12889, 12893, 12953, 12959, 12967, 
+  12979, 13003, 13009, 13033, 13037, 13049, 13063, 13093, 13099, 13147, 
+  13151, 13159, 13163, 13171, 13177, 13183, 13187, 13217, 13219, 13229, 
+  13241, 13249, 13267, 13291, 13327, 13337, 13339, 13381, 13421, 13441, 
+  13451, 13477, 13499, 13513, 13537, 13577, 13591, 13597, 13619, 13627, 
+  13679, 13681, 13687, 13693, 13697, 13709, 13711, 13721, 13729, 13751, 
+  13757, 13781, 13799, 13807, 13859, 13879, 13901, 13907, 13913, 13933, 
+  13967, 13997, 13999, 14009, 14011, 14029, 14057, 14071, 14149, 14153, 
+  14159, 14173, 14177, 14197, 14207, 14221, 14249, 14251, 14303, 14321, 
+  14327, 14341, 14347, 14369, 14387, 14401, 14407, 14411, 14423, 14449, 
+  14479, 14489, 14537, 14543, 14551, 14557, 14563, 14621, 14653, 14657, 
+  14683, 14699, 14713, 14717, 14741, 14753, 14759, 14767, 14771, 14779, 
+  14797, 14831, 14843, 14867, 14869, 14879, 14887, 14891, 14929, 14939, 
+  15013, 15017, 15073, 15101, 15131, 15139, 15193, 15227, 15271, 15277, 
+  15287, 15299, 15329, 15331, 15359, 15383, 15391, 15401, 15443, 15473, 
+  15493, 15497, 15511, 15527, 15559, 15569, 15581, 15607, 15619, 15629, 
+  15643, 15647, 15649, 15683, 15731, 15733, 15737, 15739, 15761, 15767, 
+  15773, 15787, 15791, 15797, 15809, 15817, 15823, 15859, 15877, 15881, 
+  15887, 15889, 15901, 15913, 15919, 15923, 15959, 15991, 16007, 16033, 
+  16057, 16061, 16067, 16069, 16087, 16091, 16097, 16103, 16111, 16127, 
+  16193, 16249, 16301, 16319, 16333, 16361, 16363, 16433, 16451, 16453, 
+  16477, 16481, 16487, 16519, 16529, 16553, 16567, 16573, 16619, 16673, 
+  16691, 16703, 16729, 16747, 16759, 16763, 16787, 16823, 16831, 16843, 
+  16871, 16883, 16903, 16927, 16937, 16943, 16993, 17011, 17021, 17027, 
+  17029, 17033, 17041, 17077, 17107, 17117, 17123, 17159, 17167, 17183, 
+  17191, 17203, 17207, 17209, 17231, 17239, 17291, 17293, 17299, 17317, 
+  17321, 17327, 17351, 17377, 17383, 17387, 17389, 17393, 17419, 17431, 
+  17443, 17467, 17471, 17477, 17483, 17489, 17491, 17509, 17573, 17581, 
+  17597, 17599, 17609, 17657, 17659, 17669, 17681, 17713, 17737, 17783, 
+  17827, 17837, 17863, 17891, 17909, 17921, 17939, 17957, 17981, 17987, 
+  17989, 18049, 18061, 18077, 18119, 18131, 18133, 18169, 18181, 18191, 
+  18199, 18211, 18269, 18307, 18311, 18313, 18329, 18353, 18367, 18371, 
+  18401, 18427, 18439, 18457, 18521, 18523, 18539, 18583, 18593, 18637, 
+  18661, 18671, 18679, 18691, 18713, 18731, 18749, 18757, 18797, 18803, 
+  18839, 18869, 18899, 18913, 18917, 18973, 18979, 19001, 19031, 19069, 
+  19079, 19087, 19139, 19141, 19157, 19181, 19207, 19213, 19237, 19249, 
+  19259, 19267, 19333, 19379, 19391, 19423, 19433, 19471, 19489, 19507, 
+  19541, 19543, 19553, 19577, 19597, 19609, 19661, 19687, 19697, 19699, 
+  19717, 19739, 19777, 19813, 19819, 19841, 19853, 19913, 19919, 19927, 
+  19973, 19997, 20023, 20029, 20051, 20063, 20071, 20101, 20107, 20129, 
+  20149, 20161, 20173, 20177, 20183, 20219, 20231, 20249, 20297, 20327, 
+  20333, 20341, 20369, 20389, 20399, 20407, 20411, 20441, 20479, 20507, 
+  20509, 20551, 20563, 20611, 20627, 20639, 20663, 20681, 20693, 20707, 
+  20719, 20731, 20743, 20753, 20759, 20773, 20809, 20849, 20873, 20887, 
+  20899, 20929, 20947, 20959, 20981, 20983, 21017, 21019, 21031, 21059, 
+  21061, 21067, 21143, 21149, 21157, 21163, 21179, 21187, 21211, 21247, 
+  21277, 21319, 21323, 21347, 21379, 21383, 21391, 21401, 21407, 21433, 
+  21481, 21493, 21499, 21503, 21517, 21521, 21529, 21557, 21563, 21589, 
+  21599, 21601, 21611, 21613, 21701, 21727, 21737, 21757, 21787, 21799, 
+  21817, 21839, 21841, 21851, 21859, 21863, 21871, 21911, 21929, 21977, 
+  21997, 22003, 22039, 22063, 22067, 22079, 22111, 22123, 22133, 22171, 
+  22247, 22259, 22271, 22273, 22279, 22307, 22343, 22369, 22441, 22453, 
+  22481, 22483, 22531, 22541, 22543, 22567, 22571, 22573, 22619, 22637, 
+  22651, 22669, 22691, 22697, 22709, 22717, 22727, 22741, 22769, 22783, 
+  22807, 22811, 22817, 22871, 22877, 22901, 22907, 22943, 22963, 22973, 
+  23003, 23011, 23017, 23021, 23027, 23039, 23053, 23057, 23063, 23117, 
+  23197, 23201, 23203, 23251, 23269, 23279, 23291, 23293, 23311, 23357, 
+  23369, 23371, 23399, 23431, 23447, 23537, 23539, 23561, 23563, 23581, 
+  23599, 23603, 23609, 23627, 23663, 23669, 23671, 23677, 23719, 23761, 
+  23801, 23819, 23869, 23887, 23899, 23917, 23929, 23993, 24023, 24029, 
+  24043, 24049, 24071, 24077, 24083, 24103, 24107, 24113, 24179, 24197, 
+  24203, 24223, 24281, 24317, 24373, 24379, 24391, 24443, 24473, 24481, 
+  24499, 24509, 24517, 24527, 24547, 24551, 24623, 24631, 24683, 24691, 
+  24709, 24749, 24781, 24799, 24821, 24841, 24847, 24851, 24859, 24889, 
+  24907, 24917, 24919, 24923, 24953, 24971, 24977, 25031, 25033, 25037, 
+  25057, 25097, 25117, 25163, 25169, 25183, 25229, 25237, 25243, 25247, 
+  25309, 25321, 25339, 25343, 25349, 25373, 25391, 25411, 25423, 25439, 
+  25453, 25457, 25469, 25471, 25537, 25577, 25579, 25583, 25601, 25609, 
+  25633, 25643, 25657, 25667, 25693, 25703, 25717, 25741, 25763, 25771, 
+  25819, 25841, 25889, 25903, 25913, 25919, 25933, 25939, 25969, 25981, 
+  25997, 25999, 26003, 26017, 26021, 26053, 26083, 26113, 26119, 26141, 
+  26171, 26183, 26203, 26209, 26227, 26251, 26293, 26309, 26317, 26321, 
+  26347, 26357, 26387, 26393, 26417, 26449, 26459, 26479, 26497, 26501, 
+  26513, 26573, 26641, 26647, 26699, 26711, 26713, 26717, 26729, 26759, 
+  26783, 26801, 26833, 26861, 26891, 26893, 26927, 26959, 26987, 26993, 
+  27043, 27059, 27061, 27067, 27091, 27103, 27191, 27197, 27239, 27271, 
+  27277, 27281, 27329, 27361, 27367, 27397, 27409, 27427, 27479, 27481, 
+  27527, 27541, 27581, 27647, 27653, 27673, 27689, 27691, 27739, 27743, 
+  27763, 27767, 27773, 27779, 27791, 27803, 27809, 27823, 27847, 27851, 
+  27883, 27901, 27941, 27947, 27953, 27967, 28001, 28027, 28031, 28057, 
+  28069, 28081, 28087, 28099, 28111, 28123, 28151, 28163, 28183, 28229, 
+  28283, 28297, 28309, 28319, 28349, 28387, 28393, 28411, 28429, 28433, 
+  28517, 28537, 28541, 28547, 28559, 28571, 28591, 28603, 28631, 28661, 
+  28697, 28753, 28793, 28813, 28837, 28859, 28871, 28879, 28901, 28921, 
+  28927, 28961, 28979, 29017, 29027, 29033, 29101, 29123, 29137, 29147, 
+  29153, 29167, 29231, 29243, 29251, 29269, 29297, 29339, 29383, 29387, 
+  29423, 29429, 29453, 29501, 29537, 29569, 29581, 29587, 29599, 29611, 
+  29629, 29641, 29669, 29671, 29683, 29723, 29741, 29753, 29819, 29837, 
+  29863, 29867, 29873, 29983, 30013, 30029, 30091, 30109, 30113, 30133, 
+  30181, 30197, 30203, 30211, 30223, 30259, 30293, 30313, 30323, 30341, 
+  30347, 30389, 30493, 30497, 30557, 30559, 30577, 30593, 30649, 30661, 
+  30671, 30689, 30703, 30713, 30727, 30803, 30809, 30817, 30841, 30851, 
+  30853, 30871, 30893, 30911, 30941, 30949, 30971, 30977, 31033, 31039, 
+  31081, 31121, 31139, 31147, 31151, 31177, 31181, 31189, 31193, 31219, 
+  31231, 31237, 31247, 31319, 31321, 31337, 31379, 31397, 31481, 31511, 
+  31513, 31517, 31543, 31547, 31573, 31583, 31649, 31663, 31667, 31699, 
+  31723, 31729, 31741, 31769, 31771, 31799, 31817, 31847, 31849, 31873, 
+  31883, 31957, 31963, 32009, 32027, 32029, 32051, 32057, 32059, 32063, 
+  32083, 32099, 32119, 32141, 32143, 32213, 32233, 32261, 32297, 32323, 
+  32341, 32353, 32359, 32363, 32369, 32377, 32401, 32423, 32443, 32479, 
+  32497, 32503, 32531, 32561, 32563, 32579, 32603, 32611, 32621, 32633, 
+  32647, 32653, 32687, 32693, 32717, 32749, 32771, 32801, 32831, 32839, 
+  32887, 32917, 32939, 32941, 32957, 32969, 32971, 32987, 32993, 32999, 
+  33013, 33029, 33037, 33053, 33149, 33151, 33179, 33181, 33191, 33211, 
+  33247, 33287, 33289, 33301, 33311, 33317, 33343, 33359, 33403, 33457, 
+  33479, 33493, 33503, 33521, 33533, 33547, 33563, 33569, 33577, 33601, 
+  33613, 33617, 33703, 33713, 33721, 33751, 33767, 33769, 33791, 33809, 
+  33811, 33827, 33857, 33871, 33911, 33937, 33961, 33997, 34019, 34031, 
+  34057, 34061, 34123, 34127, 34129, 34141, 34147, 34157, 34159, 34211, 
+  34213, 34217, 34253, 34259, 34261, 34267, 34273, 34283, 34297, 34303, 
+  34319, 34327, 34337, 34381, 34403, 34469, 34471, 34483, 34487, 34499, 
+  34501, 34511, 34543, 34549, 34583, 34589, 34603, 34607, 34649, 34673, 
+  34679, 34687, 34693, 34703, 34721, 34729, 34739, 34807, 34877, 34883, 
+  34913, 34961, 34963, 35027, 35053, 35083, 35107, 35111, 35117, 35153, 
+  35159, 35171, 35201, 35221, 35251, 35281, 35291, 35327, 35339, 35393, 
+  35419, 35507, 35509, 35521, 35531, 35533, 35537, 35543, 35573, 35593, 
+  35677, 35731, 35759, 35797, 35801, 35863, 35879, 35911, 35923, 35933, 
+  35963, 35969, 35977, 35983, 35993, 36013, 36017, 36037, 36067, 36073, 
+  36107, 36109, 36131, 36137, 36161, 36209, 36217, 36263, 36269, 36299, 
+  36307, 36313, 36343, 36353, 36373, 36383, 36389, 36451, 36467, 36469, 
+  36479, 36493, 36497, 36523, 36541, 36563, 36571, 36599, 36607, 36629, 
+  36643, 36671, 36677, 36683, 36691, 36721, 36739, 36749, 36781, 36787, 
+  36821, 36857, 36871, 36877, 36901, 36919, 36929, 36943, 36979, 36997, 
+  37019, 37021, 37049, 37087, 37097, 37123, 37139, 37159, 37199, 37223, 
+  37243, 37253, 37273, 37339, 37357, 37361, 37369, 37409, 37463, 37489, 
+  37511, 37549, 37573, 37589, 37591, 37607, 37649, 37657, 37663, 37717, 
+  37813, 37831, 37871, 37951, 37957, 38011, 38039, 38053, 38113, 38119, 
+  38153, 38183, 38201, 38237, 38239, 38261, 38299, 38303, 38327, 38329, 
+  38351, 38371, 38377, 38431, 38561, 38567, 38593, 38603, 38609, 38611, 
+  38629, 38639, 38669, 38707, 38713, 38723, 38729, 38737, 38747, 38767, 
+  38783, 38821, 38833, 38839, 38851, 38861, 38867, 38873, 38917, 38923, 
+  38933, 38953, 38959, 38971, 38993, 39019, 39023, 39041, 39043, 39047, 
+  39089, 39113, 39133, 39139, 39157, 39163, 39181, 39191, 39199, 39239, 
+  39241, 39323, 39341, 39343, 39359, 39367, 39371, 39383, 39397, 39419, 
+  39439, 39451, 39461, 39499, 39521, 39541, 39551, 39563, 39569, 39607, 
+  39619, 39631, 39659, 39703, 39709, 39727, 39733, 39761, 39769, 39779, 
+  39791, 39799, 39821, 39827, 39829, 39841, 39847, 39857, 39863, 39877, 
+  39883, 39887, 39929, 39983, 40031, 40037, 40039, 40099, 40111, 40129, 
+  40151, 40153, 40163, 40169, 40177, 40213, 40231, 40237, 40241, 40277, 
+  40343, 40351, 40357, 40423, 40427, 40471, 40483, 40499, 40519, 40531, 
+  40543, 40559, 40577, 40583, 40591, 40609, 40639, 40699, 40709, 40739, 
+  40751, 40759, 40763, 40771, 40813, 40819, 40841, 40849, 40897, 40927, 
+  40933, 40939, 40949, 41017, 41039, 41113, 41117, 41131, 41141, 41143, 
+  41177, 41183, 41189, 41201, 41203, 41213, 41227, 41231, 41233, 41243, 
+  41263, 41269, 41281, 41299, 41333, 41357, 41399, 41413, 41453, 41467, 
+  41479, 41491, 41507, 41519, 41521, 41539, 41549, 41579, 41597, 41611, 
+  41621, 41627, 41651, 41681, 41687, 41719, 41737, 41771, 41777, 41801, 
+  41809, 41813, 41843, 41879, 41903, 41947, 41969, 41981, 41983, 42017, 
+  42043, 42061, 42071, 42073, 42083, 42089, 42101, 42157, 42197, 42221, 
+  42223, 42239, 42257, 42283, 42299, 42307, 42323, 42373, 42379, 42391, 
+  42397, 42409, 42437, 42443, 42457, 42461, 42463, 42467, 42473, 42499, 
+  42509, 42557, 42571, 42589, 42667, 42689, 42703, 42793, 42797, 42821, 
+  42829, 42839, 42841, 42853, 42859, 42863, 42899, 42923, 42929, 42937, 
+  42943, 42953, 42989, 43067, 43093, 43103, 43117, 43133, 43151, 43159, 
+  43189, 43201, 43283, 43291, 43313, 43319, 43331, 43399, 43481, 43499, 
+  43517, 43591, 43607, 43609, 43613, 43691, 43711, 43721, 43777, 43783, 
+  43789, 43793, 43801, 43853, 43867, 43933, 43943, 43951, 43969, 43991, 
+  43997, 44029, 44041, 44053, 44059, 44071, 44087, 44101, 44129, 44171, 
+  44179, 44189, 44207, 44221, 44249, 44267, 44269, 44273, 44279, 44281, 
+  44293, 44357, 44371, 44383, 44417, 44483, 44491, 44519, 44537, 44579, 
+  44587, 44617, 44621, 44633, 44641, 44789, 44797, 44809, 44851, 44867, 
+  44893, 44917, 44927, 44939, 44959, 44983, 44987, 45013, 45053, 45119, 
+  45127, 45137, 45161, 45181, 45191, 45247, 45259, 45263, 45329, 45341, 
+  45361, 45389, 45403, 45413, 45491, 45503, 45523, 45553, 45569, 45587, 
+  45589, 45659, 45673, 45707, 45757, 45817, 45821, 45823, 45827, 45841, 
+  45949, 45953, 45959, 45971, 45979, 45989, 46049, 46061, 46099, 46133, 
+  46141, 46153, 46171, 46181, 46183, 46187, 46219, 46229, 46237, 46301, 
+  46309, 46327, 46337, 46351, 46381, 46411, 46441, 46447, 46451, 46457, 
+  46471, 46489, 46507, 46523, 46559, 46591, 46601, 46619, 46633, 46639, 
+  46643, 46649, 46663, 46681, 46687, 46703, 46723, 46727, 46751, 46829, 
+  46831, 46853, 46861, 46867, 46877, 46889, 46901, 46919, 46993, 47051, 
+  47057, 47087, 47123, 47129, 47137, 47143, 47147, 47149, 47161, 47189, 
+  47221, 47237, 47251, 47269, 47279, 47309, 47317, 47339, 47353, 47363, 
+  47381, 47387, 47389, 47407, 47417, 47441, 47513, 47521, 47527, 47533, 
+  47543, 47569, 47581, 47653, 47657, 47681, 47701, 47711, 47713, 47737, 
+  47741, 47777, 47791, 47819, 47837, 47843, 47869, 47903, 47911, 47933, 
+  47947, 47977, 48023, 48049, 48091, 48109, 48119, 48131, 48179, 48221, 
+  48239, 48247, 48299, 48337, 48341, 48383, 48397, 48413, 48479, 48491, 
+  48497, 48533, 48539, 48563, 48589, 48611, 48619, 48677, 48679, 48733, 
+  48757, 48761, 48779, 48781, 48809, 48857, 48883, 48889, 48953, 48989, 
+  48991, 49019, 49031, 49033, 49043, 49057, 49103, 49109, 49139, 49157, 
+  49201, 49211, 49253, 49261, 49277, 49331, 49333, 49369, 49391, 49393, 
+  49411, 49433, 49451, 49463, 49477, 49481, 49499, 49523, 49531, 49549, 
+  49627, 49633, 49639, 49667, 49669, 49697, 49711, 49727, 49741, 49789, 
+  49801, 49811, 49823, 49831, 49843, 49919, 49921, 49957, 49991, 49993, 
+  49999, 50033, 50047, 50053, 50069, 50093, 50123, 50147, 50153, 50177, 
+  50221, 50227, 50231, 50273, 50291, 50311, 50341, 50423, 50441, 50461, 
+  50503, 50513, 50527, 50543, 50551, 50581, 50593, 50683, 50753, 50773, 
+  50777, 50821, 50833, 50839, 50849, 50873, 50909, 50929, 50957, 50969, 
+  50971, 50989, 50993, 51001, 51031, 51047, 51059, 51061, 51109, 51131, 
+  51137, 51151, 51197, 51199, 51217, 51229, 51257, 51263, 51341, 51343, 
+  51349, 51413, 51419, 51427, 51431, 51437, 51461, 51473, 51479, 51481, 
+  51487, 51517, 51521, 51539, 51593, 51599, 51613, 51631, 51637, 51659, 
+  51679, 51683, 51713, 51719, 51721, 51749, 51767, 51769, 51797, 51803, 
+  51829, 51859, 51869, 51913, 51973, 51991, 52009, 52021, 52081, 52177, 
+  52223, 52249, 52259, 52267, 52291, 52301, 52313, 52321, 52369, 52379, 
+  52391, 52433, 52457, 52501, 52511, 52517, 52541, 52543, 52553, 52561, 
+  52567, 52579, 52583, 52609, 52673, 52709, 52721, 52747, 52757, 52783, 
+  52813, 52817, 52837, 52859, 52883, 52901, 52919, 52951, 52957, 52963, 
+  52973, 52981, 53003, 53017, 53047, 53051, 53087, 53093, 53147, 53173, 
+  53189, 53201, 53231, 53267, 53279, 53281, 53299, 53309, 53323, 53377, 
+  53381, 53401, 53407, 53411, 53437, 53503, 53527, 53549, 53593, 53611, 
+  53617, 53629, 53633, 53693, 53699, 53731, 53777, 53813, 53819, 53831, 
+  53857, 53887, 53897, 53917, 53923, 53927, 53987, 54011, 54013, 54037, 
+  54049, 54091, 54101, 54133, 54151, 54181, 54293, 54323, 54331, 54347, 
+  54401, 54421, 54437, 54449, 54469, 54493, 54517, 54521, 54547, 54559, 
+  54563, 54601, 54667, 54673, 54679, 54709, 54767, 54773, 54787, 54799, 
+  54877, 54907, 54941, 54959, 54973, 54983, 55001, 55009, 55021, 55061, 
+  55073, 55079, 55147, 55163, 55171, 55213, 55217, 55331, 55333, 55337, 
+  55343, 55351, 55373, 55411, 55439, 55457, 55487, 55501, 55511, 55541, 
+  55609, 55619, 55631, 55633, 55639, 55663, 55667, 55681, 55691, 55697, 
+  55721, 55733, 55763, 55787, 55819, 55823, 55849, 55871, 55889, 55901, 
+  55927, 56039, 56041, 56053, 56099, 56123, 56171, 56179, 56197, 56237, 
+  56239, 56249, 56263, 56267, 56269, 56311, 56359, 56383, 56443, 56453, 
+  56467, 56501, 56503, 56509, 56519, 56527, 56531, 56569, 56591, 56597, 
+  56599, 56611, 56663, 56687, 56701, 56731, 56737, 56767, 56807, 56809, 
+  56813, 56821, 56827, 56843, 56857, 56873, 56891, 56897, 56909, 56911, 
+  56921, 56923, 56941, 56951, 56963, 56983, 56993, 57037, 57059, 57073, 
+  57077, 57089, 57097, 57143, 57149, 57163, 57173, 57193, 57221, 57251, 
+  57259, 57271, 57283, 57287, 57329, 57331, 57347, 57349, 57367, 57383, 
+  57413, 57457, 57467, 57493, 57527, 57529, 57571, 57593, 57601, 57641, 
+  57649, 57719, 57731, 57737, 57773, 57793, 57809, 57829, 57839, 57853, 
+  57859, 57943, 57947, 57973, 57977, 57991, 58031, 58043, 58067, 58073, 
+  58109, 58111, 58147, 58153, 58169, 58199, 58229, 58231, 58237, 58321, 
+  58337, 58369, 58379, 58391, 58403, 58417, 58441, 58451, 58481, 58511, 
+  58579, 58613, 58631, 58657, 58693, 58727, 58733, 58889, 58897, 58907, 
+  58909, 58937, 58963, 58979, 59009, 59011, 59053, 59063, 59077, 59083, 
+  59141, 59159, 59167, 59183, 59209, 59221, 59233, 59243, 59263, 59341, 
+  59351, 59357, 59369, 59387, 59399, 59447, 59453, 59467, 59471, 59473, 
+  59497, 59509, 59561, 59581, 59617, 59621, 59627, 59651, 59729, 59747, 
+  59779, 59833, 59863, 59929, 59951, 60029, 60041, 60091, 60133, 60149, 
+  60209, 60223, 60257, 60289, 60331, 60353, 60383, 60397, 60443, 60449, 
+  60497, 60509, 60521, 60527, 60589, 60601, 60607, 60611, 60623, 60631, 
+  60647, 60659, 60679, 60689, 60703, 60737, 60757, 60761, 60763, 60773, 
+  60793, 60811, 60821, 60859, 60869, 60887, 60889, 60899, 60913, 60917, 
+  60923, 60953, 61007, 61027, 61051, 61057, 61091, 61121, 61151, 61153, 
+  61169, 61261, 61283, 61291, 61331, 61343, 61363, 61379, 61381, 61403, 
+  61441, 61469, 61471, 61493, 61511, 61543, 61547, 61561, 61637, 61657, 
+  61681, 61717, 61757, 61781, 61819, 61861, 61871, 61879, 61909, 61933, 
+  61961, 61979, 62011, 62057, 62071, 62099, 62119, 62129, 62143, 62201, 
+  62213, 62297, 62303, 62311, 62347, 62383, 62483, 62501, 62549, 62603, 
+  62617, 62639, 62653, 62659, 62687, 62701, 62743, 62761, 62773, 62861, 
+  62869, 62929, 62939, 62969, 62987, 62989, 63059, 63067, 63073, 63079, 
+  63097, 63149, 63197, 63199, 63211, 63247, 63281, 63331, 63337, 63353, 
+  63361, 63367, 63377, 63391, 63397, 63419, 63421, 63439, 63467, 63599, 
+  63601, 63607, 63611, 63647, 63649, 63659, 63667, 63671, 63691, 63703, 
+  63709, 63719, 63737, 63743, 63761, 63773, 63793, 63841, 63901, 63949, 
+  63997, 64013, 64067, 64081, 64109, 64123, 64151, 64171, 64187, 64189, 
+  64217, 64223, 64231, 64271, 64279, 64301, 64303, 64373, 64399, 64453, 
+  64513, 64579, 64601, 64613, 64627, 64633, 64661, 64663, 64679, 64781, 
+  64811, 64849, 64853, 64879, 64951, 64997, 65003, 65027, 65033, 65053, 
+  65063, 65071, 65089, 65111, 65119, 65179, 65287, 65293, 65327, 65357, 
+  65381, 65407, 65419, 65423, 65437, 65479, 65497, 65543, 65551, 65581, 
+  65587, 65599, 65617, 65629, 65647, 65657, 65699, 65717, 65761, 65809, 
+  65827, 65831, 65837, 65839, 65851, 65899, 65957, 65981, 66041, 66071, 
+  66083, 66107, 66109, 66169, 66173, 66179, 66239, 66271, 66293, 66337, 
+  66377, 66403, 66457, 66463, 66467, 66533, 66541, 66587, 66593, 66601, 
+  66643, 66683, 66701, 66721, 66739, 66749, 66751, 66763, 66809, 66821, 
+  66851, 66853, 66863, 66877, 66883, 66889, 66943, 66947, 67043, 67049, 
+  67057, 67061, 67103, 67129, 67139, 67141, 67157, 67211, 67213, 67217, 
+  67231, 67247, 67261, 67271, 67273, 67289, 67339, 67409, 67421, 67429, 
+  67433, 67447, 67477, 67481, 67489, 67493, 67511, 67547, 67607, 67619, 
+  67631, 67699, 67709, 67723, 67733, 67757, 67789, 67801, 67819, 67843, 
+  67853, 67883, 67957, 67961, 67979, 67987, 67993, 68041, 68053, 68087, 
+  68099, 68111, 68141, 68147, 68161, 68171, 68207, 68209, 68213, 68239, 
+  68261, 68279, 68281, 68329, 68371, 68389, 68399, 68443, 68447, 68449, 
+  68483, 68489, 68501, 68507, 68521, 68543, 68669, 68683, 68687, 68699, 
+  68711, 68713, 68743, 68749, 68767, 68771, 68813, 68821, 68863, 68879, 
+  68897, 68909, 68917, 68927, 68947, 69001, 69011, 69019, 69029, 69143, 
+  69151, 69163, 69191, 69203, 69233, 69247, 69257, 69259, 69313, 69317, 
+  69337, 69341, 69383, 69439, 69463, 69467, 69491, 69557, 69623, 69653, 
+  69661, 69697, 69763, 69767, 69779, 69809, 69821, 69827, 69829, 69877, 
+  69899, 69929, 69941, 69959, 69997, 70009, 70019, 70039, 70067, 70079, 
+  70157, 70201, 70207, 70241, 70249, 70271, 70297, 70309, 70321, 70327, 
+  70373, 70379, 70393, 70423, 70439, 70457, 70489, 70501, 70529, 70537, 
+  70583, 70589, 70621, 70627, 70657, 70663, 70717, 70729, 70769, 70793, 
+  70823, 70841, 70843, 70867, 70877, 70901, 70913, 70957, 70991, 71023, 
+  71039, 71069, 71081, 71089, 71119, 71143, 71147, 71161, 71263, 71293, 
+  71327, 71333, 71341, 71347, 71363, 71389, 71399, 71413, 71437, 71443, 
+  71453, 71549, 71563, 71597, 71647, 71693, 71719, 71741, 71761, 71777, 
+  71789, 71807, 71809, 71821, 71861, 71867, 71879, 71899, 71917, 71947, 
+  71963, 71971, 71983, 71999, 72019, 72031, 72047, 72077, 72091, 72109, 
+  72139, 72173, 72211, 72221, 72227, 72251, 72337, 72353, 72431, 72467, 
+  72497, 72503, 72547, 72551, 72559, 72577, 72613, 72617, 72623, 72643, 
+  72649, 72673, 72689, 72701, 72707, 72727, 72767, 72797, 72817, 72823, 
+  72859, 72869, 72889, 72907, 72923, 72937, 72953, 72959, 73019, 73039, 
+  73043, 73061, 73063, 73091, 73127, 73181, 73189, 73291, 73327, 73331, 
+  73351, 73363, 73379, 73387, 73433, 73453, 73471, 73477, 73517, 73547, 
+  73561, 73571, 73607, 73613, 73637, 73643, 73651, 73679, 73693, 73699, 
+  73727, 73751, 73771, 73819, 73847, 73867, 73877, 73939, 73943, 73961, 
+  74047, 74051, 74071, 74093, 74131, 74143, 74161, 74201, 74203, 74209, 
+  74219, 74257, 74287, 74357, 74363, 74377, 74381, 74383, 74411, 74441, 
+  74449, 74507, 74527, 74531, 74561, 74567, 74573, 74587, 74597, 74623, 
+  74653, 74731, 74747, 74761, 74771, 74779, 74797, 74821, 74861, 74887, 
+  74923, 74929, 74933, 75011, 75017, 75037, 75041, 75083, 75149, 75161, 
+  75193, 75211, 75217, 75223, 75227, 75253, 75277, 75329, 75337, 75347, 
+  75367, 75377, 75389, 75391, 75401, 75403, 75503, 75539, 75541, 75557, 
+  75619, 75629, 75641, 75659, 75689, 75707, 75721, 75743, 75767, 75773, 
+  75781, 75821, 75833, 75883, 75931, 75937, 75941, 75967, 75979, 75989, 
+  75991, 75997, 76031, 76079, 76081, 76157, 76163, 76249, 76253, 76259, 
+  76261, 76289, 76303, 76333, 76367, 76369, 76387, 76403, 76423, 76441, 
+  76463, 76471, 76481, 76487, 76519, 76543, 76603, 76651, 76757, 76777, 
+  76781, 76801, 76831, 76847, 76873, 76913, 76943, 76961, 76963, 76991, 
+  77017, 77029, 77041, 77093, 77101, 77141, 77153, 77167, 77171, 77269, 
+  77279, 77317, 77323, 77339, 77369, 77417, 77419, 77447, 77479, 77491, 
+  77509, 77521, 77527, 77543, 77549, 77551, 77563, 77611, 77617, 77647, 
+  77659, 77687, 77689, 77699, 77711, 77743, 77747, 77761, 77773, 77783, 
+  77797, 77863, 77893, 77929, 77933, 77969, 77977, 78017, 78031, 78041, 
+  78049, 78059, 78079, 78101, 78137, 78157, 78163, 78193, 78203, 78241, 
+  78259, 78307, 78311, 78317, 78341, 78347, 78367, 78401, 78437, 78439, 
+  78467, 78509, 78511, 78539, 78607, 78623, 78643, 78691, 78697, 78713, 
+  78721, 78803, 78823, 78853, 78857, 78893, 79031, 79039, 79043, 79087, 
+  79133, 79151, 79159, 79181, 79193, 79201, 79229, 79231, 79241, 79273, 
+  79279, 79283, 79301, 79309, 79319, 79333, 79337, 79349, 79367, 79427, 
+  79481, 79531, 79537, 79549, 79561, 79631, 79633, 79687, 79691, 79693, 
+  79757, 79769, 79777, 79801, 79817, 79823, 79847, 79861, 79867, 79873, 
+  79901, 79939, 79973, 79999, 80107, 80111, 80147, 80149, 80153, 80209, 
+  80221, 80239, 80263, 80279, 80287, 80309, 80329, 80341, 80363, 80407, 
+  80447, 80489, 80537, 80557, 80567, 80603, 80611, 80621, 80627, 80629, 
+  80671, 80677, 80683, 80687, 80713, 80761, 80779, 80789, 80803, 80809, 
+  80831, 80833, 80849, 80863, 80909, 80911, 80917, 80929, 80933, 80953, 
+  80963, 81001, 81017, 81019, 81023, 81031, 81043, 81047, 81049, 81077, 
+  81083, 81097, 81101, 81131, 81163, 81181, 81197, 81203, 81299, 81343, 
+  81359, 81371, 81373, 81401, 81457, 81517, 81559, 81569, 81619, 81647, 
+  81671, 81701, 81703, 81749, 81761, 81769, 81773, 81899, 81931, 81937, 
+  81943, 81953, 81967, 81971, 82007, 82013, 82039, 82051, 82073, 82129, 
+  82153, 82163, 82183, 82217, 82223, 82231, 82241, 82261, 82301, 82339, 
+  82349, 82361, 82387, 82393, 82421, 82457, 82463, 82469, 82483, 82487, 
+  82493, 82499, 82529, 82591, 82613, 82633, 82651, 82657, 82699, 82721, 
+  82727, 82759, 82763, 82787, 82793, 82799, 82811, 82813, 82847, 82889, 
+  82913, 82963, 83003, 83009, 83047, 83059, 83077, 83089, 83101, 83137, 
+  83177, 83203, 83221, 83257, 83267, 83269, 83273, 83311, 83339, 83341, 
+  83357, 83389, 83399, 83423, 83431, 83443, 83449, 83471, 83497, 83557, 
+  83563, 83579, 83597, 83609, 83617, 83639, 83641, 83701, 83717, 83761, 
+  83773, 83777, 83791, 83813, 83833, 83843, 83857, 83869, 83873, 83891, 
+  83903, 83921, 83933, 83969, 83983, 84017, 84047, 84053, 84089, 84127, 
+  84143, 84163, 84229, 84247, 84263, 84319, 84377, 84401, 84407, 84421, 
+  84443, 84449, 84457, 84463, 84481, 84499, 84503, 84509, 84533, 84551, 
+  84629, 84649, 84653, 84659, 84673, 84697, 84701, 84713, 84737, 84809, 
+  84811, 84857, 84859, 84869, 84913, 84947, 84967, 85037, 85049, 85061, 
+  85087, 85091, 85103, 85121, 85133, 85147, 85159, 85199, 85201, 85213, 
+  85223, 85237, 85243, 85247, 85303, 85331, 85333, 85361, 85411, 85429, 
+  85439, 85447, 85487 ]
+
+#I  Prime powers to be sieved  :       4234
+#I  Length of sieving interval :     524288
+#I  Small prime limit          :        333
+#I  Large prime limit          :   24994825
+#I  Number of used a - factors :          6
+#I  Size of a - factors pool   :         76
+#I  a - factors pool :
+[ 197137, 197159, 197161, 197207, 197257, 197261, 197269, 197273, 197293, 
+  197299, 197347, 197369, 197371, 197381, 197383, 197389, 197423, 197441, 
+  197479, 197507, 197521, 197551, 197567, 197599, 197609, 197621, 197641, 
+  197647, 197689, 197699, 197711, 197713, 197759, 197767, 197773, 197803, 
+  197807, 197837, 197887, 197891, 197893, 197909, 197921, 197947, 197957, 
+  197963, 197971, 198017, 198031, 198043, 198083, 198109, 198127, 198139, 
+  198173, 198179, 198193, 198241, 198251, 198259, 198277, 198347, 198349, 
+  198413, 198427, 198437, 198461, 198463, 198469, 198491, 198529, 198553, 
+  198571, 198599, 198613, 198637 ]
+
+#I  
+#I  Sieving
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      100
+#I  Relations with a large prime factor            :       11
+#I  Relations remaining to be found                :     4203
+#I  Total factorizations with a large prime factor :     1777
+#I  Used Polynomials                               :    11306
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       40 %
+#I  Progress                                       :        2 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      200
+#I  Relations with a large prime factor            :       37
+#I  Relations remaining to be found                :     4077
+#I  Total factorizations with a large prime factor :     3839
+#I  Used Polynomials                               :    24080
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       40 %
+#I  Progress                                       :        5 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      300
+#I  Relations with a large prime factor            :       88
+#I  Relations remaining to be found                :     3926
+#I  Total factorizations with a large prime factor :     5987
+#I  Used Polynomials                               :    36938
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :        8 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      400
+#I  Relations with a large prime factor            :      177
+#I  Relations remaining to be found                :     3737
+#I  Total factorizations with a large prime factor :     8514
+#I  Used Polynomials                               :    52459
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       13 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      500
+#I  Relations with a large prime factor            :      279
+#I  Relations remaining to be found                :     3535
+#I  Total factorizations with a large prime factor :    10862
+#I  Used Polynomials                               :    67186
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       18 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      600
+#I  Relations with a large prime factor            :      403
+#I  Relations remaining to be found                :     3311
+#I  Total factorizations with a large prime factor :    13180
+#I  Used Polynomials                               :    81372
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       23 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      700
+#I  Relations with a large prime factor            :      558
+#I  Relations remaining to be found                :     3056
+#I  Total factorizations with a large prime factor :    15355
+#I  Used Polynomials                               :    95134
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       29 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      800
+#I  Relations with a large prime factor            :      726
+#I  Relations remaining to be found                :     2788
+#I  Total factorizations with a large prime factor :    17517
+#I  Used Polynomials                               :   108951
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       35 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      900
+#I  Relations with a large prime factor            :      876
+#I  Relations remaining to be found                :     2538
+#I  Total factorizations with a large prime factor :    19425
+#I  Used Polynomials                               :   121174
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       41 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :     1000
+#I  Relations with a large prime factor            :     1060
+#I  Relations remaining to be found                :     2254
+#I  Total factorizations with a large prime factor :    21544
+#I  Used Polynomials                               :   134205
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       47 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :     1100
+#I  Relations with a large prime factor            :     1231
+#I  Relations remaining to be found                :     1983
+#I  Total factorizations with a large prime factor :    23319
+#I  Used Polynomials                               :   145185
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       54 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :     1200
+#I  Relations with a large prime factor            :     1427
+#I  Relations remaining to be found                :     1687
+#I  Total factorizations with a large prime factor :    25211
+#I  Used Polynomials                               :   156888
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       60 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :     1300
+#I  Relations with a large prime factor            :     1682
+#I  Relations remaining to be found                :     1332
+#I  Total factorizations with a large prime factor :    27671
+#I  Used Polynomials                               :   171760
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       69 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :     1400
+#I  Relations with a large prime factor            :     1941
+#I  Relations remaining to be found                :      973
+#I  Total factorizations with a large prime factor :    29715
+#I  Used Polynomials                               :   184774
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       77 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :     1500
+#I  Relations with a large prime factor            :     2195
+#I  Relations remaining to be found                :      619
+#I  Total factorizations with a large prime factor :    31805
+#I  Used Polynomials                               :   197409
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       85 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :     1600
+#I  Relations with a large prime factor            :     2469
+#I  Relations remaining to be found                :      245
+#I  Total factorizations with a large prime factor :    33840
+#I  Used Polynomials                               :   209695
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :       94 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :     1700
+#I  Relations with a large prime factor            :     2799
+#I  Relations remaining to be found                :        0
+#I  Total factorizations with a large prime factor :    36270
+#I  Used Polynomials                               :   225458
+#I  Efficiency 1                                   :        9 %
+#I  Efficiency 2                                   :       41 %
+#I  Progress                                       :      100 %
+#I  
+#I  Creating the exponent matrix
+#I  Doing Gaussian Elimination, #rows = 4499, #columns = 4294
+#I  Processing the zero rows
+#I  Dependency no. 1 yielded no factor
+#I  Dependency no. 2 yielded no factor
+#I  Dependency no. 3 yielded no factor
+#I  Dependency no. 4 yielded factor 23178136471206897818321
+#I  The factors are
+[ 23178136471206897818321, 
+  5333546284152983023636642836590290873850529760001201 ]
+#I  Intermediate result : 
+[ [ 23178136471206897818321, 5333546284152983023636642836590290873850529760001\
+201 ], [  ] ]
+#I  
+#I  The result is
+[ [ 2, 17, 1873, 53441, 3091592129, 10345760209, 2605409680075200641, 
+      23178136471206897818321, 
+      5333546284152983023636642836590290873850529760001201 ], [  ] ]
+gap> 
+

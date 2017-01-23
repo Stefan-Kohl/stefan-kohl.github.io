@@ -1,0 +1,1568 @@
+<!-- #################################################################### -->
+<!-- ##                                                                ## -->
+<!-- ##  solutions.xml           GAP Exercises            Stefan Kohl  ## -->
+<!-- ##                                                                ## -->
+<!-- #################################################################### -->
+
+<Chapter Label="ch:Solutions"><Heading>The Solutions</Heading>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:CommutatorSolution">
+<Heading>On Commutators and Derived Subgroups (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:CommutatorExercise"/>. <P/>
+
+<Index Key="CommutatorLength"><C>CommutatorLength</C></Index>
+
+There is a function <C>CommutatorLength(<A>G</A>)</C>, which returns the
+minimal number <M>n</M> such that each element in the derived subgroup of
+the group <A>G</A> can be written as a product of (at most) <M>n</M>
+commutators of elements of&nbsp;<A>G</A>.
+For the groups we are looking for, this function returns a value greater
+than&nbsp;1. However, <C>CommutatorLength</C> is reasonably slow and we
+need to check many groups. Therefore we write an own little function as
+follows:
+
+<Index Key="CommutatorsFormGroup"><C>CommutatorsFormGroup</C></Index>
+<Index Key="Comm"><C>Comm</C></Index>
+<Index Key="DerivedSubgroup"><C>DerivedSubgroup</C></Index>
+<Index Key="Cartesian"><C>Cartesian</C></Index>
+<Index Key="Set"><C>Set</C></Index>
+<Index Key="AsList"><C>AsList</C></Index><Index Key=""><C></C></Index>
+<Index Key="Length"><C>Length</C></Index>
+<Index Key="Size"><C>Size</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+CommutatorsFormGroup := G -> Length(Set(Cartesian(AsList(G),AsList(G)),
+                                                  t -> Comm(t[1],t[2])))
+                           = Size(DerivedSubgroup(G));
+]]>
+</Listing>
+
+Of course this function uses just a <E>brute-force</E> approach, and you
+might find it worth to look for a better algorithm to check whether the
+commutators form a subgroup -- but for our purposes it is sufficient as
+it stands.
+
+<Index Key="Small Groups Library">Small Groups Library</Index>
+
+Now we simply need to loop over the groups stored in the Small Groups
+Library&nbsp;<Cite Key="SmallGroups"/> until we find one for which this
+function returns <C>false</C>:
+
+<Index Key="Print"><C>Print</C></Index>
+<Index Key="AllGroups"><C>AllGroups</C></Index>
+<Index Key="First"><C>First</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> n := 0;;
+gap> repeat
+>      n := n + 1; Print("n = ",n,"\n");
+>      G := First(AllGroups(n),G->not CommutatorsFormGroup(G));
+>    until G <> fail;
+]]>
+</Listing>
+
+Certainly we could think about which groups we can already exclude by means
+of theory, but for our purposes here this turns out to be not necessary.
+We obtain the following:
+
+<Index Key="IdGroup"><C>IdGroup</C></Index>
+<Index Key="StructureDescription"><C>StructureDescription</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> IdGroup(G);
+[ 96, 3 ]
+gap> StructureDescription(G);
+"((C4 x C2) : C4) : C3"
+]]>
+</Listing>
+
+The possible orders <M>\leq 256</M> of groups which have
+the desired property are 96, 128, 144, 162, 168, 192, 216, 240, 256.
+A low-degree permutation group with our property is
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> G := Group((1,3)(2,4),(5,7)(6,8),(9,11)(10,12),(13,15)(14,16),
+>               (1,3)(5,7)(9,11),(1,2)(3,4)(13,15),(5,6)(7,8)(13,14)(15,16),
+>               (9,10)(11,12));;
+gap> CommutatorLength(G);
+2
+]]>
+</Listing>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:OuterAutomorphismsSolution">
+<Heading>On Outer Automorphisms Fixing Conjugacy Classes (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:OuterAutomorphismsExercise"/>. <P/>
+
+We perform a <E>brute-force</E> search. For this we write straightforward
+code that uses a <Q>problem-oriented</Q> approach:
+
+<Index Key="Print"><C>Print</C></Index>
+<Index Key="First"><C>First</C></Index>
+<Index Key="IsAbelian"><C>IsAbelian</C></Index>
+<Index Key="ForAny"><C>ForAny</C></Index>
+<Index Key="AsList"><C>AsList</C></Index>
+<Index Key="AutomorphismGroup"><C>AutomorphismGroup</C></Index>
+<Index Key="ForAll"><C>ForAll</C></Index>
+<Index Key="IsConjugate"><C>IsConjugate</C></Index>
+<Index Key="Image"><C>Image</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> n := 1;;
+gap> repeat
+>      Print(n,"\n");
+>      G := First(AllGroups(n),
+>                 G -> not IsAbelian(G)
+>                  and ForAny(AsList(AutomorphismGroup(G)),
+>                             aut -> not IsInnerAutomorphism(aut)
+>                                and ForAll(AsList(G),
+>                                           g->IsConjugate(G,g,
+>                                                          Image(aut,g)))));
+>      n := n + 1;
+>    until G <> fail;
+]]>
+</Listing>
+
+This loop runs a couple of minutes. This is likely less than the
+additional time it would take to exclude many groups from the search
+by means of theory or to write code which tests given groups faster.
+Nevertheless you might be interested in looking at this question from
+a theoretical point of view and in trying to find out more about the
+structure of groups which permit non-inner conjugacy class fixing
+automorphisms. <P/>
+
+We obtain the following:
+
+<Index Key="IdGroup"><C>IdGroup</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> G;
+<pc group of size 32 with 5 generators>
+gap> IdGroup(G);
+[ 32, 43 ]
+]]>
+</Listing>
+
+We would like to find a nice faithful permutation representation
+of&nbsp;<M>G</M> which permits us to see how our automorphism looks like.
+For this purpose we look for suitable subgroups, and let <M>G</M> act
+from the right on right cosets. Since <M>32 > 4!</M>, there is no hope
+to find a faithful permutation representation of degree&nbsp;4.
+However we can find one of degree&nbsp;8:
+
+<Index Key="Filtered"><C>Filtered</C></Index>
+<Index Key="List"><C>List</C></Index>
+<Index Key="ConjugacyClassesSubgroups"><C>ConjugacyClassesSubgroups</C></Index>
+<Index Key="Representative"><C>Representative</C></Index>
+<Index Key="Size"><C>Size</C></Index>
+<Index Key="Set"><C>Set</C></Index>
+<Index Key="Action"><C>Action</C></Index>
+<Index Key="RightCosets"><C>RightCosets</C></Index>
+<Index Key="OnRight"><C>OnRight</C></Index>
+<Index Key="Group"><C>Group</C></Index>
+<Index Key="ConjugacyClasses"><C>ConjugacyClasses</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> S4 := Filtered(List(ConjugacyClassesSubgroups(G),Representative),
+>                   S->Size(S)=4);;
+gap> permreps := Set(Filtered(List(S4,S->Action(G,RightCosets(G,S),OnRight)),
+>                             H->Size(H)=32));
+[ Group([ (1,2)(3,8)(4,6)(5,7), (2,8)(3,7)(5,6), (2,6)(5,8),
+      (1,3,4,7)(2,5,6,8), (1,4)(2,6)(3,7)(5,8) ]) ]
+gap> G := permreps[1];;
+gap> ConjugacyClasses(G);
+[ ()^G, (2,5)(3,7)(6,8)^G, (2,6)(5,8)^G, (2,8)(3,7)(5,6)^G, 
+  (1,2)(3,8)(4,6)(5,7)^G, (1,2,3,5,4,6,7,8)^G, (1,2,4,6)(3,8,7,5)^G, 
+  (1,2,7,8,4,6,3,5)^G, (1,3,4,7)(2,5,6,8)^G, (1,3,4,7)(2,8,6,5)^G, 
+  (1,4)(2,6)(3,7)(5,8)^G ]
+gap> G := G^(4,5);; # we want (1,2,3,4,5,6,7,8) in G
+gap> List(ConjugacyClasses(G),Representative); # pick nicer generators ...
+[ (), (2,4)(3,7)(6,8), (2,6)(4,8), (2,8)(3,7)(4,6), (1,2)(3,8)(4,7)(5,6),
+  (1,2,3,4,5,6,7,8), (1,2,5,6)(3,8,7,4), (1,2,7,8,5,6,3,4),
+  (1,3,5,7)(2,4,6,8), (1,3,5,7)(2,8,6,4), (1,5)(2,6)(3,7)(4,8) ]
+gap> G = Group((1,2,3,4,5,6,7,8),(2,4)(3,7)(6,8),(2,8)(3,7)(4,6));
+true
+]]>
+</Listing>
+
+Now let's have a look at our automorphism:
+
+<Index Key="AutomorphismGroup"><C>AutomorphismGroup</C></Index>
+<Index Key="IsInnerAutomorphism"><C>IsInnerAutomorphism</C></Index>
+<Index Key="ForAll"><C>ForAll</C></Index>
+<Index Key="IsConjugate"><C>IsConjugate</C></Index>
+<Index Key="Image"><C>Image</C></Index>
+<Index Key="Length"><C>Length</C></Index>
+<Index Key="GroupHomomorphismByImages">
+  <C>GroupHomomorphismByImages</C>
+</Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> a := (1,2,3,4,5,6,7,8);; b := (2,4)(3,7)(6,8);; c := (2,8)(3,7)(4,6);;
+gap> G := Group(a,b,c);; # the nice representation determined above
+gap> A := AutomorphismGroup(G);
+<group of size 64 with 6 generators>
+gap> auts := Filtered(AsList(A),
+>                     aut ->  not IsInnerAutomorphism(aut)
+>                         and ForAll(AsList(G),
+>                                    g -> IsConjugate(G,g,Image(aut,g))));;
+gap> Length(auts); # there are 16 suitable aut's -- find the nicest of them:
+16
+gap> auts := Filtered(auts,aut->Image(aut,a)=a);; # those fixing a
+gap> Length(auts);
+4
+gap> auts := Filtered(auts,aut->Image(aut,b)=b);; # those fixing b as well
+gap> Length(auts);
+1
+gap> aut := auts[1];; # this one fixes a and b, and moves the generator c
+gap> c; Image(aut,c);
+(2,8)(3,7)(4,6)
+(1,5)(2,4)(6,8)
+gap> c/Image(aut,c);
+(1,5)(2,6)(3,7)(4,8)
+gap> last = a^4; # our automorphism multiplies c by a^4
+true
+gap> aut = GroupHomomorphismByImages(G,G,[a,b,c],[a,b,a^4*c]); # check
+true
+]]>
+</Listing>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:UlamSpiralSolution">
+<Heading>Drawing the Ulam Spiral (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:UlamSpiralExercise"/>. <P/>
+
+We can write the function as follows:
+
+<Index Key="UlamSpiral"><C>UlamSpiral</C></Index>
+<Index Key="Filtered"><C>Filtered</C></Index>
+<Index Key="NullMat"><C>NullMat</C></Index>
+<Index Key="GF"><C>GF</C></Index>
+<Index Key="IsPrimeInt"><C>IsPrimeInt</C></Index>
+<Index Key="Zero"><C>Zero</C></Index>
+<Index Key="One"><C>One</C></Index>
+<Index Key="SaveAsBitmapPicture"><C>SaveAsBitmapPicture</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+UlamSpiral := function ( size, filename )
+
+  local  spiral, smallprimes, n, p, r,
+         middle, edgelength, edgepos, direction, i, j, zero, one;
+
+  smallprimes := Filtered([2..size],IsPrimeInt);
+  spiral      := NullMat(size,size,GF(2));
+
+  if size mod 2 = 0 then middle := [size/2,size/2];
+                    else middle := [(size + 1)/2,(size + 1)/2]; fi;
+
+  zero := Zero(GF(2)); one := One(GF(2));
+
+  spiral[middle[1]][middle[2]] := one;
+
+  for p in smallprimes do
+    i := middle[1]; j := middle[2];
+    edgelength := 2; edgepos := 1; direction := 0; r := 1;
+    for n in [2..size^2] do
+      if   direction = 0 then j := j + 1;
+      elif direction = 1 then i := i + 1;
+      elif direction = 2 then j := j - 1;
+      elif direction = 3 then i := i - 1; fi;
+      r       := r + 1;
+      edgepos := edgepos + 1;
+      if r = p then
+        if n > p then spiral[i][j] := one; fi;
+        r := 0;
+      fi;
+      if edgepos = edgelength then
+        direction := (direction + 1) mod 4;
+        if direction in [0,2] then edgelength := edgelength + 1; fi;
+        edgepos := 1;
+      fi;
+    od;
+  od;
+
+  SaveAsBitmapPicture(spiral,filename);
+end;
+]]>
+</Listing>
+
+<Index Key="Sieve of Eratosthenes">Sieve of Eratosthenes</Index>
+
+In this solution, we do a <E>Sieve of Eratosthenes</E> inside the spiral.
+This saves some memory, but doing the sieving before drawing the spiral
+would be faster.
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:ProjectivePlaneSolution">
+<Heading>
+  Automorphism Group of the Smallest Projective Plane (Solution)
+</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:ProjectivePlaneExercise"/>. <P/>
+
+We determine the requested automorphism group as a subgroup of the
+symmetric group of degree&nbsp;7 as follows:
+
+<Index Key="SubgroupProperty"><C>SubgroupProperty</C></Index>
+<Index Key="SymmetricGroup"><C>SymmetricGroup</C></Index>
+<Index Key="Set"><C>Set</C></Index>
+<Index Key="StructureDescription"><C>StructureDescription</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> p7 := [[1,2,3],[1,4,7],[1,5,6],[2,4,6],[2,5,7],[3,4,5],[3,6,7]];;
+gap> G := SubgroupProperty(SymmetricGroup(7),x->Set(p7,g->Set(g,p->p^x))=p7);
+Group([ (2,6)(3,5), (2,5)(3,6), (2,5,7)(3,6,4), (1,2,5,6,4,3,7) ])
+gap> StructureDescription(G);
+"PSL(3,2)"
+]]>
+</Listing>
+
+The group <M>G</M> is isomorphic to PSL(3,2) since the smallest projective
+plane is the one over the field GF(2) with 2 elements, and since the group
+PSL(<M>n</M>,<M>q</M>) is defined as the automorphism group of the projective
+space of affine dimension&nbsp;<M>n</M> (i.e. of projective dimension
+<M>n-1</M>) over&nbsp;GF(<M>q</M>). Our approach works since all groups we
+are dealing with are small, thus <C>SubgroupProperty</C> is practical.
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:InstallingMethodsSolution">
+<Heading>Installing a Missing Method (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:InstallingMethodsExercise"/>. <P/>
+
+We can implement the needed method as follows:
+
+<Index Key="InstallMethod"><C>InstallMethod</C></Index>
+<Index Key="Centre"><C>Centre</C></Index>
+<Index Key="IsSimpleGroup"><C>IsSimpleGroup</C></Index>
+<Index Key="IsAbelian"><C>IsAbelian</C></Index>
+<Index Key="TrivialSubgroup"><C>TrivialSubgroup</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+InstallMethod( Centre, "for simple groups", true, [ IsSimpleGroup ], 50,
+               function( G )
+                 if   IsAbelian( G ) then return G;
+                 else return TrivialSubgroup( G ); fi;
+               end );
+]]>
+</Listing>
+
+<Index Key="method selection">method selection</Index>
+<Index Key="method rank">method rank</Index>
+
+We set the rank to 50 to make &GAP;'s method selection choose this method
+in cases where multiple methods are applicable.
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:abcTriplesSolution">
+<Heading>Finding Good abc Triples (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:abcTriplesExercise"/>. <P/>
+
+We can write the function as follows:
+
+<Index Key="abcTriplesByRadical"><C>abcTriplesByRadical</C></Index>
+<Index Key="Union"><C>Union</C></Index>
+<Index Key="Factors"><C>Factors</C></Index>
+<Index Key="Filtered"><C>Filtered</C></Index>
+<Index Key="Gcd"><C>Gcd</C></Index>
+<Index Key="Product"><C>Product</C></Index>
+<Index Key="Set"><C>Set</C></Index>
+<Index Key="LOG_FLOAT"><C>LOG_FLOAT</C></Index>
+<Index Key="Float"><C>Float</C></Index>
+<Index Key="Add"><C>Add</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+abcTriplesByRadical := function ( radical, bound )
+
+  local  triples, values, values_last, factors, a, b, c, rad_abc, ratio;
+
+  factors := Union(Factors(radical),[1]);
+  values  := [1];
+  repeat
+    values_last := values;
+    values := Filtered(Union(List(factors,p->values*p)),n->n<bound);
+  until values = values_last;
+  triples := [];
+  for a in values do
+    for b in values do
+      if b >= a then break; fi;
+      if a + b in values and Gcd(a,b) = 1 then
+        c       := a + b;
+        rad_abc := Product(Set(Factors(a*b*c)));
+        ratio   := LOG_FLOAT(Float(c))/LOG_FLOAT(Float(rad_abc));
+        if ratio > 7/5 then Add(triples,[a,b,c]); fi;
+      fi;
+    od;
+  od;
+  return triples;
+end;
+]]>
+</Listing>
+
+In the first loop we determine all positive integers less than <A>bound</A>
+all of whose prime factors divide <A>radical</A>. For this we neither perform
+a loop over all integers in the range from 1 to <A>bound</A> nor we factor
+integers. In the nested loop afterwards we determine the abc triples by
+a <E>brute-force</E> search. <P/>
+
+We obtain for example the following:
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> abcTriplesByRadical( 2 * 3 * 5 * 7, 10000 );
+[ [ 125, 3, 128 ], [ 2400, 1, 2401 ], [ 4374, 1, 4375 ] ]
+gap> abcTriplesByRadical( 2 * 3 * 23 * 109, 10^7 );
+[ [ 6436341, 2, 6436343 ] ]
+]]>
+</Listing>
+
+The latter is currently the best known abc triple.
+Its ratio is <M>\ln(c)/\ln({\rm rad}(abc)) \approx 1.62991</M>. <P/>
+
+A more elaborate method to search for good abc triples is described
+in&nbsp;<Cite Key="Dokchitser03"/>.
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:GraphsSolution">
+<Heading>Automorphism Groups of Finite Graphs (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:GraphsExercise"/>. <P/>
+
+<List>
+  <Mark>ad a)</Mark>
+  <Item>
+    We let the symmetric group of the set of vertices act on the set of all
+    graphs with the given number of vertices. The orbits under that action
+    are the isomorphism classes. As said in the hints, we obtain the set of
+    all graphs with <A>n</A> vertices by
+    <C>Combinations(Combinations([1..<A>n</A>],2))</C>.
+    We can write a &GAP; function which takes an argument&nbsp;<A>n</A> and
+    which returns a set of representatives for the isomorphism classes of
+    graphs with <A>n</A> vertices:
+
+<Index Key="AllGraphs"><C>AllGraphs</C></Index>
+<Index Key="List"><C>List</C></Index>
+<Index Key="Orbits"><C>Orbits</C></Index>
+<Index Key="SymmetricGroup"><C>SymmetricGroup</C></Index>
+<Index Key="Combinations"><C>Combinations</C></Index>
+<Index Key="Set"><C>Set</C></Index>
+<Index Key="OnSets"><C>OnSets</C></Index>
+<Index Key="Representative"><C>Representative</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+AllGraphs := n -> List(Orbits(SymmetricGroup(n),
+                              Combinations(Combinations([1..n],2)),
+                              function(Gamma,g)
+                                return Set(Gamma,k->OnSets(k,g));
+                              end),
+                       Representative);
+]]>
+</Listing>
+    For <A>n</A> = 1, 2, 3, 4, 5 and 6, we obtain 1, 2, 4, 11, 34 and
+    156 graphs, respectively. We observe a significant increase in runtime
+    requirements between <A>n</A>&nbsp;=&nbsp;5 and <A>n</A>&nbsp;=&nbsp;6.
+  </Item>
+  <Mark>ad b)</Mark>
+  <Item>
+    We can write the &GAP; function as follows:
+
+<Index Key="GraphAutomorphismGroup"><C>GraphAutomorphismGroup</C></Index>
+<Index Key="SubgroupProperty"><C>SubgroupProperty</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+GraphAutomorphismGroup := function( Gamma, n )
+  return SubgroupProperty(SymmetricGroup(n),
+                          g -> Set(Gamma,k->OnSets(k,g)) = Set(Gamma));
+end;
+]]>
+</Listing>
+    Of course we could put much more effort into writing such a function
+    in order to obtain a satisfactory performance also for reasonably large
+    graphs -- but for our purposes the given one is already good enough.
+  </Item>
+  <Mark>ad c)</Mark>
+  <Item>
+    We write a &GAP; function which determines all transitive permutation
+    groups of given degree&nbsp;<A>n</A> which occur as automorphism groups
+    of graphs:
+
+<Index Key="TransitiveGraphAutomorphismGroups">
+  <C>TransitiveGraphAutomorphismGroups</C>
+</Index>
+<Index Key="AllGraphs"><C>AllGraphs</C></Index>
+<Index Key="Filtered"><C>Filtered</C></Index>
+<Index Key="IsTransitive"><C>IsTransitive</C></Index>
+<Index Key="AllTransitiveGroups"><C>AllTransitiveGroups</C></Index>
+<Index Key="NrMovedPoints"><C>NrMovedPoints</C></Index>
+<Index Key="TransitiveIdentification"><C>TransitiveIdentification</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+TransitiveGraphAutomorphismGroups := function( n )
+
+  local  graphs, groups; 
+
+  graphs := AllGraphs(n);
+  groups := Filtered(List(graphs,Gamma->GraphAutomorphismGroup(Gamma,n)),
+                     G -> IsTransitive(G,[1..n]));
+  return AllTransitiveGroups(NrMovedPoints,n)
+           {Set(groups,TransitiveIdentification)};
+end;
+]]>
+</Listing>
+    As often, it is possible to abridge this function without
+    performance loss:
+<Listing Type="GAP code">
+<![CDATA[
+TransitiveGraphAutomorphismGroups :=
+  n -> AllTransitiveGroups(NrMovedPoints,n)
+         {Set(Filtered(List(AllGraphs(n),
+                            Gamma->GraphAutomorphismGroup(Gamma,n)),
+                       G -> IsTransitive(G,[1..n])),
+              TransitiveIdentification)};
+]]>
+</Listing>
+    In general one needs to be a bit careful to avoid computing the same
+    things again and again, to avoid filling up the memory with junk objects
+    and to recognize other possible sources of performance problems when one
+    shrinks functions in such a way. <P/>
+
+    We obtain the following:
+
+<Alt Only="LaTeX">\pagebreak[4]</Alt>
+
+<Index Key="GeneratorsOfGroup"><C>GeneratorsOfGroup</C></Index>
+<Index Key="StructureDescription"><C>StructureDescription</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> TransitiveGraphAutomorphismGroups(3);
+[ S3 ]
+gap> TransitiveGraphAutomorphismGroups(4);
+[ D(4), S4 ]
+gap> TransitiveGraphAutomorphismGroups(5);
+[ D(5) = 5:2, S5 ]
+gap> TransitiveGraphAutomorphismGroups(6);
+[ D(6) = S(3)[x]2, 2S_4(6) = [2^3]S(3) = 2 wr S(3), 
+  F_36(6):2 = [S(3)^2]2 = S(3) wr 2, S6 ]
+gap> List(last, Size);
+[ 12, 48, 72, 720 ]
+gap> List(last2, GeneratorsOfGroup);
+[ [ (1,2,3,4,5,6), (1,4)(2,3)(5,6) ], [ (3,6), (1,3,5)(2,4,6), (1,5)(2,4) ], 
+  [ (2,4,6), (2,4), (1,4)(2,5)(3,6) ], [ (1,2,3,4,5,6), (1,2) ] ]
+gap> List(last3, StructureDescription);
+[ "D12", "C2 x S4", "(S3 x S3) : C2", "S6" ]
+]]>
+</Listing>
+    Now we determine the corresponding graphs.
+    Since the automorphism group of a graph is invariant under taking
+    the complement, we can restrict our considerations to graphs with at
+    most <M>[\frac{1}{2} \cdot \binom62] = 7</M> edges -- complements
+    of solutions are then solutions as well.
+
+<Index Key="HomogeneousGraphs"><C>HomogeneousGraphs</C></Index>
+<Index Key="Length"><C>Length</C></Index>
+<Index Key="Size"><C>Size</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> HomogeneousGraphs :=
+>      Filtered(AllGraphs(6),
+>               Gamma -> Length(Gamma) <= 7 and
+>                        IsTransitive(GraphAutomorphismGroup(Gamma,6),
+>                                     [1..6]));
+[ [  ], [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], [ 4, 5 ], [ 4, 6 ], [ 5, 6 ] ], 
+  [ [ 1, 2 ], [ 1, 3 ], [ 2, 4 ], [ 3, 5 ], [ 4, 6 ], [ 5, 6 ] ], 
+  [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ] ] ]
+gap> List(HomogeneousGraphs, Gamma -> Size(GraphAutomorphismGroup(Gamma, 6)));
+[ 720, 72, 12, 48 ]
+]]>
+</Listing>
+    Thus for the dihedral group of order&nbsp;12 we get the hexagon,
+    for <M>{\rm C}_2 \wr {\rm S}_3</M> we get the graph consisting of
+    3 disconnected edges, for <M>{\rm S}_3 \wr {\rm C}_2</M> we get the
+    graph consisting of 2 separate triangles, and for <M>{\rm S}_6</M>
+    we get the empty graph.
+  </Item>
+</List>
+
+<Index Key="GRAPE package">GRAPE package</Index>
+
+There is a &GAP; package GRAPE&nbsp;<Cite Key="GRAPE"/>, which is dedicated
+to computations with graphs.
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:EnumeratingPathsSolution">
+<Heading>Enumerating Paths (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:EnumeratingPathsExercise"/>. <P/>
+
+<List>
+  <Mark>ad a)</Mark>
+  <Item>
+    We can write the following function to determine a suitable
+    <M>x \in \mathbb{Z}^{24 \times 24}</M>:
+
+<Alt Only="LaTeX">\pagebreak[4]</Alt>
+
+<Index Key="TranspositionMatrixSn"><C>TranspositionMatrixSn</C></Index>
+<Index Key="AsList"><C>AsList</C></Index>
+<Index Key="SymmetricGroup"><C>SymmetricGroup</C></Index>
+<Index Key="List"><C>List</C></Index>
+<Index Key="Combinations"><C>Combinations</C></Index>
+<Index Key="ListWithIdenticalEntries"><C>ListWithIdenticalEntries</C></Index>
+<Index Key="Factorial"><C>Factorial</C></Index>
+<Index Key="Position"><C>Position</C></Index>
+<Index Key="Add"><C>Add</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+TranspositionMatrixSn := function ( n )
+
+  local  x, Sn, transpositions, line, g, t;
+
+  Sn := AsList(SymmetricGroup(n));
+  transpositions := List(Combinations([1..n],2),t->(t[1],t[2]));
+  x := [];
+  for g in Sn do
+    line := ListWithIdenticalEntries(Factorial(n), 0);
+    for t in transpositions do line[Position(Sn,g*t)] := 1; od;
+    Add(x, line);
+  od;
+  return x;
+end;
+]]>
+</Listing>
+    The lines and columns of the matrix correspond to the elements
+    <M>1 = g_1, \dots, g_{24}</M> of&nbsp;<M>{\rm S}_4</M>, and it is
+    <Alt Only="LaTeX">
+    <Display>
+    <![CDATA[
+      x_{ij} \ = \ \begin{cases}
+                     1 & \text{if there is a transposition} \ t \
+                         \text{such that} \ g_i \cdot t = g_j, \\
+                     0 & \text{otherwise}.
+                   \end{cases}
+    ]]>
+    </Display>
+    </Alt>
+    <Alt Not="LaTeX">
+      <M>x_ij = 1</M> if there is a transposition <M>t</M> such that
+      <M>g_i t = g_j</M>, and <M>x_ij = 0</M> otherwise. 
+    </Alt>
+    It is easy to check that <M>(x^n)_{ij}</M> is the number of ways to
+    take <M>g_i</M> to <M>g_j</M> by multiplication from the right by
+    <M>n</M> transpositions. Therefore we get the solution as follows:
+<Listing Type="GAP session log">
+<![CDATA[
+gap> x := TranspositionMatrixSn(4);; y := x^100;; y[1][1];
+54443218625005908841390855596504818378095309207030310578760502581913955860480
+]]>
+</Listing>
+  </Item>
+  <Mark>ad b)</Mark>
+  <Item>
+    We can write the following function to determine a suitable
+    <M>x \in \mathbb{Z}^{64 \times 64}</M>:
+
+<Index Key="HorsesMatrix"><C>HorsesMatrix</C></Index>
+<Index Key="NullMat"><C>NullMat</C></Index>
+<Index Key="Intersection"><C>Intersection</C></Index>
+<Index Key="Cartesian"><C>Cartesian</C></Index>
+<Index Key="Add"><C>Add</C></Index>
+<Index Key="Flat"><C>Flat</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+HorsesMatrix := function ( )
+
+  local  x, board, moves, m, i, j;
+
+  x := [];
+  for i in [1..8] do
+    for j in [1..8] do
+      board := NullMat(8,8);
+      moves := [[i-2,j-1], [i-2,j+1], [i-1,j-2], [i-1,j+2],
+                [i+2,j+1], [i+2,j-1], [i+1,j+2], [i+1,j-2]];
+      for m in Intersection(moves,Cartesian([1..8],[1..8]))
+      do board[m[1]][m[2]] := 1; od;
+      Add(x,Flat(board));
+    od;
+  od;
+  return x;
+end;
+]]>
+</Listing>
+    We proceed analogous to Part&nbsp;a). Here the lines and columns of the
+    correspond to the 64 squares of the chess board, and the matrix is filled
+    with zeros and ones in such a way that <M>x_{ij} = 1</M> if and only if
+    the horse can jump from square&nbsp;<M>i</M> to square&nbsp;<M>j</M> in
+    one move. Similar as above, we get the solution as follows:
+<Listing Type="GAP session log">
+<![CDATA[
+gap> x := HorsesMatrix();;
+gap> y := x^100;; y[1][64];
+2593244602149234588139078903115618952040745476069710377506002611030781169300
+]]>
+</Listing>
+  </Item>
+</List>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:WieferichPrimesSolution">
+<Heading>Wieferich Primes (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:WieferichPrimesExercise"/>. <P/>
+
+We can write the function as follows:
+
+<Index Key="IsWieferichPrimeInt"><C>IsWieferichPrimeInt</C></Index>
+<Index Key="IsPrimeInt"><C>IsPrimeInt</C></Index>
+<Index Key="PowerModInt"><C>PowerModInt</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+IsWieferichPrimeInt := p -> IsPrimeInt(p) and PowerModInt(2,p-1,p^2) = 1;
+]]>
+</Listing>
+
+The first two Wieferich primes can be found very quickly:
+
+<Index Key="Filtered"><C>Filtered</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> Filtered([1..10000],IsWieferichPrimeInt);
+[ 1093, 3511 ]
+]]>
+</Listing>
+
+However, presently no third Wieferich prime is known.
+In case there is one, it must be greater than <M>1.25 \cdot 10^{15}</M>
+(cf.&nbsp;<URL Text="McIntosh 2004">
+http://www.loria.fr/~zimmerma/records/Wieferich.status</URL>). <P/>
+
+Assuming <Q>equidistribution</Q> of the residues <M>(2^{p-1}-1)/p</M>
+mod&nbsp;<M>p</M>, one might argue that the <Q>probability</Q> of
+a prime&nbsp;<M>p</M> to be a Wieferich prime should be about <M>1/p</M>.
+Since the series <M>\sum_{p \ \text{prime}} 1/p</M> diverges, this would
+suggest that there are infinitely many Wieferich primes. More concisely,
+one would expect that there are roughly <M>\ln(\ln(n))</M> Wieferich primes
+less than a given bound&nbsp;<M>n</M>. Following these speculations, the
+expected number of Wieferich primes below the current bound of
+<M>1.25 \cdot 10^{15}</M> would be <M>3.548</M>, while the actual number
+is&nbsp;2. Obviously no reasonable statistical conclusions can be made
+from that difference. <P/>
+
+Well -- when trying random primes, it seems that you might perhaps have
+a little chance of finding a new Wieferich prime!
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:WordCountSolution">
+<Heading>Counting Words in a File (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:WordCountExercise"/>. <P/>
+
+We can write the function as follows:
+
+<Index Key="WordCount"><C>WordCount</C></Index>
+<Index Key="Collected"><C>Collected</C></Index>
+<Index Key="WordsString"><C>WordsString</C></Index>
+<Index Key="StringFile"><C>StringFile</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+WordCount := filename -> Collected(WordsString(StringFile(filename)));
+]]>
+</Listing>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:NonMetabelianPGroupsSolution">
+<Heading>Non-Metabelian p-Groups (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:NonMetabelianPGroupsExercise"/>. <P/>
+
+Let <M>p</M> be a prime. It is well-known that groups of order <M>p</M>
+or <M>p^2</M> are always abelian, and that groups of prime-power order are
+solvable. Therefore a non-metabelian <M>p</M>-group must at least have order
+<M>p^6</M>. Further it is easy to see that a group is metabelian if and
+only if its derived subgroup is abelian. Thus we can proceed as follows:
+
+<Index Key="First"><C>First</C></Index>
+<Index Key="AllGroups"><C>AllGroups</C></Index>
+<Index Key="IsAbelian"><C>IsAbelian</C></Index>
+<Index Key="DerivedSubgroup"><C>DerivedSubgroup</C></Index>
+<Index Key="IdGroup"><C>IdGroup</C></Index>
+<Index Key="StructureDescription"><C>StructureDescription</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> G := First( AllGroups( 64), G -> not IsAbelian( DerivedSubgroup(G) ) );
+fail
+gap> G := First( AllGroups(128), G -> not IsAbelian( DerivedSubgroup(G) ) );
+<pc group of size 128 with 7 generators>
+gap> IdGroup(G);
+[ 128, 134 ]
+gap> StructureDescription(G);
+"((C4 : C8) : C2) : C2"
+gap> StructureDescription( DerivedSubgroup(G) );
+"C2 x D8"
+]]>
+</Listing>
+
+There is a complete classification of the positive integers&nbsp;<M>n</M>
+such that all groups of order&nbsp;<M>n</M> are metabelian.
+See&nbsp;<Cite Key="Pazderski80"/>.
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:RHSolution">
+<Heading>The Growth of the Sum-of-Divisors Function (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:RHExercise"/>. <P/>
+
+We can compute floating point approximations for <M>H(n)</M> and <M>B(n)</M>
+in &GAP; as follows:
+
+<Index Key="Sum"><C>Sum</C></Index>
+<Index Key="Float"><C>Float</C></Index>
+<Index Key="LOG_FLOAT"><C>LOG_FLOAT</C></Index>
+<Index Key="EXP_FLOAT"><C>EXP_FLOAT</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+H := n -> Sum([1..n],i->Float(1/i));
+B := n -> H(n) + LOG_FLOAT(H(n)) * EXP_FLOAT(H(n));
+]]>
+</Listing>
+
+We obtain for example
+
+<Index Key="Sigma"><C>Sigma</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> List( [ 1 .. 60 ], n -> B(n) - Sigma(n) );
+[ 0, 0.317169, 1.62453, 0.977983, 4.38227, 0.834179, 7.32927, 2.86332, 
+  7.43259, 5.03387, 13.6644, 0.321837, 17.0041, 9.70942, 12.4362, 8.1831, 
+  23.9489, 5.73238, 27.5327, 8.34888, 21.1802, 20.0258, 34.8851, 1.7575, 
+  33.6424, 25.5393, 30.4477, 17.3671, 46.2972, 7.2375, 50.1877, 22.1475, 
+  40.1165, 37.0945, 46.0811, 6.0761, 62.0793, 43.0903, 50.1091, 19.1353, 
+  70.1688, 19.2093, 74.2568, 37.311, 46.3717, 55.4389, 82.5122, 9.59174, 
+  79.6772, 46.7685, 70.8655, 47.9681, 95.0762, 32.1896, 83.3082, 38.432, 
+  81.5609, 74.6946, 107.833, 2.97668 ]
+]]>
+</Listing>
+
+However we cannot answer the question whether there is a positive
+integer&nbsp;<M>n</M> such that <M>\sigma(n) > B(n)</M> -- in fact,
+Jeffrey C. Lagarias&nbsp;<Cite Key="Lagarias02"/> has shown that
+this question is equivalent to the <URL Text="Riemann hypothesis">
+http://en.wikipedia.org/wiki/Riemann_Hypothesis</URL>!
+
+<Index Key="Riemann hypothesis">Riemann hypothesis</Index>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:PellSolution">
+<Heading>Pell's Equation (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:PellExercise"/>. <P/>
+
+We can write the function as follows:
+
+<Index Key="FundamentalSolutionOfPellsEquation">
+  <C>FundamentalSolutionOfPellsEquation</C>
+</Index>
+<Index Key="ContinuedFractionExpansionOfRoot">
+  <C>ContinuedFractionExpansionOfRoot</C>
+</Index>
+<Index Key="ContinuedFractionApproximationOfRoot">
+  <C>ContinuedFractionApproximationOfRoot</C>
+</Index>
+<Index Key="RootInt"><C>RootInt</C></Index>
+<Index Key="Indeterminate"><C>Indeterminate</C></Index>
+<Index Key="Length"><C>Length</C></Index>
+<Index Key="NumeratorRat"><C>NumeratorRat</C></Index>
+<Index Key="DenominatorRat"><C>DenominatorRat</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+FundamentalSolutionOfPellsEquation := function ( n )
+
+  local  x, periodlength, approx;
+
+  if n = RootInt(n,2)^2 then return fail; fi;
+  x := Indeterminate(Integers);
+  periodlength := Length(ContinuedFractionExpansionOfRoot(x^2-n,0)) - 1;
+  if   periodlength mod 2 = 0
+  then approx := ContinuedFractionApproximationOfRoot(x^2-n,  periodlength);
+  else approx := ContinuedFractionApproximationOfRoot(x^2-n,2*periodlength);
+  fi;
+  return [ NumeratorRat(approx), DenominatorRat(approx) ];
+end;
+]]>
+</Listing>
+
+First we determine the length of the period of the continued fraction
+expansion of the square root of&nbsp;<A>n</A>. Then we determine the
+fundamental solution of Pell's equation by taking the numerator and
+the denominator of a suitable continued fraction approximation of that
+square root (note the dependency on the parity of the period length!).
+Examples are
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> FundamentalSolutionOfPellsEquation(2);
+[ 3, 2 ]
+gap> FundamentalSolutionOfPellsEquation(5);
+[ 9, 4 ]
+gap> FundamentalSolutionOfPellsEquation(13);
+[ 649, 180 ]
+gap> FundamentalSolutionOfPellsEquation(15);
+[ 4, 1 ]
+gap> FundamentalSolutionOfPellsEquation(61);
+[ 1766319049, 226153980 ]
+]]>
+</Listing>
+
+... and for <M>n = 421</M> we obtain
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> FundamentalSolutionOfPellsEquation(421);
+[ 3879474045914926879468217167061449, 189073995951839020880499780706260 ]
+]]>
+</Listing>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:AutomorphismGroupOfOddOrderSolution">
+<Heading>Automorphism Groups of Odd Order (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:AutomorphismGroupOfOddOrderExercise"/>. <P/>
+
+It suffices to look at groups of odd order:
+Assume that <M>G</M> is a group of even order, and let <M>G_2</M> be its
+Sylow 2-subgroup. If <M>G_2</M> is not a subgroup of the centre
+of&nbsp;<M>G</M>, then already the inner automorphism group has even order.
+If it is a subgroup of the centre of&nbsp;<M>G</M>, then we have
+<M>G = G_2 \times G_{2'}</M>, and therefore Aut(<M>G</M>) = Aut(<M>G_2</M>)
+<M>\times</M> Aut(<M>G_{2'}</M>). In this case, already the automorphism
+group of <M>G_{2'}</M> has odd order, and <M>G</M> is not the smallest group
+having this property. <P/>
+
+We perform a <E>brute-force</E> search:
+
+<Index Key="Print"><C>Print</C></Index>
+<Index Key="First"><C>First</C></Index>
+<Index Key="AllGroups"><C>AllGroups</C></Index>
+<Index Key="Size"><C>Size</C></Index>
+<Index Key="AutomorphismGroup"><C>AutomorphismGroup</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> n := 3;;
+gap> repeat
+>      Print(n,"\n");
+>      G := First(AllGroups(n),G->Size(AutomorphismGroup(G)) mod 2 = 1);
+>      n := n + 2;
+>    until G <> fail;
+]]>
+</Listing>
+
+This loop runs for quite a while. We obtain the following:
+
+<Index Key="IdGroup"><C>IdGroup</C></Index>
+<Index Key="StructureDescription"><C>StructureDescription</C></Index>
+<Index Key="DerivedSubgroup"><C>DerivedSubgroup</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> G;
+<pc group of size 729 with 6 generators>
+gap> IdGroup(G);
+[ 729, 31 ]
+gap> AutomorphismGroup(G);
+<group of size 19683 with 9 generators>
+gap> StructureDescription(DerivedSubgroup(G));
+"C9"
+gap> StructureDescription(G/DerivedSubgroup(G));
+"C9 x C9"
+]]>
+</Listing>
+
+The result that <M>3^6</M> is the smallest order of a group of more than
+2 elements with an odd order automorphism group has first been obtained
+in&nbsp;<Cite Key="MacHaleSheehy95"/>.
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:CompositeSumsSolution">
+<Heading>Composite Sums (Solution)</Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:CompositeSumsExercise"/>. <P/>
+
+First we look for odd integers <M>n</M> such that any sum <M>n+2^k</M>
+for <Q>small</Q> <M>k</M> has a <Q>small</Q> prime divisor:
+
+<Index Key="Product"><C>Product</C></Index>
+<Index Key="Primes"><C>Primes</C></Index>
+<Index Key="Filtered"><C>Filtered</C></Index>
+<Index Key="First"><C>First</C></Index>
+<Index Key="Gcd"><C>Gcd</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> m := Product(Primes);;
+gap> Filtered([1,3..99999],n->First([0..500],k->Gcd(n+2^k,m)=1)=fail);
+[ 78557 ]
+]]>
+</Listing>
+
+Now our goal is to find out whether in fact <E>all</E> sums <M>78557+2^k</M>
+are composite. <P/>
+
+<Index Key="ResClasses package">ResClasses package</Index>
+
+For this, we first determine the smallest prime factors of the numbers
+<M>78557+2^k</M> for <Q>small</Q> values of&nbsp;<M>k</M>.
+Then we find out for which <M>k</M> these primes <M>p_i</M> divide
+<M>78557+2^k</M>. The set of such <M>k</M> is the set of positive integers
+in a residue class modulo the order of 2&nbsp;(mod&nbsp;<M>p_i</M>).
+Finally we form the union of the residue classes we obtain, and check whether
+it equals&nbsp;<M>\mathbb{Z}</M> (this needs the <Package>ResClasses</Package>
+package&nbsp;<Cite Key="ResClasses"/>):
+
+<Index Key="Set"><C>Set</C></Index>
+<Index Key="Minimum"><C>Minimum</C></Index>
+<Index Key="Factors"><C>Factors</C></Index>
+<Index Key="List"><C>List</C></Index>
+<Index Key="OrderMod"><C>OrderMod</C></Index>
+<Index Key="Length"><C>Length</C></Index>
+<Index Key="TransposedMat"><C>TransposedMat</C></Index>
+<Index Key="ResidueClass"><C>ResidueClass</C></Index>
+<Index Key="Union"><C>Union</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> primes := Set([1..100],k->Minimum(Factors(Gcd(78557+2^k,m))));
+[ 3, 5, 7, 13, 19, 37, 73 ]
+gap> m_i := List(primes,p->OrderMod(2,p));
+[ 2, 4, 3, 12, 18, 36, 9 ]
+gap> r_i := List([1..Length(primes)],
+>                i->First([0..m_i[i]-1],k->(78557+2^k) mod primes[i] = 0));
+[ 0, 3, 2, 1, 3, 9, 6 ]
+gap> residueclasses := List(TransposedMat([r_i,m_i]),ResidueClass);
+[ 0(2), 3(4), 2(3), 1(12), 3(18), 9(36), 6(9) ]
+gap> Union(residueclasses);
+Integers
+]]>
+</Listing>
+
+Now we know that all sums <M>78557+2^k</M> for positive integers <M>k</M>
+are composite. But is 78557 indeed the smallest odd integer such that
+<M>n+2^k</M> is composite for all positive integers&nbsp;<M>k</M>? --
+Likely yes, but answering this question is computationally difficult:
+
+<Index Key="IsProbablyPrimeInt"><C>IsProbablyPrimeInt</C></Index>
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> k_s := List([1,3..78557],
+>                n->First([1..1000],k->IsProbablyPrimeInt(n+2^k)));;
+gap> k_s{[1..100]}; # small n are not a problem ...
+[ 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 3, 2, 1, 1, 4, 2, 1, 2, 1, 1, 2, 1, 5, 2, 
+  1, 3, 2, 1, 1, 8, 2, 1, 2, 1, 1, 4, 2, 1, 2, 1, 7, 2, 1, 3, 4, 2, 1, 2, 1, 
+  1, 2, 1, 1, 2, 1, 7, 4, 5, 3, 4, 2, 1, 2, 1, 3, 2, 1, 1, 10, 3, 3, 2, 1, 1, 
+  4, 2, 1, 4, 2, 1, 2, 1, 5, 2, 1, 3, 2, 1, 1, 4, 3, 3, 2, 1, 1, 2, 1, 1, 6 ]
+gap> 2*Positions(k_s,fail)-1; # ... but larger n are:
+[ 2131, 2491, 4471, 5101, 6379, 6887, 7013, 8447, 8543, 9833, 10711, 14033, 
+  14551, 14573, 14717, 15623, 16519, 17659, 18527, 19081, 19249, 20209, 
+  20273, 21143, 21661, 22193, 23147, 23221, 23971, 24953, 26213, 26491, 
+  28433, 29333, 29777, 30197, 31111, 31369, 31951, 32449, 32513, 34429, 
+  35461, 36083, 36721, 37217, 37967, 38387, 39079, 40291, 40351, 40613, 
+  41453, 41693, 43579, 47269, 48091, 48331, 48527, 48859, 48961, 49279, 
+  49577, 50839, 52339, 53119, 53359, 56717, 57083, 59071, 60443, 60451, 
+  60947, 60961, 62029, 63691, 64133, 64643, 65033, 65089, 65719, 67607, 
+  69593, 69709, 70321, 72679, 73373, 73583, 75353, 75841, 77041, 77783, 
+  77899, 78557 ]
+]]>
+</Listing>
+
+Using a bound larger than 1000 for <M>k</M>, it is possible to eliminate
+many of the above values of&nbsp;<M>n</M>, but eliminating all of them
+except of 78557 seems hard. <P/>
+
+See also the related term
+<URL Text="Sierpinski number">http://en.wikipedia.org/wiki/Sierpinski_number
+</URL>, and the corresponding distributed computing project
+<URL Text="Seventeen or bust">
+http://www.rechenkraft.net/wiki/index.php?title=Seventeen_or_bust</URL>. <P/>
+
+The interested reader might have a look at the similar problem with
+Fibonacci numbers instead of powers of&nbsp;2.
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:RationalPointsSolution">
+<Heading>Rational Points on the Unit Sphere (Solution) </Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:RationalPointsExercise"/>. <P/>
+
+The function can be written as follows:
+
+<Index Key="RationalPointsOnUnitSphere">
+  <C>RationalPointsOnUnitSphere</C>
+</Index>
+<Index Key="Zero"><C>Zero</C></Index>
+<Index Key="One"><C>One</C></Index>
+<Index Key="GF"><C>GF</C></Index>
+<Index Key="NullMat"><C>NullMat</C></Index>
+<Index Key="RootInt"><C>RootInt</C></Index>
+<Index Key="List"><C>List</C></Index>
+<Index Key="Arrangements"><C>Arrangements</C></Index>
+<Index Key="SaveAsBitmapPicture"><C>SaveAsBitmapPicture</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+RationalPointsOnUnitSphere := function ( max_abc, size, filename )
+
+  local  picture, solutions, a, b, c, d, sum,
+         pixelcoords, mirror, zero, one, i, j;
+
+  zero := Zero(GF(2)); one := One(GF(2)); # create a white picture:
+  picture := NullMat(size,size,GF(2));
+  for i in [1..size] do for j in [1..size] do picture[i][j] := one; od; od;
+
+  solutions := 0;
+  for a in [1..max_abc] do
+    Print("a = ",a,", #solutions = ",solutions,"\n");
+    for b in [1..a] do
+      for c in [1..b] do
+        sum := a^2 + b^2 + c^2;
+        d   := RootInt(sum);
+        if d^2 = sum then
+          pixelcoords := List( size * [a,b,c]/d, Int ) + 1;
+          for mirror in Arrangements([1..3],2) do
+            picture[pixelcoords[mirror[1]]][pixelcoords[mirror[2]]] := zero;
+          od;
+          solutions := solutions + 1;
+        fi;
+      od;
+    od;
+  od;
+  SaveAsBitmapPicture(picture,filename);
+end;
+]]>
+</Listing>
+
+With some patience, you can use this function to produce a picture like
+<URL Text="this">
+http://www.cip.mathematik.uni-stuttgart.de/~kohlsn/images/sphere1.gif</URL>.
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:AliquotSolution">
+<Heading>Aliquot Sequences (Solution) </Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:AliquotExercise"/>. <P/>
+
+<Index Key="AliquotSequence"><C>AliquotSequence</C></Index>
+<Index Key="Sigma"><C>Sigma</C></Index>
+<Index Key=""><C></C></Index>
+
+We can write the following &GAP; function:
+
+<Listing Type="GAP code">
+<![CDATA[
+AliquotSequence := function ( n )
+
+  local  a, i;
+
+  a := [n]; i := 1;
+  while a[i] > 1 and not a[i] in a{[1..i-1]} do
+    a[i+1] := Sigma(a[i]) - a[i]; i := i + 1;
+  od;
+  return a;
+end;
+]]>
+</Listing>
+
+This yields the following:
+
+<Listing Type="GAP session log">
+<![CDATA[
+gap> List([1..40],AliquotSequence);
+[ [ 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 3, 1 ], [ 5, 1 ], [ 6, 6 ], [ 7, 1 ], 
+  [ 8, 7, 1 ], [ 9, 4, 3, 1 ], [ 10, 8, 7, 1 ], [ 11, 1 ], 
+  [ 12, 16, 15, 9, 4, 3, 1 ], [ 13, 1 ], [ 14, 10, 8, 7, 1 ], 
+  [ 15, 9, 4, 3, 1 ], [ 16, 15, 9, 4, 3, 1 ], [ 17, 1 ], [ 18, 21, 11, 1 ], 
+  [ 19, 1 ], [ 20, 22, 14, 10, 8, 7, 1 ], [ 21, 11, 1 ], 
+  [ 22, 14, 10, 8, 7, 1 ], [ 23, 1 ], [ 24, 36, 55, 17, 1 ], [ 25, 6, 6 ], 
+  [ 26, 16, 15, 9, 4, 3, 1 ], [ 27, 13, 1 ], [ 28, 28 ], [ 29, 1 ], 
+  [ 30, 42, 54, 66, 78, 90, 144, 259, 45, 33, 15, 9, 4, 3, 1 ], [ 31, 1 ], 
+  [ 32, 31, 1 ], [ 33, 15, 9, 4, 3, 1 ], [ 34, 20, 22, 14, 10, 8, 7, 1 ], 
+  [ 35, 13, 1 ], [ 36, 55, 17, 1 ], [ 37, 1 ], [ 38, 22, 14, 10, 8, 7, 1 ], 
+  [ 39, 17, 1 ], [ 40, 50, 43, 1 ] ]
+gap> List([1..275],n->Length(AliquotSequence(n)));
+[ 1, 2, 2, 3, 2, 2, 2, 3, 4, 4, 2, 7, 2, 5, 5, 6, 2, 4, 2, 7, 3, 6, 2, 5, 3, 
+  7, 3, 2, 2, 15, 2, 3, 6, 8, 3, 4, 2, 7, 3, 4, 2, 14, 2, 5, 7, 8, 2, 6, 4, 
+  3, 4, 9, 2, 13, 3, 5, 3, 4, 2, 11, 2, 9, 3, 4, 3, 12, 2, 5, 4, 6, 2, 9, 2, 
+  5, 5, 5, 3, 11, 2, 7, 5, 6, 2, 6, 3, 9, 7, 7, 2, 10, 4, 6, 4, 4, 4, 9, 2, 
+  3, 4, 5, 2, 18, 2, 7, 8, 6, 2, 10, 2, 7, 3, 9, 2, 17, 3, 5, 4, 10, 4, 12, 
+  8, 5, 8, 6, 3, 16, 2, 3, 3, 6, 2, 11, 4, 7, 9, 8, 2, 178, 2, 5, 5, 6, 4, 9, 
+  4, 6, 6, 11, 2, 177, 2, 12, 6, 8, 3, 8, 2, 7, 4, 11, 3, 4, 2, 7, 9, 10, 2, 
+  175, 6, 9, 3, 9, 2, 16, 3, 5, 4, 7, 2, 52, 2, 9, 4, 6, 3, 15, 3, 12, 3, 10, 
+  2, 13, 2, 6, 6, 4, 2, 14, 2, 4, 3, 8, 3, 10, 3, 7, 9, 7, 3, 52, 2, 11, 6, 
+  8, 5, 10, 4, 10, 4, 3, 3, 176, 2, 17, 8, 6, 2, 8, 2, 9, 7, 11, 2, 175, 3, 
+  7, 3, 7, 2, 11, 2, 3, 9, 11, 3, 15, 7, 12, 8, 11, 2, 17, 4, 7, 5, 6, 2, 14, 
+  8, 11, 4, 8, 2, 31, 3, 9, 5, 8, 2, 13, 2, 12, 4, 6, 3 ]
+gap> Maximum(last);
+178
+gap> Position(last2,last);
+138
+gap> AliquotSequence(138);
+[ 138, 150, 222, 234, 312, 528, 960, 2088, 3762, 5598, 6570, 10746, 13254, 
+  13830, 19434, 20886, 21606, 25098, 26742, 26754, 40446, 63234, 77406, 
+  110754, 171486, 253458, 295740, 647748, 1077612, 1467588, 1956812, 2109796, 
+  1889486, 953914, 668966, 353578, 176792, 254128, 308832, 502104, 753216, 
+  1240176, 2422288, 2697920, 3727264, 3655076, 2760844, 2100740, 2310856, 
+  2455544, 3212776, 3751064, 3282196, 2723020, 3035684, 2299240, 2988440, 
+  5297320, 8325080, 11222920, 15359480, 19199440, 28875608, 25266172, 
+  19406148, 26552604, 40541052, 54202884, 72270540, 147793668, 228408732, 
+  348957876, 508132204, 404465636, 303708376, 290504024, 312058216, 
+  294959384, 290622016, 286081174, 151737434, 75868720, 108199856, 101437396, 
+  76247552, 76099654, 42387146, 21679318, 12752594, 7278382, 3660794, 
+  1855066, 927536, 932464, 1013592, 1546008, 2425752, 5084088, 8436192, 
+  13709064, 20563656, 33082104, 57142536, 99483384, 245978376, 487384824, 
+  745600776, 1118401224, 1677601896, 2538372504, 4119772776, 8030724504, 
+  14097017496, 21148436904, 40381357656, 60572036544, 100039354704, 
+  179931895322, 94685963278, 51399021218, 28358080762, 18046051430, 
+  17396081338, 8698040672, 8426226964, 6319670230, 5422685354, 3217383766, 
+  1739126474, 996366646, 636221402, 318217798, 195756362, 101900794, 
+  54202694, 49799866, 24930374, 17971642, 11130830, 8904682, 4913018, 
+  3126502, 1574810, 1473382, 736694, 541162, 312470, 249994, 127286, 69898, 
+  34952, 34708, 26038, 13994, 7000, 11720, 14740, 19532, 16588, 18692, 14026, 
+  7016, 6154, 3674, 2374, 1190, 1402, 704, 820, 944, 916, 694, 350, 394, 200, 
+  265, 59, 1 ]
+]]>
+</Listing>
+
+<Index Key="FactInt package">FactInt package</Index>
+<Index Key="method installation">method installation</Index>
+
+Thus we see that indeed all Aliquot sequences starting at integers
+<M>n \leq 275</M> either stop or run into cycles. So far, everything runs
+quickly and there are no performance problems of any kind. However,
+<M>n = 276</M> causes severe problems -- the sequence grows, and factoring
+becomes a serious problem. As suggested in the hints, we install the
+following modified &GAP; Library method for the operation <C>Sigma</C> to
+ensure that <Package>FactInt</Package>&nbsp;<Cite Key="FactInt"/> is used
+for factoring integers:
+
+<Listing Type="GAP code">
+<![CDATA[
+InstallMethod( Sigma, "use FactInt", true, [ IsPosInt ], SUM_FLAGS,
+
+  function( n )
+
+    local  sigma, p, q, k;
+
+    # make <n> it nonnegative, handle trivial cases
+    if n < 0 then n := -n; fi;
+    if n = 0 then Error("Sigma: <n> must not be 0"); fi;
+    if n <= Length(DivisorsIntCache) then
+      return Sum(DivisorsIntCache[n]);
+    fi;
+
+    # loop over all prime factors p of n
+    sigma := 1;
+    for p in Set(Factors(n)) do
+
+      # compute p^e and k = 1+p+p^2+..p^e
+      q := p;  k := 1 + p;
+      while n mod (q * p) = 0 do q := q * p; k := k + q; od;
+   
+      # combine with the value found so far
+      sigma := sigma * k;
+
+    od;
+
+    return sigma;
+  end );
+]]>
+</Listing>
+
+<Index Key="Print"><C>Print</C></Index>
+<Index Key="FactIntInfo"><C>FactIntInfo</C></Index>
+<Index Key="Info messages">Info messages</Index>
+
+Further we insert a <C>Print</C> statement into our <C>AliquotSequence</C>
+function, and we switch on <Package>FactInt</Package>'s <C>Info</C>'s
+whenever large integers are to be factored:
+
+<Listing Type="GAP code">
+<![CDATA[
+AliquotSequence := function ( n )
+
+  local  a, i;
+
+  a := [n]; i := 1;
+  while a[i] > 1 and not a[i] in a{[1..i-1]} do
+    if a[i] > 10^40 then FactIntInfo(3); fi;
+    Factors(a[i]);
+    FactIntInfo(0);
+    Print(String(i,6)," : ",a[i]," = ");
+    PrintFactorsInt(a[i]); Print("\n");
+    a[i+1] := Sigma(a[i]) - a[i];
+    i := i + 1;
+  od;
+  return a;
+end;
+]]>
+</Listing>
+
+Now try out yourself how far you can get with computing the
+<URL Text="Aliquot sequence">
+http://en.wikipedia.org/wiki/Aliquot_sequence</URL>
+starting at 276&nbsp;...&nbsp;!
+ 
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:QSolution">
+<Heading>The Q Sequence (Solution) </Heading>
+
+This is a suggested solution for
+Exercise&nbsp;<Ref Label="sec:QExercise"/>. <P/>
+
+<Index Key="Q"><C>Q</C></Index>
+<Index Key="QSequence"><C>QSequence</C></Index>
+<Index Key="iterative vs. recursive">iterative vs. recursive</Index>
+<Index Key="recursive vs. iterative">recursive vs. iterative</Index>
+
+<List>
+  <Mark>ad a)</Mark>
+  <Item>
+    We can write either the following recursive
+<Listing Type="GAP code">
+<![CDATA[
+Q := function ( n )
+  if   n in [1,2]
+  then return 1;
+  else return Q(n-Q(n-1)) + Q(n-Q(n-2)); fi;
+end;
+QSequence := l -> List([1..l],Q);
+]]>
+</Listing>
+    or the following iterative code;
+<Listing Type="GAP code">
+<![CDATA[
+QSequence := function ( l )
+
+  local  Q, n;
+
+  Q := [1,1];
+  for n in [3..l] do
+    Q[n] := Q[n-Q[n-1]] + Q[n-Q[n-2]];
+  od;
+  return Q;
+end;
+]]>
+</Listing>
+    With the recursive approach, we get something like the following timings:
+<Listing Type="GAP session log">
+<![CDATA[
+gap> QSequence(10);
+[ 1, 1, 2, 3, 3, 4, 5, 5, 6, 6 ]
+gap> time;
+0
+gap> QSequence(20);
+[ 1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 6, 8, 8, 8, 10, 9, 10, 11, 11, 12 ]
+gap> time;
+220
+gap> QSequence(30);
+[ 1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 6, 8, 8, 8, 10, 9, 10, 11, 11, 12, 12, 12, 
+  12, 16, 14, 14, 16, 16, 16, 16 ]
+gap> time;
+26640
+]]>
+</Listing>
+    Thus we observe a horrible increase in runtime.
+    With the iterative approach, this looks quite different:
+<Listing Type="GAP session log">
+<![CDATA[
+gap> QSequence(200);
+[ 1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 6, 8, 8, 8, 10, 9, 10, 11, 11, 12, 12, 12, 
+  12, 16, 14, 14, 16, 16, 16, 16, 20, 17, 17, 20, 21, 19, 20, 22, 21, 22, 23, 
+  23, 24, 24, 24, 24, 24, 32, 24, 25, 30, 28, 26, 30, 30, 28, 32, 30, 32, 32, 
+  32, 32, 40, 33, 31, 38, 35, 33, 39, 40, 37, 38, 40, 39, 40, 39, 42, 40, 41, 
+  43, 44, 43, 43, 46, 44, 45, 47, 47, 46, 48, 48, 48, 48, 48, 48, 64, 41, 52, 
+  54, 56, 48, 54, 54, 50, 60, 52, 54, 58, 60, 53, 60, 60, 52, 62, 66, 55, 62, 
+  68, 62, 58, 72, 58, 61, 78, 57, 71, 68, 64, 63, 73, 63, 71, 72, 72, 80, 61, 
+  71, 77, 65, 80, 71, 69, 77, 75, 73, 77, 79, 76, 80, 79, 75, 82, 77, 80, 80, 
+  78, 83, 83, 78, 85, 82, 85, 84, 84, 88, 83, 87, 88, 87, 86, 90, 88, 87, 92, 
+  90, 91, 92, 92, 94, 92, 93, 94, 94, 96, 94, 96, 96, 96, 96, 96, 96, 128, 
+  72, 96, 115, 100, 84, 114, 110, 93 ]
+gap> time;
+0
+]]>
+</Listing>
+    Let's have a look how often <C>Q</C> calls itself in the recursive
+    version:
+
+<Index Key="QCallCounts"><C>QCallCounts</C></Index>
+<Index Key="ListWithIdenticalEntries"><C>ListWithIdenticalEntries</C></Index>
+
+<Listing Type="GAP code">
+<![CDATA[
+QCallCounts := function ( n )
+
+  local  Q, sequence;
+
+  Q := function ( n )
+    sequence[n] := sequence[n] + 1;
+    if   n in [1,2]
+    then return 1;
+    else return Q(n-Q(n-1)) + Q(n-Q(n-2)); fi;
+  end;
+
+  sequence := ListWithIdenticalEntries(n,0);
+  Q(n);
+  return sequence;
+end;
+]]>
+</Listing>
+    We obtain
+<Listing Type="GAP session log">
+<![CDATA[
+gap> QCallCounts(30);
+[ 1477421, 5444369, 1477421, 415342, 181422, 98727, 55073, 31366, 18752, 
+  11250, 6884, 4238, 2604, 1601, 987, 610, 377, 233, 144, 89, 55, 34, 21, 13, 
+  8, 5, 3, 2, 1, 1 ]
+]]>
+</Listing>
+    This clearly explains the poor performance.
+    (By the way: The end of the sequence seems to be the reversed beginning
+    of the sequence of Fibonacci numbers -- can you find out something about
+    this?)
+  </Item>
+  <Mark>ad b)</Mark>
+  <Item>
+
+<Index Key="PlotQSequence"><C>PlotQSequence</C></Index>
+<Index Key="Maximum"><C>Maximum</C></Index>
+<Index Key="NullMat"><C>NullMat</C></Index>
+<Index Key="Zero"><C>Zero</C></Index>
+<Index Key="One"><C>One</C></Index>
+<Index Key="GF"><C>GF</C></Index>
+<Index Key="SaveAsBitmapPicture"><C>SaveAsBitmapPicture</C></Index>
+
+    We can write the following &GAP; function:
+<Listing Type="GAP code">
+<![CDATA[
+PlotQSequence := function ( l, filename )
+
+  local  Q, graph, h, n, i, j, zero, one;
+
+  Q := QSequence(l);
+  h := Maximum(Q); # use the maximum as the height of the picture
+  graph := NullMat(h,l);
+  zero := Zero(GF(2)); one := One(GF(2));
+  for i in [1..h] do for j in [1..l] do graph[i][j] := one; od; od;
+  for n in [1..l] do graph[Q[n]][n] := zero; od;
+  SaveAsBitmapPicture(graph,filename);
+end;
+]]>
+</Listing>
+  </Item>
+</List>
+
+</Section>
+ 
+<!-- #################################################################### -->
+
+</Chapter>
+
+<!-- #################################################################### -->

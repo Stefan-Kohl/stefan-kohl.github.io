@@ -1,0 +1,275 @@
+gap> Factors(1093^33+1);
+#I  
+#I  Check for n = b^k +/- 1
+#I  
+188133157447326340428115054641665938290559807945706967364092265984766318735013\
+94588182350196640061894 = 1093^33 + 1
+#I  The factors corresponding to polynomial factors are
+[ 1094, 1193557, 2431109158737775660737619782757, 
+  5926528793319212808792418262617885001876673630711194623782649 ]
+#I  Intermediate result : 
+[ [ 1193557 ], [ 1094, 2431109158737775660737619782757, 
+      5926528793319212808792418262617885001876673630711194623782649 ] ]
+#I  
+#I  Factors already found : [ 1193557 ]
+#I  
+#I  
+#I  Trial division by all primes p < 1000
+#I  Intermediate result : [ [ 2, 547 ], [  ] ]
+#I  Intermediate result : [ [ 89 ], [ 27315833244244670345366514413 ] ]
+#I  
+#I  Factors already found : [ 2, 89, 547, 1193557 ]
+#I  
+#I  
+#I  Trial division by some already known primes
+#I  Intermediate result : [ [ 37951, 719765836058197948548563 ], [  ] ]
+#I  
+#I  Factors already found : 
+[ 2, 89, 547, 37951, 1193557, 719765836058197948548563 ]
+#I  
+#I  
+#I  Check for perfect powers
+#I  
+#I  Pollard's Rho
+Steps = 16384, Cluster = 1108
+Number to be factored : 
+5926528793319212808792418262617885001876673630711194623782649
+#I  
+#I  Pollard's p - 1
+Limit1 = 10000, Limit2 = 400000
+Number to be factored : 
+5926528793319212808792418262617885001876673630711194623782649
+#I  p-1 for n = 5926528793319212808792418262617885001876673630711194623782649
+a : 2, Limit1 : 10000, Limit2 : 400000
+#I  First stage
+#I  Second stage
+#I  
+#I  Williams' p + 1
+Residues = 2, Limit1 = 2000, Limit2 = 80000
+Number to be factored : 
+5926528793319212808792418262617885001876673630711194623782649
+#I  p+1 for n = 5926528793319212808792418262617885001876673630711194623782649
+Residues : 2, Limit1 : 2000, Limit2 : 80000
+#I  Residue no. 1
+#I  Residue no. 2
+#I  
+#I  Elliptic Curves Method (ECM)
+Curves = <func.>
+Init. Limit1 = <func.>, Init. Limit2 = <func.>, Delta = <func.>
+Number to be factored : 
+5926528793319212808792418262617885001876673630711194623782649
+#I  ECM for n = 5926528793319212808792418262617885001876673630711194623782649
+#I  Digits : 61, Curves : 66
+#I  Initial Limit1 : 200, Initial Limit2 : 20000, Delta : 200
+#I  Curve no.      1 (    66), Limit1 :     200, Limit2 :    20000
+#I  Curve no.      2 (    66), Limit1 :     400, Limit2 :    40000
+#I  Curve no.      3 (    66), Limit1 :     600, Limit2 :    60000
+#I  Curve no.      4 (    66), Limit1 :     800, Limit2 :    80000
+#I  Curve no.      5 (    66), Limit1 :    1000, Limit2 :   100000
+#I  Curve no.      6 (    66), Limit1 :    1200, Limit2 :   120000
+#I  Curve no.      7 (    66), Limit1 :    1400, Limit2 :   140000
+#I  Curve no.      8 (    66), Limit1 :    1600, Limit2 :   160000
+#I  Curve no.      9 (    66), Limit1 :    1800, Limit2 :   180000
+#I  Curve no.     10 (    66), Limit1 :    2000, Limit2 :   200000
+#I  Curve no.     11 (    66), Limit1 :    2200, Limit2 :   220000
+#I  Curve no.     12 (    66), Limit1 :    2400, Limit2 :   240000
+#I  Curve no.     13 (    66), Limit1 :    2600, Limit2 :   260000
+#I  Curve no.     14 (    66), Limit1 :    2800, Limit2 :   280000
+#I  Curve no.     15 (    66), Limit1 :    3000, Limit2 :   300000
+#I  Curve no.     16 (    66), Limit1 :    3200, Limit2 :   320000
+#I  Curve no.     17 (    66), Limit1 :    3400, Limit2 :   340000
+#I  Curve no.     18 (    66), Limit1 :    3600, Limit2 :   360000
+#I  Curve no.     19 (    66), Limit1 :    3800, Limit2 :   380000
+#I  Curve no.     20 (    66), Limit1 :    4000, Limit2 :   400000
+#I  Curve no.     21 (    66), Limit1 :    4200, Limit2 :   420000
+#I  Curve no.     22 (    66), Limit1 :    4400, Limit2 :   440000
+#I  Curve no.     23 (    66), Limit1 :    4600, Limit2 :   460000
+#I  Curve no.     24 (    66), Limit1 :    4800, Limit2 :   480000
+#I  Curve no.     25 (    66), Limit1 :    5000, Limit2 :   500000
+#I  Curve no.     26 (    66), Limit1 :    5200, Limit2 :   520000
+#I  Curve no.     27 (    66), Limit1 :    5400, Limit2 :   540000
+#I  Curve no.     28 (    66), Limit1 :    5600, Limit2 :   560000
+#I  Curve no.     29 (    66), Limit1 :    5800, Limit2 :   580000
+#I  Curve no.     30 (    66), Limit1 :    6000, Limit2 :   600000
+#I  Curve no.     31 (    66), Limit1 :    6200, Limit2 :   620000
+#I  Curve no.     32 (    66), Limit1 :    6400, Limit2 :   640000
+#I  Curve no.     33 (    66), Limit1 :    6600, Limit2 :   660000
+#I  Curve no.     34 (    66), Limit1 :    6800, Limit2 :   680000
+#I  Curve no.     35 (    66), Limit1 :    7000, Limit2 :   700000
+#I  Curve no.     36 (    66), Limit1 :    7200, Limit2 :   720000
+#I  Curve no.     37 (    66), Limit1 :    7400, Limit2 :   740000
+#I  Curve no.     38 (    66), Limit1 :    7600, Limit2 :   760000
+#I  Curve no.     39 (    66), Limit1 :    7800, Limit2 :   780000
+#I  Curve no.     40 (    66), Limit1 :    8000, Limit2 :   800000
+#I  Curve no.     41 (    66), Limit1 :    8200, Limit2 :   820000
+#I  Curve no.     42 (    66), Limit1 :    8400, Limit2 :   840000
+#I  Curve no.     43 (    66), Limit1 :    8600, Limit2 :   860000
+#I  Curve no.     44 (    66), Limit1 :    8800, Limit2 :   880000
+#I  Curve no.     45 (    66), Limit1 :    9000, Limit2 :   900000
+#I  Curve no.     46 (    66), Limit1 :    9200, Limit2 :   920000
+#I  Curve no.     47 (    66), Limit1 :    9400, Limit2 :   940000
+#I  Curve no.     48 (    66), Limit1 :    9600, Limit2 :   960000
+#I  Curve no.     49 (    66), Limit1 :    9800, Limit2 :   980000
+#I  Curve no.     50 (    66), Limit1 :   10000, Limit2 :  1000000
+#I  Curve no.     51 (    66), Limit1 :   10200, Limit2 :  1020000
+#I  Initializing prime differences list, PrimeDiffLimit = 2000000
+#I  Curve no.     52 (    66), Limit1 :   10400, Limit2 :  1040000
+#I  Curve no.     53 (    66), Limit1 :   10600, Limit2 :  1060000
+#I  Curve no.     54 (    66), Limit1 :   10800, Limit2 :  1080000
+#I  Curve no.     55 (    66), Limit1 :   11000, Limit2 :  1100000
+#I  Curve no.     56 (    66), Limit1 :   11200, Limit2 :  1120000
+#I  Curve no.     57 (    66), Limit1 :   11400, Limit2 :  1140000
+#I  Curve no.     58 (    66), Limit1 :   11600, Limit2 :  1160000
+#I  Curve no.     59 (    66), Limit1 :   11800, Limit2 :  1180000
+#I  Curve no.     60 (    66), Limit1 :   12000, Limit2 :  1200000
+#I  Curve no.     61 (    66), Limit1 :   12200, Limit2 :  1220000
+#I  Curve no.     62 (    66), Limit1 :   12400, Limit2 :  1240000
+#I  Curve no.     63 (    66), Limit1 :   12600, Limit2 :  1260000
+#I  Curve no.     64 (    66), Limit1 :   12800, Limit2 :  1280000
+#I  Curve no.     65 (    66), Limit1 :   13000, Limit2 :  1300000
+#I  Curve no.     66 (    66), Limit1 :   13200, Limit2 :  1320000
+#I  
+#I  Multiple Polynomial Quadratic Sieve (MPQS)
+Number to be factored : 
+5926528793319212808792418262617885001876673630711194623782649
+#I  MPQS for n = 5926528793319212808792418262617885001876673630711194623782649
+#I  Digits                     :         61
+#I  Multiplier                 :          1
+#I  Size of factor base        :       2269
+#I  Prime powers to be sieved  :       2292
+#I  Length of sieving interval :     262144
+#I  Small prime limit          :        191
+#I  Large prime limit          :    8910138
+#I  Number of used a - factors :          5
+#I  Size of a - factors pool   :         62
+#I  Initialization time        :         17 sec.
+#I  
+#I  Sieving
+#I  
+#I  Complete factorizations over the factor base   :      100
+#I  Relations with a large prime factor            :       22
+#I  Relations remaining to be found                :     2229
+#I  Total factorizations with a large prime factor :     1782
+#I  Used polynomials                               :      869
+#I  Elapsed runtime                                :      469 sec.
+#I  Progress (relations)                           :        5 %
+#I  
+#I  
+#I  Complete factorizations over the factor base   :      200
+#I  Relations with a large prime factor            :       68
+#I  Relations remaining to be found                :     2083
+#I  Total factorizations with a large prime factor :     3150
+#I  Used polynomials                               :     1534
+#I  Elapsed runtime                                :      817 sec.
+#I  Progress (relations)                           :       11 %
+#I  
+#I  
+#I  Complete factorizations over the factor base   :      300
+#I  Relations with a large prime factor            :      148
+#I  Relations remaining to be found                :     1903
+#I  Total factorizations with a large prime factor :     4848
+#I  Used polynomials                               :     2358
+#I  Elapsed runtime                                :     1251 sec.
+#I  Progress (relations)                           :       19 %
+#I  
+#I  
+#I  Complete factorizations over the factor base   :      400
+#I  Relations with a large prime factor            :      253
+#I  Relations remaining to be found                :     1698
+#I  Total factorizations with a large prime factor :     6651
+#I  Used polynomials                               :     3204
+#I  Elapsed runtime                                :     1697 sec.
+#I  Progress (relations)                           :       27 %
+#I  
+#I  
+#I  Complete factorizations over the factor base   :      500
+#I  Relations with a large prime factor            :      378
+#I  Relations remaining to be found                :     1473
+#I  Total factorizations with a large prime factor :     8148
+#I  Used polynomials                               :     3920
+#I  Elapsed runtime                                :     2077 sec.
+#I  Progress (relations)                           :       37 %
+#I  
+#I  
+#I  Complete factorizations over the factor base   :      600
+#I  Relations with a large prime factor            :      545
+#I  Relations remaining to be found                :     1206
+#I  Total factorizations with a large prime factor :     9754
+#I  Used polynomials                               :     4660
+#I  Elapsed runtime                                :     2474 sec.
+#I  Progress (relations)                           :       48 %
+#I  
+#I  
+#I  Complete factorizations over the factor base   :      700
+#I  Relations with a large prime factor            :      698
+#I  Relations remaining to be found                :      953
+#I  Total factorizations with a large prime factor :    11193
+#I  Used polynomials                               :     5374
+#I  Elapsed runtime                                :     2860 sec.
+#I  Progress (relations)                           :       59 %
+#I  
+#I  
+#I  Complete factorizations over the factor base   :      801
+#I  Relations with a large prime factor            :      891
+#I  Relations remaining to be found                :      659
+#I  Total factorizations with a large prime factor :    12836
+#I  Used polynomials                               :     6159
+#I  Elapsed runtime                                :     3288 sec.
+#I  Progress (relations)                           :       71 %
+#I  
+#I  
+#I  Complete factorizations over the factor base   :      900
+#I  Relations with a large prime factor            :     1154
+#I  Relations remaining to be found                :      297
+#I  Total factorizations with a large prime factor :    14684
+#I  Used polynomials                               :     7043
+#I  Elapsed runtime                                :     3774 sec.
+#I  Progress (relations)                           :       87 %
+#I  
+#I  
+#I  Complete factorizations over the factor base   :     1000
+#I  Relations with a large prime factor            :     1399
+#I  Relations remaining to be found                :        0
+#I  Total factorizations with a large prime factor :    16406
+#I  Used polynomials                               :     7875
+#I  Elapsed runtime                                :     4242 sec.
+#I  Progress (relations)                           :      100 %
+#I  
+#I  Creating the exponent matrix
+#I  Doing Gaussian Elimination, #rows = 2399, #columns = 2331
+#I  Processing the zero rows
+#I  Dependency no. 1 yielded no factor
+#I  Dependency no. 2 yielded no factor
+#I  Dependency no. 3 yielded no factor
+#I  Dependency no. 4 yielded no factor
+#I  Dependency no. 5 yielded no factor
+#I  Dependency no. 6 yielded no factor
+#I  Dependency no. 7 yielded no factor
+#I  Dependency no. 8 yielded no factor
+#I  Dependency no. 9 yielded no factor
+#I  Dependency no. 10 yielded no factor
+#I  Dependency no. 11 yielded no factor
+#I  Dependency no. 12 yielded no factor
+#I  Dependency no. 13 yielded no factor
+#I  Dependency no. 14 yielded no factor
+#I  Dependency no. 15 yielded no factor
+#I  Dependency no. 16 yielded factor 627803548694357849005084367641
+#I  The factors are
+[ 627803548694357849005084367641, 9440100817595896591994719358689 ]
+#I  Digit partition : [ 30, 31 ]
+#I  MPQS runtime : 4297.550 sec.
+
+#I  Intermediate result : 
+[ [ 627803548694357849005084367641, 9440100817595896591994719358689 ], [  ] ]
+#I  
+#I  The result is
+[ [ 2, 89, 547, 37951, 1193557, 719765836058197948548563, 
+      627803548694357849005084367641, 9440100817595896591994719358689 ], [  ] 
+ ]
+
+#I  The total runtime was 5846.837 sec.
+
+[ 2, 89, 547, 37951, 1193557, 719765836058197948548563, 
+  627803548694357849005084367641, 9440100817595896591994719358689 ]
+gap>
+

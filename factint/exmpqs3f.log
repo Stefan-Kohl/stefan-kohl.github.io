@@ -1,0 +1,361 @@
+gap> Factors(NrPartitions(3489));
+#I  
+#I  Check for n = b^k +/- 1
+#I  
+#I  Factors already found : [  ]
+#I  
+#I  
+#I  Trial division by all primes p < 1000
+#I  Intermediate result : 
+[ [ 2, 2, 3, 3, 5, 13, 311 ], [ 3576269877674650069919338357664547857535700018\
+8452324843 ] ]
+#I  
+#I  Factors already found : [ 2, 2, 3, 3, 5, 13, 311 ]
+#I  
+#I  
+#I  Trial division by some already known primes
+#I  
+#I  Check for perfect powers
+#I  
+#I  Pollard's Rho
+Steps = 16384, Cluster = 416
+Number to be factored : 
+35762698776746500699193383576645478575357000188452324843
+#I  
+#I  Pollard's p - 1
+Limit1 = 10000, Limit2 = 400000
+Number to be factored : 
+35762698776746500699193383576645478575357000188452324843
+#I  p-1 for n = 35762698776746500699193383576645478575357000188452324843
+a : 2, Limit1 : 10000, Limit2 : 400000
+#I  First stage
+#I  Second stage
+#I  11 - digit factor 34241131369 was found
+#I  Intermediate result : 
+[ [ 34241131369 ], [ 1044436832163905731697710819779585729124714547 ] ]
+#I  
+#I  Factors already found : [ 2, 2, 3, 3, 5, 13, 311, 34241131369 ]
+#I  
+#I  
+#I  Williams' p + 1
+Residues = 2, Limit1 = 2000, Limit2 = 80000
+Number to be factored : 
+1044436832163905731697710819779585729124714547
+#I  p+1 for n = 1044436832163905731697710819779585729124714547
+Residues : 2, Limit1 : 2000, Limit2 : 80000
+#I  Residue no. 1
+#I  First stage
+#I  Second stage
+#I  Residue no. 2
+#I  First stage
+#I  Second stage
+#I  
+#I  Elliptic Curves Method (ECM)
+Curves = <func.>
+Init. Limit1 = <func.>, Init. Limit2 = <func.>, Delta = <func.>
+Number to be factored : 
+1044436832163905731697710819779585729124714547
+#I  ECM for n = 1044436832163905731697710819779585729124714547
+#I  Digits : 46, Curves : 18
+#I  Initial Limit1 : 200, Initial Limit2 : 20000, Delta : 200
+#I  Curve no.      1 (    18), Limit1 :     200, Limit2 :    20000
+#I  Timings : first stage : 0.271 sec., second stage : 0.481 sec.
+#I            curve       : 0.752 sec., total        : 1.322 sec.
+#I  Curve no.      2 (    18), Limit1 :     400, Limit2 :    40000
+#I  Timings : first stage : 0.440 sec., second stage : 0.851 sec.
+#I            curve       : 1.291 sec., total        : 2.681 sec.
+#I  Curve no.      3 (    18), Limit1 :     600, Limit2 :    60000
+#I  Timings : first stage : 0.651 sec., second stage : 1.703 sec.
+#I            curve       : 2.354 sec., total        : 5.112 sec.
+#I  Curve no.      4 (    18), Limit1 :     800, Limit2 :    80000
+#I  Timings : first stage : 0.871 sec., second stage : 1.470 sec.
+#I            curve       : 2.341 sec., total        : 7.571 sec.
+#I  Curve no.      5 (    18), Limit1 :    1000, Limit2 :   100000
+#I  Timings : first stage : 1.098 sec., second stage :  1.772 sec.
+#I            curve       : 2.870 sec., total        : 10.523 sec.
+#I  Curve no.      6 (    18), Limit1 :    1200, Limit2 :   120000
+#I  Timings : first stage : 1.849 sec., second stage :  2.074 sec.
+#I            curve       : 3.923 sec., total        : 14.492 sec.
+#I  Curve no.      7 (    18), Limit1 :    1400, Limit2 :   140000
+#I  Timings : first stage : 1.520 sec., second stage :  2.359 sec.
+#I            curve       : 3.879 sec., total        : 18.448 sec.
+#I  Curve no.      8 (    18), Limit1 :    1600, Limit2 :   160000
+#I  Timings : first stage : 2.280 sec., second stage :  2.637 sec.
+#I            curve       : 4.917 sec., total        : 23.447 sec.
+#I  Curve no.      9 (    18), Limit1 :    1800, Limit2 :   180000
+#I  Timings : first stage : 1.964 sec., second stage :  3.447 sec.
+#I            curve       : 5.411 sec., total        : 28.940 sec.
+#I  Curve no.     10 (    18), Limit1 :    2000, Limit2 :   200000
+#I  Timings : first stage : 2.168 sec., second stage :  3.722 sec.
+#I            curve       : 5.890 sec., total        : 34.900 sec.
+#I  Curve no.     11 (    18), Limit1 :    2200, Limit2 :   220000
+#I  Timings : first stage : 2.370 sec., second stage :  3.475 sec.
+#I            curve       : 5.845 sec., total        : 40.847 sec.
+#I  Curve no.     12 (    18), Limit1 :    2400, Limit2 :   240000
+#I  Timings : first stage : 3.167 sec., second stage :  3.735 sec.
+#I            curve       : 6.902 sec., total        : 47.837 sec.
+#I  Curve no.     13 (    18), Limit1 :    2600, Limit2 :   260000
+#I  Timings : first stage : 3.358 sec., second stage :  4.010 sec.
+#I            curve       : 7.368 sec., total        : 55.280 sec.
+#I  Curve no.     14 (    18), Limit1 :    2800, Limit2 :   280000
+#I  Timings : first stage : 3.594 sec., second stage :  4.272 sec.
+#I            curve       : 7.866 sec., total        : 63.219 sec.
+#I  Curve no.     15 (    18), Limit1 :    3000, Limit2 :   300000
+#I  Timings : first stage : 3.827 sec., second stage :  5.040 sec.
+#I            curve       : 8.867 sec., total        : 72.131 sec.
+#I  Curve no.     16 (    18), Limit1 :    3200, Limit2 :   320000
+#I  Timings : first stage : 3.483 sec., second stage :  5.287 sec.
+#I            curve       : 8.770 sec., total        : 80.962 sec.
+#I  Curve no.     17 (    18), Limit1 :    3400, Limit2 :   340000
+#I  Timings : first stage : 3.702 sec., second stage :  5.575 sec.
+#I            curve       : 9.277 sec., total        : 90.314 sec.
+#I  Curve no.     18 (    18), Limit1 :    3600, Limit2 :   360000
+#I  Timings : first stage :  4.443 sec., second stage :   5.823 sec.
+#I            curve       : 10.266 sec., total        : 100.642 sec.
+#I  
+#I  Multiple Polynomial Quadratic Sieve (MPQS)
+Number to be factored : 
+1044436832163905731697710819779585729124714547
+#I  Pass no. 1
+#I  MPQS for n = 1044436832163905731697710819779585729124714547
+#I  Digits                     :         46
+#I  Multiplier                 :          3
+#I  Size of factor base        :        973
+#I  Factor base : 
+[ -1, 2, 3, 5, 7, 11, 13, 23, 31, 37, 47, 61, 71, 107, 109, 127, 131, 137, 
+  149, 151, 163, 173, 179, 181, 199, 223, 239, 251, 263, 269, 271, 277, 283, 
+  311, 313, 331, 337, 347, 353, 359, 367, 389, 397, 401, 431, 443, 449, 457, 
+  461, 467, 487, 503, 557, 569, 571, 601, 613, 617, 619, 631, 641, 647, 659, 
+  673, 683, 701, 719, 727, 733, 743, 751, 757, 797, 811, 821, 823, 829, 863, 
+  877, 881, 883, 907, 929, 937, 941, 947, 967, 971, 977, 991, 997, 1031, 
+  1033, 1049, 1051, 1069, 1087, 1093, 1097, 1117, 1123, 1129, 1153, 1171, 
+  1181, 1187, 1193, 1217, 1229, 1237, 1249, 1279, 1289, 1291, 1327, 1361, 
+  1367, 1399, 1423, 1433, 1439, 1447, 1459, 1483, 1489, 1511, 1523, 1531, 
+  1543, 1553, 1559, 1567, 1579, 1597, 1601, 1607, 1609, 1613, 1621, 1663, 
+  1669, 1699, 1709, 1733, 1747, 1759, 1801, 1831, 1847, 1861, 1867, 1873, 
+  1877, 1879, 1901, 1907, 1933, 1951, 1973, 1997, 1999, 2003, 2011, 2017, 
+  2027, 2029, 2087, 2089, 2099, 2111, 2113, 2131, 2137, 2153, 2161, 2179, 
+  2207, 2213, 2237, 2239, 2243, 2251, 2267, 2269, 2293, 2333, 2347, 2357, 
+  2377, 2381, 2389, 2393, 2399, 2417, 2437, 2467, 2503, 2557, 2609, 2647, 
+  2657, 2659, 2687, 2699, 2711, 2713, 2729, 2753, 2767, 2797, 2803, 2833, 
+  2837, 2851, 2861, 2887, 2897, 2903, 2917, 2927, 2969, 2971, 2999, 3001, 
+  3011, 3067, 3089, 3119, 3167, 3169, 3191, 3217, 3221, 3229, 3251, 3257, 
+  3299, 3301, 3307, 3329, 3331, 3343, 3347, 3359, 3361, 3373, 3389, 3407, 
+  3457, 3463, 3491, 3499, 3517, 3527, 3533, 3539, 3541, 3557, 3583, 3613, 
+  3631, 3637, 3659, 3671, 3677, 3697, 3709, 3719, 3733, 3739, 3761, 3767, 
+  3769, 3793, 3797, 3803, 3821, 3823, 3833, 3847, 3851, 3863, 3877, 3907, 
+  3917, 3919, 3943, 3967, 3989, 4001, 4007, 4013, 4049, 4099, 4111, 4129, 
+  4133, 4139, 4153, 4201, 4211, 4231, 4241, 4243, 4259, 4271, 4297, 4327, 
+  4337, 4421, 4423, 4451, 4457, 4463, 4481, 4513, 4547, 4549, 4561, 4567, 
+  4583, 4597, 4603, 4621, 4639, 4673, 4679, 4691, 4723, 4729, 4751, 4783, 
+  4793, 4799, 4861, 4877, 4889, 4903, 4909, 4937, 4943, 4951, 4957, 4967, 
+  4973, 4993, 5003, 5009, 5021, 5059, 5081, 5087, 5099, 5113, 5119, 5147, 
+  5153, 5171, 5179, 5197, 5209, 5227, 5237, 5261, 5279, 5333, 5381, 5387, 
+  5399, 5407, 5431, 5437, 5441, 5443, 5477, 5479, 5483, 5501, 5503, 5507, 
+  5521, 5527, 5531, 5641, 5651, 5653, 5657, 5711, 5717, 5737, 5749, 5779, 
+  5791, 5801, 5807, 5813, 5821, 5827, 5839, 5857, 5861, 5867, 5881, 5897, 
+  5927, 6007, 6011, 6037, 6043, 6047, 6073, 6079, 6089, 6101, 6121, 6133, 
+  6199, 6211, 6229, 6263, 6271, 6277, 6287, 6299, 6323, 6343, 6353, 6359, 
+  6361, 6367, 6373, 6389, 6421, 6427, 6449, 6469, 6481, 6529, 6551, 6553, 
+  6577, 6581, 6653, 6659, 6673, 6689, 6691, 6703, 6709, 6763, 6779, 6781, 
+  6793, 6833, 6857, 6869, 6883, 6899, 6907, 6911, 6947, 6959, 6961, 6967, 
+  6971, 6977, 7027, 7039, 7069, 7079, 7103, 7109, 7121, 7129, 7177, 7187, 
+  7213, 7219, 7247, 7297, 7307, 7309, 7321, 7331, 7333, 7393, 7411, 7451, 
+  7457, 7487, 7489, 7499, 7507, 7537, 7541, 7547, 7549, 7559, 7573, 7589, 
+  7607, 7669, 7673, 7687, 7699, 7723, 7727, 7741, 7753, 7789, 7793, 7841, 
+  7867, 7879, 7883, 7901, 7919, 7933, 7963, 7993, 8009, 8011, 8017, 8039, 
+  8059, 8069, 8081, 8087, 8089, 8093, 8101, 8111, 8117, 8123, 8147, 8191, 
+  8231, 8237, 8243, 8263, 8269, 8273, 8287, 8291, 8293, 8317, 8377, 8429, 
+  8447, 8467, 8521, 8543, 8573, 8581, 8599, 8623, 8627, 8647, 8663, 8669, 
+  8677, 8693, 8699, 8707, 8713, 8719, 8731, 8737, 8747, 8753, 8779, 8783, 
+  8803, 8819, 8821, 8831, 8849, 8861, 8867, 8893, 8929, 8941, 8951, 8963, 
+  8969, 8971, 9007, 9013, 9041, 9049, 9091, 9109, 9137, 9157, 9161, 9203, 
+  9209, 9221, 9239, 9277, 9281, 9293, 9311, 9323, 9337, 9349, 9377, 9403, 
+  9421, 9431, 9433, 9437, 9491, 9497, 9511, 9539, 9547, 9587, 9613, 9623, 
+  9643, 9649, 9679, 9719, 9739, 9743, 9767, 9787, 9829, 9833, 9851, 9859, 
+  9871, 9887, 9929, 9931, 9941, 9949, 9973, 10007, 10009, 10039, 10067, 
+  10069, 10093, 10111, 10133, 10139, 10159, 10211, 10223, 10247, 10253, 
+  10259, 10267, 10303, 10343, 10369, 10399, 10433, 10457, 10463, 10487, 
+  10501, 10531, 10559, 10567, 10597, 10607, 10631, 10663, 10667, 10687, 
+  10709, 10711, 10723, 10729, 10733, 10739, 10771, 10799, 10837, 10847, 
+  10859, 10861, 10883, 10889, 10891, 10909, 10939, 10949, 10957, 10973, 
+  10979, 11003, 11069, 11071, 11087, 11117, 11119, 11149, 11161, 11213, 
+  11243, 11251, 11261, 11273, 11279, 11287, 11321, 11369, 11383, 11393, 
+  11399, 11423, 11437, 11467, 11471, 11489, 11503, 11527, 11549, 11593, 
+  11621, 11657, 11689, 11699, 11719, 11731, 11779, 11789, 11801, 11827, 
+  11887, 11897, 11923, 11941, 11953, 11969, 11981, 12007, 12037, 12041, 
+  12043, 12071, 12073, 12109, 12143, 12163, 12239, 12241, 12269, 12277, 
+  12281, 12289, 12343, 12377, 12379, 12409, 12413, 12473, 12479, 12539, 
+  12541, 12553, 12577, 12619, 12637, 12641, 12653, 12659, 12703, 12721, 
+  12743, 12757, 12763, 12781, 12809, 12821, 12829, 12841, 12853, 12889, 
+  12907, 12923, 12959, 12967, 12973, 12983, 13007, 13009, 13049, 13093, 
+  13109, 13151, 13159, 13171, 13183, 13229, 13241, 13291, 13297, 13309, 
+  13313, 13327, 13331, 13337, 13367, 13397, 13417, 13469, 13513, 13523, 
+  13537, 13577, 13619, 13627, 13669, 13679, 13693, 13721, 13729, 13763, 
+  13799, 13829, 13831, 13873, 13877, 13883, 13933, 13963, 13967, 13997, 
+  13999, 14057, 14107, 14149, 14173, 14207, 14243, 14293, 14303, 14327, 
+  14341, 14437, 14461, 14489, 14537, 14549, 14593, 14621, 14629, 14639, 
+  14653, 14669, 14699, 14717, 14723, 14737, 14741, 14747, 14779, 14797, 
+  14813, 14821, 14827, 14831, 14851, 14923, 14939, 14957, 14969, 15017, 
+  15031, 15073, 15077, 15091, 15101, 15107, 15131, 15139, 15149, 15161, 
+  15173, 15193, 15217, 15227, 15241, 15271, 15277, 15287, 15307, 15329, 
+  15331, 15349, 15359, 15361, 15373, 15377, 15391, 15401, 15413, 15451, 
+  15467, 15473, 15493, 15497, 15559, 15581, 15583, 15607, 15641, 15731, 
+  15733, 15791, 15797, 15817, 15887, 15907, 15923, 15959, 15973, 16001, 
+  16007, 16061, 16063, 16073, 16087, 16091, 16103, 16127, 16187, 16189, 
+  16193, 16217, 16231, 16253, 16301, 16333, 16339, 16349, 16361, 16369, 
+  16417, 16427, 16433, 16453, 16477, 16481, 16493, 16519, 16529, 16547, 
+  16573, 16619, 16633, 16649, 16651, 16657, 16699, 16729, 16759, 16787, 
+  16829, 16831, 16843, 16871, 16883, 16901, 16927, 16931, 16937, 16943 ]
+
+#I  Prime powers to be sieved  :        990
+#I  Length of sieving interval :     131072
+#I  Small prime limit          :         86
+#I  Large prime limit          :    2205390
+#I  Number of used a - factors :          3
+#I  Size of a - factors pool   :         46
+#I  a - factors pool :
+[ 1064359, 1064383, 1064407, 1064411, 1064477, 1064507, 1064533, 1064587, 
+  1064593, 1064629, 1064653, 1064669, 1064689, 1064743, 1064783, 1064867, 
+  1064873, 1064911, 1064927, 1064939, 1064953, 1064957, 1064989, 1065017, 
+  1065037, 1065041, 1065089, 1065137, 1065173, 1065217, 1065283, 1065319, 
+  1065331, 1065409, 1065433, 1065469, 1065529, 1065557, 1065593, 1065601, 
+  1065643, 1065683, 1065689, 1065697, 1065773, 1065787 ]
+
+#I  Initialization time        :         14 sec.
+#I  
+#I  Sieving
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :       50
+#I  Relations with a large prime factor            :       11
+#I  Relations remaining to be found                :      978
+#I  Total factorizations with a large prime factor :      684
+#I  Used polynomials                               :       45
+#I  Efficiency 1                                   :       12 %
+#I  Efficiency 2                                   :       41 %
+#I  Elapsed runtime                                :       33 sec.
+#I  Progress (relations)                           :        5 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      100
+#I  Relations with a large prime factor            :       46
+#I  Relations remaining to be found                :      893
+#I  Total factorizations with a large prime factor :     1386
+#I  Used polynomials                               :       91
+#I  Efficiency 1                                   :       12 %
+#I  Efficiency 2                                   :       41 %
+#I  Elapsed runtime                                :       52 sec.
+#I  Progress (relations)                           :       14 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      150
+#I  Relations with a large prime factor            :       78
+#I  Relations remaining to be found                :      811
+#I  Total factorizations with a large prime factor :     2037
+#I  Used polynomials                               :      132
+#I  Efficiency 1                                   :       13 %
+#I  Efficiency 2                                   :       41 %
+#I  Elapsed runtime                                :       70 sec.
+#I  Progress (relations)                           :       21 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      200
+#I  Relations with a large prime factor            :      128
+#I  Relations remaining to be found                :      711
+#I  Total factorizations with a large prime factor :     2622
+#I  Used polynomials                               :      171
+#I  Efficiency 1                                   :       13 %
+#I  Efficiency 2                                   :       41 %
+#I  Elapsed runtime                                :       87 sec.
+#I  Progress (relations)                           :       31 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      250
+#I  Relations with a large prime factor            :      208
+#I  Relations remaining to be found                :      581
+#I  Total factorizations with a large prime factor :     3326
+#I  Used polynomials                               :      216
+#I  Efficiency 1                                   :       13 %
+#I  Efficiency 2                                   :       41 %
+#I  Elapsed runtime                                :      109 sec.
+#I  Progress (relations)                           :       44 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      300
+#I  Relations with a large prime factor            :      284
+#I  Relations remaining to be found                :      455
+#I  Total factorizations with a large prime factor :     3976
+#I  Used polynomials                               :      258
+#I  Efficiency 1                                   :       13 %
+#I  Efficiency 2                                   :       41 %
+#I  Elapsed runtime                                :      129 sec.
+#I  Progress (relations)                           :       56 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      350
+#I  Relations with a large prime factor            :      378
+#I  Relations remaining to be found                :      311
+#I  Total factorizations with a large prime factor :     4730
+#I  Used polynomials                               :      306
+#I  Efficiency 1                                   :       13 %
+#I  Efficiency 2                                   :       41 %
+#I  Elapsed runtime                                :      152 sec.
+#I  Progress (relations)                           :       70 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      401
+#I  Relations with a large prime factor            :      464
+#I  Relations remaining to be found                :      174
+#I  Total factorizations with a large prime factor :     5436
+#I  Used polynomials                               :      352
+#I  Efficiency 1                                   :       12 %
+#I  Efficiency 2                                   :       42 %
+#I  Elapsed runtime                                :      176 sec.
+#I  Progress (relations)                           :       83 %
+#I  
+#I  
+#I  Collecting relations with a large factor
+#I  Complete factorizations over the factor base   :      451
+#I  Relations with a large prime factor            :      605
+#I  Relations remaining to be found                :        0
+#I  Total factorizations with a large prime factor :     6295
+#I  Used polynomials                               :      408
+#I  Efficiency 1                                   :       13 %
+#I  Efficiency 2                                   :       41 %
+#I  Elapsed runtime                                :      206 sec.
+#I  Progress (relations)                           :      100 %
+#I  
+#I  Creating the exponent matrix
+#I  Doing Gaussian Elimination, #rows = 1056, #columns = 1019
+#I  Processing the zero rows
+#I  Dependency no. 1 yielded no factor
+#I  Dependency no. 2 yielded no factor
+#I  Dependency no. 3 yielded factor 22720614180379
+#I  Dependency no. 4 yielded no factor
+#I  Dependency no. 5 yielded factor 139402155386591887
+#I  The factors are
+[ 22720614180379, 139402155386591887, 329755936793639 ]
+#I  Digit partition : [ 14, 18, 15 ]
+#I  MPQS runtime : 217.731 sec.
+
+#I  Intermediate result : 
+[ [ 22720614180379, 329755936793639, 139402155386591887 ], [  ] ]
+#I  
+#I  The result is
+[ [ 2, 2, 3, 3, 5, 13, 311, 34241131369, 22720614180379, 329755936793639, 
+      139402155386591887 ], [  ] ]
+
+#I  The total runtime was 347.361 sec.
+
+[ 2, 2, 3, 3, 5, 13, 311, 34241131369, 22720614180379, 329755936793639, 
+  139402155386591887 ]
+gap>
+

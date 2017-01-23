@@ -1,0 +1,179 @@
+
+Brief answers to the homework problems in MAT 410: Introduction to Topology
+===========================================================================
+
+                               Stefan Kohl
+
+ 1. The supremum is 1 (calculus).
+ 2. 1. Geometric series, limit 1.
+    2. The polynomials in numerator and denominator have the same degree
+       and the same leading coefficient, so the limit is 1.
+ 3. Any enumeration of the rationals in [0,1] will do
+    -- e.g. 0, 1,  0, 1/2, 1,  0, 1/3, 2/3, 1,  0, 1/4, 2/4, 3/4, 1,
+    0, 1/5, 2/5, 3/5, 4/5, 1, ... . Repetitions don't matter.
+ 4. 1. Q is dense, so the set of limit points is R.
+    2. The set is dense in R_0^+ (nonnegative real numbers), so the set
+       of limit points is R_0^+.
+    3. The zeros of sin(1/x) are the numbers 1/(k*pi) for k in Z,
+       so the set of limit points is {0}.
+ 5. The characteristic function of any dense set whose complement is
+    also dense, hence e.g. of Q, will do.
+ 6. E.g. f: [0,1[ -> R, x |-> 1/(1-x).
+ 7. Let U be the area of the union and I be the area of the intersection.
+    Put A_1 := pi*r_1^2 and A_2 := pi*r_2^2. W.o.l.g. assume r_1 >= r_2.
+    - If the balls are disjoint, U = A_1 + A_2 and I = 0.
+    - If the second ball is contained in the first, U = A_1 and I = A_2.
+    - If the balls intersect nontrivially:
+      - Put d := sqrt((x_1 - y_1)^2 + (x_2 - y_2)^2).
+      - Put a := arccos((d^2 + r_1^2 - r_2^2)/(2*d*r_1)).
+      - Put h := r_1 sin(a) and b := arcsin(h/r_2).
+      - Put h' := sqrt(r_1^2 - h^2) and h" := sqrt(r_2^2 - h^2).
+      - Put S_1 := a * r_1^2 and S_2 := b * r_2^2.
+      - Put T_1 := h*h' and T_2 := h*h".
+      - Put D := S_2 + T_1 - S_1 - T_2.
+    Now, U = A_1 + D and I = A_2 - D.
+ 8. Let d(x,y) = 0 if x=y and d(x,y) = 1 if x<>y (discrete metric).
+ 9. 1. See answer to Exercise 8, 2. Euclidean distance function,
+    3. Manhattan distance function (sum of coordinate differences).
+10. 1. All sets are both open and closed.
+    2. A sequence in a discrete metric space converges iff it eventually
+       gets constant.
+11. Due to the Axiom of Symmetry, a distance function on X is defined by
+    d(x,y), d(x,z) and d(y,z). Each of these distances can take value
+    1,2 or 3. There are 3^3=27 possibilities, of which only (1,1,3),
+    (1,3,1) and (3,1,1) are ruled out by the Triangle Inequality.
+    So there are 27-3=24 possible distance functions, which are
+    parametrized by the remaining triples.
+12. 1. Always. -- Since all sets are open, preimages of open sets are
+       always open.
+    2. If and only if it is bijective.
+13. It suffices to show that the metrics are equivalent, i.e. that the
+    values of the distance functions differ by at most a constant factor.
+    This is handled as case L=2 in the answer to Exercise 14.  
+14. It suffices to show that the metrics are equivalent, i.e. that
+    d_1(x,y) and d_L(x,y) differ by at most a constant factor.
+    We write "sum" for the summation over i from 1 to n.
+    (1) d_1(x,y) = sum |x_i-y_i| >= max|x_i-y_i|
+                >= 1/n * (sum |x_i-y_i|^L)^(1/L) = 1/n * d_L(x,y).
+    (2) d_L(x,y) = (sum |x_i-y_i|^L)^(1/L) >= max|x_i-y_i|
+                >= 1/n * sum |x_i-y_i| = 1/n * d_1(x,y).
+    So d_1(x,y) and d_L(x,y) differ by not more than a factor of n,
+    hence are equivalent as required.
+15. The discrete metric works: d(x,y) = 0 if x=y, and d(x,y) = 1 if x<>y. 
+16: A nicely worked out solution can be found at
+    http://www.gap-system.org/~john/MT4522/Solutions/S5.7.html.
+17. The answer is "no" -- the sequence (a_n) of 2x2 matrices with 1's on
+    the main diagonal, 0 below and n above is an example of a sequence
+    of elements of SL(2,R) which has no convergent subsequence.
+18. Take the trivial topology (i.e. the only open sets are the empty set
+    and X itself). Then every sequence of points of X converges to every
+    point in X.
+19. The axioms for a topological space are satisfied:
+    - The empty set and Z are open by definition.
+    - A union of unions of residue classes is again a union of residue
+      classes, so unions of open sets are open.
+    - The intersection of two residue classes is a residue class or
+      empty, hence finite intersections of unions of residue classes are
+      also unions of residue classes. So, finite intersections of open
+      sets are open.
+    We have a Hausdorff space, since given two points a and b, for
+    any positive integer m which does not divide a-b, a+mZ and b+mZ
+    are disjoint open sets containing a and b, respectively.
+20. Residue classes are both open and closed, so if there would be only
+    finitely many primes, the union of the residue classes pZ taken
+    over all primes would be closed. Then the complement of this union
+    would be open. However, since the only integers which are not
+    integer multiples of primes are -1 and 1, this complement is {-1,1},
+    which is finite and hence certainly not a union of residue classes.
+    This contradiction shows that there are infinitely many primes.
+    [This proof is known as "Fuerstenberg's proof", named after
+     Harry (Hillel) Fuerstenberg.]
+21. For example, n -> n+1 and n -> -n are homeomorphisms of the topology
+    in question, since they map residue classes to residue classes.
+22. The closure is R itself, since it is a closed set. The interior
+    is empty, since R does not contain a ball of radius > 0 in C.
+23. 1. The closure is R, since Q is dense in R.
+       The interior is S itself, since S is a union of open sets,
+       hence open.
+    2. The closure is R, since S is infinite and R is the only
+       infinite closed set in the Zariski topology.
+       Now, S is a union of intervals of length 1/2^i for i from 0 to
+       infinity. The sum of the lengths of these intervals is 2, so
+       the complement of S in R is infinite. Hence the interior is
+       empty, since the only open set with infinite complement in the
+       Zariski topology is the empty set.
+24. The open sets in the product topology on X_1 x X_2 are the
+    16 cartesian products of open sets in X_1 with open sets in X_2
+    and all the sets which can be obtained from them by taking unions
+    and intersections. In total, these are 40 sets -- namely:
+    {}, {(1,1)}, {(1,2)},
+    {(1,1),(1,2)}, {(1,1),(1,3)}, {(1,1),(2,1)}, {(1,2),(2,2)},
+    {(1,1),(1,2),(1,3)}, {(1,1),(1,2),(2,1)},
+    {(1,1),(1,2),(2,2)}, {(1,1),(1,3),(2,1)},
+    {(1,1),(2,1),(3,1)}, {(1,2),(2,2),(3,2)},
+    {(1,1),(1,2),(1,3),(2,1)}, {(1,1),(1,2),(1,3),(2,2)},
+    {(1,1),(1,2),(2,1),(2,2)}, {(1,1),(1,2),(2,1),(3,1)},
+    {(1,1),(1,2),(2,2),(3,2)}, {(1,1),(1,3),(2,1),(2,3)},
+    {(1,1),(1,3),(2,1),(3,1)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2)}, {(1,1),(1,2),(1,3),(2,1),(2,3)},
+    {(1,1),(1,2),(1,3),(2,1),(3,1)}, {(1,1),(1,2),(1,3),(2,2),(3,2)},
+    {(1,1),(1,2),(2,1),(2,2),(3,1)}, {(1,1),(1,2),(2,1),(2,2),(3,2)},
+    {(1,1),(1,3),(2,1),(2,3),(3,1)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2),(2,3)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2),(3,1)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2),(3,2)},
+    {(1,1),(1,2),(1,3),(2,1),(2,3),(3,1)},
+    {(1,1),(1,2),(2,1),(2,2),(3,1),(3,2)},
+    {(1,1),(1,3),(2,1),(2,3),(3,1),(3,3)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,1)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,2)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2),(3,1),(3,2)},
+    {(1,1),(1,2),(1,3),(2,1),(2,3),(3,1),(3,3)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,1),(3,2)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,1),(3,3)},
+    {(1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,1),(3,2),(3,3)}
+25. The sets are finite and have the same cardinality, so an
+    identification map must be an homeomorphism. However, the
+    topological spaces X_1 and X_2 are not homeomorphic, since they
+    have different numbers of open sets with one element. So there
+    are no identification maps from X_1 to X_2.
+26. The open sets are the images of the residue classes under q.
+    These are just the residue classes which are subsets of r+mZ.
+    The identification map q is a bijection, hence a homeomorphism.
+    So the topologies are homeomorphic.
+27. The trivial topology, i.e. the one in which the only open sets are
+    the empty set and X itself.
+28. All are compact, since they are finite.
+29. 1. Not compact. -- The open cover consisting of the one-element
+       subsets has no finite subcover.
+    2. Not compact. -- The open cover Z = 0(2) U 1(4) U 3(8) U 7(16) U ...
+       has no finite subcover.
+    3. Compact. -- Given an open cover, construct a finite subcover
+       as follows: take one set in the given cover, and cover the points
+       in the complement one-by-one by adding at most one set per point.
+    4. Not compact. -- E.g. an open cover consisting of open discs of
+       a fixed radius does not possess a finite subcover.
+    5. Compact, by Theorem 7.16.
+    6. Not compact. -- The open cover Q = S_1 U S_2 U S_3 U ...
+       does not possess a finite subcover, since S_1 < S_2 < ... and
+       Q is not equal to one of the S_n.
+30. Every such function is bounded, by Theorem 7.16 and Lemma 7.5.
+31. No. -- Counterexample: infinite discrete metric space.
+32. No. -- Counterexample: R.
+33. By the Triangle Inequality, the diameter is bounded below by
+    d(1,6) = 6. It is bounded above by half of the circumference of
+    the hexagon 1-2-3-4-5-6-1, which is (1+2+3+4+5+6)/2 = 10.5.
+    It is straightforward to check that all diameters within these bounds
+    can be realised. So we have 6 <= diam(X) <= 10.
+34. 1. diam([0,1]^4) = sqrt(1^2+1^2+1^2+1^2) = sqrt(4) = 2.
+    2. We have d(x,y) = sum|x_i-y_i| <= sum|x_i| + sum|y_i| <= 1 + 1 = 2,
+       hence the diameter of the set is 2.
+35. 1. The problem is that the "Euclidean metric" on R^\infty,
+       respectively S, is actually not a metric, since there are points
+       with infinite distance. If one permits points with infinite
+       distance ("extended metric"), the set S is not bounded.
+    2. The set S is not totally bounded, since any two of the infinitely
+       many corners of the hypercube S have distance 1, which implies
+       that a set with diameter less than 1 can at most cover one corner.
+
+

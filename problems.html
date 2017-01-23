@@ -1,0 +1,166 @@
+
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <title> Problems, Questions and Examples from Number Theory </title>
+  <link rel = "stylesheet" type = "text/css" href = "index.css" />
+</head>
+
+<body>
+
+<h1 class = "problems">
+  Some Problems, Questions and Examples from Elementary&nbsp;Number&nbsp;Theory
+</h1>
+
+<h2 align = "center"> 1. </h2>
+
+<p class = "normaltext">
+  <em class = "introducingwords"> Conjecture: </em>
+  Let <em>R</em> be an euclidean ring all of whose nontrivial residue class
+  rings are finite. Further let <em>P</em>&nbsp;in&nbsp;<em>R</em>[<em>x</em>]
+  be a univariate polynomial over&nbsp;<em>R</em> such that
+  gcd{&nbsp;<em>P</em>(<em>x</em>)&nbsp;|&nbsp;<em>x</em>&nbsp;in&nbsp;<em>R</em>&nbsp;}&nbsp;=&nbsp;1.
+  Then there is an <em>x</em>&nbsp;in&nbsp;<em>R</em> such that <em>P</em>(<em>x</em>) has
+  not more prime factors in&nbsp;<em>R</em> than the polynomial
+  <em>P</em>&nbsp;in&nbsp;<em>R</em>[<em>x</em>].
+</p>
+
+<h2 align = "center"> 2. </h2>
+
+<p class = "normaltext">
+  Let <em>n</em> be a Carmichael number with three prime factors, and let
+  <em>p</em> be one of them. Then we have <em>n</em>&nbsp;&lt;&nbsp;4<em>p</em><sup>6</sup>
+  (<a href = "problems/cmzth.pdf">proof</a>). 
+  Using this upper bound, it can be verified by means of computation that
+  <em>p</em> can be any odd prime number less than 1223, but not 1223 itself.
+  There is a <a href = "problems/cm3fact.gap">GAP program</a> 
+  and a <a href = "problems/cm3fakt.pas">Pascal program</a> for this.
+  A precomputed table is available <a href = "problems/cm3fact.txt">here</a>.
+  The numbers of Carmichael numbers with 3 prime factors having a specific factor
+  <em>p</em>&nbsp;&lt;&nbsp;10000 are listed <a href = "problems/cmzno.txt">here</a>.
+</p>
+
+<p class = "normaltext">
+  <em class = "introducingwords">Question:</em> Which primes are possible values of <em>p</em>?
+</p>
+
+<h2 align = "center"> 3. </h2>
+
+<p class = "normaltext">
+  Are there positive integers <em>a</em>,<em>b</em>&nbsp;>&nbsp;1
+  such that <em>a</em><sup>&pi;</sup>&nbsp;=&nbsp;<em>b</em>?
+</p>
+
+<p class = "normaltext">
+  The existence of such numbers is implausible, but the
+  transcendence of &pi; is obviously insufficient for a proof.
+  Cf. <a href = "http://mathoverflow.net/questions/118523/" target = "_blank">this</a>
+  question on MathOverflow.
+</p>
+
+<h2 align = "center"> 4. </h2>
+
+<p class = "normaltext">
+  Marking the rational points on the unit sphere
+  (equation <em>x</em><sup>2</sup>+<em>y</em><sup>2</sup>+<em>z</em><sup>2</sup>&nbsp;=&nbsp;1)
+  with common denominator less than a given upper bound and projecting
+  one octant onto the plane <em>z</em>&nbsp;=&nbsp;0 yields the following picture:
+</p> 
+
+<p>
+  <a href = "images/sphere1.gif">
+    <img src = "images/sphere1s.gif" width = "400" height = "400"
+         alt = "A mathematical illustration" />
+  </a>
+</p>
+
+<p class = "normaltext">
+  Taking the equation
+  <em>x</em><sup>3</sup>+<em>y</em><sup>3</sup>+<em>z</em><sup>3</sup> = 1
+  instead yields the following picture:
+</p>
+
+<p>
+  <img src = "images/sphere2.gif" width = "400" height = "400"
+       alt = "A mathematical illustration" />
+</p>
+
+<p class = "normaltext">
+  How does the respective image for the equation
+  <em>x</em><sup>4</sup>+<em>y</em><sup>4</sup>+<em>z</em><sup>4</sup>&nbsp;=&nbsp;1
+  look like?
+</p>
+
+<p class = "normaltext">
+  It is known that this equation has infinitely many solutions as well.
+  The `minimal' solution is
+  (<em>x</em>,<em>y</em>,<em>z</em>) = (95800/422481,217519/422481,414560/422481).
+</p>
+
+<h2 align = "center"> 5. </h2>
+
+<p class = "normaltext">
+  Write down the sequence of positive integers in the following manner
+  onto a square grid:
+</p>
+<pre>
+                            7 --- 8 --- 9 --- 10
+
+                            |                 |
+                            |                 |
+
+                            6     1 --- 2     11
+
+                            |           |     .
+                            |           |     .
+                                              .
+                            5 --- 4 --- 3
+</pre>
+<p class = "normaltext">
+  (like in <a href = "images/ulam.gif">
+  Ulam's prime number spiral</a>). Then paint the squares in colors
+  depending on the length of the period of the continued fraction expansion
+  of the square root of&nbsp;<em>n</em>.
+  This yields images like the following:
+</p>
+
+<table width = "100%" cellspacing = "5" cellpadding = "0"
+       summary = "This table contains two images illustrating period lengths of continued fraction expansions of square roots.">
+  <tr>
+    <td align = "left">
+      <a href = "images/cfrac1.gif">
+        <img src = "images/cfrac1s.gif" width = "288" height = "288"
+             alt = "A mathematical illustration" />
+      </a>
+    </td>
+    <td align = "right">
+      <a href = "images/cfrac2.gif">
+        <img src = "images/cfrac2s.gif" width = "288" height = "288"
+             alt = "A mathematical illustration" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+<h2 align = "center"> 6. </h2>
+
+<p class = "normaltext">
+  (Removed.)
+</p>
+
+<h2 align = "center"> 7. </h2>
+
+<p class = "normaltext">
+  A GAP implementation of elliptic curve point groups (currently only affine Weierstrass form)
+  is available here
+  (<a href = "problems/elliptic.gd">elliptic.gd</a>, <a href = "problems/elliptic.gi">elliptic.gi</a>).
+  There are also some <a href = "problems/examples.log">examples</a> for the use of these objects.
+</p>
+
+</body>
+
+</html>

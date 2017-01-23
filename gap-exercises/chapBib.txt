@@ -1,0 +1,44 @@
+  
+  
+  [1XReferences[101X
+  
+  [[20XBEO07[120X]  [16XBesche,  H. U., Eick, B. and O'Brien, E.[116X, [17X The SmallGroups Library [117X
+  (2007), (( GAP package, http://www.gap-system.org/Packages/sgl.html )).
+  
+  [[20XDok03[120X]       [16XDokchitser,       T.[116X,       [17XLLL       &       ABC[117X      (2003),
+  ((http://arxiv.org/abs/math.NT/0307322)).
+  
+  [[20XKoh07a[120X]  [16XKohl,  S.[116X,  [17XFactInt  --  Advanced  Methods  for Factoring Integers
+  (Version         1.5.2)[117X         (2007),        ((        GAP        package,
+  http://www.gap-system.org/Packages/factint.html )).
+  
+  [[20XKoh07b[120X]  [16XKohl, S.[116X, [17XRCWA -- Residue-Class-Wise Affine Groups (Version 2.5.4)[117X
+  (2007), (( GAP package, http://www.gap-system.org/Packages/rcwa.html )).
+  
+  [[20XKoh07c[120X]  [16XKohl,  S.[116X,  [17X ResClasses -- Set-Theoretic Computations with Residue
+  Classes     (Version     2.5.3)     [117X     (2007),     ((     GAP     package,
+  http://www.gap-system.org/Packages/resclasses.html )).
+  
+  [[20XLag02[120X]  [16XLagarias,  J.  C.[116X, [17X An Elementary Problem Equivalent to the Riemann
+  Hypothesis [117X, [18XAmer. Math. Monthly[118X, [19X109[119X (2002), 534-543.
+  
+  [[20XLag07[120X] [16XLagarias, J. C.[116X, [17X3x+1 Problem Annotated Bibliography[117X (2007), (( Part
+  I:          http://arxiv.org/abs/math.NT/0309224,          Part          II:
+  http://arxiv.org/abs/math.NT/0608208 )).
+  
+  [[20XLN06[120X]  [16XLübeck,  F.  and  Neunhöffer,  M.[116X, [17XGAPDoc (Version 1.0)[117X, RWTH Aachen
+  (2006), (( GAP package, http://www.gap-system.org/Packages/gapdoc.html )).
+  
+  [[20XMS95[120X] [16XMacHale, D. and Sheehy, R.[116X, [17XFinite groups with odd order automorphism
+  groups[117X, [18XProc. Roy. Irish Acad. Sect. A[118X, [19X95[119X (1995), 113--116.
+  
+  [[20XPaz80[120X]  [16XPazderski,  G.[116X,  [17XThe Orders of Which Only Belong Metabelian Groups[117X,
+  [18XMath. Nachr.[118X, [19X95[119X (1980), 7-16.
+  
+  [[20XSoi02[120X]  [16XSoicher,  L.[116X,  [17XGRAPE  --  GRaph Algorithms using PErmutation groups
+  (Version  4.1)[117X,  Queen  Mary,  University  of London (2002), (( GAP package,
+  http://www.gap-system.org/Packages/grape.html )).
+  
+  
+  
+  [32X

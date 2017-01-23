@@ -1,0 +1,607 @@
+  
+  [1X1 [33X[0;0YThe Exercises[133X[101X
+  
+  
+  [1X1.1 [33X[0;0YOn Commutators and Derived Subgroups[133X[101X
+  
+  
+  [1X1.1-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YThe  [13Xderived  subgroup[113X  [22XG'[122X of a group [22XG[122X is defined as the group [13Xgenerated[113X by
+  all  [13Xcommutators[113X  [22X[a,b]  :=  a^-1b^-1ab[122X,  where [22Xa,b ∈ G[122X. In general, not all
+  elements  of  the  derived  subgroup  of  a  group  are actually commutators
+  themselves.  Find  a group [22XG[122X of smallest possible order such that the set of
+  all commutators of elements of [22XG[122X does not [13Xform[113X a group![133X
+  
+  
+  [1X1.1-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YCommutators  can be computed by the operation [10XComm[110X, and the derived subgroup
+  can be computed by the operation [10XDerivedSubgroup[110X. The function [10XCartesian[110X and
+  the operations [10XSet[110X and [10XAsList[110X can be helpful in this context as well. If you
+  are  lazy  but patient, you may simply use [10XCommutatorLength[110X. Otherwise, this
+  exercise  requires  writing  a couple of lines of [5XGAP[105X code. The wanted group
+  has order greater than 50, but less than 100.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.1[114X.[133X
+  
+  
+  [1X1.2 [33X[0;0YOn Outer Automorphisms Fixing Conjugacy Classes[133X[101X
+  
+  
+  [1X1.2-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YIs  there  a  finite group which has an automorphism which is not inner, but
+  which  nevertheless fixes all conjugacy classes setwise? -- If so, then find
+  an example of least possible order![133X
+  
+  
+  [1X1.2-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YThis  exercise  is  slightly  more difficult than that given in Section [14X1.1[114X.
+  Useful   functions   and   operations   are   [10XAllGroups[110X,  [10XAutomorphismGroup[110X,
+  [10XIsInnerAutomorphism[110X, [10XIsConjugate[110X, [10XImage[110X and [10XAsList[110X. It is a good exercise to
+  try to find a way to write down the group and the automorphism in a nice and
+  human-readable form. One possible way to achieve this is to determine a [21Xnice[121X
+  permutation  representation of the group, and to choose an automorphism with
+  the desired property which fixes all but one of the generators.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.2[114X.[133X
+  
+  
+  [1X1.3 [33X[0;0YDrawing the Ulam Spiral[133X[101X
+  
+  
+  [1X1.3-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YWrite     a     [5XGAP[105X     function     which    draws    the    Ulam    spiral
+  ([7Xhttp://en.wikipedia.org/wiki/Ulam_spiral[107X) and saves the picture in a file![133X
+  
+  [33X[0;0YThe  arguments  of  the  function should be the size (width / height) of the
+  picture to be drawn and the name of the output file.[133X
+  
+  
+  [1X1.3-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YThis  is  more  or  less  just  an easy programming exercise, which does not
+  require  particular  mathematical  knowledge.  Use  the  function [10XNullMat[110X to
+  create  a  zero matrix over the field with two elements, and use this matrix
+  as  a grid to draw the spiral. The [5XRCWA[105X package [Koh07b] provides a function
+  [10XSaveAsBitmapPicture[110X,  which  can  be used to produce a picture file from the
+  matrix.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.3[114X.[133X
+  
+  
+  [1X1.4 [33X[0;0YAutomorphism Group of the Smallest Projective Plane[133X[101X
+  
+  
+  [1X1.4-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YThe  automorphisms  of  a  finite  projective  plane  are  determined by the
+  permutations of the set of points which move lines to lines. Thus, labelling
+  the  points  with  integers  [22X1,  2,  dots,  n[122X, the automorphism group can be
+  described as a subgroup of the symmetric group [22XS_n[122X.[133X
+  
+  [33X[0;0YThe  smallest  projective  plane  has  7  points  and  7 lines. Any point is
+  incident  with 3 lines, and any line is incident with 3 points. We label the
+  points with integers [22X1, 2, dots, 7[122X. Then the lines are given by the sets [22Xg_1
+  :=  {1,2,3}[122X, [22Xg_2 := {1,4,7}[122X, [22Xg_3 := {1,5,6}[122X, [22Xg_4 := {2,4,6}[122X, [22Xg_5 := {2,5,7}[122X,
+  [22Xg_6 := {3,4,5}[122X and [22Xg_7 := {3,6,7}[122X of points which are incident with them.[133X
+  
+  [33X[0;0YCompute the automorphism group of the smallest projective plane![133X
+  
+  
+  [1X1.4-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YA   useful   function  in  this  context  is  [10XSubgroupProperty[110X.  The  actual
+  determination  of the group can be done in one statement. Can you figure out
+  the isomorphism type of the group by theoretical means?[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.4[114X.[133X
+  
+  
+  [1X1.5 [33X[0;0YInstalling a Missing Method[133X[101X
+  
+  
+  [1X1.5-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YWhat  happens  when  you  enter  the  command [10XCentre(AlternatingGroup(100));[110X
+  in [5XGAP[105X?  Are  you satisfied with the performance, given that the centre of a
+  nonabelian  simple  group  is  always  trivial  and  that [5XGAP[105X knows that the
+  alternating group of degree 100 is simple?[133X
+  
+  [33X[0;0YProbably  not.  --  Thus improve the performance radically by implementing a
+  method  for  [10XCentre[110X for simple groups, which returns either the group itself
+  or the trivial subgroup, depending on whether the group is abelian or not![133X
+  
+  
+  [1X1.5-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YMethods  are installed with [10XInstallMethod[110X. The exercise is easy -- basically
+  all  you  need to do is to look up in the documentation how this function is
+  used.  If  your  solution  is  correct,  then [10XCentre(AlternatingGroup(100));[110X
+  returns  the  trivial subgroup immediately, and [10XCentre([3XG[103X[10X)[110X still computes the
+  centre of a non-simple group [3XG[103X using methods implemented in the [5XGAP[105X Library.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.5[114X.[133X
+  
+  
+  [1X1.6 [33X[0;0YFinding Good abc Triples[133X[101X
+  
+  
+  [1X1.6-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YGiven  a positive integer [22Xn[122X, let rad([22Xn[122X) denote the product of distinct prime
+  divisors            of [22Xn[122X.            The            abc           conjecture
+  ([7Xhttp://en.wikipedia.org/wiki/Abc_conjecture[107X)  states  that  for  any  [22Xϵ > 0[122X
+  there is a constant [22XK_ϵ[122X such that for any triple [22X(a,b,c)[122X of coprime positive
+  integers satisfying the equation [22Xa + b = c[122X we have [22Xc < K_ϵ rad(abc)^1 + ϵ[122X.[133X
+  
+  [33X[0;0YA  triple  [22X(a,b,c)[122X of coprime integers satisfying [22Xa + b = c[122X is called an [13Xabc
+  triple[113X  if  rad([22Xabc[122X)  is less than [22Xc[122X. An abc triple [22X(a,b,c)[122X is called a [13Xgood[113X
+  abc  triple  if  it  satisfies even [22Xln(c)/ln( rad(abc)) > 1.4[122X. The left-hand
+  side of the inequality is sometimes called the [13Xratio[113X of the abc triple.[133X
+  
+  [33X[0;0YIt  can  be  shown easily that there are infinitely many abc triples, but if
+  the abc conjecture holds, there are only finitely many good abc triples.[133X
+  
+  [33X[0;0YWrite  a  [5XGAP[105X  function  which finds all good abc triples [22X(a,b,c)[122X with given
+  radical rad([22Xabc[122X) and with [22Xc[122X less than a given bound![133X
+  
+  [33X[0;0YCan  you find a new triple, which is not yet on Abderrahmane Nitaj's list of
+  known good abc triples ([7Xhttp://www.math.unicaen.fr/~nitaj/tableabc.pdf[107X)?[133X
+  
+  
+  [1X1.6-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YYou can start by determining all positive integers less than the given bound
+  all  of  whose prime factors divide the given radical. This can be done much
+  more  efficiently than by the Sieve of Eratosthenes, or even by looping over
+  all integers in the range and factoring -- it is easy and very elementary to
+  find  out  how.  Then  you  can  loop over all pairs of these integers, test
+  whether  they  are coprime and compute the ratio if they are. To compute the
+  ratio, you need the operation [10XFloat[110X which converts integers and rationals to
+  floating  point  numbers,  and  the  function  [10XLOG_FLOAT[110X  which computes the
+  natural logarithm of a floating point number.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.6[114X.[133X
+  
+  
+  [1X1.7 [33X[0;0YAutomorphism Groups of Finite Graphs[133X[101X
+  
+  
+  [1X1.7-1 [33X[0;0YExercise[133X[101X
+  
+  [8Xa)[108X
+        [33X[0;6YDetermine  all undirected graphs with 6 vertices up to isomorphism! --
+        How many isomorphism types of such graphs are there?[133X
+  
+        [33X[0;6YThe  graphs  should  be  represented as sets of edges, where the edges
+        should be written as sets of two vertices, each.[133X
+  
+        [33X[0;6YExample:       In       this      representation,      the      graphs
+        [10X[[1,2],[1,6],[2,3],[3,4],[4,5],[5,6]][110X                              and
+        [10X[[1,5],[1,6],[2,4],[2,6],[3,4],[3,5]][110X   are  both  isomorphic  to  the
+        regular hexagon.[133X
+  
+  [8Xb)[108X
+        [33X[0;6YWrite  a  function  [10XGraphAutomorphismGroup([3XGamma[103X[10X,[3Xn[103X[10X)[110X which computes the
+        automorphism  group  of  the  graph  [3XGamma[103X  with  [3Xn[103X  vertices.  -- The
+        automorphisms  are  precisely  the permutations of the set of vertices
+        which move edges to edges.[133X
+  
+        [33X[0;6YNote  that  the  cardinality  [3Xn[103X  of  the  set  of vertices needs to be
+        specified, as there may be isolated vertices.[133X
+  
+  [8Xc)[108X
+        [33X[0;6YFind  out  which  of  the  (up  to  conjugation  in [22XS_6[122X) 16 transitive
+        permutation  groups of degree 6 occur as automorphism groups of graphs
+        with 6 vertices! -- How do the corresponding graphs look like?[133X
+  
+  
+  [1X1.7-2 [33X[0;0YHints[133X[101X
+  
+  [8Xad a)[108X
+        [33X[0;6YYou  can obtain the set of all graphs with [22Xn[122X vertices in the suggested
+        notation  by  [10XCombinations(Combinations([1..n],2));[110X.  Then you need to
+        find  a  suitable  group  action  on this set such that two graphs are
+        isomorphic  if  and  only  if  they  lie  in  the  same  orbit. Useful
+        operations are [10XOrbits[110X and [10XRepresentative[110X.[133X
+  
+  [8Xad b)[108X
+        [33X[0;6YIn  principle  you  can  implement a fancy algorithm here, but for our
+        purposes  a very basic one is perfectly sufficient. First find out how
+        to  check  whether a given permutation of the vertices induces a graph
+        automorphism. Then you can use [10XSubgroupProperty[110X to determine the group
+        formed by all such permutations.[133X
+  
+  [8Xad c)[108X
+        [33X[0;6YGiven  Part a)  and b),  this  is more or less straightforward. Useful
+        functions  /  operations  are  [10XAllTransitiveGroups[110X,  [10XNrMovedPoints[110X and
+        [10XTransitiveIdentification[110X.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.7[114X.[133X
+  
+  
+  [1X1.8 [33X[0;0YEnumerating Paths[133X[101X
+  
+  
+  [1X1.8-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YAnswer the following questions using [5XGAP[105X:[133X
+  
+  [8Xa)[108X
+        [33X[0;6YIn  how  many  ways can [22X1 ∈ S_4[122X be written as a product of exactly 100
+        transpositions?[133X
+  
+  [8Xb)[108X
+        [33X[0;6YIn how many ways can a horse cross the chess board from the upper left
+        to the lower right corner with exactly 100 moves?[133X
+  
+  
+  [1X1.8-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YConstruct  a  matrix  [22Xx  ∈ Z^n × n[122X with ones at suitable positions and zeros
+  everywhere  else  and  compute  powers. For Part a), choose [22Xn := 24[122X, and for
+  Part b),  choose  [22Xn  :=  8^2  =  64[122X.  Useful  functions  are  e.g.  [10XNullMat[110X,
+  [10XSymmetricGroup[110X, [10XCombinations[110X, [10XCartesian[110X and [10XPosition[110X.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.8[114X.[133X
+  
+  
+  [1X1.9 [33X[0;0YWieferich Primes[133X[101X
+  
+  
+  [1X1.9-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YBy  Fermat's  little  theorem,  for  any prime number [22Xp[122X we have [22Xp|2^p-1-1[122X. A
+  prime      number      [22Xp[122X      is      called      a      Wieferich     prime
+  ([7Xhttp://en.wikipedia.org/wiki/Wieferich_prime[107X)    if   it   satisfies   even
+  [22Xp^2|2^p-1-1[122X.[133X
+  
+  [33X[0;0YWrite  a  [5XGAP[105X  function  which  checks whether a given positive integer is a
+  Wieferich prime, and try to find as many Wieferich primes as you can![133X
+  
+  
+  [1X1.9-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YWriting the [5XGAP[105X function is easy. Use [10XPowerModInt[110X instead of first computing
+  [22X2^p-1[122X  and  then  reducing  modulo [22Xp^2[122X.  Two  Wieferich  primes can be found
+  easily, but finding a third one is at least hard.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.9[114X.[133X
+  
+  
+  [1X1.10 [33X[0;0YCounting Words in a File[133X[101X
+  
+  
+  [1X1.10-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YWrite  a  [5XGAP[105X  function which, given a filename, returns a word distribution
+  statistics.  The  function  should  return a list with entries of the form [10X[
+  "word",  237  ][110X for any word in the file, indicating the word and the number
+  of  times  it  occurs.  A [21Xword[121X in our sense is a sequence of letters with no
+  non-letter  characters  in between, i.e. it does not need to be a dictionary
+  word.  Can  you  put  your  function  into  one  line  with  no more than 80
+  characters?[133X
+  
+  
+  [1X1.10-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YYou  will  probably  need  the  operation  [10XCollected[110X. Further, the functions
+  [10XStringFile[110X and [10XWordsString[110X from the [5XGAPDoc[105X package [LN06] will be useful.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.10[114X.[133X
+  
+  
+  [1X1.11 [33X[0;0YNon-Metabelian p-Groups[133X[101X
+  
+  
+  [1X1.11-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YA  group  [22XG[122X is called [13Xmetabelian[113X if it has an abelian normal subgroup [22XN[122X such
+  that  the  quotient  [22XG/N[122X  is  abelian  as well. Further, a group is called a
+  [13X[22Xp[122X-group[113X if its order is a power of a prime.[133X
+  
+  [33X[0;0YFind a non-metabelian [22Xp[122X-group of least possible order![133X
+  
+  
+  [1X1.11-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YFirst  determine  conceivable  orders  of  non-metabelian groups by means of
+  theory.  Then  just run a [13Xbrute-force[113X search over the groups of the smallest
+  few  of these orders in the Small Groups Library [BEO07]. Useful functions /
+  operations are [10XAllGroups[110X, [10XDerivedSubgroup[110X and [10XIsAbelian[110X. For a solution, see
+  Section [14X2.11[114X.[133X
+  
+  
+  [1X1.12 [33X[0;0YThe Growth of the Sum-of-Divisors Function[133X[101X
+  
+  
+  [1X1.12-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YLet  [22Xσ[122X  denote the sum-of-divisors function. Given a positive integer [22Xn[122X, let
+  [22XH(n)  :=  ∑_k=1^n  1/k[122X  be  the  [22Xn[122Xth harmonic number, and put [22XB(n) := H(n) +
+  ln(H(n)) ⋅ e^H(n)[122X.[133X
+  
+  [33X[0;0YExamples  are  [22Xσ(24)  =  60[122X  and [22XB(24) ≈ 61.7575[122X, as well as [22Xσ(60) = 168[122X and
+  [22XB(60) ≈ 170.977[122X.[133X
+  
+  [33X[0;0YCan you find an integer [22Xn > 1[122X such that [22Xσ(n)[122X is larger than [22XB(n)[122X?[133X
+  
+  
+  [1X1.12-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YIn [5XGAP[105X, [22Xσ(n)[122X can be computed by [10XSigma([3Xn[103X[10X)[110X. Use the operation [10XFloat[110X to convert
+  integers  and  rationals  to  floating  point numbers, and use the functions
+  [10XLOG_FLOAT[110X   and   [10XEXP_FLOAT[110X  to  compute  logarithms  and  to  evaluate  the
+  exponential  function, respectively. Be prepared that finding an integer [22Xn >
+  1[122X such that [22Xσ(n)[122X is larger than [22XB(n)[122X is not easy.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.12[114X.[133X
+  
+  
+  [1X1.13 [33X[0;0YPell's Equation[133X[101X
+  
+  
+  [1X1.13-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YPell's   equation  ([7Xhttp://en.wikipedia.org/wiki/Pell%27s_equation[107X)  is  any
+  Diophantine  equation  of  the  form  [22Xx^2 - ny^2 = 1[122X, where [22Xn[122X is a nonsquare
+  integer.[133X
+  
+  [33X[0;0YWrite  a  [5XGAP[105X  function  which  takes an argument [22Xn[122X and returns the smallest
+  solution of the equation [22Xx^2 - ny^2 = 1[122X in positive integers![133X
+  
+  [33X[0;0YThis  solution  is  called  the  [13Xfundamental  solution[113X. Your function should
+  return for example the answer for [22Xn = 421[122X very quickly.[133X
+  
+  
+  [1X1.13-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YUseful  functions  in  this context are [10XContinuedFractionExpansionOfRoot[110X and
+  [10XContinuedFractionApproximationOfRoot[110X.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.13[114X.[133X
+  
+  
+  [1X1.14 [33X[0;0YAutomorphism Groups of Odd Order[133X[101X
+  
+  
+  [1X1.14-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YObviously,  the automorphism groups of both the trivial group and the cyclic
+  group  of  order 2  are  trivial,  and  have  therefore  odd order. Find the
+  smallest  group  of  order  greater  than 2 whose automorphism group has odd
+  order![133X
+  
+  
+  [1X1.14-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YFirst try to exclude the groups of even order by means of theory. Then run a
+  [13Xbrute-force[113X search over the Small Groups Library [BEO07]. Useful functions /
+  operations in this context are [10XAllGroups[110X and [10XAutomorphismGroup[110X.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.14[114X.[133X
+  
+  
+  [1X1.15 [33X[0;0YComposite Sums[133X[101X
+  
+  
+  [1X1.15-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YFind an odd positive integer [22Xn[122X such that [22Xn+2^k[122X is composite for any positive
+  integer [22Xk[122X! -- Can you find the least possible such [22Xn[122X?[133X
+  
+  
+  [1X1.15-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YFirst  perform  a  [13Xbrute-force[113X search to find candidates. Then try to verify
+  whether these candidates indeed have the desired property. A useful function
+  in  this context is [10XOrderMod[110X. In addition, it may be worth to have a look at
+  the  [5XResClasses[105X  package [Koh07c],  and  there in particular at the function
+  [10XResidueClass[110X.  Finding  a  good candidate for the least possible number with
+  the  given  property  is  reasonably  easy,  but the verification that it is
+  indeed the smallest one is computationally difficult.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.15[114X.[133X
+  
+  
+  [1X1.16 [33X[0;0YRational Points on the Unit Sphere[133X[101X
+  
+  
+  [1X1.16-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YWrite  a  [5XGAP[105X function which computes all rational points on the unit sphere
+  [22Xx^2+y^2+z^2=1[122X  which  correspond  to  solutions  of the diophantine equation
+  [22Xa^2+b^2+c^2=d^2[122X  with  [22Xa[122X, [22Xb[122X and [22Xc[122X not exceeding a given bound. Further, your
+  function  should  draw a picture showing the projection of one octant of the
+  sphere  to  the  [22Xx[122X-[22Xy[122X-plane,  where  the  rational points are marked by black
+  pixels.[133X
+  
+  
+  [1X1.16-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YJust write a nested loop to determine the solutions. Note that the variables
+  can  be  permuted,  thus you can assume [22Xa ≥ b ≥ c[122X and generate the solutions
+  not  satisfying  this  inequality by permuting [22Xa[122X, [22Xb[122X and [22Xc[122X. This saves almost
+  5/6  of  the  time. Maybe a useful function in this context is [10XArrangements[110X.
+  Create  an  empty  grid  over GF(2) by the function [10XNullMat[110X, invert it (i.e.
+  replace  zeros  by ones) and mark the solutions by zeros there. Finally, the
+  [5XRCWA[105X  package [Koh07b] provides a function [10XSaveAsBitmapPicture[110X, which can be
+  used to write the picture to a file.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.16[114X.[133X
+  
+  
+  [1X1.17 [33X[0;0YAliquot Sequences[133X[101X
+  
+  
+  [1X1.17-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YGiven  a  positive  integer  [22Xn[122X, the [13XAliquot sequence[113X [22Xn = a_1, a_2, a_3, a_4,
+  dots[122X  starting  at [22Xn[122X is defined by [22Xa_i+1 = σ(a_i) - a_i[122X, where [22Xσ[122X denotes the
+  sum-of-divisors  function.  We  say  that the Aliquot sequence starting at [22Xn[122X
+  [13Xstops[113X if there is an index [22Xi[122X such that [22Xa_i = 1[122X, and we say that it [13Xruns into
+  a cycle[113X if there are distinct indices [22Xi[122X and [22Xj[122X such that [22Xa_i = a_j[122X.[133X
+  
+  [33X[0;0YFind  out  whether all Aliquot sequences starting at integers [22Xn < 100[122X either
+  stop  or  run  into cycles! -- Can you do the same for all Aliquot sequences
+  starting  at  integers  [22Xn < 200[122X or [22Xn < 300[122X? Do you see algorithmic problems,
+  and of which kind are they?[133X
+  
+  
+  [1X1.17-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YIn  [5XGAP[105X, [22Xσ(n)[122X can be computed by [10XSigma([3Xn[103X[10X)[110X. Computing [22Xσ(n)[122X requires factoring
+  [22Xn[122X.  For  this,  the [5XGAP[105X Library method for the operation [10XSigma[110X calls the [5XGAP[105X
+  Library function [10XFactorsInt[110X directly. This works for small [22Xn[122X, but for larger
+  [22Xn[122X,  [10XFactorsInt[110X  will often give up and raise an error message which suggests
+  to  use  the  [5XFactInt[105X  package [Koh07a]. If you have loaded [5XFactInt[105X, you may
+  find  this  strange.  However,  this has nothing to do with [5XFactInt[105X, as this
+  package  does  not  get  a chance to help with factoring. You can make [10XSigma[110X
+  benefit from [5XFactInt[105X if you fetch the method for [10XSigma[110X from [11Xlib/numtheor.gi[111X,
+  put  it  into  a  separate file, replace [10XFactorsInt[110X by [10XFactors[110X, increase the
+  method  rank  to  something  like  [10XSUM_FLAGS[110X  and  read  this file into [5XGAP[105X.
+  Alternatively  you can make the change directly in the [5XGAP[105X Library. Then you
+  do not need to increase the method rank, but (as after every Library change)
+  you need to rebuild the completion files. For this, start [5XGAP[105X with option -N
+  and enter [10XCreateCompletionFiles();[110X.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.17[114X.[133X
+  
+  
+  [1X1.18 [33X[0;0YThe Q Sequence[133X[101X
+  
+  
+  [1X1.18-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YHofstadter's                            Q                           sequence
+  ([7Xhttp://mathworld.wolfram.com/HofstadtersQ-Sequence.html[107X)  is defined by [22XQ_1
+  = Q_2 = 1[122X and [22XQ_n = Q_n-Q_n-1} + Q_n-Q_n-2}[122X for [22Xn > 2[122X.[133X
+  
+  [8Xa)[108X
+        [33X[0;6YWrite  a  [5XGAP[105X  function which takes an integer argument [22Xl[122X and computes
+        the first [22Xl[122X terms of the Q sequence.[133X
+  
+  [8Xb)[108X
+        [33X[0;6YWrite a [5XGAP[105X function which plots the graph of the Q sequence.[133X
+  
+  
+  [1X1.18-2 [33X[0;0YHints[133X[101X
+  
+  [8Xad a)[108X
+        [33X[0;6YThe Q sequence is defined recursively. Ask yourself the question why a
+        recursive implementation is not a particularly good idea in this case,
+        anyway.[133X
+  
+  [8Xad b)[108X
+        [33X[0;6YUse  the  function [10XNullMat[110X to create a zero matrix over the field with
+        two  elements, turn the zeros into ones if you prefer a black graph on
+        a  white  background  to  a white graph on a black background, and use
+        this  matrix  as  a  grid to draw the graph. The [5XRCWA[105X package [Koh07b]
+        provides  a function [10XSaveAsBitmapPicture[110X, which can be used to produce
+        a picture file from the matrix.[133X
+  
+  [33X[0;0YFor a solution, see Section [14X2.18[114X.[133X
+  
+  
+  [1X1.19 [33X[0;0YA Quickly Growing Function[133X[101X
+  
+  
+  [1X1.19-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YHave  a  look  at  the  following  function,  which takes as arguments three
+  nonnegative integers and which returns a positive integer:[133X
+  
+  [4X[32X  GAP code  [32X[104X
+    [4X[104X
+    [4Xf := function ( i, j, k )[104X
+    [4X  if i = 0 then[104X
+    [4X    if   j = 0[104X
+    [4X    then if k = 0 then return 2; else return 2^f(i,j,k-1); fi;[104X
+    [4X    else return f(i,j-1,f(i,j-1,k)); fi;[104X
+    [4X  else[104X
+    [4X    return f(i-1,f(i-1,j,k),f(i-1,j,k));[104X
+    [4X  fi;[104X
+    [4Xend;[104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YTry  to  evaluate  [10Xf[110X for small values of [10Xi[110X, [10Xj[110X and [10Xk[110X! -- How far can you get?
+  Can  you  evaluate [10Xf(1,1,1)[110X or [10Xf(2,2,2)[110X, or can you perhaps write down these
+  values as non-recursive expressions?[133X
+  
+  [33X[0;0YThe  function  [10Xf[110X is still a computable function -- recall however that there
+  are functions which grow faster than [13Xany[113X computable function![133X
+  
+  
+  [1X1.19-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YSome  values this function takes: [10Xf(0,0,0)[110X is 2, [10Xf(0,0,1)[110X is 4, [10Xf(0,0,2)[110X and
+  [10Xf(0,1,0)[110X   are   both 16,  [10Xf(0,0,3)[110X  is 65536,  [10Xf(0,0,4)[110X  and  [10Xf(0,1,1)[110X  are
+  both [22X2^65536[122X,  [10Xf(0,0,5)[110X is [22X2^2^65536}[122X, and already [10Xf(1,1,1)[110X is basically too
+  large  to be written down in a non-recursive way. The exercise asks just for
+  some experimentation -- thus there is no solution given.[133X
+  
+  
+  [1X1.20 [33X[0;0YThe 3n+1 Conjecture[133X[101X
+  
+  
+  [1X1.20-1 [33X[0;0YExercise[133X[101X
+  
+  [33X[0;0YThe [13X[22X3n+1[122X conjecture[113X, also known as [13XCollatz conjecture[113X, asserts that iterated
+  application of the [13XCollatz mapping[113X[133X
+  
+                                         /
+                                        | n/2 if n even,
+                 T:  Z -> Z,   n  |->  <
+                                        | (3n+1)/2 if n odd
+                                         \
+  
+  [33X[0;0Yto  any  given  positive  integer eventually yields 1. This problem has been
+  posed by Lothar Collatz in the 1930's, and it is still open today.[133X
+  
+  [33X[0;0YInvestigate Collatz' conjecture by means of computation with [5XGAP[105X, and try to
+  find a proof or a counterexample![133X
+  
+  
+  [1X1.20-2 [33X[0;0YHints[133X[101X
+  
+  [33X[0;0YThe  [22X3n+1[122X  conjecture  is generally believed to be true, but if it is false,
+  this  may be for two reasons: firstly, there may be unbounded sequences, and
+  secondly,  there  may  be  sequences which run into cycles not containing 1.
+  Jeffrey    C.    Lagarias    has    compiled   a   comprehensive   annotated
+  bibliography [Lag07]  on  this  conjecture.  The  [5XGAP[105X  package [5XRCWA[105X [Koh07b]
+  provides  a  large  variety  of  methods  to  compute with mappings like the
+  Collatz  mapping.  We  show just how to enter the Collatz mapping and how to
+  compute the sequences we are interested in:[133X
+  
+  [4X[32X  GAP session log  [32X[104X
+    [4X[104X
+    [4Xgap> T := RcwaMapping([[1,0,2],[3,1,2]]);[104X
+    [4X<rcwa mapping of Z with modulus 2>[104X
+    [4Xgap> SetName(T,"T");[104X
+    [4Xgap> Display(T);[104X
+    [4X[104X
+    [4XRcwa mapping of Z with modulus 2[104X
+    [4X[104X
+    [4X              n mod 2               |                n^T[104X
+    [4X------------------------------------+------------------------------------[104X
+    [4X  0                                 | n/2[104X
+    [4X  1                                 | (3n + 1)/2[104X
+    [4X[104X
+    [4Xgap> Trajectory(T,15,[1]);[104X
+    [4X[ 15, 23, 35, 53, 80, 40, 20, 10, 5, 8, 4, 2, 1 ][104X
+    [4Xgap> Trajectory(T,27,[1]);[104X
+    [4X[ 27, 41, 62, 31, 47, 71, 107, 161, 242, 121, 182, 91, 137, 206, 103, [104X
+    [4X  155, 233, 350, 175, 263, 395, 593, 890, 445, 668, 334, 167, 251, 377, [104X
+    [4X  566, 283, 425, 638, 319, 479, 719, 1079, 1619, 2429, 3644, 1822, 911, [104X
+    [4X  1367, 2051, 3077, 4616, 2308, 1154, 577, 866, 433, 650, 325, 488, 244, [104X
+    [4X  122, 61, 92, 46, 23, 35, 53, 80, 40, 20, 10, 5, 8, 4, 2, 1 ][104X
+    [4X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThere is (of course!) no solution given for this exercise.[133X
+  

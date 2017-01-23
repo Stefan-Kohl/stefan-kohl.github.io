@@ -1,0 +1,43 @@
+<!-- #################################################################### -->
+
+<Section Label="sec:ex2">
+<Heading>ex2</Heading>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Section Label="sec:ex2">
+<Heading>ex2</Heading>
+
+</Section>
+
+<!-- #################################################################### -->
+
+<Cite Key="GAPDoc"/>
+
+</Chapter>
+
+<Listing Type="GAP session log">
+<![CDATA[
+
+]]>
+</Listing>
+
+<Listing Type="GAP code">
+<![CDATA[
+
+]]>
+</Listing>
+
+<List>
+  <Mark>a)</Mark>
+  <Item>
+
+  </Item>
+  <Mark>b)</Mark>
+  <Item>
+
+  </Item>
+</List>
+

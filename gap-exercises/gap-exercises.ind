@@ -1,0 +1,272 @@
+\begin{theindex}
+
+  \item 3n+1 conjecture, \hyperpage{12}
+  \item 3n+1 problem bibliography, \hyperpage{12}
+
+  \indexspace
+
+  \item abc conjecture, \hyperpage{6}
+  \item abc triples, \hyperpage{6}
+  \item \texttt{abcTriplesByRadical}, \hyperpage{18}
+  \item \texttt{Action}, \hyperpage{15}
+  \item \texttt{Add}, \hyperpage{18}, \hyperpage{22, 23}
+  \item Aliquot sequence, \hyperpage{10}
+  \item \texttt{AliquotSequence}, \hyperpage{29}
+  \item \texttt{AllGraphs}, \hyperpage{19, 20}
+  \item \texttt{AllGroups}, \hyperpage{4}, \hyperpage{8, 9}, 
+		\hyperpage{14}, \hyperpage{25}, \hyperpage{27}
+  \item \texttt{AllTransitiveGroups}, \hyperpage{7}, \hyperpage{20}
+  \item \texttt{AlternatingGroup}, \hyperpage{5}
+  \item \texttt{Arrangements}, \hyperpage{10}, \hyperpage{29}
+  \item \texttt{AsList}, \hyperpage{4}, \hyperpage{14, 15}, 
+		\hyperpage{22}
+  \item \texttt{AutomorphismGroup}, \hyperpage{4}, \hyperpage{9}, 
+		\hyperpage{15, 16}, \hyperpage{27}
+
+  \indexspace
+
+  \item \texttt{Cartesian}, \hyperpage{4}, \hyperpage{7}, 
+		\hyperpage{14}, \hyperpage{23}
+  \item \texttt{Centre}, \hyperpage{5}, \hyperpage{18}
+  \item changing the GAP Library, \hyperpage{11}
+  \item chess board, \hyperpage{7}
+  \item Collatz conjecture, \hyperpage{12}
+  \item Collatz mapping, \hyperpage{12}
+  \item \texttt{Collected}, \hyperpage{8}, \hyperpage{24}
+  \item \texttt{Combinations}, \hyperpage{7}, \hyperpage{19}, 
+		\hyperpage{22}
+  \item \texttt{Comm}, \hyperpage{4}, \hyperpage{14}
+  \item commutator, \hyperpage{4}
+  \item \texttt{CommutatorLength}, \hyperpage{4}, \hyperpage{14}
+  \item \texttt{CommutatorsFormGroup}, \hyperpage{14}
+  \item computable function, \hyperpage{11}
+  \item conjugacy class, \hyperpage{4}
+  \item \texttt{ConjugacyClasses}, \hyperpage{15}
+  \item \texttt{ConjugacyClassesSubgroups}, \hyperpage{15}
+  \item \texttt{ContinuedFractionApproximationOfRoot}, \hyperpage{9}, 
+		\hyperpage{26}
+  \item \texttt{ContinuedFractionExpansionOfRoot}, \hyperpage{9}, 
+		\hyperpage{26}
+  \item \texttt{CreateCompletionFiles}, \hyperpage{11}
+
+  \indexspace
+
+  \item \texttt{DenominatorRat}, \hyperpage{26}
+  \item derived subgroup, \hyperpage{4}
+  \item \texttt{DerivedSubgroup}, \hyperpage{4}, \hyperpage{8}, 
+		\hyperpage{14}, \hyperpage{25}, \hyperpage{27}
+  \item \texttt{Display}, \hyperpage{12}
+
+  \indexspace
+
+  \item \texttt{EXP{\textunderscore}FLOAT}, \hyperpage{9}, 
+		\hyperpage{25}
+
+  \indexspace
+
+  \item FactInt package, \hyperpage{11}, \hyperpage{31}
+  \item \texttt{FactIntInfo}, \hyperpage{32}
+  \item \texttt{Factorial}, \hyperpage{22}
+  \item \texttt{Factors}, \hyperpage{18}, \hyperpage{28}
+  \item \texttt{FactorsInt}, \hyperpage{11}
+  \item \texttt{Filtered}, \hyperpage{15}, \hyperpage{17, 18}, 
+		\hyperpage{20}, \hyperpage{24}, \hyperpage{27}
+  \item \texttt{First}, \hyperpage{14, 15}, \hyperpage{25}, 
+		\hyperpage{27}
+  \item \texttt{Flat}, \hyperpage{23}
+  \item \texttt{Float}, \hyperpage{6}, \hyperpage{9}, \hyperpage{18}, 
+		\hyperpage{25}
+  \item \texttt{ForAll}, \hyperpage{15, 16}
+  \item \texttt{ForAny}, \hyperpage{15}
+  \item function
+    \subitem computable, \hyperpage{11}
+    \subitem quickly growing, \hyperpage{11}
+    \subitem recursive, \hyperpage{11}
+  \item \texttt{FundamentalSolutionOfPellsEquation}, \hyperpage{26}
+
+  \indexspace
+
+  \item GAPDoc package, \hyperpage{8}
+  \item \texttt{Gcd}, \hyperpage{18}, \hyperpage{27}
+  \item \texttt{GeneratorsOfGroup}, \hyperpage{21}
+  \item \texttt{GF}, \hyperpage{17}, \hyperpage{29}, \hyperpage{34}
+  \item GRAPE package, \hyperpage{22}
+  \item graph
+    \subitem automorphism group, \hyperpage{6}
+    \subitem finite, undirected, \hyperpage{6}
+    \subitem isomorphism type, \hyperpage{6}
+  \item \texttt{GraphAutomorphismGroup}, \hyperpage{20}
+  \item graphics, \hyperpage{5}
+  \item \texttt{Group}, \hyperpage{15}
+  \item group
+    \subitem automorphism group, \hyperpage{9}
+    \subitem commutator, \hyperpage{4}
+    \subitem conjugacy class, \hyperpage{4}
+    \subitem derived subgroup, \hyperpage{4}
+    \subitem metabelian group, \hyperpage{8}
+    \subitem outer automorphism, \hyperpage{4}
+    \subitem p-group, \hyperpage{8}
+  \item \texttt{GroupHomomorphismByImages}, \hyperpage{16}
+
+  \indexspace
+
+  \item harmonic number, \hyperpage{9}
+  \item \texttt{HomogeneousGraphs}, \hyperpage{22}
+  \item \texttt{HorsesMatrix}, \hyperpage{23}
+
+  \indexspace
+
+  \item \texttt{IdGroup}, \hyperpage{14, 15}, \hyperpage{25}, 
+		\hyperpage{27}
+  \item \texttt{Image}, \hyperpage{4}, \hyperpage{15, 16}
+  \item \texttt{Indeterminate}, \hyperpage{26}
+  \item Info messages, \hyperpage{32}
+  \item \texttt{InstallMethod}, \hyperpage{6}, \hyperpage{18}
+  \item \texttt{Intersection}, \hyperpage{23}
+  \item \texttt{IsAbelian}, \hyperpage{8}, \hyperpage{15}, 
+		\hyperpage{18}, \hyperpage{25}
+  \item \texttt{IsConjugate}, \hyperpage{4}, \hyperpage{15, 16}
+  \item \texttt{IsInnerAutomorphism}, \hyperpage{4}, \hyperpage{16}
+  \item \texttt{IsPrimeInt}, \hyperpage{17}, \hyperpage{24}
+  \item \texttt{IsProbablyPrimeInt}, \hyperpage{28}
+  \item \texttt{IsSimpleGroup}, \hyperpage{18}
+  \item \texttt{IsTransitive}, \hyperpage{20}
+  \item \texttt{IsWieferichPrimeInt}, \hyperpage{24}
+  \item iterative vs. recursive, \hyperpage{32}
+
+  \indexspace
+
+  \item Lagarias bibliography, \hyperpage{12}
+  \item \texttt{Length}, \hyperpage{14}, \hyperpage{16}, \hyperpage{22}, 
+		\hyperpage{26}, \hyperpage{28}
+  \item \texttt{List}, \hyperpage{15}, \hyperpage{19}, \hyperpage{22}, 
+		\hyperpage{28, 29}
+  \item \texttt{ListWithIdenticalEntries}, \hyperpage{22}, 
+		\hyperpage{33}
+  \item \texttt{LOG{\textunderscore}FLOAT}, \hyperpage{6}, 
+		\hyperpage{9}, \hyperpage{18}, \hyperpage{25}
+
+  \indexspace
+
+  \item \texttt{Maximum}, \hyperpage{34}
+  \item metabelian group, \hyperpage{8}
+  \item method installation, \hyperpage{5}, \hyperpage{11}, 
+		\hyperpage{31}
+  \item method rank, \hyperpage{18}
+  \item method selection, \hyperpage{18}
+  \item \texttt{Minimum}, \hyperpage{28}
+
+  \indexspace
+
+  \item \texttt{NrMovedPoints}, \hyperpage{7}, \hyperpage{20}
+  \item \texttt{NullMat}, \hyperpage{5}, \hyperpage{7}, 
+		\hyperpage{10, 11}, \hyperpage{17}, \hyperpage{23}, 
+		\hyperpage{29}, \hyperpage{34}
+  \item \texttt{NumeratorRat}, \hyperpage{26}
+
+  \indexspace
+
+  \item \texttt{One}, \hyperpage{17}, \hyperpage{29}, \hyperpage{34}
+  \item \texttt{OnRight}, \hyperpage{15}
+  \item \texttt{OnSets}, \hyperpage{19}
+  \item \texttt{Orbits}, \hyperpage{7}, \hyperpage{19}
+  \item \texttt{OrderMod}, \hyperpage{10}, \hyperpage{28}
+  \item outer automorphism, \hyperpage{4}
+
+  \indexspace
+
+  \item p-group, \hyperpage{8}
+  \item Pell's equation, \hyperpage{9}
+    \subitem fundamental solution, \hyperpage{9}
+  \item \texttt{PlotQSequence}, \hyperpage{34}
+  \item \texttt{Position}, \hyperpage{7}, \hyperpage{22}
+  \item \texttt{PowerModInt}, \hyperpage{8}, \hyperpage{24}
+  \item prime number, \hyperpage{5}
+  \item \texttt{Primes}, \hyperpage{27}
+  \item \texttt{Print}, \hyperpage{14, 15}, \hyperpage{27}, 
+		\hyperpage{32}
+  \item \texttt{Product}, \hyperpage{18}, \hyperpage{27}
+  \item projective plane
+    \subitem automorphism group, \hyperpage{5}
+
+  \indexspace
+
+  \item \texttt{Q}, \hyperpage{32}
+  \item Q sequence, \hyperpage{11}
+  \item \texttt{QCallCounts}, \hyperpage{33}
+  \item \texttt{QSequence}, \hyperpage{32}
+
+  \indexspace
+
+  \item rational points
+    \subitem on the unit sphere, \hyperpage{10}
+  \item \texttt{RationalPointsOnUnitSphere}, \hyperpage{29}
+  \item RCWA package, \hyperpage{5}, \hyperpage{10--12}
+  \item \texttt{RcwaMapping}, \hyperpage{12}
+  \item rebuilding completion files, \hyperpage{11}
+  \item recursive vs. iterative, \hyperpage{32}
+  \item \texttt{Representative}, \hyperpage{7}, \hyperpage{15}, 
+		\hyperpage{19}
+  \item ResClasses package, \hyperpage{10}, \hyperpage{28}
+  \item \texttt{ResidueClass}, \hyperpage{10}, \hyperpage{28}
+  \item Riemann hypothesis, \hyperpage{26}
+  \item \texttt{RightCosets}, \hyperpage{15}
+  \item \texttt{RootInt}, \hyperpage{26}, \hyperpage{29}
+
+  \indexspace
+
+  \item \texttt{SaveAsBitmapPicture}, \hyperpage{5}, \hyperpage{10, 11}, 
+		\hyperpage{17}, \hyperpage{29}, \hyperpage{34}
+  \item \texttt{Set}, \hyperpage{4}, \hyperpage{14, 15}, 
+		\hyperpage{18, 19}, \hyperpage{28}
+  \item \texttt{SetName}, \hyperpage{12}
+  \item Sieve of Eratosthenes, \hyperpage{17}
+  \item \texttt{Sigma}, \hyperpage{9}, \hyperpage{11}, \hyperpage{25}, 
+		\hyperpage{29}
+  \item \texttt{Size}, \hyperpage{14, 15}, \hyperpage{22}, 
+		\hyperpage{27}
+  \item Small Groups Library, \hyperpage{8, 9}, \hyperpage{14}
+  \item stream, \hyperpage{8}
+  \item string, \hyperpage{8}
+  \item \texttt{StringFile}, \hyperpage{8}, \hyperpage{24}
+  \item \texttt{StructureDescription}, \hyperpage{14}, \hyperpage{18}, 
+		\hyperpage{21}, \hyperpage{25}, \hyperpage{27}
+  \item \texttt{SubgroupProperty}, \hyperpage{5}, \hyperpage{7}, 
+		\hyperpage{18}, \hyperpage{20}
+  \item \texttt{Sum}, \hyperpage{25}
+  \item sum-of-divisors function, \hyperpage{9, 10}
+  \item \texttt{SUM{\textunderscore}FLAGS}, \hyperpage{11}
+  \item \texttt{SymmetricGroup}, \hyperpage{7}, \hyperpage{18, 19}, 
+		\hyperpage{22}
+
+  \indexspace
+
+  \item \texttt{Trajectory}, \hyperpage{12}
+  \item \texttt{TransitiveGraphAutomorphismGroups}, \hyperpage{20}
+  \item \texttt{TransitiveIdentification}, \hyperpage{7}, 
+		\hyperpage{20}
+  \item \texttt{TransposedMat}, \hyperpage{28}
+  \item transposition, \hyperpage{7}
+  \item \texttt{TranspositionMatrixSn}, \hyperpage{22}
+  \item \texttt{TrivialSubgroup}, \hyperpage{18}
+
+  \indexspace
+
+  \item Ulam spiral, \hyperpage{5}
+  \item \texttt{UlamSpiral}, \hyperpage{17}
+  \item \texttt{Union}, \hyperpage{18}, \hyperpage{28}
+  \item unit sphere
+    \subitem rational points, \hyperpage{10}
+
+  \indexspace
+
+  \item Wieferich prime, \hyperpage{8}
+  \item word count, \hyperpage{8}
+  \item \texttt{WordCount}, \hyperpage{24}
+  \item \texttt{WordsString}, \hyperpage{8}, \hyperpage{24}
+
+  \indexspace
+
+  \item \texttt{Zero}, \hyperpage{17}, \hyperpage{29}, \hyperpage{34}
+
+\end{theindex}
