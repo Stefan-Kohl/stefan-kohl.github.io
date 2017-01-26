@@ -215,7 +215,7 @@ a:active  { color: #000000; background-color: #FFFFFF; text-decoration: none; }
 hr { height: 0.3pt; }
 
 /* ####################################################################### */
-§index.html§16-Jun-2016§
+§index.html§26-Jan-2017§
 {Frameset DTD}
 <html>
 
@@ -230,7 +230,7 @@ hr { height: 0.3pt; }
   <meta name = "DC.date.current"      content = "(SCHEME=ISO8601) 2010-03-27" />
   <meta name = "DC.type"              content = "Homepage" />
   <meta name = "DC.format"            content = "(SCHEME=imt) text/html" />
-  <meta name = "DC.identifier"        content = "(SCHEME=URL) http://www.gap-system.org/DevelopersPages/StefanKohl/" />
+  <meta name = "DC.identifier"        content = "(SCHEME=URL) https://stefan-kohl.github.io/" />
   <meta name = "DC.language"          content = "(SCHEME=NISOZ39.53) ENG" />
   {index.css}
 </head>
@@ -1718,7 +1718,7 @@ Seminar: Wednesday, 14:00 - 16:00
 </body>
 
 </html>
-§talks_kohl.html§16-Jun-2016§
+§talks_kohl.html§26-Jan-2017§
 {DTD}
 <html>
 
@@ -1736,6 +1736,8 @@ Seminar: Wednesday, 14:00 - 16:00
 <table class = "list" width = "100%" cellspacing = "2" cellpadding = "2"
        summary = "This table contains the list of talks and conference participations of Stefan Kohl.">
 
+  <tr> <td nowrap = "nowrap" valign = "top"> January 12 - 14, 2017     </td> <td valign = "top"> Participation in the <a href = "https://www.math.uni-bielefeld.de/~baumeist/wop2017/en/" target = "_blank">Workshop on Permutation Groups: Methods and Applications</a> at the University of Bielefeld.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> December 9 - 10, 2016     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2016/index.html" target = "_blank">Nikolaus Conference&nbsp;2016</a> at the RWTH Aachen.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> August 7 - 12, 2015      </td> <td valign = "top"> Gave a course <em>Introduction to <a href = "http://www.gap-system.org" target = "_blank">GAP</a> with an Emphasis on Automorphisms of Finite Groups</em> at Dogus University in Istanbul, mainly for faculty and PhD students from various universities in Turkey; participated in a subsequent workshop <em>Finite Groups and their Automorphisms</em>.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> December 5 - 6, 2014     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2014/index.html" target = "_blank">Nikolaus Conference&nbsp;2014</a> at the RWTH Aachen, and talk entitled <a href = "http://www.math.rwth-aachen.de/Nikolaus2014/abstracts/kohl.html" target = "_blank"><em>What do Thompson's Group V and the Collatz Conjecture have in Common?</em></a>.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> August 25 - 29, 2014     </td> <td valign = "top"> Participation in the <a href = "http://gapdays.de/gapdays2014/" target = "_blank">GAP Days 2014</a> at the RWTH Aachen.&nbsp;* </td> </tr>
@@ -3508,7 +3510,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§cpr.html§02-Jul-2016§
+§cpr.html§26-Jan-2016§
 {DTD}
 <html>
 
@@ -3523,8 +3525,8 @@ hr { height: 0.3pt; }
 
 <p class = "normaltext">
   The material presented on the page
-  <a href = "http://www.gap-system.org/DevelopersPages/StefanKohl/" target = "_blank">http://www.gap-system.org/DevelopersPages/StefanKohl/</a>
-  is Copyright&nbsp;1999&nbsp;-&nbsp;2016 by Stefan&nbsp;Kohl.
+  <a href = "https://stefan-kohl.github.io/" target = "_blank">https://stefan-kohl.github.io/</a>
+  is Copyright&nbsp;1999&nbsp;-&nbsp;2017 by Stefan&nbsp;Kohl.
   For details (including exceptions from this general copyright) and permissions, ask
   <a href = "mailto:{MYMAIL}">Stefan&nbsp;Kohl</a>.
   You may use the material in accordance with good practice in science.

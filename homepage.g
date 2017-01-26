@@ -5,7 +5,9 @@
 # HPDir    := "/home/kohl/Homepage-XHTML/";
 # HPDir    := "C:/Kohl/Homepage/";
 # HPDir    := "D:/HOMEPAGE/WWW.XHTML/";
-HPDir      := "E:/Homepage/WWW/";
+# HPDir    := "E:/Homepage/WWW/";
+# HPDir    := "C:/User/Homepage/WWW/";
+HPDir    := "/user/Homepage/WWW/";  
 HPFileName := Filename(Directory(HPDir),"homepage.input");
 Read(Concatenation(HPDir,"data.g"));
 
