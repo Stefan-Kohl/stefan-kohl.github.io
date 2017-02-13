@@ -2319,7 +2319,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§factint.html§16-Jun-2016§
+§factint.html§13-Feb-2017§
 {DTD}
 <html>
 
@@ -2335,7 +2335,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 <p class = "subtitle">
   Advanced Methods for <em class = "partsofheading">Fact</em>oring
   <em class = "partsofheading">Int</em>egers <br /> <br />
-  Version 1.5.3
+  Version 1.5.4
 </p>
 
 {SK}
@@ -2399,8 +2399,9 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 <ul>
   <li> Download FactInt: 
     <ul>
-      <li> <a href = "factint/factint-1.5.3-win.zip">factint-1.5.3-win.zip</a> (recent version, released 16-Jun-2011, about 4.2&nbsp;MB). </li>
-      <li> <a href = "factint/factint-1.5.2.tar.gz">factint-1.5.2.tar.gz</a> (previous version, released 26-Sep-2007, about 3.2&nbsp;MB). </li>
+      <li> <a href = "factint/factint-1.5.4.tar.gz">factint-1.5.4.tar.gz</a> (current version, released 13-Feb-2017, about 3.8&nbsp;MB). </li>
+      <li> <a href = "factint/factint-1.5.3-win.zip">factint-1.5.3-win.zip</a> (previous version, released 16-Jun-2011, about 4.2&nbsp;MB). </li>
+      <li> <a href = "factint/factint-1.5.2.tar.gz">factint-1.5.2.tar.gz</a> (old version, released 26-Sep-2007, about 3.2&nbsp;MB). </li>
     </ul>
   </li>
   <li> FactInt&nbsp;can&nbsp;be used under any operating system for which {GAP}&nbsp;is&nbsp;available. </li>
