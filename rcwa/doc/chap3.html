@@ -608,9 +608,10 @@ infinity
 <h5>3.2-2 EpimorphismFromFpGroup</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; EpimorphismFromFpGroup</code>( <var class="Arg">G</var>, <var class="Arg">r</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; EpimorphismFromFpGroup</code>( <var class="Arg">G</var>, <var class="Arg">r</var>, <var class="Arg">maxparts</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: an epimorphism from a finitely presented group to the rcwa group <var class="Arg">G</var>.</p>
 
-<p>The argument <var class="Arg">r</var> is the "search radius", i.e. the radius of the ball around 1 which is scanned for relations. In general, the larger <var class="Arg">r</var> is chosen the smaller the kernel of the returned epimorphism is. If the group <var class="Arg">G</var> has finite presentations, the kernel will in principle get trivial provided that <var class="Arg">r</var> is chosen large enough.</p>
+<p>The argument <var class="Arg">r</var> is the "search radius", i.e. the radius of the ball around 1 which is scanned for relations. In general, the larger <var class="Arg">r</var> is chosen the smaller the kernel of the returned epimorphism is. If the group <var class="Arg">G</var> has finite presentations, the kernel will in principle get trivial provided that <var class="Arg">r</var> is chosen large enough. If the optional argument <var class="Arg">maxparts</var> is given, it limits the search space to elements with at most <var class="Arg">maxparts</var> affine parts.</p>
 
 
 <div class="example"><pre>
@@ -621,9 +622,12 @@ infinity
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := SparseRep(Group(a,b,c));</span>
 &lt;(2(4),3(4)),(4(6),8(12)),(3(4),4(6))&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">phi := EpimorphismFromFpGroup(G,6);</span>
+#I  there are 3 generators and 12 relators of total length 330
+#I  there are 3 generators and 11 relators of total length 312
 [ a, b, c ] -&gt; [ ( 2(4), 3(4) ), ( 4(6), 8(12) ), ( 3(4), 4(6) ) ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RelatorsOfFpGroup(Source(phi));</span>
-[ a^2, b^2, c^2, (b*c)^3, (a*b)^6, (a*b*c*b)^3, (a*b*a*c)^12 ]
+[ a^2, b^2, c^2, (b*c)^3, (a*b)^6, (a*b*c*b)^3, (a*c*b*c)^3, 
+  (a*b*a*c)^12, ((a*b)^2*a*c)^12, (a*b*(a*c)^2)^12, (a*b*c*a*c*b)^12 ]
 
 </pre></div>
 
@@ -1063,7 +1067,7 @@ n = 100: after 100000 steps, the iterate has 7918 binary digits.
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Ball</code>( <var class="Arg">G</var>, <var class="Arg">p</var>, <var class="Arg">r</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: the ball of radius <var class="Arg">r</var> around the element <var class="Arg">g</var> in the group <var class="Arg">G</var>, respectively the ball of radius <var class="Arg">r</var> around the point <var class="Arg">p</var> under the action <var class="Arg">action</var> of the group <var class="Arg">G</var>, respectively the ball of radius <var class="Arg">r</var> around the point <var class="Arg">p</var> under the action <code class="code">OnPoints</code> of the group <var class="Arg">G</var>,</p>
 
-<p>All balls are understood with respect to <code class="code">GeneratorsOfGroup(<var class="Arg">G</var>)</code>. As membership tests can be expensive, the former method does not check whether <var class="Arg">g</var> is indeed an element of <var class="Arg">G</var>. The methods require that element- / point comparisons are cheap. They are not only applicable to rcwa groups. If the option <var class="Arg">Spheres</var> is set, the ball is split up and returned as a list of spheres. There is a related operation <code class="code">RestrictedBall(<var class="Arg">G</var>,<var class="Arg">g</var>,<var class="Arg">r</var>,<var class="Arg">modulusbound</var>)</code> specifically for rcwa groups which computes only those elements of the ball whose moduli do not exceed <var class="Arg">modulusbound</var>, and which can be reached from <var class="Arg">g</var> without computing intermediate elements whose moduli do exceed <var class="Arg">modulusbound</var>.</p>
+<p>All balls are understood with respect to <code class="code">GeneratorsOfGroup(<var class="Arg">G</var>)</code>. As membership tests can be expensive, the former method does not check whether <var class="Arg">g</var> is indeed an element of <var class="Arg">G</var>. The methods require that element- / point comparisons are cheap. They are not only applicable to rcwa groups. If the option <var class="Arg">Spheres</var> is set, the ball is split up and returned as a list of spheres. There is a related operation <code class="code">RestrictedBall(<var class="Arg">G</var>,<var class="Arg">g</var>,<var class="Arg">r</var>,<var class="Arg">modulusbound</var>)</code> specifically for rcwa groups which computes only those elements of the ball whose moduli do not exceed <var class="Arg">modulusbound</var>, and which can be reached from <var class="Arg">g</var> without computing intermediate elements whose moduli do exceed <var class="Arg">modulusbound</var>. The latter operation interprets an option <code class="code">"boundaffineparts"</code>. -- If this option is set and the group <var class="Arg">G</var> and the element <var class="Arg">g</var> are in sparse representation, then <var class="Arg">modulusbound</var> is actually taken to be a bound on the number of affine parts rather than a bound on the modulus.</p>
 
 
 <div class="example"><pre>
