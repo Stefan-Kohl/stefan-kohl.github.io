@@ -246,7 +246,7 @@ hr { height: 0.3pt; }
 </frameset>
 
 </html>
-§contents.html§15-Sep-2015§
+§contents.html§16-Feb-2017§
 {DTD}
 <html>
 
@@ -274,7 +274,10 @@ hr { height: 0.3pt; }
   <tr> <td nowrap = "nowrap"> <a href = "motivated_papers.html" target = "mainwindow">Papers</a> motivated by </td> </tr>
   <tr> <td nowrap = "nowrap"> questions of mine. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "miscellanea.html" target = "mainwindow">Miscellanea</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> <a href = "links.html" target = "mainwindow">External links</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> External links: </td> </tr>
+  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "albanian_music.html" target = "mainwindow">Albanian music</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;My brother <a href = "http://www.fkohl.de/" target = "_blank">Frithjof</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;My stster <a href = "http://evakohl.de/" target = "_blank">Eva</a>. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "cpr.html" target = "mainwindow">Copyright</a>. </td> </tr>
 
 </table>
@@ -3476,36 +3479,58 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§links.html§16-Jun-2016§
+§albanian_music.html§16-Feb-2017§
 {DTD}
 <html>
 
 <head>
-  <title> External Links </title>
+  <title> Links to Selected Albanian Music </title>
   {index.css}
 </head>
 
 <body>
 
-<h1> External Links </h1>
+<h1 class = "other" align = "center"> Links to Selected Albanian Music </h1>
 
 <ul>
   <li>
+    Ema Qazimi: <a href = "https://www.youtube.com/watch?v=cGoWX52eQLY" target = "_blank"><em>Krenari e Brezave</em></a>
     <p class = "normaltext">
-      My brother <a href = "http://www.fkohl.de/" target = "_blank">Frithjof</a>
-      has built a site showing about 45000 macro photos of insects, spiders and other arthropods.
-      Most of the photos have been taken in southern Germany.
-    </p>
-    <p align = "right">
-      <iframe src="http://www.fkohl.de/random/thumbs/en" scrolling="no" style="overflow:hidden;width:424px;height:194px;border:0px none;background-color:#EDEEEF;" title = "Homepage of my brother Frithjof on insects, spiders and other arthropods">
-           <a href="http://www.fkohl.de/">Makrofotos von Insekten, Spinnen und anderen Gliederfüssern</a>
-      </iframe>
+      A song about good times, full of beautiful lyrics to an amount which makes it basically untranslatable,
+      and with an enormous spirit of pride and optimism.
+      For this, Ema Qazimi got the first prize in the <em>Festivali i kënges në Radiotelevizion</em> in&nbsp;1981.
     </p>
   </li>
   <li>
+    Rovena Stefa: <a href = "https://www.youtube.com/watch?v=xEU14XpnQYM" target = "_blank"><em>Rrofte shqipja dhe vatani</em></a>
     <p class = "normaltext">
-      My sister <a href = "http://evakohl.de/" target = "_blank">Eva</a> is a freelance webdesigner,
-      and lives in Berlin.
+      A song about bad times in the diaspora, and longing for home.
+      Anyway a very nice song for dancing -- when I was in Vlora, at university parties this was frequently played
+      as dancing music.
+    </p>
+  </li>
+  <li>
+    <a href = "https://www.youtube.com/watch?v=BkCPOiE2y5s" target = "_blank"><em>Kur mi zbrisje shkallët</em></a>
+    <p class = "normaltext">
+      Beautiful wedding song from southern Albania. Very nice for dancing.
+      I heard it quite often when I was in Vlora.
+    </p>
+  </li>
+  <li>
+    Marina Grabovari: <a href = "https://www.youtube.com/watch?v=mgNEV_Vex-A" target = "_blank"><em>Mesnatë</em></a> 
+    <p class = "normaltext">
+      A WONDERFUL love song, from around&nbsp;1980.
+    </p>
+  </li>
+  <li>
+    Marina Grabovari: <a href = "https://www.youtube.com/watch?v=IPzDelHTU5w" target = "_blank"><em>Një djep në barrikadë</em></a> 
+    <p class = "normaltext">
+      A song by the same artist as above, but about fighting in the streets of Tirana in World&nbsp;War&nbsp;II
+      against the fashists. 
+      For this, Marina Grabovari got the first prize in the <em>Festivali i kënges në Radiotelevizion</em> in&nbsp;1982,
+      lost support by the party, was banned to a village and her career came to a sudden end.
+      (The imagery has likely been added much later for the YouTube video --
+      except for those showing her singing, of course.)
     </p>
   </li>
 </ul>
@@ -3513,7 +3538,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§cpr.html§26-Jan-2016§
+§cpr.html§26-Jan-2017§
 {DTD}
 <html>
 
