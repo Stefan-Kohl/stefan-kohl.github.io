@@ -287,7 +287,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§main.html§30-Sep-2016§
+§main.html§24-Feb-2017§
 {DTD}
 <html>
 
@@ -1784,7 +1784,7 @@ Seminar: Wednesday, 14:00 - 16:00
 </body>
 
 </html>
-§rcwa.html§12-Feb-2017§
+§rcwa.html§24-Feb-2017§
 {DTD}
 <html>
 
@@ -2218,7 +2218,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§resclasses.html§12-Feb-2017§
+§resclasses.html§24-Feb-2017§
 {DTD}
 <html>
 
@@ -2322,7 +2322,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§factint.html§13-Feb-2017§
+§factint.html§24-Feb-2017§
 {DTD}
 <html>
 
@@ -3550,7 +3550,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§cpr.html§26-Jan-2017§
+§cpr.html§24-Feb-2017§
 {DTD}
 <html>
 
