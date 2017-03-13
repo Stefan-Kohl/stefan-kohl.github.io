@@ -8,16 +8,16 @@ SetPackageInfo( rec(
 
 PackageName      := "RCWA",
 Subtitle         := "Residue-Class-Wise Affine Groups",
-Version          := "4.5.0",
-Date             := "12/02/2017",
-ArchiveURL       := "https://stefan-kohl.github.io/rcwa/rcwa-4.5.0",
+Version          := "4.5.1",
+Date             := "13/03/2017",
+ArchiveURL       := "https://stefan-kohl.github.io/rcwa/rcwa-4.5.1",
 ArchiveFormats   := ".tar.gz", # "-win.zip" when providing text files with Windows line breaks
 Persons          := [
                       rec( LastName      := "Kohl",
                            FirstNames    := "Stefan",
                            IsAuthor      := true,
                            IsMaintainer  := true,
-                           Email         := "stefan@mcs.st-and.ac.uk",
+                           Email         := "stefan@gap-system.org",
                            WWWHome       := "https://stefan-kohl.github.io/"
                          )
                     ],
@@ -48,10 +48,17 @@ Dependencies     := rec(
                          SuggestedOtherPackages := [ ],
                          ExternalConditions     := [ ]
                        ),
-AvailabilityTest := ReturnTrue,
+AvailabilityTest := function ( )
+                      if GAPInfo.BytesPerVariable = 4 then
+                        LogPackageLoadingMessage( PACKAGE_WARNING,
+                                                  [ "you are running GAP in legacy 32-bit mode - ",
+                                                    "not everything might work." ] );
+                      fi;
+                      return true;
+                    end,
 BannerString     := Concatenation( "\nLoading RCWA ", ~.Version,
                                    " ([R]esidue-[C]lass-[W]ise [A]ffine groups)",
-                                   "\n  by Stefan Kohl, stefan@mcs.st-and.ac.uk.",
+                                   "\n  by Stefan Kohl, stefan@gap-system.org.",
                                    "\nSee ?RCWA:About for information about the package.\n\n" ),
 TestFile         := "tst/testall.g",
 Keywords         := [ "infinite permutation groups", "permutation groups over rings",
