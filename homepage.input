@@ -2610,7 +2610,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 
 <body>
 
-<h1 class = "other"> Miscellanea </h1>
+<h1 class = "other" align = "center"> Miscellanea </h1>
 
 <ul>
   <li>
