@@ -246,7 +246,7 @@ hr { height: 0.3pt; }
 </frameset>
 
 </html>
-§contents.html§01-Mar-2017§
+§contents.html§01-Apr-2017§
 {DTD}
 <html>
 
@@ -269,15 +269,13 @@ hr { height: 0.3pt; }
   <tr> <td nowrap = "nowrap"> {GAP} packages: </td> </tr>
   <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "rcwa.html" target = "mainwindow">RCWA</a>. </td> </tr>
   <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "resclasses.html" target = "mainwindow">ResClasses</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "factint.html" target = "mainwindow">FactInt</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> GAP <a href = "gap-materials.html" target = "mainwindow">exercises</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> <a href = "motivated_papers.html" target = "mainwindow">Papers</a> motivated by </td> </tr>
-  <tr> <td nowrap = "nowrap"> questions of mine. </td> </tr>
+  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "factint.html" target = "mainwindow">FactInt</a> (public <a href = "https://github.com/gap-packages/FactInt" target = "_blank">repository</a>). </td> </tr>
+  <tr> <td nowrap = "nowrap"> My <a href = "http://mathoverflow.net/users/28104/stefan-kohl" target = "_blank">contributions</a> to MathOverflow. </td> </tr>
+  <tr> <td nowrap = "nowrap"> <a href = "motivated_papers.html" target = "mainwindow">Papers</a> motivated by questions of mine.</td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "miscellanea.html" target = "mainwindow">Miscellanea</a>. </td> </tr>
   <tr> <td nowrap = "nowrap"> External links: </td> </tr>
   <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;My brother <a href = "http://www.fkohl.de/" target = "_blank">Frithjof</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;My stster <a href = "http://evakohl.de/" target = "_blank">Eva</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "albanian_music.html" target = "mainwindow">Albanian music</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;My sister <a href = "http://evakohl.de/" target = "_blank">Eva</a>. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "cpr.html" target = "mainwindow">Copyright</a>. </td> </tr>
 
 </table>
@@ -287,7 +285,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§main.html§24-Feb-2017§
+§main.html§01-Apr-2017§
 {DTD}
 <html>
 
@@ -300,18 +298,15 @@ hr { height: 0.3pt; }
 
 <body>
 
-<b class = "address"> Dr. Stefan Kohl </b> <br />
-<b class = "address"> E-mail: <a href = "mailto:{MYMAIL}">{MYMAIL}</a> </b> <br />
-
 <hr />
-
-<br />
 
 <table width = "100%" cellspacing = "0" cellpadding = "0"
        summary = "This table contains the address and a photo of Stefan Kohl.">
 
   <tr>
     <td valign = "top">
+      <b class = "address"> Dr. Stefan Kohl </b> <br />
+      <b class = "address"> E-mail: <a href = "mailto:{MYMAIL}">{MYMAIL}</a> </b> <br />
     </td>
     <td rowspan = "2">
       <p class = "portrait">
@@ -324,15 +319,12 @@ hr { height: 0.3pt; }
     <td valign = "bottom">
       Mathematical interests: <br />
       Algebra (in particular group theory) and number theory. <br />
-      Computational aspects of these topics. <br /> <br />
-      Member of the <a href = "http://www.gap-system.org/Contacts/People/supportgroup.html" target = "_blank">GAP Support Group</a>.
+      Computational aspects of these topics.
       <br /> <br />
     </td>
   </tr>
 
 </table>
-
-<br />
 
 <hr />
 
@@ -2583,39 +2575,6 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§gap-materials.html§04-Oct-2011§
-{DTD}
-<html>
-
-<head>
-  <title> GAP Materials </title>
-  {index.css}
-</head>
-
-<body>
-
-<h1 class = "publications"> GAP Materials </h1>
-
-{SK}
-
-<h2> GAP Exercises </h2>
-
-<p class = "normaltext">
-  A collection of {GAP} exercises is available in <a href = "gap-exercises/chap0.html">HTML</a>
-  and <a href = "gap-exercises/manual.pdf">PDF</a>.
-</p>
-
-<h2> GAP Crossword Puzzle </h2>
-
-<p class = "normaltext">
-  A {GAP} crossword puzzle is available <a href = "gap-crossword/gap-crossword.html">here</a>.
-</p>
-
-{FOOTER}
-
-</body>
-
-</html>
 §announcements.html§30-Aug-2012§
 {DTD}
 <html>
@@ -2640,7 +2599,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§miscellanea.html§29-Sep-2014§
+§miscellanea.html§01-Apr-2017§
 {DTD}
 <html>
 
@@ -2651,17 +2610,21 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 
 <body>
 
-<h1> Miscellanea </h1>
+<h1 class = "other"> Miscellanea </h1>
 
 <ul>
   <li>
+    A collection of {GAP} exercises -- in <a href = "gap-exercises/chap0.html">HTML</a>
+    and <a href = "gap-exercises/manual.pdf">PDF</a> format.
+  </li>
+  <li>
+    A <a href = "gap-crossword/gap-crossword.html">GAP crossword puzzle</a>.
+  </li>
+  <li>
+    <a href = "primpath/primpath.html">Prime number races</a> in multiple dimensions.
+  </li>
+  <li>
     A couple of <a href = "problems.html">problems and examples</a> from elementary number theory.
-  </li>
-  <li>
-    Prime number races in multiple dimensions -- <a href = "primpath/primpath.html">conjecture and pictures</a>.
-  </li>
-  <li>
-    A few <a href = "photos.html">photos</a> from my holidays (all from the 1990's).
   </li>
 </ul>
 
@@ -3386,161 +3349,6 @@ a:active  { color: #0000FF; background-color: #000000; text-decoration: none; }
 hr { height: 0.3pt; }
 
 /* ####################################################################### */
-§photos.html§30-Jan-2006§
-{DTD}
-<html>
-
-<head>
-  <title> Photos from my Holidays </title>
-  {photos.css}
-</head>
-
-<body>
-
-<h1> Some Photos from my Holidays </h1>
-
-<table width = "100%" cellspacing = "8" cellpadding = "0"
-       summary = "This table contains selected photos from my holidays.">
-
-  <tr>
-    <td width = "250">
-      <a href = "images/schlateb.jpg">
-        <img src = "images/schlates.jpg" width = "250" height = "180"
-             alt = "Schlatenkees, Kristallwand; Venedigergruppe / Hohe Tauern (Austria)" />
-      </a>
-    </td>
-    <td valign = "bottom">
-      Schlatenkees, Kristallwand; Venedigergruppe / Hohe Tauern (Austria).
-    </td>
-  </tr>
-  <tr>
-    <td width = "250">
-      <a href = "images/geigerb.jpg">
-        <img src = "images/geigers.jpg" width = "250" height = "180"
-             alt = "Gro&szlig;er Geiger, Venedigergruppe / Hohe Tauern (Austria)" />
-      </a>
-    </td>
-    <td valign = "bottom">
-      Gro&szlig;er Geiger, Venedigergruppe / Hohe Tauern (Austria).
-    </td>
-  </tr>
-  <tr>
-    <td width = "250">
-      <a href = "images/dellachb.jpg">
-        <img src = "images/dellachs.jpg" width = "250" height = "180"
-             alt = "Gail Valley / K&auml;rnten (Austria)" />
-      </a>
-    </td>
-    <td valign = "bottom">
-      Gail Valley / K&auml;rnten (Austria).
-    </td>
-  </tr>
-  <tr>
-    <td width = "250">
-      <a href = "images/miradlpb.jpg">
-        <img src = "images/miradlps.jpg" width = "250" height = "180"
-             alt = "View from Mirador de Las Playas / El Hierro (Spain)" />
-      </a>
-    </td>
-    <td valign = "bottom">
-      View from Mirador de Las Playas / El Hierro (Spain).
-    </td>
-  </tr>
-  <tr>
-    <td width = "250">
-      <a href = "images/mercadb.jpg">
-        <img src = "images/mercads.jpg" width = "250" height = "180"
-             alt = "On the Mercadel / El Hierro (Spain)" />
-      </a>
-    </td>
-    <td valign = "bottom">
-      On the Mercadel / El Hierro (Spain).
-    </td>
-  </tr>
-  <tr>
-    <td width = "250">
-      <a href = "images/pettneub.jpg">
-        <img src = "images/pettneus.jpg" width = "250" height = "180"
-             alt = "On the Pettneuer Ferner; Verwallgruppe / Tirol (Austria)" />
-      </a>
-    </td>
-    <td valign = "bottom">
-      On the Pettneuer Ferner; Verwallgruppe / Tirol (Austria).
-    </td>
-  </tr>
-
-</table>
-
-</body>
-
-</html>
-§albanian_music.html§04-Mar-2017§
-{DTD}
-<html>
-
-<head>
-  <title> Links to Selected Albanian Music </title>
-  {index.css}
-</head>
-
-<body>
-
-<h1 class = "other" align = "center"> Links to Selected Albanian Music </h1>
-
-<ul>
-  <li>
-    Ema Qazimi: <a href = "https://www.youtube.com/watch?v=cGoWX52eQLY" target = "_blank"><em>Krenari e Brezave</em></a>
-    <p class = "normaltext">
-      A song about good times, full of beautiful lyrics to an amount which makes it basically untranslatable,
-      and with an enormous spirit of pride and optimism.
-      For this, Ema Qazimi got the first prize in the 20th
-      <a href = "http://festivali-rtsh.al/" target = "_blank"><em>Festivali i kenges ne RTSH</em></a>.
-    </p>
-  </li>
-  <li>
-    Rovena Stefa: <a href = "https://www.youtube.com/watch?v=xEU14XpnQYM" target = "_blank"><em>Rrofte shqipja dhe vatani</em></a>
-    <p class = "normaltext">
-      A song about bad times in the diaspora, and longing for home.
-      Anyway a very nice song for dancing -- when I was in Vlora, at university parties this was frequently played
-      as dancing music.
-    </p>
-  </li>
-  <li>
-    Vace Zela: <a href = "https://www.youtube.com/watch?v=osFYt8k7lgk" target = "_blank"><em>Nene moj do pres gershetin</em></a>
-    <p class = "normaltext">
-      A very beautiful song -- of a bride who decides otherwise, cancels her wedding, and ... -- but listen yourself!
-      For this, Vace Zela got the first prize in the 15th
-      <a href = "http://festivali-rtsh.al/" target = "_blank"><em>Festivali i kenges ne RTSH</em></a>.
-    </p>
-  </li>
-  <li>
-    <a href = "https://www.youtube.com/watch?v=BkCPOiE2y5s" target = "_blank"><em>Kur mi zbrisje shkallet</em></a>
-    <p class = "normaltext">
-      Beautiful wedding song from southern Albania. Very nice for dancing.
-      I heard it quite often when I was in Vlora.
-    </p>
-  </li>
-  <li>
-    Marina Grabovari: <a href = "https://www.youtube.com/watch?v=mgNEV_Vex-A" target = "_blank"><em>Mesnate</em></a> 
-    <p class = "normaltext">
-      A WONDERFUL love song, from around&nbsp;1980.
-    </p>
-  </li>
-  <li>
-    Marina Grabovari: <a href = "https://www.youtube.com/watch?v=IPzDelHTU5w" target = "_blank"><em>Nje djep ne barrikade</em></a> 
-    <p class = "normaltext">
-      Another very nice song by the same artist as above.
-      Unintentionally humoristic, or at least can be taken as such -- but listen yourself!
-      For this, Marina Grabovari got the first prize in the 21st
-      <a href = "http://festivali-rtsh.al/" target = "_blank"><em>Festivali i kenges ne RTSH</em></a>,
-      lost support by PPSH, was banned to a village and her career came to a sudden end.
-    </p>
-  </li>
-</ul>
-
-</body>
-
-</html>
 §cpr.html§24-Feb-2017§
 {DTD}
 <html>
