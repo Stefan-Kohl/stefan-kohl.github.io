@@ -3319,36 +3319,6 @@ Click on the larger images to get them in original size.
 </body>
 
 </html>
-§photos.css§25-Sep-2010§
-/* ####################################################################### */
-/* ##                                                                   ## */
-/* ##  photos.css          Photo Page Style File           Stefan Kohl  ## */
-/* ##                                                                   ## */
-/* ####################################################################### */
-
-body {
-  color:            #FFFFFF;
-  background-color: #000000;
-
-  margin-top:     1cm;
-  margin-bottom:  1cm;
-  margin-left:    3mm;
-  margin-right:   3mm;
-
-  font-family: Helvetica,Verdana,Arial,sans-serif;
-  font-size: 10pt;
-}
-
-h1 { text-align:    center;
-     margin-bottom: 8mm; }
-
-a:link    { color: #0000AE; background-color: #000000; text-decoration: none; }
-a:visited { color: #0000AE; background-color: #000000; text-decoration: none; }
-a:active  { color: #0000FF; background-color: #000000; text-decoration: none; }
-
-hr { height: 0.3pt; }
-
-/* ####################################################################### */
 §cpr.html§24-Feb-2017§
 {DTD}
 <html>
