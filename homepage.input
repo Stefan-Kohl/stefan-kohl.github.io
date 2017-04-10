@@ -373,7 +373,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§04-Mar-2017§
+§publications_kohl.html§10-Apr-2017§
 {DTD}
 <html>
 
@@ -392,7 +392,8 @@ hr { height: 0.3pt; }
 
 <ul>
   <li>
-    The Collatz conjecture in a group theoretic context. <em>To appear in J. Group Theory</em>. <br />
+    The Collatz conjecture in a group theoretic context. <em>J. Group Theory</em>. <br />
+    DOI:&nbsp;<a href = "https://doi.org/10.1515/jgth-2017-0012" target = "_blank">10.1515/jgth-2017-0012</a>.
     Download:&nbsp;<a href = "articles/collatzgroups.pdf">PDF</a>.
     <br /> <br />
   </li>
