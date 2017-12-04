@@ -2313,7 +2313,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§factint.html§24-Feb-2017§
+§factint.html§04-Dec-2017§
 {DTD}
 <html>
 
@@ -2329,7 +2329,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 <p class = "subtitle">
   Advanced Methods for <em class = "partsofheading">Fact</em>oring
   <em class = "partsofheading">Int</em>egers <br /> <br />
-  Version 1.5.4
+  Version 1.6.0
 </p>
 
 {SK}
@@ -2393,13 +2393,14 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 <ul>
   <li> Download FactInt: 
     <ul>
-      <li> <a href = "factint/factint-1.5.4.tar.gz">factint-1.5.4.tar.gz</a> (current version, released 13-Feb-2017, about 3.8&nbsp;MB). </li>
-      <li> <a href = "factint/factint-1.5.3-win.zip">factint-1.5.3-win.zip</a> (previous version, released 16-Jun-2011, about 4.2&nbsp;MB). </li>
+      <li> <a href = "factint/factint-1.6.0.tar.gz">factint-1.6.0.tar.gz</a> (current version, released 04-Dec-2017, about 3.8&nbsp;MB). </li>
+      <li> <a href = "factint/factint-1.5.4.tar.gz">factint-1.5.4.tar.gz</a> (previous version, released 13-Feb-2017, about 3.8&nbsp;MB). </li>
+      <li> <a href = "factint/factint-1.5.3-win.zip">factint-1.5.3-win.zip</a> (old version, released 16-Jun-2011, about 4.2&nbsp;MB). </li>
       <li> <a href = "factint/factint-1.5.2.tar.gz">factint-1.5.2.tar.gz</a> (old version, released 26-Sep-2007, about 3.2&nbsp;MB). </li>
     </ul>
   </li>
   <li> FactInt&nbsp;can&nbsp;be used under any operating system for which {GAP}&nbsp;is&nbsp;available. </li>
-  <li> Requirements: {GAP}&nbsp;4.4.9 or newer and <a href = "http://www.gap-system.org/Packages/gapdoc.html" target = "_blank">GAPDoc</a>&nbsp;1.0 or newer. </li>
+  <li> Requirements: {GAP}&nbsp;4.8.8 or newer and <a href = "http://www.gap-system.org/Packages/gapdoc.html" target = "_blank">GAPDoc</a>&nbsp;1.6 or newer. </li>
   <li> Installation: extract the distribution file in the <code>pkg/</code> subdirectory of the {GAP} root directory. </li>
   <li> Manual: <a href = "factint/doc/chap0.html">HTML</a>&nbsp;<a href = "factint/doc/manual.pdf">PDF</a>. </li>
   <li> Some <a href = "factint/examples.html">examples</a> for the use of FactInt. </li>
