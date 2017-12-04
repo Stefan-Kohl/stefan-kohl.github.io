@@ -8,16 +8,16 @@ SetPackageInfo( rec(
 
 PackageName      := "FactInt",
 Subtitle         := "Advanced Methods for Factoring Integers", 
-Version          := "1.5.4",
-Date             := "13/02/2017",
-ArchiveURL       := "https://stefan-kohl.github.io/factint/factint-1.5.4",
+Version          := "1.6.0",
+Date             := "04/12/2017",
+ArchiveURL       := "https://stefan-kohl.github.io/factint/factint-1.6.0",
 ArchiveFormats   := ".tar.gz", # "-win.zip" when providing text files with Windows line breaks
 Persons          := [
                       rec( LastName      := "Kohl",
                            FirstNames    := "Stefan",
                            IsAuthor      := true,
                            IsMaintainer  := true,
-                           Email         := "stefan@mcs.st-and.ac.uk",
+                           Email         := "stefan@gap-system.org",
                            WWWHome       := "https://stefan-kohl.github.io/"
                          )
                     ],
@@ -45,15 +45,15 @@ PackageDoc       := rec(
                          Autoload         := true
                        ),
 Dependencies     := rec(
-                         GAP                    := ">=4.4.9",
-                         NeededOtherPackages    := [ ["GAPDoc",">=1.0"] ],
+                         GAP                    := ">=4.8.8",
+                         NeededOtherPackages    := [ ["GAPDoc",">=1.6"] ],
                          SuggestedOtherPackages := [ ],
                          ExternalConditions     := [ ]
                        ),
 AvailabilityTest := ReturnTrue,
 BannerString     := Concatenation( "\nLoading FactInt ", ~.Version,
                                    " (Routines for Integer Factorization)",
-                                   "\nby Stefan Kohl, stefan@mcs.st-and.ac.uk\n\n" ),
+                                   "\nby Stefan Kohl, stefan@gap-system.org\n\n" ),
 TestFile         := "factint.tst",
 Keywords         := [ "Integer factorization", "ECM", "Elliptic Curves Method",
                       "MPQS", "Multiple Polynomial Quadratic Sieve", "CFRAC",
