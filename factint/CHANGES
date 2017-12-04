@@ -127,5 +127,5 @@ Changes between FactInt 1.0 and FactInt 1.1:
    routine. The kernel routine has been implemented in src/listoper.c by
    Steve Linton.
 
-Initial FactInt: 1.0 (July 1999)
+Initial version: 1.0 (July 1999)
 
