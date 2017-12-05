@@ -1775,7 +1775,7 @@ Seminar: Wednesday, 14:00 - 16:00
 </body>
 
 </html>
-§rcwa.html§13-Mar-2017§
+§rcwa.html§05-Dec-2017§
 {DTD}
 <html>
 
@@ -1791,7 +1791,7 @@ Seminar: Wednesday, 14:00 - 16:00
 <p class = "subtitle">
   <em class = "partsofheading">R</em>esidue-<em class = "partsofheading">C</em>lass-<em class = "partsofheading">W</em>ise
   <em class = "partsofheading">A</em>ffine Groups <br /> <br />
-  Version 4.5.1
+  Version 4.6.0
 </p>
 
 {SK}
@@ -1895,8 +1895,9 @@ DOI:&nbsp;<a href = "http://dx.doi.org/10.1016/j.jsc.2007.12.001" target = "_bla
   Download one of the following archives:
 </p>
 <ul>
-  <li> <a href = "rcwa/rcwa-4.5.1.tar.gz">rcwa-4.5.1.tar.gz</a>, <a href = "rcwa/rcwa-4.5.1-win.zip">rcwa-4.5.1-win.zip</a> (current version, for GAP >=4.8.5 in 64-bit mode, released 13-Mar-2017, about 13&nbsp;MB). </li>
-  <li> <a href = "rcwa/rcwa-4.4.1.tar.gz">rcwa-4.4.1.tar.gz</a>, <a href = "rcwa/rcwa-4.4.1-win.zip">rcwa-4.4.1-win.zip</a> (previous version, for GAP >=4.8, released 22-May-2016, about 13&nbsp;MB). </li>
+  <li> <a href = "rcwa/rcwa-4.6.0.tar.gz">rcwa-4.6.0.tar.gz</a>, <a href = "rcwa/rcwa-4.6.0-win.zip">rcwa-4.6.0-win.zip</a> (current version, for GAP >=4.8.7 in 64-bit mode, released 05-Dec-2017, about 13&nbsp;MB). </li>
+  <li> <a href = "rcwa/rcwa-4.5.1.tar.gz">rcwa-4.5.1.tar.gz</a>, <a href = "rcwa/rcwa-4.5.1-win.zip">rcwa-4.5.1-win.zip</a> (previous version, for GAP >=4.8.5 in 64-bit mode, released 13-Mar-2017, about 13&nbsp;MB). </li>
+  <li> <a href = "rcwa/rcwa-4.4.1.tar.gz">rcwa-4.4.1.tar.gz</a>, <a href = "rcwa/rcwa-4.4.1-win.zip">rcwa-4.4.1-win.zip</a> (old version, for GAP >=4.8, released 22-May-2016, about 13&nbsp;MB). </li>
   <li> <a href = "rcwa/rcwa-4.3.1.tar.gz">rcwa-4.3.1.tar.gz</a>, <a href = "rcwa/rcwa-4.3.1-win.zip">rcwa-4.3.1-win.zip</a> (old version, for GAP 4.8, released 09-Mar-2016, about 13&nbsp;MB). </li>
   <li> <a href = "rcwa/rcwa-3.7.0.tar.gz">rcwa-3.7.0.tar.gz</a>, <a href = "rcwa/rcwa-3.7.0-win.zip">rcwa-3.7.0-win.zip</a> (old version, for GAP 4.7, released 21-Jul-2014, about 5.3&nbsp;MB). </li>
   <li> <a href = "rcwa/rcwa-3.6.1.tar.gz">rcwa-3.6.1.tar.gz</a>, <a href = "rcwa/rcwa-3.6.1-win.zip">rcwa-3.6.1-win.zip</a> (old version, for GAP 4.7, released 18-Nov-2013, about 5.2&nbsp;MB). </li>
@@ -2209,7 +2210,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§resclasses.html§13-Mar-2017§
+§resclasses.html§05-Dec-2017§
 {DTD}
 <html>
 
@@ -2226,7 +2227,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
   Set-Theoretic Computations with
   <em class = "partsofheading">Res</em>idue
   <em class = "partsofheading">Classes</em> <br /> <br />
-  Version 4.6.0
+  Version 4.7.0
 </p>
 
 {SK}
@@ -2288,9 +2289,10 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
   Download one of the following archives:
 </p>
 <ul>
-  <li> <a href = "resclasses/resclasses-4.6.0.tar.gz">resclasses-4.6.0.tar.gz</a>, <a href = "resclasses/resclasses-4.6.0-win.zip">resclasses-4.6.0-win.zip</a> (current version, for GAP >=4.8.5, released 12-Feb-2017, about 300KB). </li>
-  <li> <a href = "resclasses/resclasses-4.5.0.tar.gz">resclasses-4.5.0.tar.gz</a>, <a href = "resclasses/resclasses-4.5.0-win.zip">resclasses-4.5.0-win.zip</a> (previous version, for GAP >=4.8, released 14-May-2016, about 300KB). </li>
-  <li> <a href = "resclasses/resclasses-4.4.2.tar.gz">resclasses-4.4.2.tar.gz</a>, <a href = "resclasses/resclasses-4.4.2-win.zip">resclasses-4.4.2-win.zip</a> (previous version, for GAP 4.8, released 09-Mar-2016, about 300KB). </li>
+  <li> <a href = "resclasses/resclasses-4.7.0.tar.gz">resclasses-4.7.0.tar.gz</a>, <a href = "resclasses/resclasses-4.7.0-win.zip">resclasses-4.7.0-win.zip</a> (current version, for GAP >=4.8.7, released 05-Dec-2017, about 300KB). </li>
+  <li> <a href = "resclasses/resclasses-4.6.0.tar.gz">resclasses-4.6.0.tar.gz</a>, <a href = "resclasses/resclasses-4.6.0-win.zip">resclasses-4.6.0-win.zip</a> (previous version, for GAP >=4.8.5, released 12-Feb-2017, about 300KB). </li>
+  <li> <a href = "resclasses/resclasses-4.5.0.tar.gz">resclasses-4.5.0.tar.gz</a>, <a href = "resclasses/resclasses-4.5.0-win.zip">resclasses-4.5.0-win.zip</a> (old version, for GAP >=4.8, released 14-May-2016, about 300KB). </li>
+  <li> <a href = "resclasses/resclasses-4.4.2.tar.gz">resclasses-4.4.2.tar.gz</a>, <a href = "resclasses/resclasses-4.4.2-win.zip">resclasses-4.4.2-win.zip</a> (old version, for GAP 4.8, released 09-Mar-2016, about 300KB). </li>
   <li> <a href = "resclasses/resclasses-3.4.0.tar.gz">resclasses-3.4.0.tar.gz</a>, <a href = "resclasses/resclasses-3.4.0-win.zip">resclasses-3.4.0-win.zip</a> (old version, for GAP 4.7, released 21-Jul-2014, about 270KB). </li>
   <li> <a href = "resclasses/resclasses-3.3.2.tar.gz">resclasses-3.3.2.tar.gz</a>, <a href = "resclasses/resclasses-3.3.2-win.zip">resclasses-3.3.2-win.zip</a> (old version, for GAP 4.6, released 18-Nov-2013). </li>
   <li> <a href = "resclasses/resclasses-3.0.0.tar.gz">resclasses-3.0.0.tar.gz</a>, <a href = "resclasses/resclasses-3.0.0-win.zip">resclasses-3.0.0-win.zip</a> (old version, for GAP 4.4.12, released 08-May-2011). </li>
