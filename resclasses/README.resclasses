@@ -4,9 +4,9 @@
 
                            -- A GAP 4 Package --
 
-                               Version 4.6.0
+                               Version 4.7.0
 
-        Author and Maintainer:  Stefan Kohl, stefan@mcs.st-and.ac.uk
+         Author and Maintainer:  Stefan Kohl, stefan@gap-system.org
 
 
                                   Abstract
@@ -25,7 +25,7 @@ viewer.
 
                                 Requirements
 
-This version of  ResClasses  needs  GAP >=4.8.3,  GAPDoc >=1.5.1,  Polycyclic 
+This version of  ResClasses  needs  GAP >=4.8.7,  GAPDoc >=1.5.1,  Polycyclic 
 >=2.11 and Utils >=0.40.  All required packages are already present in an up-
 to-date standard  GAP installation.  ResClasses can be used on  all platforms
 for which GAP is available.  It is completely written in the GAP language and
@@ -46,7 +46,7 @@ ter `Installation and Auxiliary Functions' in the manual.
 
 New releases of this package are put online on the package web page
 
-    http://www.gap-system.org/DevelopersPages/StefanKohl/resclasses.html
+    https://stefan-kohl.github.io/resclasses.html
 
                                      ---
 
