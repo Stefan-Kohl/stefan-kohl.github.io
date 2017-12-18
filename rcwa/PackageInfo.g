@@ -8,16 +8,16 @@ SetPackageInfo( rec(
 
 PackageName      := "RCWA",
 Subtitle         := "Residue-Class-Wise Affine Groups",
-Version          := "4.6.0",
-Date             := "05/12/2017",
-ArchiveURL       := "https://stefan-kohl.github.io/rcwa/rcwa-4.6.0",
+Version          := "4.6.1",
+Date             := "18/12/2017",
+ArchiveURL       := "https://stefan-kohl.github.io/rcwa/rcwa-4.6.1",
 ArchiveFormats   := ".tar.gz", # "-win.zip" when providing text files with Windows line breaks
 Persons          := [
                       rec( LastName      := "Kohl",
                            FirstNames    := "Stefan",
                            IsAuthor      := true,
                            IsMaintainer  := true,
-                           Email         := "stefan@gap-system.org",
+                           Email         := "stefan@mcs.st-and.ac.uk",
                            WWWHome       := "https://stefan-kohl.github.io/"
                          )
                     ],
@@ -58,7 +58,7 @@ AvailabilityTest := function ( )
                     end,
 BannerString     := Concatenation( "\nLoading RCWA ", ~.Version,
                                    " ([R]esidue-[C]lass-[W]ise [A]ffine groups)",
-                                   "\n  by Stefan Kohl, stefan@gap-system.org.",
+                                   "\n  by Stefan Kohl, stefan@mcs.st-and.ac.uk.",
                                    "\nSee ?RCWA:About for information about the package.\n\n" ),
 TestFile         := "tst/testall.g",
 Keywords         := [ "infinite permutation groups", "permutation groups over rings",
