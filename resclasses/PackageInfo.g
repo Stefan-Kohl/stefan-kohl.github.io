@@ -8,16 +8,16 @@ SetPackageInfo( rec(
 
 PackageName      := "ResClasses",
 Subtitle         := "Set-Theoretic Computations with Residue Classes",
-Version          := "4.7.0",
-Date             := "05/12/2017",
-ArchiveURL       := "https://stefan-kohl.github.io/resclasses/resclasses-4.7.0",
+Version          := "4.7.1",
+Date             := "18/12/2017",
+ArchiveURL       := "https://stefan-kohl.github.io/resclasses/resclasses-4.7.1",
 ArchiveFormats   := ".tar.gz", # "-win.zip" when providing text files with Windows line breaks
 Persons          := [
                       rec( LastName      := "Kohl",
                            FirstNames    := "Stefan",
                            IsAuthor      := true,
                            IsMaintainer  := true,
-                           Email         := "stefan@gap-system.org",
+                           Email         := "stefan@mcs.st-and.ac.uk",
                            WWWHome       := "https://stefan-kohl.github.io/"
                          )
                     ],
@@ -49,7 +49,7 @@ Dependencies     := rec(
 AvailabilityTest := ReturnTrue,
 BannerString     := Concatenation( "\nLoading ResClasses ", ~.Version,
                                    " (Computations with Residue Classes)",
-                                   "\nby Stefan Kohl, stefan@gap-system.org\n\n" ),
+                                   "\nby Stefan Kohl, stefan@mcs.st-and.ac.uk\n\n" ),
 TestFile         := "tst/testall.g",
 Keywords         := [ "residue classes", "integers", "number theory" ]
 
