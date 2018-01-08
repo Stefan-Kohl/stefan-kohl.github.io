@@ -2211,7 +2211,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§resclasses.html§18-Dec-2017§
+§resclasses.html§08-Jan-2018§
 {DTD}
 <html>
 
@@ -2234,7 +2234,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 {SK}
 
 <h2>
-  Description
+  Abstract
 </h2>
 
 <p class = "firstparagraph">
@@ -2316,7 +2316,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§factint.html§04-Dec-2017§
+§factint.html§08-Jan-2018§
 {DTD}
 <html>
 
@@ -2338,7 +2338,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 {SK}
 
 <h2>
-  Description
+  Abstract
 </h2>
 
 <p class = "firstparagraph">
