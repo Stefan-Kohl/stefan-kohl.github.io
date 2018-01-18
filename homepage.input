@@ -373,7 +373,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§05-Dec-2017§
+§publications_kohl.html§18-Jan-2018§
 {DTD}
 <html>
 
@@ -500,15 +500,15 @@ hr { height: 0.3pt; }
   <li>
     <a href = "http://www.gap-system.org/Packages/rcwa.html" target = "_blank">RCWA</a>.
     Residue-class-wise affine groups. {GAP}&nbsp;package. 2005. <br />
-    Current version: 4.5.1 (released 13/03/2017). <br />
+    Current version: 4.6.1 (released 18/12/2017). <br />
     For a longer description and download, see <a href = "rcwa.html">here</a>.
     <br /> <br />
   </li>
   <li>
     <a href = "http://www.gap-system.org/Packages/factint.html" target = "_blank">FactInt</a>.
     Advanced methods for factoring integers. {GAP}&nbsp;package. 1999. <br />
-    Current version: 1.5.4 (released 13/02/2017). <br />
-    For a longer description and download, see <a href = "factint.html">here</a>.
+    Current version: 1.6.1 (released 17/01/2018). <br />
+    For a longer description and download, see <a href = "https://gap-packages.github.io/FactInt/" target = "_blank">here</a>.
   </li>
 </ul>
 
@@ -518,7 +518,7 @@ hr { height: 0.3pt; }
   <li>
     <a href = "http://www.gap-system.org/Packages/resclasses.html" target = "_blank">ResClasses</a>.
     Set-theoretic computations with residue classes. {GAP}&nbsp;package. 2004. <br />
-    Current version: 4.5.0 (released 14/05/2016). <br />
+    Current version: 4.7.1 (released 18/12/2017). <br />
     For a longer description, see <a href = "resclasses.html">here</a>.
   </li>
 </ul>
