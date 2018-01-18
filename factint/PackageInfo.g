@@ -8,10 +8,22 @@ SetPackageInfo( rec(
 
 PackageName      := "FactInt",
 Subtitle         := "Advanced Methods for Factoring Integers", 
-Version          := "1.6.0",
-Date             := "04/12/2017",
-ArchiveURL       := "https://stefan-kohl.github.io/factint/factint-1.6.0",
-ArchiveFormats   := ".tar.gz", # "-win.zip" when providing text files with Windows line breaks
+Version          := "1.6.1",
+Date             := "17/01/2018",
+
+SourceRepository := rec(
+    Type := "git",
+    URL := Concatenation( "https://github.com/gap-packages/", ~.PackageName ),
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", ~.PackageName ),
+README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/", ~.PackageName, "-", ~.Version ),
+ArchiveFormats := ".tar.gz",
+
 Persons          := [
                       rec( LastName      := "Kohl",
                            FirstNames    := "Stefan",
@@ -19,14 +31,25 @@ Persons          := [
                            IsMaintainer  := true,
                            Email         := "stefan@gap-system.org",
                            WWWHome       := "https://stefan-kohl.github.io/"
-                         )
+                         ),
+                      rec( LastName      := "Konovalov",
+                           FirstNames    := "Alexander",
+                           IsAuthor      := false,
+                           IsMaintainer  := true,
+                           Email         := "alexander.konovalov@st-andrews.ac.uk",
+                           WWWHome       := "https://alexk.host.cs.st-andrews.ac.uk",
+                           PostalAddress := Concatenation( [
+                             "School of Computer Science\n",
+                             "University of St Andrews\n",
+                             "Jack Cole Building, North Haugh,\n",
+                             "St Andrews, Fife, KY16 9SX, Scotland" ] ),
+                           Place         := "St Andrews",
+                           Institution   := "University of St Andrews"
+    ),
                     ],
 Status           := "accepted",
 CommunicatedBy   := "Mike Atkinson (St. Andrews)",
 AcceptDate       := "07/1999",
-PackageWWWHome   := "https://stefan-kohl.github.io/factint.html",
-README_URL       := "https://stefan-kohl.github.io/factint/README.factint",
-PackageInfoURL   := "https://stefan-kohl.github.io/factint/PackageInfo.g",
 AbstractHTML     := Concatenation("This package provides routines for factoring integers, ",
                                   "in particular:</p>\n<ul>\n  <li>Pollard's <em>p</em>-1</li>\n",
                                   "  <li>Williams' <em>p</em>+1</li>\n  <li>Elliptic Curves ",
@@ -54,11 +77,38 @@ AvailabilityTest := ReturnTrue,
 BannerString     := Concatenation( "\nLoading FactInt ", ~.Version,
                                    " (Routines for Integer Factorization)",
                                    "\nby Stefan Kohl, stefan@gap-system.org\n\n" ),
-TestFile         := "factint.tst",
+TestFile         := "tst/testall.g",
 Keywords         := [ "Integer factorization", "ECM", "Elliptic Curves Method",
                       "MPQS", "Multiple Polynomial Quadratic Sieve", "CFRAC",
                       "Continued Fraction Algorithm", "Pollard's p-1", "Williams' p+1",
-                      "Cunningham Tables", "Richard P. Brent's Factor Tables" ]
+                      "Cunningham Tables", "Richard P. Brent's Factor Tables" ],
+
+AutoDoc := rec(
+  TitlePage := rec(
+    Copyright := """
+      &copyright; 1999 - 2017 by Stefan Kohl. <P/>
+
+      &FactInt; is free software: you can redistribute it and/or modify
+      it under the terms of the GNU General Public License as published by
+      the Free Software Foundation, either version 2 of the License, or
+      (at your option) any later version. <P/>
+
+      &FactInt; is distributed in the hope that it will be useful,
+      but WITHOUT ANY WARRANTY; without even the implied warranty of
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+      GNU General Public License for more details. <P/>
+
+      For a copy of the GNU General Public License, see
+      the file <F>GPL</F> in the <F>etc</F> directory of the &GAP;
+      distribution or see <URL>http://www.gnu.org/licenses/gpl.html</URL>.
+      """,
+    Abstract := """<#Include SYSTEM "abstract.xml">""",
+    Acknowledgements := """
+      I would like to thank Bettina Eick and Steve Linton for their support
+      and many interesting discussions.
+      """,
+  ),
+),
 
 ) );
 
