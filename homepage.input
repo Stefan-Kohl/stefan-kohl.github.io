@@ -285,7 +285,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§main.html§01-Apr-2017§
+§main.html§29-Mar-2018§
 {DTD}
 <html>
 
@@ -1789,7 +1789,7 @@ Seminar: Wednesday, 14:00 - 16:00
 </body>
 
 </html>
-§rcwa.html§18-Dec-2017§
+§rcwa.html§29-Mar-2018§
 {DTD}
 <html>
 
@@ -2224,7 +2224,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§resclasses.html§08-Jan-2018§
+§resclasses.html§29-Mar-2018§
 {DTD}
 <html>
 
@@ -2329,7 +2329,7 @@ gap> DrawOrbitPicture(G,[0,1],40,512,512,false,fail,
 </body>
 
 </html>
-§factint.html§18-Jan-2018§
+§factint.html§29-Mar-2018§
 {DTD}
 <html>
 
@@ -3349,7 +3349,7 @@ Click on the larger images to get them in original size.
 </body>
 
 </html>
-§cpr.html§24-Feb-2017§
+§cpr.html§29-Mar-2018§
 {DTD}
 <html>
 
@@ -3365,7 +3365,7 @@ Click on the larger images to get them in original size.
 <p class = "normaltext">
   The material presented on the page
   <a href = "https://stefan-kohl.github.io/" target = "_blank">https://stefan-kohl.github.io/</a>
-  is Copyright&nbsp;1999&nbsp;-&nbsp;2017 by Stefan&nbsp;Kohl.
+  is Copyright&nbsp;1999&nbsp;-&nbsp;2018 by Stefan&nbsp;Kohl.
   For details (including exceptions from this general copyright) and permissions, ask
   <a href = "mailto:{MYMAIL}">Stefan&nbsp;Kohl</a>.
   You may use the material in accordance with good practice in science.
