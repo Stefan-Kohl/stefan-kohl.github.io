@@ -246,7 +246,7 @@ hr { height: 0.3pt; }
 </frameset>
 
 </html>
-§contents.html§05-Mar-2018§
+§contents.html§30-Sep-2018§
 {DTD}
 <html>
 
@@ -262,20 +262,15 @@ hr { height: 0.3pt; }
 <table width = "100%" cellspacing = "5" cellpadding = "0"
        summary = "This is the table of contents of the homepage of Stefan Kohl.">
 
-  <tr> <td nowrap = "nowrap"> <a href = "cv_kohl.html" target = "mainwindow">Curriculum vitae</a>. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "publications_kohl.html" target = "mainwindow">Publications</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> <a href = "teaching_kohl.html" target = "mainwindow">Teaching</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> <a href = "talks_kohl.html" target = "mainwindow">Talks / conferences</a>. </td> </tr>
   <tr> <td nowrap = "nowrap"> {GAP} packages: </td> </tr>
   <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "rcwa.html" target = "mainwindow">RCWA</a> (public <a href = "https://github.com/gap-packages/rcwa" target = "_blank">repository</a>). </td> </tr>
   <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "resclasses.html" target = "mainwindow">ResClasses</a> (public <a href = "https://github.com/gap-packages/resclasses" target = "_blank">repository</a>). </td> </tr>
   <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "factint.html" target = "mainwindow">FactInt</a> (public <a href = "https://github.com/gap-packages/FactInt" target = "_blank">repository</a>). </td> </tr>
   <tr> <td nowrap = "nowrap"> My <a href = "http://mathoverflow.net/users/28104/stefan-kohl" target = "_blank">contributions</a> to MathOverflow. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "motivated_papers.html" target = "mainwindow">Papers</a> motivated by questions of mine.</td> </tr>
+  <tr> <td nowrap = "nowrap"> <a href = "talks_kohl.html" target = "mainwindow">Talks / conferences</a>. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "miscellanea.html" target = "mainwindow">Miscellanea</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> External links: </td> </tr>
-  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;My brother <a href = "http://www.fkohl.de/" target = "_blank">Frithjof</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;My sister <a href = "http://evakohl.de/" target = "_blank">Eva</a>. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "cpr.html" target = "mainwindow">Copyright</a>. </td> </tr>
 
 </table>
@@ -331,49 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§cv_kohl.html§16-Feb-2017§
-{DTD}
-<html>
-
-<head>
-  <title> Curriculum Vitae of Stefan Kohl </title>
-  {index.css}
-</head>
-
-<body>
-
-<h1 class = "other" align = "center"> Curriculum Vitae </h1>
-
-{SK}
-
-<table class = "list" width = "100%" cellspacing = "2" cellpadding = "2"
-       summary = "This table contains the CV of Stefan Kohl.">
-
-  <tr> <td nowrap = "nowrap" valign = "top"> July 10, 1973                 </td> <td valign = "top"> Born in Sindelfingen / Germany. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> September 1980 - August 1984  </td> <td valign = "top"> Elementary school in Weil der Stadt / Germany. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> September 1984 - May 1993     </td> <td valign = "top"> <em>Johannes-Kepler-Gymnasium</em> in Weil der Stadt. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> March 25, 1993                </td> <td valign = "top"> 2nd price in the <em>Landeswettbewerb Jugend forscht</em> in Baden-W&uuml;rttemberg on the subject mathematics / computer science for the project <em>Programmierung des ostasiatischen Brettspiels Go</em>. (<a href = "stuff/go.zip">Download</a>) </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> May 18, 1993                  </td> <td valign = "top"> <em>Abitur</em> at the <em>Johannes-Kepler-Gymnasium</em> in Weil der Stadt. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> October 1993 - February 2000  </td> <td valign = "top"> Studied mathematics with minor subject computer science at the University of Stuttgart. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> March 8, 1996                 </td> <td valign = "top"> <em>Vordiplom</em> in mathematics. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> February 28, 2000             </td> <td valign = "top"> <em>Diplom</em> in mathematics. <br /> Thesis: <em>&Uuml;ber die Anzahl der Bahnen auf endlichen Gruppen unter der Operation der Automorphismengruppe - Suzuki-Gruppen vs. lineare Gruppen</em> (Counting the Orbits on Finite Groups under the Action of the Automorphism Group - Suzuki Groups vs. Linear Groups). <br /> Advisor: Prof. Dr. Markus Stroppel. <br /> Download:&nbsp;<a href = "diplom/diplomathesis_kohl.dvi">DVI</a>&nbsp;<a href = "diplom/diplomathesis_kohl.pdf">PDF</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> March 2000 - October 2005     </td> <td valign = "top"> <em>Doktorand</em> in mathematics at the University of Stuttgart. Advisor: Prof. Dr. Wolfgang Kimmerle. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> August 18 - September 8, 2001 </td> <td valign = "top"> Invited visit at the University of St Andrews / Scotland. <br /> Purpose: Introduction to {GAP} development. Since then, one of the {GAP} developers. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> Since July 2003               </td> <td valign = "top"> Member of the <a href = "http://www.gap-system.org/Contacts/People/supportgroup.html" target = "_blank">GAP Support Group</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> October 6, 2005               </td> <td valign = "top"> Dr. rer. nat. in mathematics. <br /> Thesis:  <a href = "http://dx.doi.org/10.18419/opus-4763" target = "_blank">Restklassenweise affine Gruppen</a> (Residue-Class-Wise Affine Groups). <br /> Download of the slides I used in my talk in the public part of the examination: <a href = "rcwa/slides/promotionsvortrag-kohl.pdf">PDF</a>&nbsp;<a href = "rcwa/slides/promvortragauf1seite.ps">PS</a>. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> Since then                    </td> <td valign = "top"> Further research; found and investigated a simple group which arises in a natural way from the arithmetical structure of the ring of integers. Cf. the article <a href = "http://dx.doi.org/10.1007/s00209-009-0497-8" target = "_blank">A Simple Group Generated by Involutions Interchanging Residue Classes of the Integers</a>, which appeared in 2009 in <em>Mathematische Zeitschrift</em>. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> August 1 - October 31, 2007   </td> <td valign = "top"> Developed teaching material for the computer algebra system {GAP} for the University of St Andrews. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> October 2008 - September 2010 </td> <td valign = "top"> <em>Profesor i Ftuar</em> (Visiting Professor), <a href = "http://univlora.edu.al/" target = "_blank">Universiteti <q>Ismail Qemali</q> Vlore</a> / Albania. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> June 26, 2010                 </td> <td valign = "top"> Organized a session on computational group theory on the conference <a href = "http://math.unm.edu/aca.html" target = "_blank">ACA 2010, Applications of Computer Algebra</a>, with talks by Max Horn (Germany), Vasyl Alex Ustimenko (Poland), Ekaterina Khrebtova (Russia, Dubai), Thomas Bier (Oman), Sandeep Rajkumar Murthy (Great Britain) and Urszula Romanczuk (Poland). (Jointly with Dmitry Malinin.) </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> September 6, 2010             </td> <td valign = "top"> Obtained albanian title <em>Profesor i Asociuar</em>, registered by the Ministry of Education and Sciences of the Republic of Albania. </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> March 2011 - July 2012        </td> <td valign = "top"> <em>Profesor i Ftuar</em> (Visiting Professor), <a href = "http://univlora.edu.al/" target = "_blank">Universiteti <q>Ismail Qemali</q> Vlore</a> / Albania. </td> </tr>
-
-</table>
-
-</body>
-
-</html>
-§publications_kohl.html§21-Apr-2018§
+§publications_kohl.html§11-Sep-2018§
 {DTD}
 <html>
 
@@ -526,6 +479,11 @@ hr { height: 0.3pt; }
 <h2> Preprints </h2>
 
 <ul>
+  <li>
+    (With L. Jafari Taghvasani:)
+    Simple groups the derived subgroups of all of whose subgroups are TI-subgroups. 10&nbsp;pages,&nbsp;2018. <br />
+    Download:&nbsp;<a href = "preprints/dti-groups.pdf">PDF</a>.
+  </li>
   <li>
     On the cycle structure of products of two class transpositions. 5&nbsp;pages,&nbsp;2009, revised 2011. <br />
     Download:&nbsp;<a href = "preprints/cycles.pdf">PDF</a>.
@@ -934,7 +892,7 @@ and <a href = "https://www.dpmms.cam.ac.uk/~hjrw2/" target = "_blank">Henry Wilt
 </body>
 
 </html>
-§teaching_kohl.html§16-Jun-2016§
+§teaching_kohl.html§23-Sep-2018§
 {DTD}
 <html>
 
@@ -954,7 +912,7 @@ and <a href = "https://www.dpmms.cam.ac.uk/~hjrw2/" target = "_blank">Henry Wilt
 </p>
 
 <p class = "normaltext">
-  In Spring 2012, I have taught
+  Spring 2012
 </p>
 <ul>
   <li> <a href = "teaching/mat_421/mat_421.html">MAT 421, Introduction to Real Analysis I</a>. </li>
@@ -962,7 +920,7 @@ and <a href = "https://www.dpmms.cam.ac.uk/~hjrw2/" target = "_blank">Henry Wilt
 </ul>
 
 <p class = "normaltext">
-  In Fall 2011, I have taught
+  Fall 2011
 </p>
 <ul>
   <li> <a href = "teaching/mat_551_2/mat_551.html">MAT 551, Algebra I</a> and </li>
@@ -970,7 +928,7 @@ and <a href = "https://www.dpmms.cam.ac.uk/~hjrw2/" target = "_blank">Henry Wilt
 </ul>
 
 <p class = "normaltext">
-  In Spring 2011, I have taught
+  Spring 2011
 </p>
 <ul>
   <li> <a href = "teaching/mat_551/mat_551.html">MAT 551, Algebra I</a> and </li>
@@ -978,14 +936,14 @@ and <a href = "https://www.dpmms.cam.ac.uk/~hjrw2/" target = "_blank">Henry Wilt
 </ul>
 
 <p class = "normaltext">
-  In Spring 2010, I have taught
+  Spring 2010
 </p>
 <ul>
   <li> <a href = "teaching/mat_642/mat_642.html">MAT 642, Computational Algebra II</a>. </li>
 </ul>
 
 <p class = "normaltext">
-  In Fall 2009, I have taught
+  Fall 2009
 </p>
 <ul>
   <li> <a href = "teaching/mat_410/mat_410.html">MAT 410, Introduction to Topology</a> and </li>
@@ -993,7 +951,7 @@ and <a href = "https://www.dpmms.cam.ac.uk/~hjrw2/" target = "_blank">Henry Wilt
 </ul>
 
 <p class = "normaltext">
-  In Spring 2009, I have taught
+  Spring 2009
 </p>
 <ul>
   <li> MAT 452, Introduction to Algebra II, </li>
@@ -1002,13 +960,11 @@ and <a href = "https://www.dpmms.cam.ac.uk/~hjrw2/" target = "_blank">Henry Wilt
 </ul>  
 
 <p class = "normaltext">
-  In Fall 2008, I have taught
+  Fall 2008
 </p>
 <ul>
   <li> MAT 451, Introduction to Algebra I. </li>
 </ul>
-
-{FOOTER}
 
 </body>
 
