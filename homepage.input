@@ -267,9 +267,9 @@ hr { height: 0.3pt; }
   <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "rcwa.html" target = "mainwindow">RCWA</a> (public <a href = "https://github.com/gap-packages/rcwa" target = "_blank">repository</a>). </td> </tr>
   <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "resclasses.html" target = "mainwindow">ResClasses</a> (public <a href = "https://github.com/gap-packages/resclasses" target = "_blank">repository</a>). </td> </tr>
   <tr> <td nowrap = "nowrap"> &nbsp;-&nbsp;<a href = "factint.html" target = "mainwindow">FactInt</a> (public <a href = "https://github.com/gap-packages/FactInt" target = "_blank">repository</a>). </td> </tr>
-  <tr> <td nowrap = "nowrap"> My <a href = "http://mathoverflow.net/users/28104/stefan-kohl" target = "_blank">contributions</a> to MathOverflow. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "motivated_papers.html" target = "mainwindow">Papers</a> motivated by questions of mine.</td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "talks_kohl.html" target = "mainwindow">Talks / conferences</a>. </td> </tr>
+  <tr> <td nowrap = "nowrap"> My <a href = "http://mathoverflow.net/users/28104/stefan-kohl" target = "_blank">contributions</a> to MathOverflow. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "miscellanea.html" target = "mainwindow">Miscellanea</a>. </td> </tr>
   <tr> <td nowrap = "nowrap"> <a href = "cpr.html" target = "mainwindow">Copyright</a>. </td> </tr>
 
