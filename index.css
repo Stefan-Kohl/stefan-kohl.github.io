@@ -72,7 +72,8 @@ p.subtitle { font-size:     160%;
              margin-bottom: 8mm; }
 
 p.myname { font-size:     140%;
-           text-align:    center; 
+           text-align:    center;
+           margin-top:    3mm;
            margin-bottom: 8mm; }
 
 p.display { font-size:     100%;
