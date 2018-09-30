@@ -1,4 +1,4 @@
-§index.css§25-Sep-2010§
+§index.css§30-Sep-2018§
 /* ####################################################################### */
 /* ##                                                                   ## */
 /* ##  index.css            Homepage Style File            Stefan Kohl  ## */
@@ -72,7 +72,7 @@ p.subtitle { font-size:     160%;
              margin-bottom: 8mm; }
 
 p.myname { font-size:     140%;
-           text-align:    center; 
+           text-align:    center;
            margin-bottom: 8mm; }
 
 p.display { font-size:     100%;
