@@ -1677,7 +1677,7 @@ Seminar: Wednesday, 14:00 - 16:00
 </body>
 
 </html>
-§talks_kohl.html§30-Sep-2018§
+§talks_kohl.html§28-Jan-2019§
 {DTD}
 <html>
 
@@ -1695,6 +1695,7 @@ Seminar: Wednesday, 14:00 - 16:00
 <table class = "list" width = "100%" cellspacing = "2" cellpadding = "2"
        summary = "This table contains the list of talks and conference participations of Stefan Kohl.">
 
+  <tr> <td nowrap = "nowrap" valign = "top"> December 7 - 8, 2018     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2018/index.html" target = "_blank">Nikolaus Conference&nbsp;2018</a> at the RWTH Aachen.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> January 12 - 14, 2017    </td> <td valign = "top"> Participation in the <a href = "https://www.math.uni-bielefeld.de/~baumeist/wop2017/en/" target = "_blank">Workshop on Permutation Groups: Methods and Applications</a> at the University of Bielefeld.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> December 9 - 10, 2016    </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2016/index.html" target = "_blank">Nikolaus Conference&nbsp;2016</a> at the RWTH Aachen.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> August 7 - 12, 2015      </td> <td valign = "top"> Teaching of a course <em>Introduction to <a href = "http://www.gap-system.org" target = "_blank">GAP</a> with an emphasis on automorphisms of finite groups</em> at Dogus University in Istanbul, mainly for faculty and PhD students from various universities in Turkey; participation in a subsequent workshop <em>Finite Groups and their Automorphisms</em>.&nbsp;* </td> </tr>
@@ -1712,7 +1713,7 @@ Seminar: Wednesday, 14:00 - 16:00
   <tr> <td nowrap = "nowrap" valign = "top"> December 7 - 9, 2007     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2007/index.html" target = "_blank">Nikolaus Conference&nbsp;2007</a> at the RWTH Aachen and talk entitled `Residue-class-wise affine permutations of Z^2'.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> September 11 - 15, 2007  </td> <td valign = "top"> Participation in the <a href = "http://www.gap-system.org/workshop2007/" target = "_blank">GAP Package Authors Workshop</a> at the <em>Technische Universit&auml;t Braunschweig</em> and talk entitled `Computing in a class of infinite permutation groups'.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> November 7, 2006         </td> <td valign = "top"> Invited talk on the Computational Algebra Day at the <em>Vrije Universiteit Brussel</em> (Belgium), entitled <a href = "rcwa/slides/brussels2006slides.pdf">A new class of groups accessible to methods from computational group theory</a>.&nbsp;* </td> </tr>
-  <tr> <td nowrap = "nowrap" valign = "top"> October 6, 2006          </td> <td valign = "top"> Invited <a href = "http://hamilton.nuigalway.ie/seminars.html" target = "_blank">talk</a> at the <em>National University of Ireland, Galway</em>.&nbsp;* </td> </tr>
+  <tr> <td nowrap = "nowrap" valign = "top"> October 6, 2006          </td> <td valign = "top"> Invited <a href = "http://hamilton.nuigalway.ie/seminars.html" target = "_blank">talk</a> at the <em>National University of Ireland, Galway</em> <em>(blackboard talk, no slides)</em>.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> April 11, 2006           </td> <td valign = "top"> Invited talk at the <em>Ecole Polytechnique Federale de Lausanne</em> (Switzerland), entitled `A class of infinite permutation groups Which are accessible to computational investigations' <em>(blackboard talk, no slides)</em>.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> March 8, 2006            </td> <td valign = "top"> Invited talk at the University of Bielefeld, entitled `A countable highly transitive simple group containing Collatz' permutation' <em>(blackboard talk, no slides)</em>.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> December 8 - 10, 2005    </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2005/index.html" target = "_blank">Darstellungstheorie-Tage&nbsp;/ Nikolaus Conference&nbsp;2005</a> in Aachen and talk entitled <a href = "rcwa/slides/aachen2005slides.pdf">On a class of infinite permutation groups</a>.&nbsp;* </td> </tr>
