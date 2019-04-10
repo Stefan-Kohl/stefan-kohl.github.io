@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§18-Jan-2019§
+§publications_kohl.html§10-Apr-2019§
 {DTD}
 <html>
 
@@ -344,6 +344,13 @@ hr { height: 0.3pt; }
 <h2> Journal Articles </h2>
 
 <ul>
+  <li>
+    <em>(With Leyli Jafari Taghvasani:)</em> Simple groups the derived subgroups of all of whose subgroups are TI-subgroups. <br />
+    <em>Comm.&nbsp;Algebra</em> 47 (2019); <em>to appear</em>. <br />
+    DOI:&nbsp;<a href = "https://doi.org/10.1080/00927872.2019.1588979" target = "_blank">10.1080/00927872.2019.1588979</a>. <br />
+    Download:&nbsp;<a href = "articles/dti-groups.pdf">PDF</a>.
+    <br /> <br />
+  </li>
   <li>
     The Collatz conjecture in a group theoretic context. <br />
     <em>J. Group Theory</em> 20 (2017), no.&nbsp;5, 1025-1030. <br />
@@ -453,14 +460,14 @@ hr { height: 0.3pt; }
   <li>
     <a href = "http://www.gap-system.org/Packages/rcwa.html" target = "_blank">RCWA</a>.
     Residue-class-wise affine groups. {GAP}&nbsp;package. 2005. <br />
-    Current version: 4.6.2 (released 26/06/2018). <br />
+    Current version: 4.6.3 (released 27/11/2018). <br />
     For a longer description and download, see <a href = "rcwa.html">here</a>.
     <br /> <br />
   </li>
   <li>
     <a href = "http://www.gap-system.org/Packages/factint.html" target = "_blank">FactInt</a>.
     Advanced methods for factoring integers. {GAP}&nbsp;package. 1999. <br />
-    Current version: 1.6.1 (released 17/01/2018). <br />
+    Current version: 1.6.2 (released 18/02/2018). <br />
     For a longer description and download, see <a href = "https://gap-packages.github.io/FactInt/" target = "_blank">here</a>.
   </li>
 </ul>
@@ -471,7 +478,7 @@ hr { height: 0.3pt; }
   <li>
     <a href = "http://www.gap-system.org/Packages/resclasses.html" target = "_blank">ResClasses</a>.
     Set-theoretic computations with residue classes. {GAP}&nbsp;package. 2004. <br />
-    Current version: 4.7.1 (released 18/12/2017). <br />
+    Current version: 4.7.2 (released 24/03/2019). <br />
     For a longer description, see <a href = "resclasses.html">here</a>.
   </li>
 </ul>
