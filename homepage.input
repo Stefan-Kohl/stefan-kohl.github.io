@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§03-May-2019§
+§publications_kohl.html§04-May-2019§
 {DTD}
 <html>
 
@@ -526,6 +526,7 @@ hr { height: 0.3pt; }
     Cited by <a href = "https://www.semanticscholar.org/paper/Polynomial-time-normalizers-Luks-Miyazaki/ca5ae2cdbd948ce27b6d129c4ec1a542f6ba9923" target = "_blank">[Luks, Miyazaki 2011]</a>,
     <a href = "https://doi.org/10.1090/tran/6984" target = "_blank">[Bamberg, Li, Swartz 2017]</a>
     (<a href = "http://arxiv.org/abs/1508.03565#" target = "_blank">arXiv version</a>),
+    <a href = "https://arxiv.org/abs/1708.04224" target = "_blank">[Aivazidis, Mueller 2017]</a>,
     <a href = "https://doi.org/10.1112/jlms.12138" target = "_blank">[Glasby, Praeger, Rosa, Verret 2018]</a>
     (<a href = "https://arxiv.org/abs/1712.05520" target = "_blank">arXiv version</a>),
     <a href = "https://arxiv.org/abs/1905.00520" target = "_blank">[Bachraty, Conder, Verret 2019]</a>.
