@@ -1697,7 +1697,7 @@ Seminar: Wednesday, 14:00 - 16:00
 </body>
 
 </html>
-§talks_kohl.html§28-Jan-2019§
+§talks_kohl.html§27-Aug-2019§
 {DTD}
 <html>
 
@@ -1715,6 +1715,7 @@ Seminar: Wednesday, 14:00 - 16:00
 <table class = "list" width = "100%" cellspacing = "2" cellpadding = "2"
        summary = "This table contains the list of talks and conference participations of Stefan Kohl.">
 
+  <tr> <td nowrap = "nowrap" valign = "top"> August 15 - 23, 2019     </td> <td valign = "top"> Participation in the <a href = "https://opendreamkit.org/meetings/2019-04-02-GAPSingularMeeting/" target = "_blank">GAP-Singular-Meeting</a> at the PfalzAkademie in Lambrecht (Pfalz) / Germany, and talk entitled <em>A class of infinite permutation groups which permits computation</em>.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> December 7 - 8, 2018     </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2018/index.html" target = "_blank">Nikolaus Conference&nbsp;2018</a> at the RWTH Aachen.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> January 12 - 14, 2017    </td> <td valign = "top"> Participation in the <a href = "https://www.math.uni-bielefeld.de/~baumeist/wop2017/en/" target = "_blank">Workshop on Permutation Groups: Methods and Applications</a> at the University of Bielefeld.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> December 9 - 10, 2016    </td> <td valign = "top"> Participation in the <a href = "http://www.math.rwth-aachen.de/Nikolaus2016/index.html" target = "_blank">Nikolaus Conference&nbsp;2016</a> at the RWTH Aachen.&nbsp;* </td> </tr>
