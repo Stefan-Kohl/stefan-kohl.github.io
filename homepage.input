@@ -345,7 +345,7 @@ hr { height: 0.3pt; }
 
 <ul>
   <li>
-    <em>(With Leyli Jafari Taghvasani:)</em> Simple groups the derived subgroups of all of whose subgroups are TI-subgroups. <br />
+    <em>(With Leyli Jafari:)</em> Simple groups the derived subgroups of all of whose subgroups are TI-subgroups. <br />
     <em>Comm.&nbsp;Algebra</em> 47 (2019), no.&nbsp;11, 4676-4683. <br />
     DOI:&nbsp;<a href = "https://doi.org/10.1080/00927872.2019.1588979" target = "_blank">10.1080/00927872.2019.1588979</a>. <br />
     Download:&nbsp;<a href = "articles/dti-groups.pdf">PDF</a>.
@@ -414,7 +414,7 @@ hr { height: 0.3pt; }
     <a href = "https://zbmath.org/?q=an:1077.20023" target = "_blank">Zbl&nbsp;1077.20023</a>. <br />
     Download:&nbsp;<a href = "articles/autorb.pdf">PDF</a>&nbsp;<a href = "articles/autorb.dvi">DVI</a>. <br />
     Supplementary tables:&nbsp;<a href = "articles/autorb-tables.pdf">PDF</a>&nbsp;<a href = "articles/autorb-tables.dvi">DVI</a>;
-    updated version from 2019, incorporating the results of a larger
+    updated version, incorporating the results of a larger
     <a href = "http://magma.maths.usyd.edu.au/magma/" target = "_blank">MAGMA</a> computation run by
     <a href = "https://www.math.auckland.ac.nz/~obrien/" target = "_blank">Eamonn O'Brien</a> in December 2019:&nbsp;<a href = "articles/autorb-tables-2019.pdf">PDF</a>. <br />
     {GAP}&nbsp;routines used for the paper: <a href = "articles/autorb.g">autorb.g</a>. <br />
@@ -495,6 +495,10 @@ hr { height: 0.3pt; }
 <h2> Preprints </h2>
 
 <ul>
+  <li>
+    <em>(With Leyli Jafari and Mohammad Zarrin:)</em> A classification of the finite non-solvable minimal non-CA-groups.  6&nbsp;pages,&nbsp;2019. <br />
+    Download:&nbsp;<a href = "https://arxiv.org/pdf/1912.08185.pdf">PDF</a>.
+  </li>
   <li>
     On the cycle structure of products of two class transpositions. 5&nbsp;pages,&nbsp;2009, revised 2011. <br />
     Download:&nbsp;<a href = "preprints/cycles.pdf">PDF</a>.
