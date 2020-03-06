@@ -513,7 +513,8 @@ hr { height: 0.3pt; }
 <ul>
   <li>
     The monster is the 28917828424943086th smallest non-abelian simple group. 6&nbsp;pages, 2020. <br />
-    Download:&nbsp;<a href = "preprints/monsterpos.pdf">PDF</a>.
+    Download:&nbsp;<a href = "preprints/monsterpos.pdf">PDF</a>. <br />
+    {GAP} code used for finding the results in this paper:&nbsp;<a href = "preprints/simplegroupssizesiterator.zip">ZIP-file</a>&nbsp;(34KB).
     <br /> <br />
   </li>
   <li>
