@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§03-Apr-2020§
+§publications_kohl.html§12-Apr-2020§
 {DTD}
 <html>
 
@@ -499,6 +499,12 @@ hr { height: 0.3pt; }
 
 <ul>
   <li>
+    <em>(With Leyli Jafari:)</em> The monster is the 28917828424943086th smallest non-abelian simple group. 6&nbsp;pages, 2020. <br />
+    Download:&nbsp;<a href = "preprints/monsterpos.pdf">PDF</a>. <br />
+    {GAP} code used for finding the results in this paper:&nbsp;<a href = "preprints/simplegroupssizesiterator.zip">ZIP-file</a>&nbsp;(34KB).
+    <br /> <br />
+  </li>
+  <li>
     <em>(With Leyli Jafari and Mohammad Zarrin:)</em> A classification of the finite non-solvable minimal non-CA-groups.  6&nbsp;pages,&nbsp;2019. <br />
     Download:&nbsp;<a href = "https://arxiv.org/pdf/1912.08185.pdf">PDF</a>.
     <br /> <br />
@@ -512,12 +518,6 @@ hr { height: 0.3pt; }
 <h2> Short Notes </h2>
 
 <ul>
-  <li>
-    The monster is the 28917828424943086th smallest non-abelian simple group. 6&nbsp;pages, 2020. <br />
-    Download:&nbsp;<a href = "preprints/monsterpos.pdf">PDF</a>. <br />
-    {GAP} code used for finding the results in this paper:&nbsp;<a href = "preprints/simplegroupssizesiterator.zip">ZIP-file</a>&nbsp;(34KB).
-    <br /> <br />
-  </li>
   <li>
     Two invariants of residue-class-wise affine permutations of the integers. 6&nbsp;pages, 2006. <br />
     Download:&nbsp;<a href = "preprints/rcwaepis.pdf">PDF</a>&nbsp;<a href = "preprints/rcwaepis.ps">PS</a>&nbsp;<a href = "preprints/rcwaepis.dvi">DVI</a>.
