@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§28-Apr-2020§
+§publications_kohl.html§14-Jun-2020§
 {DTD}
 <html>
 
@@ -418,7 +418,7 @@ hr { height: 0.3pt; }
     <a href = "http://magma.maths.usyd.edu.au/magma/" target = "_blank">MAGMA</a> computation run by
     <a href = "https://www.math.auckland.ac.nz/~obrien/" target = "_blank">Eamonn O'Brien</a> in December 2019
     and some further results obtained by <a href = "http://www.math.rwth-aachen.de/~Frank.Luebeck/index.html" target = "_blank">Frank L&uuml;beck</a> 
-    and <a href = "http://www.maths.qmul.ac.uk/~raw/" target = "_blank">Robert A Wilson</a> in January 2020:&nbsp;<a href = "articles/autorb-tables_2020-04-28.pdf">PDF</a>. <br />
+    and <a href = "http://www.maths.qmul.ac.uk/~raw/" target = "_blank">Robert A Wilson</a> in January 2020:&nbsp;<a href = "articles/autorb-tables_2020-06-14.pdf">PDF</a>. <br />
     {GAP}&nbsp;routines used for the paper: <a href = "articles/autorb.g">autorb.g</a>. <br />
     Cited by <a href = "http://link.springer.com/article/10.1007/s12190-007-0001-8" target = "_blank">[Ashrafi, Shi 2008]</a>,
     <a href = "http://dx.doi.org/10.1080/00927872.2015.1065856" target = "_blank">[Bastos, Dantas 2016]</a>,
