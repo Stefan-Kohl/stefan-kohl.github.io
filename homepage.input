@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§28-Jun-2020§
+§publications_kohl.html§12-Jul-2020§
 {DTD}
 <html>
 
@@ -346,7 +346,8 @@ hr { height: 0.3pt; }
 <ul>
   <li>
     <em>(With Leyli Jafari and Mohammad Zarrin:)</em> A classification of the finite non-solvable minimal non-CA-groups. <br />
-    To appear in&nbsp;<em>J. Algebra Appl.</em>
+    To appear in&nbsp;<em>J. Algebra Appl.</em> <br />
+    DOI:&nbsp;<a href = "https://doi.org/10.1142/S0219498821502030" target = "_blank">10.1142/S0219498821502030</a>. <br />
     Download:&nbsp;<a href = "https://arxiv.org/pdf/1912.08185.pdf">PDF</a>.
     <br /> <br />
   </li>
@@ -507,6 +508,11 @@ hr { height: 0.3pt; }
 <h2> Preprints </h2>
 
 <ul>
+  <li>
+    <em>(With Leyli Jafari and Eamonn O'Brien):)</em> Automorphism group orbits on finite simple groups. 9&nbsp;pages, 2020. <br />
+    Download:&nbsp;<a href = "preprints/automorphism_orbits.pdf">PDF</a>.
+    <br /> <br />
+  </li>
   <li>
     <em>(With Leyli Jafari:)</em> The monster is the 28917828424943086th smallest non-abelian simple group. 6&nbsp;pages, 2020. <br />
     Download:&nbsp;<a href = "preprints/monsterpos.pdf">PDF</a>. <br />
