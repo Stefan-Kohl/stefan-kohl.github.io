@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§09-Feb-2021§
+§publications_kohl.html§22-Feb-2021§
 {DTD}
 <html>
 
@@ -344,6 +344,13 @@ hr { height: 0.3pt; }
 <h2> Journal Articles </h2>
 
 <ul>
+  <li>
+    <em>(With Leyli Jafari and Eamonn O'Brien:)</em> Automorphism group orbits on finite simple groups. <br />
+    Accepted by <em>Comm.&nbsp;Algebra</em>. <br />
+    DOI:&nbsp;<a href = "https://doi.org/10.1080/00927872.2021.1894166" target = "_blank">10.1080/00927872.2021.1894166</a> (will be activated after online publication). <br />
+    Download:&nbsp;<a href = "articles/autorb2.pdf">PDF</a>.
+    <br /> <br />
+  </li>
   <li>
     <em>(With Leyli Jafari and Mohammad Zarrin:)</em> A classification of the finite non-solvable minimal non-CA-groups. <br />
     <em>J. Algebra Appl.</em> <br />
@@ -509,11 +516,6 @@ hr { height: 0.3pt; }
 <h2> Preprints </h2>
 
 <ul>
-  <li>
-    <em>(With Leyli Jafari and Eamonn O'Brien:)</em> Automorphism group orbits on finite simple groups. 10&nbsp;pages, 2020. <br />
-    Download:&nbsp;<a href = "preprints/autorb2-v2.pdf">PDF</a>.
-    <br /> <br />
-  </li>
   <li>
     On the cycle structure of products of two class transpositions. 5&nbsp;pages,&nbsp;2009, revised 2011. <br />
     Download:&nbsp;<a href = "preprints/cycles.pdf">PDF</a>.
