@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§27-Apr-2021§
+§publications_kohl.html§28-Apr-2021§
 {DTD}
 <html>
 
@@ -578,7 +578,7 @@ hr { height: 0.3pt; }
   <li>
     I am a reviewer for MathSciNet. <br />
     A list of papers I have written reviews for can be found <a href = "https://mathscinet.ams.org/mathscinet/search/publications.html?pg1=RVRI&s1=698248&pg3=authreviews" target = "_blank">here</a>.
-    <em>(Accessing that page may require a subscription to MathSciNet.)</em>
+    <em>(Accessing that page requires a subscription to MathSciNet.)</em>
     <br /> <br />
   </li>
   <li>
