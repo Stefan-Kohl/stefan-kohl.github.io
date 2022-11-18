@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§11-Sep-2022§
+§publications_kohl.html§18-Nov-2022§
 {DTD}
 <html>
 
@@ -561,13 +561,14 @@ hr { height: 0.3pt; }
     (<a href = "http://arxiv.org/abs/1508.03565" target = "_blank">arXiv version</a>),
     <a href = "https://doi.org/10.1112/jlms.12138" target = "_blank">[Glasby, Praeger, Rosa, Verret 2018]</a>
     (<a href = "https://arxiv.org/abs/1712.05520" target = "_blank">arXiv version</a>),
-    <a href = "https://arxiv.org/abs/1905.00520" target = "_blank">[Bachraty, Conder, Verret 2019]</a>,
     <a href = "https://arxiv.org/abs/1910.11781" target = "_blank">[Bors, Giudici, Praeger 2019]</a>,
     <a href = "https://doi.org/10.1142/S0219498819500555" target = "_blank">[Bors 2019]</a>,
     <a href = "https://doi.org/10.1515/jgth-2020-0077" target = "_blank">[Aivazidis, Mueller 2021]</a>
     (<a href = "https://publications.mfo.de/handle/mfo/1423" target = "_blank">Oberwolfach Preprint version</a>,
     <a href = "https://arxiv.org/abs/1708.04224" target = "_blank">arXiv version</a>),
-    <a href = "https://arxiv.org/abs/2112.05838" target = "_blank">[Guo, Guo, Ryabov, Vasil'ev 2021]</a>.
+    <a href = "https://arxiv.org/abs/2112.05838" target = "_blank">[Guo, Guo, Ryabov, Vasil'ev 2021]</a>,
+    <a href = "http://dx.doi.org/10.5802/alco.206" target = "_blank">[Bachraty, Conder, Verret 2022]</a>
+    (<a href = "https://arxiv.org/abs/1905.00520" target = "_blank">arXiv version</a>).
   </li>
 </ul>
 
