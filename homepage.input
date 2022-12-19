@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§08-Dec-2022§
+§publications_kohl.html§19-Dec-2022§
 {DTD}
 <html>
 
@@ -497,7 +497,7 @@ hr { height: 0.3pt; }
   <li>
     <a href = "http://www.gap-system.org/Packages/rcwa.html" target = "_blank">RCWA</a>.
     Residue-class-wise affine groups. {GAP}&nbsp;package. 2005. <br />
-    Current version: 4.7.0 (released 27/07/2022). <br />
+    Current version: 4.7.1 (released 06/12/2022). <br />
     For a longer description and download, see <a href = "rcwa.html">here</a>. <br />
     Cited by <a href = "https://arxiv.org/abs/2203.00912" target = "_blank">[Bond 2022]</a>.
     <br /> <br />
