@@ -1757,7 +1757,7 @@ Seminar: Wednesday, 14:00 - 16:00
 </body>
 
 </html>
-§talks_kohl.html§11-May-2023§
+§talks_kohl.html§14-May-2024§
 {DTD}
 <html>
 
@@ -1775,6 +1775,7 @@ Seminar: Wednesday, 14:00 - 16:00
 <table class = "list" width = "100%" cellspacing = "2" cellpadding = "2"
        summary = "This table contains the list of talks and conference participations of Stefan Kohl.">
 
+  <tr> <td nowrap = "nowrap" valign = "top"> February 1, 2024         </td> <td valign = "top"> Lecture entitled <em>An Introduction to GAP - from the basics to finite and infinite permutation groups</em> at the <em>16th Iranian International Group Theory Conference</em> at <a href = "https://www.sru.ac.ir/en/" target = "_blank">Shahid Rajaee Teacher Training University</a> (online). </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> May 11, 2023             </td> <td valign = "top"> Talk entitled <em>An introduction to GAP with an emphasis on residue-class-wise affine groups</em> at the <em>One-day workshop on mathematical chemistry</em> in the memory of <a href = "https://faculty.kashanu.ac.ir/ashrafi/en" target = "_blank">Ali Reza Ashrafi</a> at <a href = "https://www.sru.ac.ir/en/" target = "_blank">Shahid Rajaee Teacher Training University</a> (online). </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> October 15 - 24, 2022    </td> <td valign = "top"> Invited visit at <a href = "http://math.ipm.ac.ir/isfahan/" target = "_blank">IPM Isfahan</a> / Iran.&nbsp;* </td> </tr>
   <tr> <td nowrap = "nowrap" valign = "top"> September 22, 2022       </td> <td valign = "top"> Workshop <em>Introduction to GAP</em> at <a href = "http://math.ipm.ac.ir/isfahan/" target = "_blank">IPM Isfahan</a> (online). </td> </tr>
