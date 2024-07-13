@@ -36,7 +36,8 @@ REPLACEMENTS := [
                  "       <td> <p align = \"right\"> Last modified: {DATE} </p> </td> </tr>\n",
                  "</table>" ) ],
 [ "{SK}", "<p class = \"myname\">Stefan Kohl</p>" ],
-[ "{MYMAIL}", "sk239@st-andrews.ac.uk" ],
+[ "{MYMAIL}", "stefan.kohl.rostock@gmail.com" ],
+#[ "{MYMAIL}", "sk239@st-andrews.ac.uk" ],
 #[ "{MYMAIL}", "stefan@mcs.st-and.ac.uk" ],
 #[ "{MYMAIL}", "stefan@gap-system.org" ],
 [ "{GAP}", "<a href = \"http://www.gap-system.org\" target = \"_blank\">GAP</a>" ] ];
