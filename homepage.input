@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§06-Dec-2024§
+§publications_kohl.html§23-Apr-2025§
 {DTD}
 <html>
 
@@ -381,7 +381,8 @@ hr { height: 0.3pt; }
     <a href = "http://www.ams.org/mathscinet-getitem?mr=3692062" target = "_blank">MR3692062</a>,
     <a href = "https://zbmath.org/?q=an%3A1400.20022" target = "_blank">Zbl&nbsp;1400.20022</a>. <br />
     Download:&nbsp;<a href = "articles/collatzgroups.pdf">PDF</a>. <br />
-    Cited by <a href = "https://arxiv.org/abs/2409.13341" target = "_blank">[Bardakov, Iskra 2024]</a>.
+    Cited by <a href = "https://arxiv.org/abs/2409.13341" target = "_blank">[Bardakov, Iskra 2024]</a>,
+    <a href = "https://arxiv.org/abs/2504.08595" target = "_blank">[Bardakov, Iskra 2025]</a>.
     <br /> <br />
   </li>
   <li>
@@ -401,7 +402,8 @@ hr { height: 0.3pt; }
     <a href = "https://zbmath.org/?q=an:1210.20026" target = "_blank">Zbl&nbsp;1210.20026</a>. <br />
     Download:&nbsp;<a href = "articles/simplegp.pdf">PDF</a>&nbsp;<a href = "articles/simplegp.dvi">DVI</a>. <br />
     Cited by <a href = "https://arxiv.org/abs/2206.07412" target = "_blank">[Hines 2022]</a>,
-    <a href = "https://arxiv.org/abs/2409.13341" target = "_blank">[Bardakov, Iskra 2024]</a>.
+    <a href = "https://arxiv.org/abs/2409.13341" target = "_blank">[Bardakov, Iskra 2024]</a>,
+    <a href = "https://arxiv.org/abs/2504.08595" target = "_blank">[Bardakov, Iskra 2025]</a>.
     <br /> <br />
   </li>
   <li>
@@ -535,9 +537,15 @@ hr { height: 0.3pt; }
 
 <ul>
   <li>
+    <em>(With M. H. Hooshmand:)</em> Groups in which every Lagrange subset is a factor. 6&nbsp;pages,&nbsp;2025. <br />
+    Download:&nbsp;<a href = "https://arxiv.org/pdf/2504.11503">PDF</a>.
+    <br /> <br />
+  </li>
+  <li>
     On the cycle structure of products of two class transpositions. 5&nbsp;pages,&nbsp;2009, revised 2011. <br />
     Download:&nbsp;<a href = "preprints/cycles.pdf">PDF</a>. <br />
-    Cited by <a href = "https://arxiv.org/abs/2409.13341" target = "_blank">[Bardakov, Iskra 2024]</a>.
+    Cited by <a href = "https://arxiv.org/abs/2409.13341" target = "_blank">[Bardakov, Iskra 2024]</a>,
+    <a href = "https://arxiv.org/abs/2504.08595" target = "_blank">[Bardakov, Iskra 2025]</a>.
   </li>
 </ul>
 
