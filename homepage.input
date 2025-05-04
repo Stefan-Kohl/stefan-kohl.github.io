@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§23-Apr-2025§
+§publications_kohl.html§04-May-2025§
 {DTD}
 <html>
 
@@ -351,7 +351,8 @@ hr { height: 0.3pt; }
     <a href = "http://www.ams.org/mathscinet-getitem?mr=4283148" target = "_blank">MR4283148</a>,
     <a href = "https://zbmath.org/1543.20021" target = "_blank">Zbl&nbsp;1543.20021</a>. <br />
     Download:&nbsp;<a href = "articles/autorb2.pdf">PDF</a>. <br />
-    Cited by <a href = "https://arxiv.org/abs/2403.01725" target = "_blank">[Li, Zhu 2024]</a>.
+    Cited by <a href = "https://doi.org/10.1016/j.jalgebra.2025.04.028" target = "_blank">[Li, Zhu 2024]</a>
+    (<a href = "https://arxiv.org/abs/2403.01725" target = "_blank">arXiv version</a>).
     <br /> <br />
   </li>
   <li>
