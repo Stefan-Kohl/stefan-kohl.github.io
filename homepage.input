@@ -518,7 +518,7 @@ hr { height: 0.3pt; }
     <a href = "https://gap-packages.github.io/rcwa/" target = "_blank">RCWA</a>.
     Residue-class-wise affine groups. {GAP}&nbsp;package. 2005. <br />
     Current version: 4.8.0 (released 22/09/2025). <br />
-    For a longer description and download, see <a href = "rcwa.html">here</a>. <br />
+    For a longer description, see <a href = "rcwa.html">here</a>. <br />
     Cited by <a href = "https://arxiv.org/abs/1909.09733" target = "_blank">[Siegel 2019]</a>,
     <a href = "https://arxiv.org/abs/2203.00912" target = "_blank">[Bond 2022]</a>,
     <a href = "http://dx.doi.org/10.1134/S2070046624020055" target = "_blank">[Siegel 2024]</a>,
@@ -529,7 +529,7 @@ hr { height: 0.3pt; }
     <a href = "https://gap-packages.github.io/FactInt/" target = "_blank">FactInt</a>.
     Advanced methods for factoring integers. {GAP}&nbsp;package. 1999. <br />
     Current version: 1.6.3 (released 15/11/2019). <br />
-    For a longer description and download, see <a href = "https://gap-packages.github.io/FactInt/" target = "_blank">here</a>.
+    For a longer description, see <a href = "factint.html" target = "_blank">here</a>.
   </li>
 </ul>
 
