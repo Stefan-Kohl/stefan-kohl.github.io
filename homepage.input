@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§30-Jul-2026§
+§publications_kohl.html§04-Aug-2026§
 {DTD}
 <html>
 
@@ -396,7 +396,8 @@ hr { height: 0.3pt; }
     <a href = "https://doi.org/10.4213/mzm14458" target = "_blank">published version in Russian</a>),
     <a href = "https://doi.org/10.1515/jgth-2025-0074" target = "_blank">[Bardakov, Iskra 2026]</a>
     (<a href = "https://arxiv.org/abs/2504.08595" target = "_blank">arXiv version</a>),
-    <a href = "https://doi.org/10.48550/arXiv.2604.12553" target = "_blank">[Pan 2026]</a>.
+    <a href = "https://doi.org/10.48550/arXiv.2604.12553" target = "_blank">[Pan 2026]</a>,
+    <a href = "https://doi.org/10.48550/arXiv.2607.17477" target = "_blank">[van Doorn, Judin, Monticone, Morrison 2026]</a>.
     <br /> <br />
   </li>
   <li>
@@ -422,7 +423,8 @@ hr { height: 0.3pt; }
     <a href = "https://doi.org/10.4213/mzm14458" target = "_blank">published version in Russian</a>),
     <a href = "https://doi.org/10.1515/jgth-2025-0074" target = "_blank">[Bardakov, Iskra 2026]</a>
     (<a href = "https://arxiv.org/abs/2504.08595" target = "_blank">arXiv version</a>),
-    <a href = "https://doi.org/10.48550/arXiv.2604.12553" target = "_blank">[Pan 2026]</a>.
+    <a href = "https://doi.org/10.48550/arXiv.2604.12553" target = "_blank">[Pan 2026]</a>,
+    <a href = "https://doi.org/10.48550/arXiv.2607.17477" target = "_blank">[van Doorn, Judin, Monticone, Morrison 2026]</a>.
     <br /> <br />
   </li>
   <li>
@@ -613,12 +615,13 @@ hr { height: 0.3pt; }
     (<a href = "https://arxiv.org/abs/2408.12298" target = "_blank">arXiv version</a>),
     <a href = "https://doi.org/10.1142/S0219498827501180" target = "_blank">[Arranz 2025]</a>
     (<a href = "https://arxiv.org/abs/2507.19571" target = "_blank">arXiv version</a>),
-    <a href = "https://arxiv.org/abs/2508.20731" target = "_blank">[Barbieri, Lekse, Potocnik, Rekvenyi 2025]</a>,
     <a href = "https://doi.org/10.1007/s00493-025-00175-x" target = "_blank">[Gan, Spiga, Xia 2025]</a>,
     <a href = "https://doi.org/10.1016/j.jalgebra.2025.12.017" target = "_blank">[Gan, Liu, Xia 2026]</a>
     (<a href = "https://arxiv.org/abs/2412.03057" target = "_blank">arXiv version</a>),
     <a href = "https://doi.org/10.48550/arXiv.2604.15303" target = "_blank">[Eberhard, Maini, Sabatini, Tracey 2026]</a>,
-    <a href = "https://doi.org/10.1360/SSM-2026-0094" target = "_blank">[Gan, Liu 2026]</a>.
+    <a href = "https://doi.org/10.1360/SSM-2026-0094" target = "_blank">[Gan, Liu 2026]</a>,
+    <a href = "https://doi.org/10.1017/fms.2026.10258" target = "_blank">[Barbieri, Lekse, Potocnik, Rekvenyi 2026]</a>
+    (<a href = "https://arxiv.org/abs/2508.20731" target = "_blank">arXiv version</a>).
   </li>
 </ul>
 
