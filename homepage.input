@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§04-Aug-2026§
+§publications_kohl.html§07-Aug-2026§
 {DTD}
 <html>
 
@@ -541,7 +541,7 @@ hr { height: 0.3pt; }
   <li>
     <a href = "https://gap-packages.github.io/FactInt/" target = "_blank">FactInt</a>.
     Advanced methods for factoring integers. {GAP}&nbsp;package. 1999. <br />
-    Current version: 1.6.3 (released 15/11/2019). <br />
+    Current version: 1.7.0 (released 07/08/2026). <br />
     For a longer description, see <a href = "factint.html">here</a>.
   </li>
 </ul>
