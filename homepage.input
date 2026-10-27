@@ -326,7 +326,7 @@ hr { height: 0.3pt; }
 </body>
 
 </html>
-§publications_kohl.html§21-Oct-2026§
+§publications_kohl.html§27-Oct-2026§
 {DTD}
 <html>
 
@@ -562,6 +562,12 @@ hr { height: 0.3pt; }
     Set-theoretic computations with residue classes. {GAP}&nbsp;package. 2004. <br />
     Current version: 4.8.0 (released 12/10/2026). <br />
     For a longer description, see <a href = "resclasses.html">here</a>.
+    <br /> <br />
+  </li>
+  <li>
+    <a href = "https://github.com/gap-packages/iterators/releases/download/v1.0.0/iterators-1.0.0.tar.gz">Iterators</a>.
+    Iterators of orders of simple groups and more. {GAP}&nbsp;package. 2026. <br />
+    Current version: 1.0.0 (released 27/10/2026). <br />
   </li>
 </ul>
 
